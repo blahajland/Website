@@ -7,8 +7,7 @@ import CustomFooter from '@/components/CustomFooter.vue'
 <template>
   <TopBar />
   <TabGroup />
-  <RouterView>
-  </RouterView>
+  <RouterView> </RouterView>
   <CustomFooter>
     <p>&copy; <a>eryn</a> Some rights reserved</p>
     <p>Made by <a>Nerd</a></p>
@@ -16,6 +15,4 @@ import CustomFooter from '@/components/CustomFooter.vue'
   </CustomFooter>
 </template>
 
-<style>
-
-</style>
+<style></style>

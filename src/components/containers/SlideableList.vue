@@ -1,5 +1,4 @@
 <script setup>
-
 import { ref } from 'vue'
 
 const SCROLL_AMOUNT = 380
@@ -7,8 +6,8 @@ const SCROLL_AMOUNT = 380
 const scrollComp = ref(null)
 
 function scroll(amount) {
-  if(!scrollComp.value){
-    console.log("a")
+  if (!scrollComp.value) {
+    console.log('a')
   }
   scrollComp.value.scrollLeft += amount
 }
@@ -17,14 +16,13 @@ function scroll(amount) {
 <template>
   <div class="SlideableList">
     <div class="SlideButton" @click="scroll(-1 * SCROLL_AMOUNT)">
-      <img src="/icons/left.png" alt="&lt;">
+      <img src="/icons/left.png" alt="&lt;" />
     </div>
     <div class="SlideContainer" ref="scrollComp">
-      <slot>
-      </slot>
+      <slot> </slot>
     </div>
     <div class="SlideButton" @click="scroll(SCROLL_AMOUNT)">
-      <img src="/icons/right.png" alt="&gt;">
+      <img src="/icons/right.png" alt="&gt;" />
     </div>
   </div>
 </template>

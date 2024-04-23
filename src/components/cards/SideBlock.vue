@@ -1,5 +1,4 @@
 <script setup>
-
 import { IS_COLOR, IS_CSS_VAR } from '@/assets/js/propsTools.js'
 
 defineProps({
@@ -7,10 +6,9 @@ defineProps({
     default: 'var(--blahaj)',
     type: String,
     validator(value) {
-      return value === undefined ||
-        value instanceof String && (
-        IS_COLOR.test(value)
-        || IS_CSS_VAR.test(value)
+      return (
+        value === undefined ||
+        (value instanceof String && (IS_COLOR.test(value) || IS_CSS_VAR.test(value)))
       )
     }
   },
@@ -18,10 +16,9 @@ defineProps({
     default: 'var(--text)',
     type: String,
     validator(value) {
-      return value === undefined ||
-        value instanceof String && (
-        IS_COLOR.test(value)
-        || IS_CSS_VAR.test(value)
+      return (
+        value === undefined ||
+        (value instanceof String && (IS_COLOR.test(value) || IS_CSS_VAR.test(value)))
       )
     }
   }

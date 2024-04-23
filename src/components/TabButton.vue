@@ -1,10 +1,9 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <div class="TabButton">
     <slot></slot>
-    <hr>
+    <hr />
   </div>
 </template>
 

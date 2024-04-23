@@ -1,11 +1,8 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
   <div class="CustomFooter">
-    <slot>
-    </slot>
+    <slot> </slot>
   </div>
 </template>
 

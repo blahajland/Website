@@ -1,21 +1,21 @@
 @import './base.css';
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: "Noto IKEA", serif;
-    font-size: 0.9em;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    background: var(--background);
-    color: var(--text);
+  margin: 0;
+  font-family: 'Noto IKEA', serif;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: var(--background);
+  color: var(--text);
 }
 
 #app {
-    width: 1200px;
+  width: 1200px;
 }

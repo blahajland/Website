@@ -1,5 +1,4 @@
 <script setup>
-
 import { IS_GTZ_NB } from '@/assets/js/propsTools.js'
 
 defineProps({
@@ -7,13 +6,10 @@ defineProps({
     default: '3',
     type: String,
     validator(value) {
-      return value === undefined ||
-        value instanceof String
-        && IS_GTZ_NB.test(value)
+      return value === undefined || (value instanceof String && IS_GTZ_NB.test(value))
     }
   }
 })
-
 </script>
 
 <template>

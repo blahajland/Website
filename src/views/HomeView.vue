@@ -16,7 +16,7 @@ const randomTitles = [
   'Blahaj go spinny',
   'Be silly, burn Google Drive',
   'the blahaj is very tired he is eepy',
-  'Don\'t click 6 times on the 6th bullet point...',
+  "Don't click 6 times on the 6th bullet point...",
   'Be gay, do crimes',
   'Blahaj is life! Blahaj is everything!',
   'Shork goodness'
@@ -28,7 +28,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
 <template>
   <div class="HomeView">
     <a href="https://blahaj.itsjamie.dev/">
-      <img src="/images/spinning-blahaj.gif" alt="Blahaj">
+      <img src="/images/spinning-blahaj.gif" alt="Blahaj" />
     </a>
     <h1>{{ randomTitle }}</h1>
     <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
@@ -36,7 +36,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
     <BlockGrid>
       <ContentBlock color="#ACD3DC">
         <p>Take a tour and see <b>what's inside :3</b></p>
-        <CustomButton @click="changeLoc('#p1',false)">
+        <CustomButton @click="changeLoc('#p1', false)">
           <p>Discover</p>
         </CustomButton>
       </ContentBlock>
@@ -61,17 +61,17 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
       </template>
       <BlockGrid>
         <ContentBlock color="#B5C4E2">
-          <img src="/icons/website.png" alt="Website">
+          <img src="/icons/website.png" alt="Website" />
           <h3>Host your own website for free!</h3>
           <p>With <b>blahaj.land</b> you can easily host your own static site for free!</p>
         </ContentBlock>
         <ContentBlock color="#B1BCE1">
-          <img src="/icons/cloud.png" alt="Cloud">
+          <img src="/icons/cloud.png" alt="Cloud" />
           <h3>Cloud storage</h3>
           <p>Starting at <b>1€&sol;month</b></p>
         </ContentBlock>
         <ContentBlock color="#ACD3DC">
-          <img src="/icons/communication.png" alt="Communication">
+          <img src="/icons/communication.png" alt="Communication" />
           <h3>Communication services</h3>
           <p>E-mail, Matrix, Send and more !</p>
         </ContentBlock>
@@ -85,67 +85,82 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
       <SlideableList>
         <SideBlock color="#FFF6AD">
           <template #image>
-            <img src="/icons/apps/haste.png" alt="Haste">
+            <img src="/icons/apps/haste.png" alt="Haste" />
           </template>
           <h3>Haste</h3>
-          <p>A free and private pastebin alternative for sharing code snippets and text securely.</p>
+          <p>
+            A free and private pastebin alternative for sharing code snippets and text securely.
+          </p>
         </SideBlock>
         <SideBlock color="#FFAD8D">
           <template #image>
-            <img src="/icons/apps/hedgedoc.png" alt="HedgeDoc">
+            <img src="/icons/apps/hedgedoc.png" alt="HedgeDoc" />
           </template>
           <h3>HedgeDoc</h3>
-          <p>An open-source collaborative markdown editor that respects privacy and allows to easily share docs.</p>
+          <p>
+            An open-source collaborative markdown editor that respects privacy and allows to easily
+            share docs.
+          </p>
         </SideBlock>
         <SideBlock color="#7BC8FF">
           <template #image>
-            <img src="/icons/apps/nextcloud.png" alt="Nextcloud">
+            <img src="/icons/apps/nextcloud.png" alt="Nextcloud" />
           </template>
           <h3>Nextcloud</h3>
-          <p>An all-in-one solution for file sharing, calendar, contacts, and more, hosted on your own cloud server.</p>
+          <p>
+            An all-in-one solution for file sharing, calendar, contacts, and more, hosted on your
+            own cloud server.
+          </p>
         </SideBlock>
         <SideBlock color="#FFA0A7">
           <template #image>
-            <img src="/icons/apps/piped.png" alt="Send">
+            <img src="/icons/apps/piped.png" alt="Send" />
           </template>
           <h3>Piped</h3>
-          <p>A private YouTube player with no ads or tracking, perfect for watching content without compromising
-            privacy.</p>
+          <p>
+            A private YouTube player with no ads or tracking, perfect for watching content without
+            compromising privacy.
+          </p>
         </SideBlock>
         <SideBlock color="#76CEFF">
           <template #image>
-            <img src="/icons/apps/send.png" alt="Send">
+            <img src="/icons/apps/send.png" alt="Send" />
           </template>
           <h3>Send</h3>
-          <p>Securely transfer large files between devices using sharing links with up to 2,5GB capacity per file.</p>
+          <p>
+            Securely transfer large files between devices using sharing links with up to 2,5GB
+            capacity per file.
+          </p>
         </SideBlock>
         <SideBlock color="#7DACFF">
           <template #image>
-            <img src="/icons/apps/vaultwarden.png" alt="Vaultwarden">
+            <img src="/icons/apps/vaultwarden.png" alt="Vaultwarden" />
           </template>
           <h3>Vaultwarden</h3>
           <p>The best password manager for securely storing and managing passwords.</p>
         </SideBlock>
         <SideBlock color="#FF9E81">
           <template #image>
-            <img src="/icons/apps/lutim.png" alt="Lutim">
+            <img src="/icons/apps/lutim.png" alt="Lutim" />
           </template>
           <h3>Lutim</h3>
           <p>An image hosting app similar to Imgur, but private and free.</p>
         </SideBlock>
         <SideBlock color="#FF8490">
           <template #image>
-            <img src="/icons/apps/prettyheroes.png" alt="PrettyHeroes">
+            <img src="/icons/apps/prettyheroes.png" alt="PrettyHeroes" />
           </template>
           <h3>PrettyHeroes</h3>
           <p>A simple and colorful About Me page creator with no account creation needed.</p>
         </SideBlock>
         <SideBlock color="#CEF0FF">
           <template #image>
-            <img src="/icons/apps/mail.png" alt="Mail">
+            <img src="/icons/apps/mail.png" alt="Mail" />
           </template>
           <h3>Mail</h3>
-          <p>Access your emails securely from the webmail interface or with any preferred client.</p>
+          <p>
+            Access your emails securely from the webmail interface or with any preferred client.
+          </p>
         </SideBlock>
       </SlideableList>
     </PageSection>
@@ -156,7 +171,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <SlideableList>
           <SideBlock>
             <template #image>
-              <img src="/icons/join.png" alt="User">
+              <img src="/icons/join.png" alt="User" />
             </template>
             <p>TODO</p>
           </SideBlock>
@@ -168,14 +183,14 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <h2 id="p4">Tiers</h2>
         <p>Get more features and support the website! >83</p>
       </template>
-        <BlockGrid>
-          <SideBlock>
-            <template #image>
-              <img src="/icons/join.png" alt="User">
-            </template>
-            <p>TODO</p>
-          </SideBlock>
-        </BlockGrid>
+      <BlockGrid>
+        <SideBlock>
+          <template #image>
+            <img src="/icons/join.png" alt="User" />
+          </template>
+          <p>TODO</p>
+        </SideBlock>
+      </BlockGrid>
     </PageSection>
     <PageSection>
       <template #title>
@@ -185,32 +200,30 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
       <BlockGrid>
         <SideBlock>
           <template #image>
-            <img src="/icons/join.png" alt="User">
+            <img src="/icons/join.png" alt="User" />
           </template>
           <p>TODO</p>
         </SideBlock>
       </BlockGrid>
     </PageSection>
-    <PageSection :last='true'>
+    <PageSection :last="true">
       <template #title>
-        <h2 id="p5">Props</h2>
-        <p>You're &ast;ahem&ast; <i>transitionning</i> from another service? hehe...</p>
+        <h2 id="p5">Donations</h2>
+        <p>Thanks or your <i>kind</i> donations <3</p>
       </template>
       <BlockGrid>
         <SideBlock>
           <template #image>
-            <img src="/icons/join.png" alt="User">
+            <img src="/icons/join.png" alt="User" />
           </template>
           <p>TODO</p>
         </SideBlock>
       </BlockGrid>
     </PageSection>
   </div>
-
 </template>
 
 <style>
-
 .HomeView {
   padding: 64px 0;
   display: flex;

@@ -1,5 +1,4 @@
 <script setup>
-
 import TabButton from '@/components/TabButton.vue'
 import { changeLoc } from '@/assets/js/linkTools.js'
 </script>
@@ -18,10 +17,10 @@ import { changeLoc } from '@/assets/js/linkTools.js'
     <TabButton @click="changeLoc('#p4', false)">
       <p>Tiers</p>
     </TabButton>
-    <TabButton @click="changeLoc('#p5',false)">
+    <TabButton @click="changeLoc('#p5', false)">
       <p>Props</p>
     </TabButton>
-    <TabButton @click="changeLoc('#p6',false)">
+    <TabButton @click="changeLoc('#p6', false)">
       <p>Donations</p>
     </TabButton>
   </div>
