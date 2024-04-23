@@ -1,22 +1,19 @@
 <script setup>
 import TopBar from '@/components/static/TopBar.vue'
 import TabGroup from '@/components/static/TabGroup.vue'
-import NotificationBanner from '@/components/NotificationBanner.vue'
-import CustomButton from '@/components/CustomButton.vue'
+import CustomFooter from '@/components/CustomFooter.vue'
 </script>
 
 <template>
-  <NotificationBanner>
-    <p>blahaj.land is soon introducing a <b>paid tier</b> to bring more features/apps for you.</p>
-    <CustomButton>
-      <p>See the announcement</p>
-    </CustomButton>
-  </NotificationBanner>
   <TopBar />
   <TabGroup />
   <RouterView>
-
   </RouterView>
+  <CustomFooter>
+    <p>&copy; <a>eryn</a> Some rights reserved</p>
+    <p>Made by <a>Nerd</a></p>
+    <a>Rules & TOS</a>
+  </CustomFooter>
 </template>
 
 <style>

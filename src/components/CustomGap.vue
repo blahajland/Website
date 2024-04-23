@@ -6,7 +6,7 @@ defineProps({
     required: true,
     type: String,
     validator(value) {
-      return value instanceof String && IS_PIXEL_SZ.test(value)
+      return value === undefined || value instanceof String && IS_PIXEL_SZ.test(value)
     }
   }
 })

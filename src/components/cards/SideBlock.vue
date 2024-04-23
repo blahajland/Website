@@ -7,7 +7,8 @@ defineProps({
     default: 'var(--blahaj)',
     type: String,
     validator(value) {
-      return value instanceof String && (
+      return value === undefined ||
+        value instanceof String && (
         IS_COLOR.test(value)
         || IS_CSS_VAR.test(value)
       )
@@ -17,7 +18,8 @@ defineProps({
     default: 'var(--text)',
     type: String,
     validator(value) {
-      return value instanceof String && (
+      return value === undefined ||
+        value instanceof String && (
         IS_COLOR.test(value)
         || IS_CSS_VAR.test(value)
       )
@@ -27,39 +29,44 @@ defineProps({
 </script>
 
 <template>
-  <div class="ContentBlock">
-    <slot></slot>
+  <div class="SideBlock">
+    <div>
+      <slot name="image"></slot>
+    </div>
+    <div>
+      <slot name="default"></slot>
+    </div>
   </div>
 </template>
 
 <style>
-.ContentBlock {
+.SideBlock {
   background: v-bind(color);
   border-radius: var(--radius-small);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 32px;
+  padding: 24px;
   transition: var(--trans);
   color: v-bind(font);
-  gap: 16px;
+  gap: 24px;
+  flex: 0 0 312px;
 }
 
-.ContentBlock > p, .ContentBlock > h3 {
-  max-width: 90%;
-  text-align: center;
+.SideBlock > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 4px;
 }
 
-.ContentBlock * {
+.SideBlock * {
   margin: 0;
 }
 
-/*.ContentBlock:hover {
-  background: color-mix(in srgb, v-bind(fColor), black 20%);
-}*/
-
-.ContentBlock > img {
-  height: 128px;
+.SideBlock > div > img {
+  height: 64px;
 }
 </style>

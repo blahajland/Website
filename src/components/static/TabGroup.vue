@@ -1,27 +1,28 @@
 <script setup>
 
 import TabButton from '@/components/TabButton.vue'
+import { changeLoc } from '@/assets/js/linkTools.js'
 </script>
 
 <template>
   <div class="TabGroup">
-    <TabButton>
+    <TabButton @click="changeLoc('#p1', false)">
       <p>Presentation</p>
     </TabButton>
-    <TabButton>
+    <TabButton @click="changeLoc('#p2', false)">
       <p>Services</p>
     </TabButton>
-    <TabButton>
+    <TabButton @click="changeLoc('#p3', false)">
       <p>User Sites</p>
     </TabButton>
-    <TabButton>
+    <TabButton @click="changeLoc('#p4', false)">
       <p>Tiers</p>
     </TabButton>
-    <TabButton>
-      <p>Donations</p>
+    <TabButton @click="changeLoc('#p5',false)">
+      <p>Props</p>
     </TabButton>
-    <TabButton>
-      <p>Rules & TOS</p>
+    <TabButton @click="changeLoc('#p6',false)">
+      <p>Donations</p>
     </TabButton>
   </div>
 </template>
@@ -34,7 +35,8 @@ import TabButton from '@/components/TabButton.vue'
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 24px 0;
-  gap: 8px;background: var(--background);
+  padding: 8px 24px 16px;
+  gap: 8px;
+  background: var(--background);
 }
 </style>

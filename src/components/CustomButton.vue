@@ -8,7 +8,8 @@ defineProps({
     default: 'var(--background)',
     type: String,
     validator(value) {
-      return value instanceof String && (
+      return value === undefined ||
+        value instanceof String && (
         IS_COLOR.test(value)
         || IS_CSS_VAR.test(value))
     }
@@ -17,7 +18,8 @@ defineProps({
     default: 'var(--text)',
     type: String,
     validator(value) {
-      return value instanceof String && (
+      return value === undefined ||
+        value instanceof String && (
         IS_COLOR.test(value)
         || IS_CSS_VAR.test(value))
     }
@@ -26,7 +28,8 @@ defineProps({
     default: 'var(--hover)',
     type: String,
     validator(value) {
-      return value instanceof String && (
+      return value === undefined ||
+        value instanceof String && (
         IS_COLOR.test(value)
         || IS_CSS_VAR.test(value))
     }

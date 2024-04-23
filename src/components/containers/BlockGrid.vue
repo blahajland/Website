@@ -7,7 +7,8 @@ defineProps({
     default: '3',
     type: String,
     validator(value) {
-      return value instanceof String
+      return value === undefined ||
+        value instanceof String
         && IS_GTZ_NB.test(value)
     }
   }
