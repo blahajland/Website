@@ -26,36 +26,40 @@ defineProps({
 </script>
 
 <template>
-  <div class="ContentBlock">
+  <div class="SmallBlock">
     <slot></slot>
   </div>
 </template>
 
 <style>
-.ContentBlock {
+.SmallBlock {
   background: v-bind(color);
   border-radius: var(--radius-small);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 32px;
+  padding: 24px;
   transition: var(--trans);
   color: v-bind(font);
-  gap: 16px;
+  gap: 24px;
+  flex: 0 0 128px;
 }
 
-.ContentBlock > p,
-.ContentBlock > h3 {
-  max-width: 90%;
-  text-align: center;
-}
-
-.ContentBlock * {
+.SmallBlock * {
   margin: 0;
 }
 
-.ContentBlock > img {
-  height: 32px;
+.SmallBlock > img {
+  height: 64px;
+  border-radius: var(--radius-inf);
+}
+
+.SmallBlock:hover {
+  background: color-mix(in srgb, v-bind(color),var(--hover));
+}
+
+.SmallBlock:active {
+  background: var(--blahaj);
 }
 </style>

@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const SCROLL_AMOUNT = 380
+const SCROLL_AMOUNT = 500
 
 const scrollComp = ref(null)
 

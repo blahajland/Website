@@ -47,8 +47,8 @@ defineProps({
   padding: 24px;
   transition: var(--trans);
   color: v-bind(font);
-  gap: 24px;
-  flex: 0 0 312px;
+  gap: 32px;
+  flex: 0 0 324px;
 }
 
 .SideBlock > div {

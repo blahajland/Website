@@ -1,6 +1,6 @@
 <script setup>
-import TopBar from '@/components/static/TopBar.vue'
-import TabGroup from '@/components/static/TabGroup.vue'
+import TopBar from '@/static/TopBar.vue'
+import TabGroup from '@/static/TabGroup.vue'
 import CustomFooter from '@/components/CustomFooter.vue'
 </script>
 

@@ -20,22 +20,19 @@ import { changeLoc } from '@/assets/js/linkTools.js'
     <TabButton @click="changeLoc('#p5', false)">
       <p>Props</p>
     </TabButton>
-    <TabButton @click="changeLoc('#p6', false)">
-      <p>Donations</p>
-    </TabButton>
   </div>
 </template>
 
 <style>
 .TabGroup {
   position: sticky;
-  top: 72px;
+  top: 64px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 24px 16px;
-  gap: 8px;
+  padding: 16px 0;
+  gap: 16px;
   background: var(--background);
 }
 </style>

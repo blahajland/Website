@@ -14,7 +14,7 @@ import { changeLoc } from '@/assets/js/linkTools.js'
         <p>Donate</p>
       </PN>
       <PN @click="changeLoc('https://discord.gg/23ScBhN7xx')">
-        <img src="/icons/join.png" alt="Donate" />
+        <img src="/icons/join.png" alt="Join" />
         <p>Sign up</p>
       </PN>
       <PN @click="changeLoc('https://blahaj.land/yunohost/sso/')">
@@ -38,7 +38,7 @@ import { changeLoc } from '@/assets/js/linkTools.js'
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
+  padding: 24px 0;
 }
 
 .TopBar > a > img {
