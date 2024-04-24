@@ -209,7 +209,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
     <PageSection>
       <template #title>
         <h2 id="p4">Tiers</h2>
-        <p>Get more features and support the website! >83</p>
+        <p>Get more features and support the website >83</p>
       </template>
       <BlockGrid>
         <ContentBlock color="#BCDBFF">
@@ -247,7 +247,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
     <PageSection :last="true">
       <template #title>
         <h2 id="p5">Donations</h2>
-        <p>Thanks or your <i>kind</i> donations &lt;3</p>
+        <p>Thanks for your <i>kind</i> donations &lt;3</p>
         <CustomGap gap="8px" />
         <CustomButton style="align-self: start" color="#FFE5A3">
           <img src="/icons/donate.png" alt="Donate" />
