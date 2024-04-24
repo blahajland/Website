@@ -182,6 +182,12 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
             Access your emails securely from the webmail interface or with any preferred client.
           </p>
         </SideBlock>
+        <SideBlock color="#E0F6FF">
+          <template #image>
+            <!--img src="/icons/apps/more.png" alt="More" /-->
+          </template>
+          <h3>And much much more</h3>
+        </SideBlock>
       </SlideableList>
     </PageSection>
     <PageSection>

@@ -6,7 +6,7 @@ import { changeLoc } from '@/assets/js/linkTools.js'
 <template>
   <div class="TabGroup">
     <TabButton @click="changeLoc('#p1', false)">
-      <p>Presentation</p>
+      <p>Why ?</p>
     </TabButton>
     <TabButton @click="changeLoc('#p2', false)">
       <p>Services</p>
@@ -18,7 +18,7 @@ import { changeLoc } from '@/assets/js/linkTools.js'
       <p>Tiers</p>
     </TabButton>
     <TabButton @click="changeLoc('#p5', false)">
-      <p>Props</p>
+      <p>Donations</p>
     </TabButton>
   </div>
 </template>

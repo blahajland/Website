@@ -50,7 +50,7 @@ defineProps({
   transition: var(--trans);
   color: v-bind(font);
   gap: v-bind(gap);
-  flex: 0 0 256px;
+  flex: 0 0 300px;
 }
 
 .ContentBlock > p,
