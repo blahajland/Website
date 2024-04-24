@@ -4,11 +4,22 @@
   --radius-med: 12px;
 
   --trans: all ease-out 0.25s;
+}
 
+:root[data-theme='dark'] {
+  --background: #181825;
+  --text: #ffffff;
+  --hover: #313244;
+  --blahaj: #74c7ec;
+  --filter: brightness(0%) invert(100%);
+}
+
+:root:not([data-theme='dark']) {
   --background: #ffffff;
   --text: #000000;
   --hover: #dfdfdf;
   --blahaj: #577183;
+  --filter: none;
 }
 
 @font-face {

@@ -66,6 +66,7 @@ defineProps({
 .CustomButton > img {
   height: 20px;
   width: 20px;
+  filter: var(--filter);
 }
 
 .CustomButton > p {

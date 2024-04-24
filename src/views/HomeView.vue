@@ -9,6 +9,8 @@ import { changeLoc } from '@/assets/js/linkTools.js'
 import PageSection from '@/components/containers/PageSection.vue'
 import RandomTitles from '@/assets/json/titles.json'
 import SmallBlock from '@/components/blocks/SmallBlock.vue'
+import TabButton from '@/components/TabButton.vue'
+import TabGroup from '@/components/containers/TabGroup.vue'
 
 const randomTitles = RandomTitles.randomTitles
 
@@ -17,6 +19,23 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
 
 <template>
   <div class="HomeView">
+    <TabGroup>
+      <TabButton @click="changeLoc('#p1', false)">
+        <p>Why?</p>
+      </TabButton>
+      <TabButton @click="changeLoc('#p2', false)">
+        <p>Services</p>
+      </TabButton>
+      <TabButton @click="changeLoc('#p3', false)">
+        <p>User Sites</p>
+      </TabButton>
+      <TabButton @click="changeLoc('#p4', false)">
+        <p>Tiers</p>
+      </TabButton>
+      <TabButton @click="changeLoc('#p5', false)">
+        <p>Donations</p>
+      </TabButton>
+    </TabGroup>
     <a href="https://blahaj.itsjamie.dev/">
       <img src="/images/spinning-blahaj.gif" alt="Blahaj" />
     </a>
@@ -34,19 +53,19 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         </ContentBlock>
         <ContentBlock color="#F0C1B7">
           <p>Create your account and <b>pass the vibe check &gt;:3</b></p>
-          <CustomButton>
+          <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Sing up</p>
           </CustomButton>
         </ContentBlock>
         <ContentBlock color="#B1BCE1">
           <p>Just want to hang around? Join our <b>Discord</b></p>
-          <CustomButton>
+          <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Join</p>
           </CustomButton>
         </ContentBlock>
         <ContentBlock color="#DCDCDC">
           <p>Already part of the community? Get access to <b>all the apps</b></p>
-          <CustomButton>
+          <CustomButton @click="changeLoc('https://blahaj.land/yunohost/sso/')">
             <p>Open</p>
           </CustomButton>
         </ContentBlock>
@@ -56,7 +75,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
     <PageSection>
       <template #title>
         <h2 id="p1">Why?</h2>
-        <p>Why should you consider <b>Blahaj Land</b> for your needs? ;3</p>
+        <p>Why should you consider <b>Blahaj Land</b> for your needs ? ;3</p>
       </template>
       <BlockGrid>
         <ContentBlock color="#B1BCE1">
@@ -134,7 +153,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         </SideBlock>
         <SideBlock color="#FFB8BD">
           <template #image>
-            <img src="/icons/apps/piped.png" alt="Send" />
+            <img src="/icons/apps/piped.png" alt="Piped" />
           </template>
           <h3>Piped</h3>
           <p>
@@ -182,9 +201,9 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
             Access your emails securely from the webmail interface or with any preferred client.
           </p>
         </SideBlock>
-        <SideBlock color="#E0F6FF">
+        <SideBlock color="#F3CBFF">
           <template #image>
-            <!--img src="/icons/apps/more.png" alt="More" /-->
+            <img src="/icons/apps/more.png" alt="More" />
           </template>
           <h3>And much much more</h3>
         </SideBlock>
@@ -216,7 +235,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
           <h2>Starter</h2>
           <h3>Free</h3>
           <p>&bull; Get access to all the apps (except Nextcloud)</p>
-          <CustomButton>
+          <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Join</p>
           </CustomButton>
         </ContentBlock>
@@ -227,7 +246,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
             &bull; <b>10GB</b> of Nextcloud storage <br />&bull; Get access to all the apps
             <br />&bull; Support Blahaj Land's development
           </p>
-          <CustomButton>
+          <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
             <p>Donate</p>
           </CustomButton>
         </ContentBlock>
@@ -238,7 +257,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
             &bull; <b>250GB</b> of Nextcloud storage <br />&bull; Get access to all the apps
             <br />&bull; Support Blahaj Land's development
           </p>
-          <CustomButton>
+          <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
             <p>Donate</p>
           </CustomButton>
         </ContentBlock>
@@ -249,10 +268,6 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <h2 id="p5">Donations</h2>
         <p>Thanks for your <i>kind</i> donations &lt;3</p>
         <CustomGap gap="8px" />
-        <CustomButton style="align-self: start" color="#FFE5A3">
-          <img src="/icons/donate.png" alt="Donate" />
-          <p>Donate</p>
-        </CustomButton>
       </template>
       <SlideableList>
         <ContentBlock color="#D9F6F2">
@@ -263,14 +278,14 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <ContentBlock color="#C8E7FF">
           <h3>6vz</h3>
           <h3>1.00€</h3>
-          <CustomButton>
+          <CustomButton @click="changeLoc('https://6vz.dev')">
             <p>Website</p>
           </CustomButton>
         </ContentBlock>
         <ContentBlock color="#FBE4FF">
           <h3>Nerd &bull; 10.00€</h3>
           <p><i> Thanks for all ! You kinda saved my life </i></p>
-          <CustomButton>
+          <CustomButton @click="changeLoc('https://imalonelynerd.fr')">
             <p>Website</p>
           </CustomButton>
         </ContentBlock>
@@ -282,7 +297,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <ContentBlock color="#F9E4DD">
           <h3>Henry Hiles &bull; 11.00€</h3>
           <p><i> Good luck with blahaj.land, keep up the good work Eryn! </i></p>
-          <CustomButton>
+          <CustomButton @click="changeLoc('https://www.henryhiles.com')">
             <p>Website</p>
           </CustomButton>
         </ContentBlock>
@@ -297,7 +312,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
 
 <style>
 .HomeView {
-  padding: 64px 0;
+  padding-bottom: 64px;
   display: flex;
   flex-direction: column;
   justify-content: start;

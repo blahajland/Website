@@ -23,5 +23,7 @@
 
 .CustomFooter a {
   font-weight: 700;
+  text-decoration: none;
+  color: inherit;
 }
 </style>

@@ -13,7 +13,7 @@ defineProps({
     }
   },
   font: {
-    default: 'var(--text)',
+    default: '#101010',
     type: String,
     validator(value) {
       return (

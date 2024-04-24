@@ -1,17 +1,18 @@
 <script setup>
 import TopBar from '@/static/TopBar.vue'
-import TabGroup from '@/static/TabGroup.vue'
 import CustomFooter from '@/components/CustomFooter.vue'
+import { setThemeFromCookie } from '@/assets/js/themeTools.js'
+
+setThemeFromCookie()
 </script>
 
 <template>
   <TopBar />
-  <TabGroup />
-  <RouterView> </RouterView>
+  <RouterView></RouterView>
   <CustomFooter>
-    <p>&copy; <a>eryn</a> Some rights reserved</p>
-    <p>Made by <a>Nerd</a></p>
-    <a>Rules & TOS</a>
+    <p>&copy; <a href="https://blog.blahaj.land/">eryn</a> Some rights reserved</p>
+    <p>Made by <a href="https://github.com/imalonelynerd">Nerd</a></p>
+    <RouterLink to="/rules">Rules & TOS</RouterLink>
   </CustomFooter>
 </template>
 

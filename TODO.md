@@ -1,12 +1,13 @@
 # TODO
 
 - [ ] Mobile interface
-- [ ] Dark theme
-- [ ] Add links
-- [ ] Check colors
+- [x] Dark theme
+- [x] Add links
+- [x] Check colors
 - [ ] Join form
-- [ ] "More" block
-- [ ] Credits ?
+- [x] "More" block
+- [x] Credits ?
 - [ ] More easter eggs ?
-- [ ] Find Kofi API for donations section
-- [ ] Finish footer
+- [x] Find Kofi API for donations section
+- [x] Finish footer
+- [x] Rules & TOS

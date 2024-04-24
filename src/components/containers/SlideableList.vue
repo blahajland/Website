@@ -53,6 +53,7 @@ function scroll(amount) {
 
 .SlideButton > img {
   height: 24px;
+  filter: var(--filter);
 }
 
 .SlideContainer {

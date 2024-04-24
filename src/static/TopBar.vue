@@ -1,6 +1,7 @@
 <script setup>
 import PN from '@/components/CustomButton.vue'
 import { changeLoc } from '@/assets/js/linkTools.js'
+import { switchTheme } from '@/assets/js/themeTools.js'
 </script>
 
 <template>
@@ -21,7 +22,7 @@ import { changeLoc } from '@/assets/js/linkTools.js'
         <img src="/icons/open.png" alt="Open" />
         <p>Log in</p>
       </PN>
-      <PN>
+      <PN @click="switchTheme()">
         <img src="/icons/theme.png" alt="Theme" />
         <p>Theme</p>
       </PN>
@@ -39,10 +40,12 @@ import { changeLoc } from '@/assets/js/linkTools.js'
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
+  z-index: 5;
 }
 
 .TopBar > a > img {
   height: 32px;
+  filter: var(--filter);
 }
 
 .TopBar > div {
