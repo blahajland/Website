@@ -55,8 +55,8 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
     <CustomGap gap="32px" />
     <PageSection>
       <template #title>
-        <h2 id="p1">Why ?</h2>
-        <p>Why should you consider <b>Blahaj Land</b> for your needs ? ;3</p>
+        <h2 id="p1">Why?</h2>
+        <p>Why should you consider <b>Blahaj Land</b> for your needs? ;3</p>
       </template>
       <BlockGrid>
         <ContentBlock color="#B1BCE1">
