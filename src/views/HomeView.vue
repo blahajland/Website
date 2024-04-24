@@ -77,14 +77,18 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <ContentBlock color="#DEAAFF" gap="8px">
           <img src="/icons/friend.png" alt="Communication" />
           <h3>Bring your friends in!</h3>
-          <p>For every person you invite, you'll get <b>5GB</b> of storage.
-            If they make a donation, you'll get an extra <b>10GB</b>.</p>
+          <p>
+            For every person you invite, you'll get <b>5GB</b> of storage. If they make a donation,
+            you'll get an extra <b>10GB</b>.
+          </p>
         </ContentBlock>
         <ContentBlock color="#ECBCFD" gap="8px">
           <img src="/icons/switch.png" alt="Communication" />
           <h3>You want to host your website?</h3>
-          <p>If you switch from <b>neocities.org</b>, <b>Github Pages</b>, or any other host,
-            you'll get <b>15GB</b> of storage and a month of <b>Premium</b> for free.</p>
+          <p>
+            If you switch from <b>neocities.org</b>, <b>Github Pages</b>, or any other host, you'll
+            get <b>15GB</b> of storage and a month of <b>Premium</b> for free.
+          </p>
         </ContentBlock>
         <ContentBlock color="#FFCBF2">
           <img src="/icons/rosa.png" alt="Communication" />
@@ -205,7 +209,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <ContentBlock color="#BCDBFF">
           <h2>Starter</h2>
           <h3>Free</h3>
-          <p>&bull; Get access to all the apps</p>
+          <p>&bull; Get access to all the apps (except Nextcloud)</p>
           <CustomButton>
             <p>Join</p>
           </CustomButton>
@@ -213,9 +217,10 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <ContentBlock color="#FFCEF1">
           <h2>Supporter</h2>
           <h3>Starting at 1€/month</h3>
-          <p>&bull; <b>10GB</b> of Nextcloud storage
-            <br />&bull; Get access to all the apps
-            <br />&bull; Support Blahaj Land's development</p>
+          <p>
+            &bull; <b>10GB</b> of Nextcloud storage <br />&bull; Get access to all the apps
+            <br />&bull; Support Blahaj Land's development
+          </p>
           <CustomButton>
             <p>Donate</p>
           </CustomButton>
@@ -223,9 +228,10 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <ContentBlock color="#FFE5A3">
           <h2>Premium</h2>
           <h3>Starting at 5€/month</h3>
-          <p>&bull; <b>250GB</b> of Nextcloud storage
-            <br />&bull; Get access to all the apps
-            <br />&bull; Support Blahaj Land's development</p>
+          <p>
+            &bull; <b>250GB</b> of Nextcloud storage <br />&bull; Get access to all the apps
+            <br />&bull; Support Blahaj Land's development
+          </p>
           <CustomButton>
             <p>Donate</p>
           </CustomButton>
@@ -269,9 +275,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         </ContentBlock>
         <ContentBlock color="#F9E4DD">
           <h3>Henry Hiles &bull; 11.00€</h3>
-          <p><i>
-            Good luck with blahaj.land, keep up the good work Eryn!
-          </i></p>
+          <p><i> Good luck with blahaj.land, keep up the good work Eryn! </i></p>
           <CustomButton>
             <p>Website</p>
           </CustomButton>

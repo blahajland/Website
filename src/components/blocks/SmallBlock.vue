@@ -56,7 +56,7 @@ defineProps({
 }
 
 .SmallBlock:hover {
-  background: color-mix(in srgb, v-bind(color),var(--hover));
+  background: color-mix(in srgb, v-bind(color), var(--hover));
 }
 
 .SmallBlock:active {

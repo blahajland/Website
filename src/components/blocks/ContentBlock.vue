@@ -26,10 +26,7 @@ defineProps({
     default: '12px',
     type: String,
     validator(value) {
-      return (
-        value === undefined ||
-        (value instanceof String && (IS_PIXEL_SZ.test(value)))
-      )
+      return value === undefined || (value instanceof String && IS_PIXEL_SZ.test(value))
     }
   }
 })
