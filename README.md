@@ -18,20 +18,21 @@ npm run format
 npm run build
 ```
 
-## Submodules
-
-> **These submodules doesn't exists yet !**
+## References
 
 - BlahajTeam/blahajlanddata
   - Contains :
     - colors (colors.css)
     - dynamic data (*.json)
 - BlahajTeam/blahajlandimages
+  - users icons
+  - apps icons
 
 ## To Do
 
 ### In progress
 
+- [x] Move images
 - [ ] Mobile interface
 - [ ] Put each "dynamic" informations in another folder
     - Maybe another repo from which we could fetch/submodule...
@@ -40,7 +41,6 @@ npm run build
     - [ ] SearXNG
     - [ ] Fedi
         - [ ] Edit "Communication" block
-    - [ ] DNS Resolver
     - [ ] RSS Bridge
 
 
@@ -65,5 +65,7 @@ npm run build
 
 ### Aborted ideas
 - Credits ?
+- DNS Resolver
+
 
 > Check `Notion > ToDo > Projects > BlahajLand` for more informations

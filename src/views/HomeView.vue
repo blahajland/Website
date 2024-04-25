@@ -123,7 +123,8 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
       <SlideableContainer>
         <SideBlock color="#FFF6AD">
           <template #image>
-            <img src="/icons/apps/haste.png" alt="Haste" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/haste.png"
+                 alt="Haste" />
           </template>
           <h3>Haste</h3>
           <p>
@@ -132,7 +133,8 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         </SideBlock>
         <SideBlock color="#FFCDBA">
           <template #image>
-            <img src="/icons/apps/hedgedoc.png" alt="HedgeDoc" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/hedgedoc.png"
+                 alt="HedgeDoc" />
           </template>
           <h3>HedgeDoc</h3>
           <p>
@@ -142,7 +144,8 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         </SideBlock>
         <SideBlock color="#B8E1FF">
           <template #image>
-            <img src="/icons/apps/nextcloud.png" alt="Nextcloud" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/nextcloud.png"
+                 alt="Nextcloud" />
           </template>
           <h3>Nextcloud</h3>
           <p>
@@ -152,7 +155,8 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         </SideBlock>
         <SideBlock color="#FFB8BD">
           <template #image>
-            <img src="/icons/apps/piped.png" alt="Piped" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/piped.png"
+                 alt="Piped" />
           </template>
           <h3>Piped</h3>
           <p>
@@ -162,7 +166,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         </SideBlock>
         <SideBlock color="#B1E3FF">
           <template #image>
-            <img src="/icons/apps/send.png" alt="Send" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/send.png" alt="Send" />
           </template>
           <h3>Send</h3>
           <p>
@@ -172,28 +176,31 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         </SideBlock>
         <SideBlock color="#B5CFFF">
           <template #image>
-            <img src="/icons/apps/vaultwarden.png" alt="Vaultwarden" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/vaultwarden.png"
+                 alt="Vaultwarden" />
           </template>
           <h3>Vaultwarden</h3>
           <p>The best password manager for securely storing and managing passwords.</p>
         </SideBlock>
         <SideBlock color="#FFD3C6">
           <template #image>
-            <img src="/icons/apps/lutim.png" alt="Lutim" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/lutim.png"
+                 alt="Lutim" />
           </template>
           <h3>Lutim</h3>
           <p>An image hosting app similar to Imgur, but private and free.</p>
         </SideBlock>
         <SideBlock color="#FFBCC3">
           <template #image>
-            <img src="/icons/apps/prettyheroes.png" alt="PrettyHeroes" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/prettyheroes.png"
+                 alt="PrettyHeroes" />
           </template>
           <h3>PrettyHeroes</h3>
           <p>A simple and colorful About Me page creator with no account creation needed.</p>
         </SideBlock>
         <SideBlock color="#E0F6FF">
           <template #image>
-            <img src="/icons/apps/mail.png" alt="Mail" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/mail.png" alt="Mail" />
           </template>
           <h3>Mail</h3>
           <p>
@@ -202,7 +209,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         </SideBlock>
         <SideBlock color="#F3CBFF">
           <template #image>
-            <img src="/icons/apps/more.png" alt="More" />
+            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/more.png" alt="More" />
           </template>
           <h3>And much much more</h3>
         </SideBlock>
@@ -215,11 +222,11 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
       </template>
       <SlideableContainer>
         <SmallBlock color="#FFC1C6" @click="changeLoc('https://zoey.blahaj.land')">
-          <img src="/users/zoey.png" alt="Zoey" />
+          <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/users/zoey.png" alt="Zoey" />
           <h3>Zoey</h3>
         </SmallBlock>
         <SmallBlock color="#B1FFA9" @click="changeLoc('https://soup.blahaj.land')">
-          <img src="/users/soup.png" alt="Soup" />
+          <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/users/soup.png" alt="Soup" />
           <h3>Soup</h3>
         </SmallBlock>
       </SlideableContainer>
