@@ -1,0 +1,16 @@
+.ViewRules {
+  margin: 137px 0 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.ViewRules * {
+  margin: 0;
+}
+
+.ViewRules > h1 {
+  font-size: 2.5em;
+}

@@ -11,6 +11,7 @@ import RandomTitles from '@/assets/json/titles.json'
 import SmallBlock from '@/components/cards/SmallCard.vue'
 import TabButton from '@/components/TabButton.vue'
 import TabGroup from '@/components/containers/TabGroup.vue'
+import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
 
 const randomTitles = RandomTitles.randomTitles
 
@@ -18,7 +19,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
 </script>
 
 <template>
-  <div class="HomeView">
+  <div class="ViewRules">
     <TabGroup>
       <TabButton @click="changeLoc('#p1', false)">
         <p>Why?</p>
@@ -36,9 +37,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <p>Donations</p>
       </TabButton>
     </TabGroup>
-    <a href="https://blahaj.itsjamie.dev/">
-      <img src="/images/spinning-blahaj.gif" alt="Blahaj" />
-    </a>
+    <SpinningBlahaj />
     <PageContainer>
       <template #title>
         <h1>{{ randomTitle }}</h1>
@@ -310,38 +309,4 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
   </div>
 </template>
 
-<style>
-.HomeView {
-  padding-bottom: 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: stretch;
-  gap: 8px;
-}
-
-.HomeView * {
-  margin: 0;
-}
-
-.HomeView > h1 {
-  font-size: 2.5em;
-}
-
-.HomeView > a:first-of-type {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 32px;
-}
-
-.HomeView > a > img {
-  height: 220px;
-  z-index: -1;
-}
-
-/*.HomeView > a > img:hover {
-  filter: brightness(110%);
-}*/
-</style>
+<style></style>

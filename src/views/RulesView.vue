@@ -5,12 +5,13 @@ import TabButton from '@/components/TabButton.vue'
 import PageContainer from '@/components/containers/PageContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import ContentBlock from '@/components/cards/VerticalCard.vue'
+import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
 
 changeLoc('#', false)
 </script>
 
 <template>
-  <div class="RulesView">
+  <div class="ViewRules">
     <TabGroup>
       <TabButton @click="changeLoc('#r1', false)">
         <p>Rules</p>
@@ -19,9 +20,7 @@ changeLoc('#', false)
         <p>Terms of Service</p>
       </TabButton>
     </TabGroup>
-    <a href="https://blahaj.itsjamie.dev/">
-      <img src="/images/spinning-blahaj.gif" alt="Blahaj" />
-    </a>
+    <SpinningBlahaj />
     <PageContainer>
       <template #title>
         <h1 id="r1">Rules</h1>
@@ -97,34 +96,4 @@ changeLoc('#', false)
   </div>
 </template>
 
-<style>
-.RulesView {
-  padding-bottom: 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: stretch;
-  gap: 8px;
-}
-
-.RulesView * {
-  margin: 0;
-}
-
-.RulesView > h1 {
-  font-size: 2.5em;
-}
-
-.RulesView > a:first-of-type {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 32px;
-}
-
-.RulesView > a > img {
-  height: 220px;
-  z-index: -1;
-}
-</style>
+<style></style>
