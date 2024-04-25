@@ -5,6 +5,8 @@ import TabButton from '@/components/TabButton.vue'
 import PageSection from '@/components/containers/PageSection.vue'
 import BlockGrid from '@/components/containers/BlockGrid.vue'
 import ContentBlock from '@/components/blocks/ContentBlock.vue'
+
+changeLoc('#',false)
 </script>
 
 <template>
