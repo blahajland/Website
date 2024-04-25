@@ -14,7 +14,7 @@ function scroll(amount) {
 </script>
 
 <template>
-  <div class="SlideableList">
+  <div class="SlideableContainer">
     <div class="SlideButton" @click="scroll(-1 * SCROLL_AMOUNT)">
       <img src="/icons/left.png" alt="&lt;" />
     </div>
@@ -28,7 +28,7 @@ function scroll(amount) {
 </template>
 
 <style>
-.SlideableList {
+.SlideableContainer {
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -44,11 +44,22 @@ function scroll(amount) {
   align-items: center;
   border-radius: var(--radius-inf);
   transition: var(--trans);
-  padding: 8px;
+  opacity: 0.5;
+  /*position: absolute;*/
 }
 
+/*.SlideButton:first-of-type {
+  left: 32px;
+}
+
+.SlideButton:last-of-type {
+  right: 32px;
+}*/
+
 .SlideButton:hover {
+  padding: 8px;
   background: var(--hover);
+  opacity: 1;
 }
 
 .SlideButton > img {

@@ -2,11 +2,11 @@
 import { changeLoc } from '@/assets/js/linkTools.js'
 import TabGroup from '@/components/containers/TabGroup.vue'
 import TabButton from '@/components/TabButton.vue'
-import PageSection from '@/components/containers/PageSection.vue'
-import BlockGrid from '@/components/containers/BlockGrid.vue'
-import ContentBlock from '@/components/blocks/ContentBlock.vue'
+import PageContainer from '@/components/containers/PageContainer.vue'
+import GridContainer from '@/components/containers/GridContainer.vue'
+import ContentBlock from '@/components/cards/VerticalCard.vue'
 
-changeLoc('#',false)
+changeLoc('#', false)
 </script>
 
 <template>
@@ -22,12 +22,12 @@ changeLoc('#',false)
     <a href="https://blahaj.itsjamie.dev/">
       <img src="/images/spinning-blahaj.gif" alt="Blahaj" />
     </a>
-    <PageSection>
+    <PageContainer>
       <template #title>
         <h1 id="r1">Rules</h1>
         <p>Last updated : 14/11/2023</p>
       </template>
-      <BlockGrid>
+      <GridContainer>
         <ContentBlock color="#C3FFD4">
           <h3>Respectful Behavior</h3>
           <p>
@@ -80,20 +80,20 @@ changeLoc('#',false)
             administrators. Violation of this rule may result in immediate action.
           </p>
         </ContentBlock>
-      </BlockGrid>
-    </PageSection>
-    <PageSection :last="true">
+      </GridContainer>
+    </PageContainer>
+    <PageContainer :last="true">
       <template #title>
         <h1 id="r2">Terms of Service</h1>
         <p>Last updated : --/--/20--</p>
       </template>
-      <BlockGrid>
+      <GridContainer>
         <ContentBlock color="#DCDCDC">
           <h3>Coming soon !</h3>
           <p>More infos on the <b>Discord</b> server.</p>
         </ContentBlock>
-      </BlockGrid>
-    </PageSection>
+      </GridContainer>
+    </PageContainer>
   </div>
 </template>
 

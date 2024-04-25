@@ -1,14 +1,14 @@
 <script setup>
-import ContentBlock from '@/components/blocks/ContentBlock.vue'
+import ContentBlock from '@/components/cards/VerticalCard.vue'
 import CustomButton from '@/components/CustomButton.vue'
 import CustomGap from '@/components/CustomGap.vue'
-import BlockGrid from '@/components/containers/BlockGrid.vue'
-import SlideableList from '@/components/containers/SlideableList.vue'
-import SideBlock from '@/components/blocks/SideBlock.vue'
+import GridContainer from '@/components/containers/GridContainer.vue'
+import SlideableContainer from '@/components/containers/SlideableContainer.vue'
+import SideBlock from '@/components/cards/RowCard.vue'
 import { changeLoc } from '@/assets/js/linkTools.js'
-import PageSection from '@/components/containers/PageSection.vue'
+import PageContainer from '@/components/containers/PageContainer.vue'
 import RandomTitles from '@/assets/json/titles.json'
-import SmallBlock from '@/components/blocks/SmallBlock.vue'
+import SmallBlock from '@/components/cards/SmallCard.vue'
 import TabButton from '@/components/TabButton.vue'
 import TabGroup from '@/components/containers/TabGroup.vue'
 
@@ -39,12 +39,12 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
     <a href="https://blahaj.itsjamie.dev/">
       <img src="/images/spinning-blahaj.gif" alt="Blahaj" />
     </a>
-    <PageSection>
+    <PageContainer>
       <template #title>
         <h1>{{ randomTitle }}</h1>
         <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
       </template>
-      <BlockGrid rows="4">
+      <GridContainer rows="4">
         <ContentBlock color="#ACD3DC">
           <p>Take a tour and see <b>what's inside :3</b></p>
           <CustomButton @click="changeLoc('#p1', false)">
@@ -69,15 +69,15 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
             <p>Open</p>
           </CustomButton>
         </ContentBlock>
-      </BlockGrid>
-    </PageSection>
+      </GridContainer>
+    </PageContainer>
     <CustomGap gap="32px" />
-    <PageSection>
+    <PageContainer>
       <template #title>
         <h2 id="p1">Why?</h2>
         <p>Why should you consider <b>Blahaj Land</b> for your needs ? ;3</p>
       </template>
-      <BlockGrid>
+      <GridContainer>
         <ContentBlock color="#B1BCE1">
           <img src="/icons/website.png" alt="Website" />
           <h3>Host your own website for free!</h3>
@@ -114,14 +114,14 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
           <h3>Queer-powered</h3>
           <p>Everybody is welcome here. You always will be.</p>
         </ContentBlock>
-      </BlockGrid>
-    </PageSection>
-    <PageSection>
+      </GridContainer>
+    </PageContainer>
+    <PageContainer>
       <template #title>
         <h2 id="p2">Services</h2>
         <p>The stuff we host >:3</p>
       </template>
-      <SlideableList>
+      <SlideableContainer>
         <SideBlock color="#FFF6AD">
           <template #image>
             <img src="/icons/apps/haste.png" alt="Haste" />
@@ -207,14 +207,14 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
           </template>
           <h3>And much much more</h3>
         </SideBlock>
-      </SlideableList>
-    </PageSection>
-    <PageSection>
+      </SlideableContainer>
+    </PageContainer>
+    <PageContainer>
       <template #title>
         <h2 id="p3">User sites</h2>
         <p>Here you can view our user's sites :3</p>
       </template>
-      <SlideableList>
+      <SlideableContainer>
         <SmallBlock color="#FFC1C6" @click="changeLoc('https://zoey.blahaj.land')">
           <img src="/users/zoey.png" alt="Zoey" />
           <h3>Zoey</h3>
@@ -223,14 +223,14 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
           <img src="/users/soup.png" alt="Soup" />
           <h3>Soup</h3>
         </SmallBlock>
-      </SlideableList>
-    </PageSection>
-    <PageSection>
+      </SlideableContainer>
+    </PageContainer>
+    <PageContainer>
       <template #title>
         <h2 id="p4">Tiers</h2>
         <p>Get more features and support the website >83</p>
       </template>
-      <BlockGrid>
+      <GridContainer>
         <ContentBlock color="#BCDBFF">
           <h2>Starter</h2>
           <h3>Free</h3>
@@ -261,15 +261,15 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
             <p>Donate</p>
           </CustomButton>
         </ContentBlock>
-      </BlockGrid>
-    </PageSection>
-    <PageSection :last="true">
+      </GridContainer>
+    </PageContainer>
+    <PageContainer :last="true">
       <template #title>
         <h2 id="p5">Donations</h2>
         <p>Thanks for your <i>kind</i> donations &lt;3</p>
         <CustomGap gap="8px" />
       </template>
-      <SlideableList>
+      <SlideableContainer>
         <ContentBlock color="#D9F6F2">
           <h3>Magnetron</h3>
           <h3>6.00€</h3>
@@ -305,8 +305,8 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
           <h3>imnotklaus</h3>
           <h3>2.00€</h3>
         </ContentBlock>
-      </SlideableList>
-    </PageSection>
+      </SlideableContainer>
+    </PageContainer>
   </div>
 </template>
 

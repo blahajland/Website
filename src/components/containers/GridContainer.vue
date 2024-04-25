@@ -13,13 +13,13 @@ defineProps({
 </script>
 
 <template>
-  <div class="BlockGrid">
+  <div class="GridContainer">
     <slot></slot>
   </div>
 </template>
 
 <style>
-.BlockGrid {
+.GridContainer {
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(v-bind(rows), 1fr);
