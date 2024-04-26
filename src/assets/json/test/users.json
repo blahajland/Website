@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "color":"#FFC1C6",
+      "img": "https://raw.githubusercontent.com/blahajland/blahajlandimages/master/users/zoey.png",
+      "title":"Zoey",
+      "href": "https://zoey.blahaj.land"
+    },
+    {
+      "color": "#B1FFA9",
+      "img": "https://raw.githubusercontent.com/blahajland/blahajlandimages/master/users/soup.png",
+      "title": "Soup",
+      "href":"https://soup.blahaj.land"
+    }
+  ]
+}

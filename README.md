@@ -34,14 +34,15 @@ npm run build
 
 - [x] Move images
 - [ ] Mobile interface
-- [ ] Put each "dynamic" informations in another folder
+- [x] Put each "dynamic" informations in another folder
     - Maybe another repo from which we could fetch/submodule...
+    - Yeet colors too !
 
-- [ ] Add new apps
-    - [ ] SearXNG
-    - [ ] Fedi
-        - [ ] Edit "Communication" block
-    - [ ] RSS Bridge
+- [x] Add new apps
+    - [x] SearXNG
+    - [x] Fedi
+        - [x] Edit "Communication" block
+    - [x] RSS Bridge
 
 
 ### Pending
@@ -58,10 +59,11 @@ npm run build
 - [x] Rules & TOS
 
 ### Low priority
+- [ ] Local fonts
 - [ ] Translations
-    - Blocked by [(line 16)]
+    - Blocked by [(line 37)]
     - https://vue-i18n.intlify.dev/guide/essentials/started.html
-- [ ] More easter eggs ?
+- [ ] More easter eggs (GVH :) ?
 
 ### Aborted ideas
 - Credits ?

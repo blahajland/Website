@@ -13,6 +13,9 @@ import TabButton from '@/components/TabButton.vue'
 import TabGroup from '@/components/containers/TabGroup.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
 
+import AppList from '@/assets/json/test/apps.json'
+import UsersList from '@/assets/json/test/users.json'
+
 const randomTitles = RandomTitles.randomTitles
 
 const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)]
@@ -90,7 +93,7 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <ContentBlock color="#C8E7FF">
           <img src="/icons/communication.png" alt="Communication" />
           <h3>Communication services</h3>
-          <p>E-mail, blogs, Send and <b>more</b>!</p>
+          <p>E-mail, Fediverse, Send and <b>more</b>!</p>
         </ContentBlock>
         <ContentBlock color="#DEAAFF" gap="8px">
           <img src="/icons/friend.png" alt="Communication" />
@@ -121,97 +124,13 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <p>The stuff we host >:3</p>
       </template>
       <SlideableContainer>
-        <SideBlock color="#FFF6AD">
+        <SideBlock v-for="(e, i) in AppList.apps" :key="i" :color="e.color">
           <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/haste.png"
-                 alt="Haste" />
+            <img :src="e.img"
+                 :alt="e.title" />
           </template>
-          <h3>Haste</h3>
-          <p>
-            A free and private pastebin alternative for sharing code snippets and text securely.
-          </p>
-        </SideBlock>
-        <SideBlock color="#FFCDBA">
-          <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/hedgedoc.png"
-                 alt="HedgeDoc" />
-          </template>
-          <h3>HedgeDoc</h3>
-          <p>
-            An open-source collaborative markdown editor that respects privacy and allows to easily
-            share docs.
-          </p>
-        </SideBlock>
-        <SideBlock color="#B8E1FF">
-          <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/nextcloud.png"
-                 alt="Nextcloud" />
-          </template>
-          <h3>Nextcloud</h3>
-          <p>
-            An all-in-one solution for file sharing, calendar, contacts, and more, hosted on your
-            own cloud server.
-          </p>
-        </SideBlock>
-        <SideBlock color="#FFB8BD">
-          <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/piped.png"
-                 alt="Piped" />
-          </template>
-          <h3>Piped</h3>
-          <p>
-            A private YouTube player with no ads or tracking, perfect for watching content without
-            compromising privacy.
-          </p>
-        </SideBlock>
-        <SideBlock color="#B1E3FF">
-          <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/send.png" alt="Send" />
-          </template>
-          <h3>Send</h3>
-          <p>
-            Securely transfer large files between devices using sharing links with up to 2,5GB
-            capacity per file.
-          </p>
-        </SideBlock>
-        <SideBlock color="#B5CFFF">
-          <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/vaultwarden.png"
-                 alt="Vaultwarden" />
-          </template>
-          <h3>Vaultwarden</h3>
-          <p>The best password manager for securely storing and managing passwords.</p>
-        </SideBlock>
-        <SideBlock color="#FFD3C6">
-          <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/lutim.png"
-                 alt="Lutim" />
-          </template>
-          <h3>Lutim</h3>
-          <p>An image hosting app similar to Imgur, but private and free.</p>
-        </SideBlock>
-        <SideBlock color="#FFBCC3">
-          <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/prettyheroes.png"
-                 alt="PrettyHeroes" />
-          </template>
-          <h3>PrettyHeroes</h3>
-          <p>A simple and colorful About Me page creator with no account creation needed.</p>
-        </SideBlock>
-        <SideBlock color="#E0F6FF">
-          <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/mail.png" alt="Mail" />
-          </template>
-          <h3>Mail</h3>
-          <p>
-            Access your emails securely from the webmail interface or with any preferred client.
-          </p>
-        </SideBlock>
-        <SideBlock color="#F3CBFF">
-          <template #image>
-            <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/apps/more.png" alt="More" />
-          </template>
-          <h3>And much much more</h3>
+          <h3>{{ e.title }}</h3>
+          <p>{{ e.desc }}</p>
         </SideBlock>
       </SlideableContainer>
     </PageContainer>
@@ -221,13 +140,9 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <p>Here you can view our user's sites :3</p>
       </template>
       <SlideableContainer>
-        <SmallBlock color="#FFC1C6" @click="changeLoc('https://zoey.blahaj.land')">
-          <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/users/zoey.png" alt="Zoey" />
-          <h3>Zoey</h3>
-        </SmallBlock>
-        <SmallBlock color="#B1FFA9" @click="changeLoc('https://soup.blahaj.land')">
-          <img src="https://raw.githubusercontent.com/blahajland/blahajlandimages/master/users/soup.png" alt="Soup" />
-          <h3>Soup</h3>
+        <SmallBlock v-for="(e, i) in UsersList.users" :key="i" :color="e.color" @click="changeLoc(e.href)">
+          <img :src="e.img" :alt="e.title" />
+          <h3>{{ e.title}}</h3>
         </SmallBlock>
       </SlideableContainer>
     </PageContainer>

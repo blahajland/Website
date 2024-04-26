@@ -13,7 +13,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 32px;
+  padding: 64px 0 32px;
 }
 
 a > img {
