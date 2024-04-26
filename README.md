@@ -48,7 +48,6 @@ npm run build
 ### Pending
 - [ ] Join form
 - [ ] Remake donations
-    - Find Kofi API for donations section
 - [ ] Edit tiers part
 
 - [x] Dark theme
