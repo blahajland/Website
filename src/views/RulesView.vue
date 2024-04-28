@@ -6,6 +6,24 @@ import PageContainer from '@/components/containers/PageContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import ContentBlock from '@/components/cards/VerticalCard.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
+import { onBeforeMount, ref } from 'vue'
+import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
+
+import links from '@/assets/json/links.json'
+
+const rLastUpdated = ref('')
+const tLastUpdated = ref('')
+const rulesList = ref([])
+const tosList = ref([])
+
+onBeforeMount(
+  async () => {
+    rulesList.value = await fetchDataAsJson(links.rules)
+    tosList.value = await fetchDataAsJson(links.tos)
+    rLastUpdated.value = rulesList.value['updated']
+    tLastUpdated.value = tosList.value['updated']
+  }
+)
 
 changeLoc('#', false)
 </script>
@@ -24,72 +42,24 @@ changeLoc('#', false)
     <PageContainer>
       <template #title>
         <h1 id="r1">Rules</h1>
-        <p>Last updated : 14/11/2023</p>
+        <p>Last updated : {{ rLastUpdated }}</p>
       </template>
       <GridContainer>
-        <ContentBlock color="#C3FFD4">
-          <h3>Respectful Behavior</h3>
-          <p>
-            Treat others with respect and kindness. Do not engage in behavior that may be perceived
-            as disrespectful, offensive, or harmful. Remember that behind each username is a real
-            person.
-          </p>
-        </ContentBlock>
-        <ContentBlock color="#B1BCE1">
-          <h3>Anti-Discrimination</h3>
-          <p>
-            Absolutely no tolerance for homophobia, transphobia, bigotry, or racism. This includes
-            offensive language, slurs, or any form of discrimination based on race, gender, sexual
-            orientation, or identity.
-          </p>
-        </ContentBlock>
-        <ContentBlock color="#ACD3DC">
-          <h3>Content Piracy</h3>
-          <p>
-            Do not share or promote links to pirated content, unless explicitly allowed by the
-            server owner. Respect intellectual property rights and adhere to copyright laws.
-          </p>
-        </ContentBlock>
-        <ContentBlock color="#C8E7FF">
-          <h3>Anti-Spam</h3>
-          <p>
-            Refrain from spamming the channels with repetitive messages, excessive emojis, or any
-            form of unwanted content.
-          </p>
-        </ContentBlock>
-        <ContentBlock color="#DEAAFF">
-          <h3>Zalgo-Free Zone</h3>
-          <p>
-            Do not use zalgo text or any other forms of disruptive formatting that make messages
-            difficult to read. Maintain clear and comprehensible communication.
-          </p>
-        </ContentBlock>
-        <ContentBlock color="#ECBCFD">
-          <h3>Spoiler Etiquette</h3>
-          <p>
-            If discussing sensitive content, use spoliers and ensure you tag the spoilered content
-            accordingly.
-          </p>
-        </ContentBlock>
-        <ContentBlock color="#FFCBF2">
-          <h3>NSFW Guidelines</h3>
-          <p>
-            Explicit adult content is strictly prohibited outside of designated NSFW channels. The
-            definition of NSFW content is at the discretion of the server moderators and
-            administrators. Violation of this rule may result in immediate action.
-          </p>
+        <ContentBlock v-for="(e, i) in rulesList['rules']" :key="i" :color="e.color">
+          <h3>{{e.title}}</h3>
+          <p v-html="e.desc"></p>
         </ContentBlock>
       </GridContainer>
     </PageContainer>
     <PageContainer :last="true">
       <template #title>
         <h1 id="r2">Terms of Service</h1>
-        <p>Last updated : --/--/20--</p>
+        <p>Last updated : {{ tLastUpdated }}</p>
       </template>
       <GridContainer>
-        <ContentBlock color="#DCDCDC">
-          <h3>Coming soon !</h3>
-          <p>More infos on the <b>Discord</b> server.</p>
+        <ContentBlock v-for="(e, i) in tosList['tos']" :key="i" :color="e.color">
+          <h3>{{e.title}}</h3>
+          <p v-html="e.desc"></p>
         </ContentBlock>
       </GridContainer>
     </PageContainer>

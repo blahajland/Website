@@ -7,18 +7,29 @@ import SlideableContainer from '@/components/containers/SlideableContainer.vue'
 import SideBlock from '@/components/cards/RowCard.vue'
 import { changeLoc } from '@/assets/js/linkTools.js'
 import PageContainer from '@/components/containers/PageContainer.vue'
-import RandomTitles from '@/assets/json/titles.json'
 import SmallBlock from '@/components/cards/SmallCard.vue'
 import TabButton from '@/components/TabButton.vue'
 import TabGroup from '@/components/containers/TabGroup.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
+import links from '@/assets/json/links.json'
+import { onBeforeMount, ref } from 'vue'
+import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
 
-import AppList from '@/assets/json/test/apps.json'
-import UsersList from '@/assets/json/test/users.json'
+const appList = ref([])
+const usersList = ref([])
+const donationsList = ref([])
+const randomTitle = ref('')
 
-const randomTitles = RandomTitles.randomTitles
-
-const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)]
+onBeforeMount(async () => {
+  appList.value = await fetchDataAsJson(links.apps)
+  usersList.value = await fetchDataAsJson(links.users)
+  donationsList.value = await fetchDataAsJson(links.donations)
+  const randomTitles = await fetchDataAsJson(links.titles)
+  randomTitle.value =
+    randomTitles
+      ['randomTitles']
+      [Math.floor(Math.random() * randomTitles['randomTitles'].length)]
+})
 </script>
 
 <template>
@@ -124,13 +135,12 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <p>The stuff we host >:3</p>
       </template>
       <SlideableContainer>
-        <SideBlock v-for="(e, i) in AppList.apps" :key="i" :color="e.color">
+        <SideBlock v-for="(e, i) in appList['apps']" :key="i" :color="e.color">
           <template #image>
-            <img :src="e.img"
-                 :alt="e.title" />
+            <img :src="e.img" :alt="e.title" />
           </template>
           <h3>{{ e.title }}</h3>
-          <p>{{ e.desc }}</p>
+          <p v-html="e.desc"></p>
         </SideBlock>
       </SlideableContainer>
     </PageContainer>
@@ -140,9 +150,9 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <p>Here you can view our user's sites :3</p>
       </template>
       <SlideableContainer>
-        <SmallBlock v-for="(e, i) in UsersList.users" :key="i" :color="e.color" @click="changeLoc(e.href)">
+        <SmallBlock v-for="(e, i) in usersList['users']" :key="i" :color="e.color" @click="changeLoc(e.href)">
           <img :src="e.img" :alt="e.title" />
-          <h3>{{ e.title}}</h3>
+          <h3>{{ e.title }}</h3>
         </SmallBlock>
       </SlideableContainer>
     </PageContainer>
@@ -155,7 +165,9 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <ContentBlock color="#BCDBFF">
           <h2>Starter</h2>
           <h3>Free</h3>
-          <p>&bull; Get access to all the apps (except Nextcloud)</p>
+          <p>&bull; Send, Vaultwarden, Haste & more
+            <br />&bull; Email (500MB quota)
+            <br />&bull; One hosted site</p>
           <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Join</p>
           </CustomButton>
@@ -164,8 +176,9 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
           <h2>Supporter</h2>
           <h3>Starting at 1€/month</h3>
           <p>
-            &bull; <b>10GB</b> of Nextcloud storage <br />&bull; Get access to all the apps
-            <br />&bull; Support Blahaj Land's development
+            &bull; <b>10GB</b> of Nextcloud storage
+            <br />&bull; Unlimited site hosting
+            <br />&bull; All the advantages of the <b>Starter</b> tier
           </p>
           <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
             <p>Donate</p>
@@ -175,8 +188,9 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
           <h2>Premium</h2>
           <h3>Starting at 5€/month</h3>
           <p>
-            &bull; <b>250GB</b> of Nextcloud storage <br />&bull; Get access to all the apps
-            <br />&bull; Support Blahaj Land's development
+            &bull; <b>250GB</b> of Nextcloud storage
+            <br />&bull; Discord bot hosting
+            <br />&bull; All the advantages of the <b>Supporter</b> tier
           </p>
           <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
             <p>Donate</p>
@@ -191,40 +205,11 @@ const randomTitle = randomTitles[Math.floor(Math.random() * randomTitles.length)
         <CustomGap gap="8px" />
       </template>
       <SlideableContainer>
-        <ContentBlock color="#D9F6F2">
-          <h3>Magnetron</h3>
-          <h3>6.00€</h3>
-          <p><i>FIRST</i></p>
-        </ContentBlock>
-        <ContentBlock color="#C8E7FF">
-          <h3>6vz</h3>
-          <h3>1.00€</h3>
-          <CustomButton @click="changeLoc('https://6vz.dev')">
-            <p>Website</p>
-          </CustomButton>
-        </ContentBlock>
-        <ContentBlock color="#FBE4FF">
-          <h3>Nerd &bull; 10.00€</h3>
-          <p><i> Thanks for all ! You kinda saved my life </i></p>
-          <CustomButton @click="changeLoc('https://imalonelynerd.fr')">
-            <p>Website</p>
-          </CustomButton>
-        </ContentBlock>
-        <ContentBlock color="#FBD1FF">
-          <h3>Matth. B</h3>
-          <h3>5.00€</h3>
-          <p><i>keep it up</i></p>
-        </ContentBlock>
-        <ContentBlock color="#F9E4DD">
-          <h3>Henry Hiles &bull; 11.00€</h3>
-          <p><i> Good luck with blahaj.land, keep up the good work Eryn! </i></p>
-          <CustomButton @click="changeLoc('https://www.henryhiles.com')">
-            <p>Website</p>
-          </CustomButton>
-        </ContentBlock>
-        <ContentBlock color="#FDE4E4">
-          <h3>imnotklaus</h3>
-          <h3>2.00€</h3>
+        <ContentBlock v-for="(e, i) in donationsList['donations']" :key="i" :color="e.color">
+          <h3>{{ e.title }}</h3>
+          <p>
+            <i>{{ e.desc }}</i>
+          </p>
         </ContentBlock>
       </SlideableContainer>
     </PageContainer>

@@ -31,42 +31,39 @@ npm run build
 ## To Do
 
 ### In progress
-
-- [x] Move images
 - [ ] Mobile interface
-- [x] Put each "dynamic" informations in another folder
-    - Maybe another repo from which we could fetch/submodule...
-    - Yeet colors too !
-
-- [x] Add new apps
-    - [x] SearXNG
-    - [x] Fedi
-        - [x] Edit "Communication" block
-    - [x] RSS Bridge
-
 
 ### Pending
-- [ ] Join form
-- [ ] Remake donations
-- [ ] Edit tiers part
 
+### Low priority
+- [ ] Translations
+    - Blocked by [(line 37)]
+    - https://vue-i18n.intlify.dev/guide/essentials/started.html
+    - https://translations.blahaj.land/
+- [ ] More easter eggs (GVH :) ?
+
+### Done
+- [x] Local fonts
+- [x] Move images
+- [x] Add new apps
+  - [x] SearXNG
+  - [x] Fedi
+    - [x] Edit "Communication" block
+  - [x] RSS Bridge
+- [x] Put each "dynamic" informations in another folder
+  - [x] Maybe another repo from which we could fetch/submodule...
+- [x] Edit tiers part
 - [x] Dark theme
 - [x] Add links
 - [x] Check colors
 - [x] "More" block
 - [x] Finish footer
 - [x] Rules & TOS
-
-### Low priority
-- [ ] Local fonts
-- [ ] Translations
-    - Blocked by [(line 37)]
-    - https://vue-i18n.intlify.dev/guide/essentials/started.html
-- [ ] More easter eggs (GVH :) ?
+- [x] Remake donations
 
 ### Aborted ideas
 - Credits ?
 - DNS Resolver
-
+- Yeet colors too !
 
 > Check `Notion > ToDo > Projects > BlahajLand` for more informations

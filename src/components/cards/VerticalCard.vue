@@ -4,29 +4,20 @@ import { IS_COLOR, IS_CSS_VAR, IS_PIXEL_SZ } from '@/assets/js/propsTools.js'
 defineProps({
   color: {
     default: 'var(--blahaj)',
-    type: String,
     validator(value) {
-      return (
-        value === undefined ||
-        (value instanceof String && (IS_COLOR.test(value) || IS_CSS_VAR.test(value)))
-      )
+      return value instanceof String && (IS_COLOR.test(value) || IS_CSS_VAR.test(value))
     }
   },
   font: {
     default: '#101010',
-    type: String,
     validator(value) {
-      return (
-        value === undefined ||
-        (value instanceof String && (IS_COLOR.test(value) || IS_CSS_VAR.test(value)))
-      )
+      return value instanceof String && (IS_COLOR.test(value) || IS_CSS_VAR.test(value))
     }
   },
   gap: {
     default: '12px',
-    type: String,
     validator(value) {
-      return value === undefined || (value instanceof String && IS_PIXEL_SZ.test(value))
+      (value instanceof String && IS_PIXEL_SZ.test(value))
     }
   }
 })

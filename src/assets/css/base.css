@@ -1,8 +1,8 @@
 :root {
-  --radius-inf: 9999px;
-  --radius-small: 4px;
-  --radius-med: 12px;
-  --trans: all ease-out 0.25s;
+    --radius-inf: 9999px;
+    --radius-small: 4px;
+    --radius-med: 12px;
+    --trans: all ease-out 0.25s;
 }
 
 /*@media screen and (max-width: 1200px) {
@@ -13,39 +13,37 @@
 }*/
 
 :root[data-theme='dark'] {
-  --background: #181825;
-  --text: #ffffff;
-  --hover: #313244;
-  --blahaj: #74c7ec;
-  --filter: brightness(0%) invert(100%);
+    --background: #181825;
+    --text: #ffffff;
+    --hover: #313244;
+    --blahaj: #74c7ec;
+    --filter: brightness(0%) invert(100%);
 }
 
 :root:not([data-theme='dark']) {
-  --background: #ffffff;
-  --text: #000000;
-  --hover: #dfdfdf;
-  --blahaj: #577183;
-  --filter: none;
+    --background: #ffffff;
+    --text: #000000;
+    --hover: #dfdfdf;
+    --blahaj: #577183;
+    --filter: none;
 }
 
 @font-face {
-  font-family: Noto IKEA;
-  src: url('https://www.ikea.com/global/assets/fonts/woff2/noto-ikea-400.latin.647e877d.woff2')
-    format('woff2');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074,
+    font-family: Noto IKEA;
+    src: url('@/assets/fonts/NotoIKEARegular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074,
     U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: Noto IKEA;
-  src: url('https://www.ikea.com/global/assets/fonts/woff2/noto-ikea-700.latin.d7277c39.woff2')
-    format('woff2');
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074,
+    font-family: Noto IKEA;
+    src: url('@/assets/fonts/NotoIKEABold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074,
     U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
