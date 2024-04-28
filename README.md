@@ -22,7 +22,6 @@ npm run build
 
 - BlahajTeam/blahajlanddata
   - Contains :
-    - colors (colors.css)
     - dynamic data (*.json)
 - BlahajTeam/blahajlandimages
   - users icons
@@ -31,12 +30,10 @@ npm run build
 ## To Do
 
 ### In progress
-- [ ] Mobile interface
 
 ### Pending
 
 ### Low priority
-- [ ] transfer `base.css` in `blahajlanddata` once finished
 - [ ] Translations
     - Blocked by [(line 37)]
     - https://vue-i18n.intlify.dev/guide/essentials/started.html
@@ -44,6 +41,7 @@ npm run build
 - [ ] More easter eggs (GVH :) ?
 
 ### Done
+- [x] Mobile interface
 - [x] Local fonts
 - [x] Move images
 - [x] Add new apps
@@ -51,7 +49,7 @@ npm run build
   - [x] Fedi
     - [x] Edit "Communication" block
   - [x] RSS Bridge
-- [x] Put each "dynamic" informations in another folder
+- [x] Put each "dynamic" information in another folder
   - [x] Maybe another repo from which we could fetch/submodule...
 - [x] Edit tiers part
 - [x] Dark theme
@@ -63,8 +61,9 @@ npm run build
 - [x] Remake donations
 
 ### Aborted ideas
+- Transfer `base.css` in `blahajlanddata` once finished
 - Credits ?
 - DNS Resolver
 - Yeet colors too !
 
-> Check `Notion > ToDo > Projects > BlahajLand` for more informations
+> Check `Notion > ToDo > Projects > BlahajLand` for more information

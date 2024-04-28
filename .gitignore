@@ -28,6 +28,4 @@ coverage
 
 *.tsbuildinfo
 
-dist
-
 *.scratch

@@ -1,8 +1,8 @@
 {
-  "apps": "https://raw.githubusercontent.com/blahajland/BlahajLandData/master/json/apps.json",
-  "users": "https://raw.githubusercontent.com/blahajland/BlahajLandData/master/json/users.json",
-  "donations": "https://raw.githubusercontent.com/blahajland/BlahajLandData/master/json/donations.json",
-  "titles": "https://raw.githubusercontent.com/blahajland/BlahajLandData/master/json/titles.json",
-  "rules": "https://raw.githubusercontent.com/blahajland/BlahajLandData/master/json/rules.json",
-  "tos": "https://raw.githubusercontent.com/blahajland/BlahajLandData/master/json/tos.json"
+  "apps": "https://blahajland.github.io/BlahajLandData/json/apps.json",
+  "users": "https://blahajland.github.io/BlahajLandData/json/users.json",
+  "donations": "https://blahajland.github.io/BlahajLandData/json/donations.json",
+  "titles": "https://blahajland.github.io/BlahajLandData/json/titles.json",
+  "rules": "https://blahajland.github.io/BlahajLandData/json/rules.json",
+  "tos": "https://blahajland.github.io/BlahajLandData/json/tos.json"
 }

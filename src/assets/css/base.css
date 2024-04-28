@@ -12,22 +12,6 @@
   }
 }
 
-:root[data-theme='dark'] {
-  --background: #181825;
-  --text: #ffffff;
-  --hover: #313244;
-  --blahaj: #74c7ec;
-  --filter: brightness(0%) invert(100%);
-}
-
-:root:not([data-theme='dark']) {
-  --background: #ffffff;
-  --text: #000000;
-  --hover: #dfdfdf;
-  --blahaj: #577183;
-  --filter: none;
-}
-
 @font-face {
   font-family: Noto IKEA;
   src: url('@/assets/fonts/NotoIKEARegular.woff2') format('woff2');
