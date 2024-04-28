@@ -6,7 +6,7 @@ defineProps({
     default: '3',
 
     validator(value) {
-      (value instanceof String && IS_GTZ_NB.test(value))
+      value instanceof String && IS_GTZ_NB.test(value)
     }
   }
 })

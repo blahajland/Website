@@ -11,19 +11,17 @@ import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
 
 import links from '@/assets/json/links.json'
 
-const rLastUpdated = ref('')
-const tLastUpdated = ref('')
+const rLastUpdated = ref('__/__/____')
+const tLastUpdated = ref('__/__/____')
 const rulesList = ref([])
 const tosList = ref([])
 
-onBeforeMount(
-  async () => {
-    rulesList.value = await fetchDataAsJson(links.rules)
-    tosList.value = await fetchDataAsJson(links.tos)
-    rLastUpdated.value = rulesList.value['updated']
-    tLastUpdated.value = tosList.value['updated']
-  }
-)
+onBeforeMount(async () => {
+  rulesList.value = await fetchDataAsJson(links.rules)
+  tosList.value = await fetchDataAsJson(links.tos)
+  rLastUpdated.value = rulesList.value['updated']
+  tLastUpdated.value = tosList.value['updated']
+})
 
 changeLoc('#', false)
 </script>
@@ -46,7 +44,7 @@ changeLoc('#', false)
       </template>
       <GridContainer>
         <ContentBlock v-for="(e, i) in rulesList['rules']" :key="i" :color="e.color">
-          <h3>{{e.title}}</h3>
+          <h3>{{ e.title }}</h3>
           <p v-html="e.desc"></p>
         </ContentBlock>
       </GridContainer>
@@ -58,7 +56,7 @@ changeLoc('#', false)
       </template>
       <GridContainer>
         <ContentBlock v-for="(e, i) in tosList['tos']" :key="i" :color="e.color">
-          <h3>{{e.title}}</h3>
+          <h3>{{ e.title }}</h3>
           <p v-html="e.desc"></p>
         </ContentBlock>
       </GridContainer>

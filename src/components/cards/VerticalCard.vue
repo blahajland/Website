@@ -15,9 +15,9 @@ defineProps({
     }
   },
   gap: {
-    default: '12px',
+    default: '16px',
     validator(value) {
-      (value instanceof String && IS_PIXEL_SZ.test(value))
+      value instanceof String && IS_PIXEL_SZ.test(value)
     }
   }
 })

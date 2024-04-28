@@ -8,6 +8,7 @@ import SideBlock from '@/components/cards/RowCard.vue'
 import { changeLoc } from '@/assets/js/linkTools.js'
 import PageContainer from '@/components/containers/PageContainer.vue'
 import SmallBlock from '@/components/cards/SmallCard.vue'
+import SmallCard from '@/components/cards/SmallCard.vue'
 import TabButton from '@/components/TabButton.vue'
 import TabGroup from '@/components/containers/TabGroup.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
@@ -18,7 +19,7 @@ import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
 const appList = ref([])
 const usersList = ref([])
 const donationsList = ref([])
-const randomTitle = ref('')
+const randomTitle = ref('Welcome to Blahaj Land')
 
 onBeforeMount(async () => {
   appList.value = await fetchDataAsJson(links.apps)
@@ -26,9 +27,7 @@ onBeforeMount(async () => {
   donationsList.value = await fetchDataAsJson(links.donations)
   const randomTitles = await fetchDataAsJson(links.titles)
   randomTitle.value =
-    randomTitles
-      ['randomTitles']
-      [Math.floor(Math.random() * randomTitles['randomTitles'].length)]
+    randomTitles['randomTitles'][Math.floor(Math.random() * randomTitles['randomTitles'].length)]
 })
 </script>
 
@@ -150,7 +149,13 @@ onBeforeMount(async () => {
         <p>Here you can view our user's sites :3</p>
       </template>
       <SlideableContainer>
-        <SmallBlock v-for="(e, i) in usersList['users']" :key="i" :color="e.color" @click="changeLoc(e.href)">
+        <SmallBlock
+          v-for="(e, i) in usersList['users']"
+          :key="i"
+          :color="e.color"
+          @click="changeLoc(e.href)"
+          :clickable="true"
+        >
           <img :src="e.img" :alt="e.title" />
           <h3>{{ e.title }}</h3>
         </SmallBlock>
@@ -165,9 +170,11 @@ onBeforeMount(async () => {
         <ContentBlock color="#BCDBFF">
           <h2>Starter</h2>
           <h3>Free</h3>
-          <p>&bull; Send, Vaultwarden, Haste & more
-            <br />&bull; Email (500MB quota)
-            <br />&bull; One hosted site</p>
+          <p>
+            &bull; Send, Vaultwarden, Haste <b>&amp; more </b><br />&bull; Email (500MB quota)
+            <br />&bull; One
+            <b>hosted site</b>
+          </p>
           <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Join</p>
           </CustomButton>
@@ -176,8 +183,7 @@ onBeforeMount(async () => {
           <h2>Supporter</h2>
           <h3>Starting at 1€/month</h3>
           <p>
-            &bull; <b>10GB</b> of Nextcloud storage
-            <br />&bull; Unlimited site hosting
+            &bull; <b>10GB</b> of Nextcloud storage <br />&bull; <b>Unlimited</b> site hosting
             <br />&bull; All the advantages of the <b>Starter</b> tier
           </p>
           <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
@@ -188,8 +194,7 @@ onBeforeMount(async () => {
           <h2>Premium</h2>
           <h3>Starting at 5€/month</h3>
           <p>
-            &bull; <b>250GB</b> of Nextcloud storage
-            <br />&bull; Discord bot hosting
+            &bull; <b>250GB</b> of Nextcloud storage <br />&bull; <b>Discord bot</b> hosting
             <br />&bull; All the advantages of the <b>Supporter</b> tier
           </p>
           <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
@@ -205,12 +210,17 @@ onBeforeMount(async () => {
         <CustomGap gap="8px" />
       </template>
       <SlideableContainer>
-        <ContentBlock v-for="(e, i) in donationsList['donations']" :key="i" :color="e.color">
+        <SmallCard
+          v-for="(e, i) in donationsList['donations']"
+          :key="i"
+          :color="e.color"
+          orientation="column"
+        >
           <h3>{{ e.title }}</h3>
-          <p>
+          <p :title="e.desc">
             <i>{{ e.desc }}</i>
           </p>
-        </ContentBlock>
+        </SmallCard>
       </SlideableContainer>
     </PageContainer>
   </div>

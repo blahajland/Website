@@ -36,6 +36,7 @@ npm run build
 ### Pending
 
 ### Low priority
+- [ ] transfer `base.css` in `blahajlanddata` once finished
 - [ ] Translations
     - Blocked by [(line 37)]
     - https://vue-i18n.intlify.dev/guide/essentials/started.html

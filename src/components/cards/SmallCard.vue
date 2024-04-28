@@ -13,12 +13,24 @@ defineProps({
     validator(value) {
       return value instanceof String && (IS_COLOR.test(value) || IS_CSS_VAR.test(value))
     }
+  },
+  orientation: {
+    default: 'row',
+    validator(value) {
+      return ['column', 'row'].includes(value)
+    }
+  },
+  clickable: {
+    default: false,
+    validator(value) {
+      return value instanceof Boolean
+    }
   }
 })
 </script>
 
 <template>
-  <div class="SmallBlock">
+  <div class="SmallBlock" :class="{ clickable: clickable }">
     <slot></slot>
   </div>
 </template>
@@ -28,8 +40,8 @@ defineProps({
   background: v-bind(color);
   border-radius: var(--radius-small);
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: v-bind(orientation);
+  justify-content: start;
   align-items: center;
   padding: 24px;
   transition: var(--trans);
@@ -40,6 +52,7 @@ defineProps({
 
 .SmallBlock * {
   margin: 0;
+  text-align: center;
 }
 
 .SmallBlock > img {
@@ -47,11 +60,20 @@ defineProps({
   border-radius: var(--radius-inf);
 }
 
-.SmallBlock:hover {
+.SmallBlock > p {
+  overflow: hidden;
+  line-clamp: 2;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.SmallBlock.clickable:hover {
   background: color-mix(in srgb, v-bind(color), var(--hover));
 }
 
-.SmallBlock:active {
+.SmallBlock.clickable:active {
   background: var(--blahaj);
 }
 </style>
