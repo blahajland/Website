@@ -8,16 +8,33 @@
 
 <!-- scope warranted -->
 <style scoped>
-a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 64px 0 32px;
+@media screen and (min-width: 1201px) {
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 0 32px;
+  }
+
+  a > img {
+    height: 220px;
+    z-index: -1;
+  }
 }
 
-a > img {
-  height: 220px;
-  z-index: -1;
+@media screen and (max-width: 1200px) {
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 96px 0 16px;
+  }
+
+  a > img {
+    width: 80vw;
+    z-index: -1;
+  }
 }
 </style>

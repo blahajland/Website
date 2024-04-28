@@ -63,5 +63,3 @@ changeLoc('#', false)
     </PageContainer>
   </div>
 </template>
-
-<style></style>

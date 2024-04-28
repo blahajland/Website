@@ -29,10 +29,12 @@ setThemeFromCookie()
   </TopBar>
   <RouterView></RouterView>
   <CustomFooter>
+    <CustomButton class="displayOnMobile" color="var(--hover)" @click="switchTheme">
+      <img src="/icons/theme.png" alt="Theme" />
+      <p>Theme</p>
+    </CustomButton>
     <p>&copy; <a href="https://blog.blahaj.land/">eryn</a> Some rights reserved</p>
     <p>Made by <a href="https://github.com/imalonelynerd">Nerd</a></p>
     <RouterLink to="/rules">Rules & TOS</RouterLink>
   </CustomFooter>
 </template>
-
-<style></style>

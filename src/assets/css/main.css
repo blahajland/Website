@@ -5,18 +5,35 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  font-family: 'Noto IKEA', serif;
-  font-size: 0.9em;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  background: var(--background);
-  color: var(--text);
+@media screen and (min-width: 1021px) {
+  body {
+    margin: 0;
+    font-family: 'Noto IKEA', serif;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background: var(--background);
+    color: var(--text);
+  }
+
+  #app {
+    width: 1200px;
+  }
 }
 
-#app {
-  width: 1200px;
+@media screen and (max-width: 1200px) {
+  body {
+    margin: 0;
+    font-family: 'Noto IKEA', serif;
+    font-size: 0.9em;
+    background: var(--background);
+    color: var(--text);
+  }
+
+  #app {
+    width: 100vw;
+    overflow: hidden;
+  }
 }

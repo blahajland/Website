@@ -30,31 +30,62 @@ defineProps({
 </template>
 
 <style>
-.ContentBlock {
-  background: v-bind(color);
-  border-radius: var(--radius-small);
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  padding: 32px;
-  transition: var(--trans);
-  color: v-bind(font);
-  gap: v-bind(gap);
-  flex: 0 0 300px;
+@media screen and (min-width: 1201px) {
+  .ContentBlock {
+    background: v-bind(color);
+    border-radius: var(--radius-small);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 32px;
+    transition: var(--trans);
+    color: v-bind(font);
+    gap: v-bind(gap);
+    flex: 0 0 300px;
+  }
+
+  .ContentBlock > p,
+  .ContentBlock > h3,
+  .ContentBlock > h1 {
+    text-align: center;
+  }
+
+  .ContentBlock * {
+    margin: 0;
+  }
+
+  .ContentBlock > img {
+    height: 32px;
+  }
 }
 
-.ContentBlock > p,
-.ContentBlock > h3,
-.ContentBlock > h1 {
-  text-align: center;
-}
+@media screen and (max-width: 1200px) {
+  .ContentBlock {
+    background: v-bind(color);
+    border-radius: var(--radius-small);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 24px 32px;
+    transition: var(--trans);
+    color: v-bind(font);
+    gap: 24px;
+  }
 
-.ContentBlock * {
-  margin: 0;
-}
+  .ContentBlock > p,
+  .ContentBlock > h3,
+  .ContentBlock > h1 {
+    text-align: center;
+  }
 
-.ContentBlock > img {
-  height: 32px;
+  .ContentBlock * {
+    margin: 0;
+  }
+
+  .ContentBlock > img {
+    height: 32px;
+  }
 }
 </style>

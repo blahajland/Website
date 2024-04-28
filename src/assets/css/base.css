@@ -5,12 +5,12 @@
   --trans: all ease-out 0.25s;
 }
 
-/*@media screen and (max-width: 1200px) {
-    :root {
-        --radius-small: 4px;
-        --radius-med: 12px;
-    }
-}*/
+@media screen and (max-width: 1200px) {
+  :root {
+    --radius-small: 2vw;
+    --radius-med: 8vw;
+  }
+}
 
 :root[data-theme='dark'] {
   --background: #181825;

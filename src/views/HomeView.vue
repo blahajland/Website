@@ -7,7 +7,6 @@ import SlideableContainer from '@/components/containers/SlideableContainer.vue'
 import SideBlock from '@/components/cards/RowCard.vue'
 import { changeLoc } from '@/assets/js/linkTools.js'
 import PageContainer from '@/components/containers/PageContainer.vue'
-import SmallBlock from '@/components/cards/SmallCard.vue'
 import SmallCard from '@/components/cards/SmallCard.vue'
 import TabButton from '@/components/TabButton.vue'
 import TabGroup from '@/components/containers/TabGroup.vue'
@@ -149,7 +148,7 @@ onBeforeMount(async () => {
         <p>Here you can view our user's sites :3</p>
       </template>
       <SlideableContainer>
-        <SmallBlock
+        <SmallCard
           v-for="(e, i) in usersList['users']"
           :key="i"
           :color="e.color"
@@ -158,7 +157,7 @@ onBeforeMount(async () => {
         >
           <img :src="e.img" :alt="e.title" />
           <h3>{{ e.title }}</h3>
-        </SmallBlock>
+        </SmallCard>
       </SlideableContainer>
     </PageContainer>
     <PageContainer>
@@ -207,7 +206,6 @@ onBeforeMount(async () => {
       <template #title>
         <h2 id="p5">Donations</h2>
         <p>Thanks for your <i>kind</i> donations &lt;3</p>
-        <CustomGap gap="8px" />
       </template>
       <SlideableContainer>
         <SmallCard
@@ -217,7 +215,7 @@ onBeforeMount(async () => {
           orientation="column"
         >
           <h3>{{ e.title }}</h3>
-          <p :title="e.desc">
+          <p v-if="e.desc !== ''" :title="e.desc">
             <i>{{ e.desc }}</i>
           </p>
         </SmallCard>
@@ -225,5 +223,3 @@ onBeforeMount(async () => {
     </PageContainer>
   </div>
 </template>
-
-<style></style>

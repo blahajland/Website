@@ -19,10 +19,22 @@ defineProps({
 </template>
 
 <style>
-.GridContainer {
-  display: grid;
-  grid-auto-rows: 1fr;
-  grid-template-columns: repeat(v-bind(rows), 1fr);
-  gap: 16px;
+@media screen and (min-width: 1201px) {
+  .GridContainer {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(v-bind(rows), 1fr);
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .GridContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    gap: 16px;
+  }
 }
 </style>
