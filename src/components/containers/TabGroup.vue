@@ -10,7 +10,7 @@
 @media screen and (min-width: 1201px) {
   .TabGroup {
     position: fixed;
-    top: 89px;
+    top: 88px;
     left: 0;
     right: 0;
     display: flex;
