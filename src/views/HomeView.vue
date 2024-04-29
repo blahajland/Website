@@ -65,7 +65,7 @@ onBeforeMount(async () => {
         <ContentBlock color="#F0C1B7">
           <p>Create your account and <b>pass the vibe check &gt;:3</b></p>
           <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
-            <p>Sing up</p>
+            <p>Sign up</p>
           </CustomButton>
         </ContentBlock>
         <ContentBlock color="#B1BCE1">

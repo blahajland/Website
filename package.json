@@ -1,6 +1,6 @@
 {
-  "name": "ziemiablahaja",
-  "version": "0.0.0",
+  "name": "blahajland",
+  "version": "3.0 IKEA Update",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "final": "npm run lint && npm run format && vite build --base=/landing/"
   },
   "dependencies": {
     "vue": "^3.4.21",
