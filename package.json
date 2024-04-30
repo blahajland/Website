@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "final": "npm run lint && npm run format && vite build --base=/landing/"
+    "final": "npm run lint && npm run format && node_modules/.bin/vite build --base=/landing/"
   },
   "dependencies": {
     "vue": "^3.4.21",
