@@ -35,89 +35,49 @@ defineProps({
   </div>
 </template>
 
-<style>
-@media screen and (min-width: 1201px) {
-  .SmallCard {
-    background: v-bind(color);
-    border-radius: var(--radius-small);
-    display: flex;
-    flex-direction: v-bind(orientation);
-    justify-content: start;
-    align-items: center;
-    padding: 24px;
-    transition: var(--trans);
-    color: v-bind(font);
-    gap: 16px;
-    flex: 0 0 128px;
-  }
+<style lang="sass">
 
-  .SmallCard * {
-    margin: 0;
-    text-align: center;
-  }
+.SmallCard
+  background: v-bind(color)
+  border-radius: var(--radius-small)
+  display: flex
+  flex-direction: v-bind(orientation)
+  align-items: center
+  transition: var(--trans)
+  color: v-bind(font)
 
-  .SmallCard > img {
-    height: 64px;
-    border-radius: var(--radius-inf);
-  }
+  *
+    margin: 0
+    text-align: center
 
-  .SmallCard > p {
-    overflow: hidden;
-    line-clamp: 2;
+  > img
+    height: 64px
+    border-radius: var(--radius-inf)
 
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
+  > p
+    overflow: hidden
+    line-clamp: 2
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
 
-  .SmallCard.clickable:hover {
-    background: color-mix(in srgb, v-bind(color), var(--hover));
-  }
+  .clickable
+    &:hover
+      background: color-mix(in srgb, v-bind(color), var(--hover))
 
-  .SmallCard.clickable:active {
-    background: var(--blahaj);
-  }
-}
+    &:active
+      background: var(--blahaj)
 
-@media screen and (max-width: 1200px) {
-  .SmallCard {
-    background: v-bind(color);
-    border-radius: var(--radius-small);
-    display: flex;
-    flex-direction: v-bind(orientation);
-    justify-content: center;
-    align-items: center;
-    padding: 24px 32px;
-    transition: var(--trans);
-    color: v-bind(font);
-    gap: 24px;
-  }
+@media screen and (min-width: 1201px)
+  .SmallCard
+    justify-content: start
+    padding: 24px
+    gap: 16px
+    flex: 0 0 128px
 
-  .SmallCard * {
-    margin: 0;
-    text-align: center;
-  }
-
-  .SmallCard > img {
-    height: 64px;
-    border-radius: var(--radius-inf);
-  }
-
-  .SmallCard > p {
-    overflow: hidden;
-    line-clamp: 2;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
-
-  .SmallCard.clickable:hover {
-    background: color-mix(in srgb, v-bind(color), var(--hover));
-  }
-
-  .SmallCard.clickable:active {
-    background: var(--blahaj);
-  }
-}
+@media screen and (max-width: 1200px)
+  .SmallCard
+    justify-content: center
+    padding: 24px 32px
+    gap: 24px
 </style>

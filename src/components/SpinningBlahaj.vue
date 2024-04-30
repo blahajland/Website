@@ -7,34 +7,28 @@
 </template>
 
 <!-- scope warranted -->
-<style scoped>
-@media screen and (min-width: 1201px) {
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 64px 0 32px;
-  }
+<style lang="sass" scoped>
 
-  a > img {
-    height: 220px;
-    z-index: -1;
-  }
-}
+a
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
 
-@media screen and (max-width: 1200px) {
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 96px 0 16px;
-  }
+  > img
+    z-index: -1
 
-  a > img {
-    width: 80vw;
-    z-index: -1;
-  }
-}
+@media screen and (min-width: 1201px)
+  a
+    padding: 64px 0 32px
+
+    > img
+      height: 220px
+
+@media screen and (max-width: 1200px)
+  a
+    padding: 96px 0 16px
+
+    > img
+      width: 80vw
 </style>

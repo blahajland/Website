@@ -27,82 +27,62 @@ function scroll(amount) {
   </div>
 </template>
 
-<style>
-@media screen and (min-width: 1201px) {
-  .SlideableContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    align-items: center;
-    width: 100%;
-    gap: 8px;
-  }
+<style lang="sass">
 
-  .SlideButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--radius-inf);
-    transition: var(--trans);
-    opacity: 0.5;
-  }
+.SlideableContainer
+  display: flex
+  flex-direction: row
+  justify-content: stretch
+  align-items: center
 
-  .SlideButton:hover {
-    padding: 8px;
-    background: var(--hover);
-    opacity: 1;
-  }
 
-  .SlideButton > img {
-    height: 24px;
-    filter: var(--filter);
-  }
+.SlideContainer
+  -ms-overflow-style: none
+  scrollbar-width: none
+  display: flex
+  justify-content: start
+  align-items: stretch
+  gap: 16px
 
-  .SlideContainer {
-    flex: 1 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: stretch;
-    gap: 16px;
-    overflow: scroll;
-    scroll-behavior: smooth;
-    border-radius: var(--radius-small);
-  }
+  &::-webkit-scrollbar
+    display: none
 
-  .SlideContainer::-webkit-scrollbar {
-    display: none;
-  }
-}
+@media screen and (min-width: 1201px)
+  .SlideableContainer
+    width: 100%
+    gap: 8px
 
-@media screen and (max-width: 1200px) {
-  .SlideableContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    align-items: center;
-  }
+  .SlideButton
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    border-radius: var(--radius-inf)
+    transition: var(--trans)
+    opacity: 0.5
 
-  .SlideButton {
-    display: none;
-  }
+    &:hover
+      padding: 8px
+      background: var(--hover)
+      opacity: 1
 
-  .SlideContainer {
-    width: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: stretch;
-    gap: 16px;
-  }
+    > img
+      height: 24px
+      filter: var(--filter)
 
-  .SlideContainer::-webkit-scrollbar {
-    display: none;
-  }
-}
+  .SlideContainer
+    flex: 1 0
+    flex-direction: row
+    overflow: scroll
+    scroll-behavior: smooth
+    border-radius: var(--radius-small)
+
+@media screen and (max-width: 1200px)
+  .SlideButton
+    display: none
+
+  .SlideContainer
+    width: 100%
+    flex-direction: column
+
 </style>

@@ -17,23 +17,18 @@ defineProps({
   </div>
 </template>
 
-<style>
-@media screen and (min-width: 1201px) {
-  .GridContainer {
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: repeat(v-bind(rows), 1fr);
-    gap: 16px;
-  }
-}
+<style lang="sass">
+.GridContainer
+  gap: 16px
 
-@media screen and (max-width: 1200px) {
-  .GridContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: stretch;
-    gap: 16px;
-  }
-}
+  @media screen and (min-width: 1201px)
+    display: grid
+    grid-auto-rows: 1fr
+    grid-template-columns: repeat(v-bind(rows), 1fr)
+
+  @media screen and (max-width: 1200px)
+    display: flex
+    flex-direction: column
+    justify-content: start
+    align-items: stretch
 </style>

@@ -29,72 +29,32 @@ defineProps({
   </div>
 </template>
 
-<style>
-@media screen and (min-width: 1201px) {
-  .CustomButton {
-    padding: 10px 20px;
-    border-radius: var(--radius-inf);
-    background: v-bind(color) !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--trans);
-    color: v-bind(font) !important;
-    gap: 8px;
-  }
+<style lang="sass">
 
-  .CustomButton:hover {
-    background: v-bind(hover) !important;
-  }
+.CustomButton
+  padding: 10px 20px
+  border-radius: var(--radius-inf)
+  background: v-bind(color) !important
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  transition: var(--trans)
+  color: v-bind(font) !important
+  gap: 8px
 
-  .CustomButton:active {
-    background: var(--blahaj) !important;
-  }
+  &:hover
+    background: v-bind(hover) !important
 
-  .CustomButton > img {
-    height: 20px;
-    width: 20px;
-    filter: var(--filter);
-  }
+  &:active
+    background: var(--blahaj) !important
 
-  .CustomButton > p {
-    margin: 0;
-    font-weight: bold;
-  }
-}
+  > img
+    height: 20px
+    width: 20px
+    filter: var(--filter)
 
-@media screen and (max-width: 1200px) {
-  .CustomButton {
-    padding: 10px 20px;
-    border-radius: var(--radius-inf);
-    background: v-bind(color) !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--trans);
-    color: v-bind(font) !important;
-    gap: 8px;
-  }
-
-  .CustomButton:hover {
-    background: v-bind(hover) !important;
-  }
-
-  .CustomButton:active {
-    background: var(--blahaj) !important;
-  }
-
-  .CustomButton > img {
-    height: 20px;
-    width: 20px;
-    filter: var(--filter);
-  }
-
-  .CustomButton > p {
-    margin: 0;
-    font-weight: bold;
-  }
-}
+  > p
+    margin: 0
+    font-weight: bold
 </style>

@@ -1,0 +1,55 @@
+@import 'base.scss'
+@import 'https://blahajland.github.io/Data/css/colors.css'
+
+html
+  scroll-behavior: smooth
+
+body
+  margin: 0
+  font-family: 'Noto IKEA', serif
+  font-size: 0.9em
+  background: var(--background)
+  color: var(--text)
+
+.ViewRules
+  display: flex
+  flex-direction: column
+  justify-content: start
+  align-items: stretch
+  gap: 8px
+
+  *
+    margin: 0
+
+@media screen and (min-width: 1021px)
+  body
+    display: flex
+    flex-direction: column
+    justify-content: start
+    align-items: center
+
+  #app
+    width: 1200px
+
+  .ViewRules
+    margin: 137px 0 64px
+
+    > h1
+      font-size: 2.5em
+
+  .displayOnMobile
+    display: none !important
+
+@media screen and (max-width: 1200px)
+  #app
+    width: 100vw
+    overflow: hidden
+
+  .ViewRules
+    padding: 96px 24px 0
+
+    > h1
+      font-size: 2em
+
+  .displayOnMobile
+    display: inherit !important

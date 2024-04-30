@@ -24,68 +24,42 @@ defineProps({
 </script>
 
 <template>
-  <div class="ContentBlock">
+  <div class="VerticalCard">
     <slot></slot>
   </div>
 </template>
 
-<style>
-@media screen and (min-width: 1201px) {
-  .ContentBlock {
-    background: v-bind(color);
-    border-radius: var(--radius-small);
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding: 32px;
-    transition: var(--trans);
-    color: v-bind(font);
-    gap: v-bind(gap);
-    flex: 0 0 300px;
-  }
+<style lang="sass">
 
-  .ContentBlock > p,
-  .ContentBlock > h3,
-  .ContentBlock > h1 {
-    text-align: center;
-  }
+.VerticalCard
+  background: v-bind(color)
+  border-radius: var(--radius-small)
+  display: flex
+  flex-direction: column
+  justify-content: start
+  align-items: center
+  transition: var(--trans)
+  color: v-bind(font)
 
-  .ContentBlock * {
-    margin: 0;
-  }
+  p, h3, h1
+    text-align: center
 
-  .ContentBlock > img {
-    height: 32px;
-  }
-}
+  *
+    margin: 0
 
-@media screen and (max-width: 1200px) {
-  .ContentBlock {
-    background: v-bind(color);
-    border-radius: var(--radius-small);
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding: 24px 32px;
-    transition: var(--trans);
-    color: v-bind(font);
-    gap: 24px;
-  }
+  > img
+    height: 32px
 
-  .ContentBlock > p,
-  .ContentBlock > h3,
-  .ContentBlock > h1 {
-    text-align: center;
-  }
 
-  .ContentBlock * {
-    margin: 0;
-  }
+@media screen and (min-width: 1201px)
+  .VerticalCard
+    padding: 32px
+    gap: v-bind(gap)
+    flex: 0 0 300px
 
-  .ContentBlock > img {
-    height: 32px;
-  }
-}
+
+@media screen and (max-width: 1200px)
+  .VerticalCard
+    padding: 24px 32px
+    gap: 24px
 </style>

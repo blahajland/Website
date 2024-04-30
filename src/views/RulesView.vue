@@ -4,7 +4,7 @@ import TabGroup from '@/components/containers/TabGroup.vue'
 import TabButton from '@/components/TabButton.vue'
 import PageContainer from '@/components/containers/PageContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
-import ContentBlock from '@/components/cards/VerticalCard.vue'
+import VerticalCard from '@/components/cards/VerticalCard.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
 import { onBeforeMount, ref } from 'vue'
 import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
@@ -43,10 +43,10 @@ changeLoc('#', false)
         <p>Last updated : {{ rLastUpdated }}</p>
       </template>
       <GridContainer>
-        <ContentBlock v-for="(e, i) in rulesList['rules']" :key="i" :color="e.color">
+        <VerticalCard v-for="(e, i) in rulesList['rules']" :key="i" :color="e.color">
           <h3>{{ e.title }}</h3>
           <p v-html="e.desc"></p>
-        </ContentBlock>
+        </VerticalCard>
       </GridContainer>
     </PageContainer>
     <PageContainer :last="true">
@@ -55,10 +55,10 @@ changeLoc('#', false)
         <p>Last updated : {{ tLastUpdated }}</p>
       </template>
       <GridContainer>
-        <ContentBlock v-for="(e, i) in tosList['tos']" :key="i" :color="e.color">
+        <VerticalCard v-for="(e, i) in tosList['tos']" :key="i" :color="e.color">
           <h3>{{ e.title }}</h3>
           <p v-html="e.desc"></p>
-        </ContentBlock>
+        </VerticalCard>
       </GridContainer>
     </PageContainer>
   </div>

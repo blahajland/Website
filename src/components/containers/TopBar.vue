@@ -11,58 +11,45 @@
   </div>
 </template>
 
-<style>
-@media screen and (min-width: 1201px) {
-  .TopBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--background);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px;
-    z-index: 5;
-  }
+<style lang="sass">
+.TopBar
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background: var(--background)
+  display: flex
+  align-items: center
+  z-index: 5
 
-  .TopBar > a > img {
-    height: 32px;
-    filter: var(--filter);
-  }
+  > a > img
+    filter: var(--filter)
 
-  .TopBar > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 8px;
-  }
-}
+@media screen and (min-width: 1201px)
+  .TopBar
+    flex-direction: row
+    justify-content: space-between
+    padding: 24px
 
-@media screen and (max-width: 1200px) {
-  .TopBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--background);
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding: 24px 0;
-    z-index: 5;
-  }
+    > a > img
+      height: 32px
 
-  .TopBar > a > img {
-    height: 36px;
-    filter: var(--filter);
-  }
+    > div
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: stretch
+      gap: 8px
 
-  .TopBar > div {
-    display: none;
-  }
-}
+@media screen and (max-width: 1200px)
+  .TopBar
+    flex-direction: column
+    justify-content: start
+    padding: 24px 0
+
+    > a > img
+      height: 36px
+
+    > div
+      display: none
 </style>

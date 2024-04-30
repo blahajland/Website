@@ -15,9 +15,8 @@ defineProps({
   <div class="CustomGap"></div>
 </template>
 
-<style>
-.CustomGap {
-  display: flex;
-  height: v-bind(gap);
-}
+<style lang="sass">
+.CustomGap
+  display: flex
+  height: v-bind(gap)
 </style>

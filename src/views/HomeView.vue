@@ -1,10 +1,10 @@
 <script setup>
-import ContentBlock from '@/components/cards/VerticalCard.vue'
+import VerticalCard from '@/components/cards/VerticalCard.vue'
 import CustomButton from '@/components/CustomButton.vue'
 import CustomGap from '@/components/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SlideableContainer from '@/components/containers/SlideableContainer.vue'
-import SideBlock from '@/components/cards/RowCard.vue'
+import RowCard from '@/components/cards/RowCard.vue'
 import { changeLoc } from '@/assets/js/linkTools.js'
 import PageContainer from '@/components/containers/PageContainer.vue'
 import SmallCard from '@/components/cards/SmallCard.vue'
@@ -56,30 +56,30 @@ onBeforeMount(async () => {
         <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
       </template>
       <GridContainer rows="4">
-        <ContentBlock color="#ACD3DC">
+        <VerticalCard color="#ACD3DC">
           <p>Take a tour and see <b>what's inside :3</b></p>
           <CustomButton @click="changeLoc('#p1', false)">
             <p>Discover</p>
           </CustomButton>
-        </ContentBlock>
-        <ContentBlock color="#F0C1B7">
+        </VerticalCard>
+        <VerticalCard color="#F0C1B7">
           <p>Create your account and <b>pass the vibe check &gt;:3</b></p>
           <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Sign up</p>
           </CustomButton>
-        </ContentBlock>
-        <ContentBlock color="#B1BCE1">
+        </VerticalCard>
+        <VerticalCard color="#B1BCE1">
           <p>Just want to hang around? Join our <b>Discord</b></p>
           <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Join</p>
           </CustomButton>
-        </ContentBlock>
-        <ContentBlock color="#DCDCDC">
+        </VerticalCard>
+        <VerticalCard color="#DCDCDC">
           <p>Already part of the community? Get access to <b>all the apps</b></p>
           <CustomButton @click="changeLoc('https://blahaj.land/yunohost/sso/')">
             <p>Open</p>
           </CustomButton>
-        </ContentBlock>
+        </VerticalCard>
       </GridContainer>
     </PageContainer>
     <CustomGap gap="32px" />
@@ -89,42 +89,42 @@ onBeforeMount(async () => {
         <p>Why should you consider <b>Blahaj Land</b> for your needs ? ;3</p>
       </template>
       <GridContainer>
-        <ContentBlock color="#B1BCE1">
+        <VerticalCard color="#B1BCE1">
           <img src="/icons/website.png" alt="Website" />
           <h3>Host your own website for free!</h3>
           <p>With <b>blahaj.land</b> you can easily host your own static site for free!</p>
-        </ContentBlock>
-        <ContentBlock color="#ACD3DC">
+        </VerticalCard>
+        <VerticalCard color="#ACD3DC">
           <img src="/icons/cloud.png" alt="Cloud" />
           <h3>Cloud storage</h3>
           <p>Starting at <b>1€&sol;month</b></p>
-        </ContentBlock>
-        <ContentBlock color="#C8E7FF">
+        </VerticalCard>
+        <VerticalCard color="#C8E7FF">
           <img src="/icons/communication.png" alt="Communication" />
           <h3>Communication services</h3>
           <p>E-mail, Fediverse, Send and <b>more</b>!</p>
-        </ContentBlock>
-        <ContentBlock color="#DEAAFF" gap="8px">
+        </VerticalCard>
+        <VerticalCard color="#DEAAFF" gap="8px">
           <img src="/icons/friend.png" alt="Communication" />
           <h3>Bring your friends in!</h3>
           <p>
             For every person you invite, you'll get <b>5GB</b> of storage. If they make a donation,
             you'll get an extra <b>10GB</b>.
           </p>
-        </ContentBlock>
-        <ContentBlock color="#ECBCFD" gap="8px">
+        </VerticalCard>
+        <VerticalCard color="#ECBCFD" gap="8px">
           <img src="/icons/switch.png" alt="Communication" />
           <h3>You want to host your website?</h3>
           <p>
             If you switch from <b>neocities.org</b>, <b>Github Pages</b>, or any other host, you'll
             get <b>15GB</b> of storage and a month of <b>Premium</b> for free.
           </p>
-        </ContentBlock>
-        <ContentBlock color="#FFCBF2">
+        </VerticalCard>
+        <VerticalCard color="#FFCBF2">
           <img src="/icons/rosa.png" alt="Communication" />
           <h3>Queer-powered</h3>
           <p>Everybody is welcome here. You always will be.</p>
-        </ContentBlock>
+        </VerticalCard>
       </GridContainer>
     </PageContainer>
     <PageContainer>
@@ -133,13 +133,13 @@ onBeforeMount(async () => {
         <p>The stuff we host >:3</p>
       </template>
       <SlideableContainer>
-        <SideBlock v-for="(e, i) in appList['apps']" :key="i" :color="e.color">
+        <RowCard v-for="(e, i) in appList['apps']" :key="i" :color="e.color">
           <template #image>
             <img :src="e.img" :alt="e.title" />
           </template>
           <h3>{{ e.title }}</h3>
           <p v-html="e.desc"></p>
-        </SideBlock>
+        </RowCard>
       </SlideableContainer>
     </PageContainer>
     <PageContainer>
@@ -166,7 +166,7 @@ onBeforeMount(async () => {
         <p>Get more features and support the website >83</p>
       </template>
       <GridContainer>
-        <ContentBlock color="#BCDBFF">
+        <VerticalCard color="#BCDBFF">
           <h2>Starter</h2>
           <h3>Free</h3>
           <p>
@@ -177,8 +177,8 @@ onBeforeMount(async () => {
           <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Join</p>
           </CustomButton>
-        </ContentBlock>
-        <ContentBlock color="#FFCEF1">
+        </VerticalCard>
+        <VerticalCard color="#FFCEF1">
           <h2>Supporter</h2>
           <h3>Starting at 1€/month</h3>
           <p>
@@ -188,8 +188,8 @@ onBeforeMount(async () => {
           <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
             <p>Donate</p>
           </CustomButton>
-        </ContentBlock>
-        <ContentBlock color="#FFE5A3">
+        </VerticalCard>
+        <VerticalCard color="#FFE5A3">
           <h2>Premium</h2>
           <h3>Starting at 5€/month</h3>
           <p>
@@ -199,7 +199,7 @@ onBeforeMount(async () => {
           <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
             <p>Donate</p>
           </CustomButton>
-        </ContentBlock>
+        </VerticalCard>
       </GridContainer>
     </PageContainer>
     <PageContainer :last="true">
