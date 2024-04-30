@@ -56,13 +56,13 @@ defineProps({
   *
     margin: 0
 
-@media screen and (min-width: 1201px)
+@media (min-width: 1201px)
   .RowCard
     padding: 24px
     gap: 32px
     flex: 0 0 324px
 
-@media screen and (max-width: 1200px)
+@media (max-width: 1200px)
   .RowCard
     padding: 24px 32px
     gap: 24px

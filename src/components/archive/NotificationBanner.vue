@@ -7,7 +7,7 @@
 </template>
 
 <style>
-@media screen and (min-width: 1201px) {
+@media (min-width: 1201px) {
   .NotificationBanner {
     border-radius: 0 0 var(--radius-med) var(--radius-med);
     background: var(--text);

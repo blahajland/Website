@@ -42,7 +42,6 @@
   &:active
     background: var(--blahaj)
 
-  @media screen and (max-width: 1200px)
+  @media (max-width: 1200px)
     display: none
-
 </style>

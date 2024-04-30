@@ -68,14 +68,14 @@ defineProps({
     &:active
       background: var(--blahaj)
 
-@media screen and (min-width: 1201px)
+@media (min-width: 1201px)
   .SmallCard
     justify-content: start
     padding: 24px
     gap: 16px
     flex: 0 0 128px
 
-@media screen and (max-width: 1200px)
+@media (max-width: 1200px)
   .SmallCard
     justify-content: center
     padding: 24px 32px

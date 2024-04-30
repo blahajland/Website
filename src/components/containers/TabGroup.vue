@@ -21,7 +21,6 @@
   z-index: 5
   background: var(--background)
 
-  @media screen and (max-width: 1200px)
+  @media (max-width: 1200px)
     display: none
-
 </style>

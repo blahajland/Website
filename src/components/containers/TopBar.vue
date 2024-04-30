@@ -25,7 +25,7 @@
   > a > img
     filter: var(--filter)
 
-@media screen and (min-width: 1201px)
+@media (min-width: 1201px)
   .TopBar
     flex-direction: row
     justify-content: space-between
@@ -41,7 +41,7 @@
       align-items: stretch
       gap: 8px
 
-@media screen and (max-width: 1200px)
+@media (max-width: 1200px)
   .TopBar
     flex-direction: column
     justify-content: start

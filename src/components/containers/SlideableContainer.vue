@@ -47,7 +47,7 @@ function scroll(amount) {
   &::-webkit-scrollbar
     display: none
 
-@media screen and (min-width: 1201px)
+@media (min-width: 1201px)
   .SlideableContainer
     width: 100%
     gap: 8px
@@ -77,12 +77,11 @@ function scroll(amount) {
     scroll-behavior: smooth
     border-radius: var(--radius-small)
 
-@media screen and (max-width: 1200px)
+@media (max-width: 1200px)
   .SlideButton
     display: none
 
   .SlideContainer
     width: 100%
     flex-direction: column
-
 </style>

@@ -21,16 +21,15 @@
     text-decoration: none
     color: inherit
 
-@media screen and (min-width: 1201px)
+@media (min-width: 1201px)
   .CustomFooter
     flex-direction: row
     gap: 24px
     padding: 0 0 12px
 
-@media screen and (max-width: 1200px)
+@media (max-width: 1200px)
   .CustomFooter
     flex-direction: column
     gap: 16px
     padding: 64px 0 32px
-
 </style>

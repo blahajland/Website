@@ -51,14 +51,14 @@ defineProps({
     height: 32px
 
 
-@media screen and (min-width: 1201px)
+@media (min-width: 1201px)
   .VerticalCard
     padding: 32px
     gap: v-bind(gap)
     flex: 0 0 300px
 
 
-@media screen and (max-width: 1200px)
+@media (max-width: 1200px)
   .VerticalCard
     padding: 24px 32px
     gap: 24px

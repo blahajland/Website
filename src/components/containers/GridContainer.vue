@@ -21,12 +21,12 @@ defineProps({
 .GridContainer
   gap: 16px
 
-  @media screen and (min-width: 1201px)
+  @media (min-width: 1201px)
     display: grid
     grid-auto-rows: 1fr
     grid-template-columns: repeat(v-bind(rows), 1fr)
 
-  @media screen and (max-width: 1200px)
+  @media (max-width: 1200px)
     display: flex
     flex-direction: column
     justify-content: start

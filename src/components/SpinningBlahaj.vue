@@ -18,14 +18,14 @@ a
   > img
     z-index: -1
 
-@media screen and (min-width: 1201px)
+@media (min-width: 1201px)
   a
     padding: 64px 0 32px
 
     > img
       height: 220px
 
-@media screen and (max-width: 1200px)
+@media (max-width: 1200px)
   a
     padding: 96px 0 16px
 
