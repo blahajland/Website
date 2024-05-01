@@ -36,7 +36,7 @@ setThemeFromCookie()
       <p>Theme</p>
     </BlahajButton>
     <p>&copy; <a :href="links.eryn">eryn</a> Some rights reserved</p>
-    <p>Made by <a :href="links.nerd">Nerd</a></p>
+    <p>Made by <a :href="links.blahaj">Blahaj Team</a></p>
     <RouterLink to="/rules">Rules & TOS</RouterLink>
   </CustomFooter>
 </template>
