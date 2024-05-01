@@ -1,30 +1,16 @@
 <script setup>
-import { IS_COLOR, IS_CSS_VAR } from '@/assets/js/propsTools.js'
-
 defineProps({
   color: {
-    default: 'var(--blahaj)',
-    validator(value) {
-      return value instanceof String && (IS_COLOR.test(value) || IS_CSS_VAR.test(value))
-    }
+    default: 'var(--blahaj)'
   },
   font: {
-    default: '#101010',
-    validator(value) {
-      return value instanceof String && (IS_COLOR.test(value) || IS_CSS_VAR.test(value))
-    }
+    default: '#101010'
   },
   orientation: {
-    default: 'row',
-    validator(value) {
-      return ['column', 'row'].includes(value)
-    }
+    default: 'row'
   },
   clickable: {
-    default: false,
-    validator(value) {
-      return value instanceof Boolean
-    }
+    default: false
   }
 })
 </script>

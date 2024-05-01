@@ -1,6 +1,6 @@
 <script setup>
 import VerticalCard from '@/components/cards/VerticalCard.vue'
-import BlahajButton from '@/components/library/BlahajButton.vue'
+import BlahajButton from '@/library/vue/BlahajButton.vue'
 import CustomGap from '@/components/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SlideableContainer from '@/components/containers/SlideableContainer.vue'
@@ -15,7 +15,7 @@ import DonatorsList from '@/fetchables/DonatorsList.vue'
 
 import links from '@/assets/json/links.json'
 
-import { changeLoc } from '@/assets/js/linkTools.js'
+import { changeLoc } from '@/library/js/linkTools.js'
 </script>
 
 <template>

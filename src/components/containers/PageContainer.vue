@@ -4,10 +4,7 @@ import CustomGap from '@/components/CustomGap.vue'
 defineProps({
   last: {
     type: Boolean,
-    default: false,
-    validator(value) {
-      return value !== undefined
-    }
+    default: false
   }
 })
 </script>

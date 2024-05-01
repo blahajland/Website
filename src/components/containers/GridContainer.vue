@@ -1,12 +1,7 @@
 <script setup>
-import { IS_GTZ_NB } from '@/assets/js/propsTools.js'
-
 defineProps({
   rows: {
-    default: '3',
-    validator(value) {
-      value instanceof String && IS_GTZ_NB.test(value)
-    }
+    default: '3'
   }
 })
 </script>

@@ -1,6 +1,6 @@
 <script setup>
 import { onBeforeMount, ref } from 'vue'
-import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
+import { fetchDataAsJson } from '@/library/js/fetchTools.js'
 import fetchable from '@/assets/json/fetchable.json'
 import VerticalCard from '@/components/cards/VerticalCard.vue'
 import PageContainer from '@/components/containers/PageContainer.vue'

@@ -1,5 +1,5 @@
 <script setup>
-import { changeLoc } from '@/assets/js/linkTools.js'
+import { changeLoc } from '@/library/js/linkTools.js'
 import TabGroup from '@/components/containers/TabGroup.vue'
 import TabButton from '@/components/TabButton.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'

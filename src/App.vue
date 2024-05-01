@@ -1,9 +1,9 @@
 <script setup>
 import TopBar from '@/components/containers/TopBar.vue'
 import CustomFooter from '@/components/CustomFooter.vue'
-import { setThemeFromCookie, switchTheme } from '@/assets/js/themeTools.js'
-import { changeLoc } from '@/assets/js/linkTools.js'
-import BlahajButton from '@/components/library/BlahajButton.vue'
+import { setThemeFromCookie, switchTheme } from '@/library/js/themeTools.js'
+import { changeLoc } from '@/library/js/linkTools.js'
+import BlahajButton from '@/library/vue/BlahajButton.vue'
 
 import links from '@/assets/json/links.json'
 
