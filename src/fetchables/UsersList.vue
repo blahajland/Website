@@ -1,14 +1,14 @@
 <script setup>
-import { changeLoc } from '@/assets/js/linkTools.js'
+import { changeLoc } from '@/library/js/linkTools.js'
 import SmallCard from '@/components/cards/SmallCard.vue'
-import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
-import links from '@/assets/json/links.json'
+import { fetchDataAsJson } from '@/library/js/fetchTools.js'
+import fetchable from '@/assets/json/fetchable.json'
 import { onBeforeMount, ref } from 'vue'
 
 const usersList = ref([])
 
 onBeforeMount(async () => {
-  usersList.value = await fetchDataAsJson(links.users, 'users')
+  usersList.value = await fetchDataAsJson(fetchable.users, 'users')
 })
 </script>
 

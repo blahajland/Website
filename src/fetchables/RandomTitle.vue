@@ -1,12 +1,12 @@
 <script setup>
-import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
-import links from '@/assets/json/links.json'
+import { fetchDataAsJson } from '@/library/js/fetchTools.js'
+import fetchable from '@/assets/json/fetchable.json'
 import { onBeforeMount, ref } from 'vue'
 
 const randomTitle = ref(':3')
 
 onBeforeMount(async () => {
-  const randomTitles = await fetchDataAsJson(links.titles, 'randomTitles')
+  const randomTitles = await fetchDataAsJson(fetchable.titles, 'randomTitles')
   randomTitle.value = randomTitles[Math.floor(Math.random() * randomTitles.length)]
 })
 </script>

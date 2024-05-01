@@ -1,40 +1,42 @@
 <script setup>
 import TopBar from '@/components/containers/TopBar.vue'
 import CustomFooter from '@/components/CustomFooter.vue'
-import { setThemeFromCookie, switchTheme } from '@/assets/js/themeTools.js'
-import { changeLoc } from '@/assets/js/linkTools.js'
-import CustomButton from '@/components/CustomButton.vue'
+import { setThemeFromCookie, switchTheme } from '@/library/js/themeTools.js'
+import { changeLoc } from '@/library/js/linkTools.js'
+import BlahajButton from '@/library/vue/BlahajButton.vue'
+
+import links from '@/assets/json/links.json'
 
 setThemeFromCookie()
 </script>
 
 <template>
   <TopBar>
-    <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
+    <BlahajButton @click="changeLoc(links.donate)">
       <img src="/icons/donate.png" alt="Donate" />
       <p>Donate</p>
-    </CustomButton>
-    <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
+    </BlahajButton>
+    <BlahajButton>
       <img src="/icons/join.png" alt="Join" />
       <p>Sign up</p>
-    </CustomButton>
-    <CustomButton @click="changeLoc('https://blahaj.land/yunohost/sso/')">
+    </BlahajButton>
+    <BlahajButton @click="changeLoc(links.open)">
       <img src="/icons/open.png" alt="Open" />
       <p>Log in</p>
-    </CustomButton>
-    <CustomButton @click="switchTheme()">
+    </BlahajButton>
+    <BlahajButton @click="switchTheme()">
       <img src="/icons/theme.png" alt="Theme" />
       <p>Theme</p>
-    </CustomButton>
+    </BlahajButton>
   </TopBar>
   <RouterView></RouterView>
   <CustomFooter>
-    <CustomButton class="displayOnMobile" color="var(--hover)" @click="switchTheme">
+    <BlahajButton class="displayOnMobile" color="var(--hover)" @click="switchTheme">
       <img src="/icons/theme.png" alt="Theme" />
       <p>Theme</p>
-    </CustomButton>
-    <p>&copy; <a href="https://blog.blahaj.land/">eryn</a> Some rights reserved</p>
-    <p>Made by <a href="https://github.com/imalonelynerd">Nerd</a></p>
+    </BlahajButton>
+    <p>&copy; <a :href="links.eryn">eryn</a> Some rights reserved</p>
+    <p>Made by <a :href="links.nerd">Nerd</a></p>
     <RouterLink to="/rules">Rules & TOS</RouterLink>
   </CustomFooter>
 </template>
