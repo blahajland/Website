@@ -4,30 +4,16 @@ import CustomButton from '@/components/CustomButton.vue'
 import CustomGap from '@/components/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SlideableContainer from '@/components/containers/SlideableContainer.vue'
-import RowCard from '@/components/cards/RowCard.vue'
-import { changeLoc } from '@/assets/js/linkTools.js'
 import PageContainer from '@/components/containers/PageContainer.vue'
-import SmallCard from '@/components/cards/SmallCard.vue'
 import TabButton from '@/components/TabButton.vue'
 import TabGroup from '@/components/containers/TabGroup.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
-import links from '@/assets/json/links.json'
-import { onBeforeMount, ref } from 'vue'
-import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
+import RandomTitle from '@/fetchables/RandomTitle.vue'
+import AppsList from '@/fetchables/AppsList.vue'
+import UsersList from '@/fetchables/UsersList.vue'
+import DonatorsList from '@/fetchables/DonatorsList.vue'
 
-const appList = ref([])
-const usersList = ref([])
-const donationsList = ref([])
-const randomTitle = ref('Welcome to Blahaj Land')
-
-onBeforeMount(async () => {
-  appList.value = await fetchDataAsJson(links.apps)
-  usersList.value = await fetchDataAsJson(links.users)
-  donationsList.value = await fetchDataAsJson(links.donations)
-  const randomTitles = await fetchDataAsJson(links.titles)
-  randomTitle.value =
-    randomTitles['randomTitles'][Math.floor(Math.random() * randomTitles['randomTitles'].length)]
-})
+import { changeLoc } from '@/assets/js/linkTools.js'
 </script>
 
 <template>
@@ -52,7 +38,7 @@ onBeforeMount(async () => {
     <SpinningBlahaj />
     <PageContainer>
       <template #title>
-        <h1>{{ randomTitle }}</h1>
+        <RandomTitle />
         <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
       </template>
       <GridContainer rows="4">
@@ -77,7 +63,7 @@ onBeforeMount(async () => {
         <VerticalCard color="#DCDCDC">
           <p>Already part of the community? Get access to <b>all the apps</b></p>
           <CustomButton @click="changeLoc('https://blahaj.land/yunohost/sso/')">
-            <p>Open</p>
+            <p>Open Dashboard</p>
           </CustomButton>
         </VerticalCard>
       </GridContainer>
@@ -133,13 +119,7 @@ onBeforeMount(async () => {
         <p>The stuff we host >:3</p>
       </template>
       <SlideableContainer>
-        <RowCard v-for="(e, i) in appList['apps']" :key="i" :color="e.color">
-          <template #image>
-            <img :src="e.img" :alt="e.title" />
-          </template>
-          <h3>{{ e.title }}</h3>
-          <p v-html="e.desc"></p>
-        </RowCard>
+        <AppsList />
       </SlideableContainer>
     </PageContainer>
     <PageContainer>
@@ -148,16 +128,7 @@ onBeforeMount(async () => {
         <p>Here you can view our user's sites :3</p>
       </template>
       <SlideableContainer>
-        <SmallCard
-          v-for="(e, i) in usersList['users']"
-          :key="i"
-          :color="e.color"
-          @click="changeLoc(e.href)"
-          :clickable="true"
-        >
-          <img :src="e.img" :alt="e.title" />
-          <h3>{{ e.title }}</h3>
-        </SmallCard>
+        <UsersList />
       </SlideableContainer>
     </PageContainer>
     <PageContainer>
@@ -208,17 +179,7 @@ onBeforeMount(async () => {
         <p>Thanks for your <i>kind</i> donations &lt;3</p>
       </template>
       <SlideableContainer>
-        <SmallCard
-          v-for="(e, i) in donationsList['donations']"
-          :key="i"
-          :color="e.color"
-          orientation="column"
-        >
-          <h3>{{ e.title }}</h3>
-          <p v-if="e.desc !== ''" :title="e.desc">
-            <i>{{ e.desc }}</i>
-          </p>
-        </SmallCard>
+        <DonatorsList />
       </SlideableContainer>
     </PageContainer>
   </div>

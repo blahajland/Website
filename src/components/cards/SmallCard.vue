@@ -46,6 +46,17 @@ defineProps({
   transition: var(--trans)
   color: v-bind(font)
 
+  @media (min-width: 1201px)
+    justify-content: start
+    padding: 24px
+    gap: 16px
+    flex: 0 0 128px
+
+  @media (max-width: 1200px)
+    justify-content: center
+    padding: 24px 32px
+    gap: 24px
+
   *
     margin: 0
     text-align: center
@@ -61,23 +72,10 @@ defineProps({
     -webkit-line-clamp: 2
     -webkit-box-orient: vertical
 
-  .clickable
+  &.clickable
     &:hover
       background: color-mix(in srgb, v-bind(color), var(--hover))
 
     &:active
       background: var(--blahaj)
-
-@media (min-width: 1201px)
-  .SmallCard
-    justify-content: start
-    padding: 24px
-    gap: 16px
-    flex: 0 0 128px
-
-@media (max-width: 1200px)
-  .SmallCard
-    justify-content: center
-    padding: 24px 32px
-    gap: 24px
 </style>

@@ -40,6 +40,15 @@ defineProps({
   transition: var(--trans)
   color: v-bind(font)
 
+  @media (min-width: 1201px)
+    padding: 24px
+    gap: 32px
+    flex: 0 0 324px
+
+  @media (max-width: 1200px)
+  padding: 24px 32px
+  gap: 24px
+
   > div
     display: flex
     flex-direction: column
@@ -55,15 +64,4 @@ defineProps({
 
   *
     margin: 0
-
-@media (min-width: 1201px)
-  .RowCard
-    padding: 24px
-    gap: 32px
-    flex: 0 0 324px
-
-@media (max-width: 1200px)
-  .RowCard
-    padding: 24px 32px
-    gap: 24px
 </style>

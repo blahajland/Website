@@ -6,10 +6,9 @@ const SCROLL_AMOUNT = 500
 const scrollComp = ref(null)
 
 function scroll(amount) {
-  if (!scrollComp.value) {
-    console.log('a')
+  if (scrollComp.value) {
+    scrollComp.value.scrollLeft += amount
   }
-  scrollComp.value.scrollLeft += amount
 }
 </script>
 

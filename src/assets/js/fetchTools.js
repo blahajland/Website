@@ -1,8 +1,14 @@
-export async function fetchDataAsJson(url) {
-  const res = await fetch(url)
-  if (!res.ok) {
-    console.log(`Failed to fetch data from ${url}`)
-    return null
+export async function fetchDataAsJson(url, tag = undefined) {
+  let res
+  const response = await fetch(url)
+  if (!response.ok) {
+    return []
   }
-  return res.json()
+  let responseAsJson = await response.json()
+  if (tag && Object.prototype.hasOwnProperty.call(responseAsJson, tag)) {
+    res = responseAsJson[tag]
+  } else {
+    res = responseAsJson
+  }
+  return res
 }
