@@ -1,6 +1,6 @@
 <script setup>
 import VerticalCard from '@/components/cards/VerticalCard.vue'
-import CustomButton from '@/components/CustomButton.vue'
+import BlahajButton from '@/components/inputs/BlahajButton.vue'
 import CustomGap from '@/components/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SlideableContainer from '@/components/containers/SlideableContainer.vue'
@@ -44,27 +44,27 @@ import { changeLoc } from '@/assets/js/linkTools.js'
       <GridContainer rows="4">
         <VerticalCard color="#ACD3DC">
           <p>Take a tour and see <b>what's inside :3</b></p>
-          <CustomButton @click="changeLoc('#p1', false)">
+          <BlahajButton @click="changeLoc('#p1', false)">
             <p>Discover</p>
-          </CustomButton>
+          </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#F0C1B7">
           <p>Create your account and <b>pass the vibe check &gt;:3</b></p>
-          <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
+          <BlahajButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Sign up</p>
-          </CustomButton>
+          </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#B1BCE1">
           <p>Just want to hang around? Join our <b>Discord</b></p>
-          <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
+          <BlahajButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Join</p>
-          </CustomButton>
+          </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#DCDCDC">
           <p>Already part of the community? Get access to <b>all the apps</b></p>
-          <CustomButton @click="changeLoc('https://blahaj.land/yunohost/sso/')">
+          <BlahajButton @click="changeLoc('https://blahaj.land/yunohost/sso/')">
             <p>Open Dashboard</p>
-          </CustomButton>
+          </BlahajButton>
         </VerticalCard>
       </GridContainer>
     </PageContainer>
@@ -145,9 +145,9 @@ import { changeLoc } from '@/assets/js/linkTools.js'
             <br />&bull; One
             <b>hosted site</b>
           </p>
-          <CustomButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
+          <BlahajButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
             <p>Join</p>
-          </CustomButton>
+          </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#FFCEF1">
           <h2>Supporter</h2>
@@ -156,9 +156,9 @@ import { changeLoc } from '@/assets/js/linkTools.js'
             &bull; <b>10GB</b> of Nextcloud storage <br />&bull; <b>Unlimited</b> site hosting
             <br />&bull; All the advantages of the <b>Starter</b> tier
           </p>
-          <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
+          <BlahajButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
             <p>Donate</p>
-          </CustomButton>
+          </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#FFE5A3">
           <h2>Premium</h2>
@@ -167,9 +167,9 @@ import { changeLoc } from '@/assets/js/linkTools.js'
             &bull; <b>250GB</b> of Nextcloud storage <br />&bull; <b>Discord bot</b> hosting
             <br />&bull; All the advantages of the <b>Supporter</b> tier
           </p>
-          <CustomButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
+          <BlahajButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
             <p>Donate</p>
-          </CustomButton>
+          </BlahajButton>
         </VerticalCard>
       </GridContainer>
     </PageContainer>

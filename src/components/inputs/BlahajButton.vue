@@ -24,14 +24,14 @@ defineProps({
 </script>
 
 <template>
-  <div class="CustomButton">
+  <div class="BlahajButton">
     <slot></slot>
   </div>
 </template>
 
 <style lang="sass">
 
-.CustomButton
+.BlahajButton
   padding: 10px 20px
   border-radius: var(--radius-inf)
   background: v-bind(color) !important
