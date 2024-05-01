@@ -1,8 +1,7 @@
 {
-  "apps": "https://blahajland.github.io/Data/json/apps.json",
-  "users": "https://blahajland.github.io/Data/json/users.json",
-  "donations": "https://blahajland.github.io/Data/json/donations.json",
-  "titles": "https://blahajland.github.io/Data/json/titles.json",
-  "rules": "https://blahajland.github.io/Data/json/rules.json",
-  "tos": "https://blahajland.github.io/Data/json/tos.json"
+  "join": "https://discord.gg/23ScBhN7xx",
+  "open": "https://blahaj.land/yunohost/sso/",
+  "donate": "https://ko-fi.com/eryncloud/",
+  "eryn": "https://blog.blahaj.land/",
+  "nerd": "https://github.com/imalonelynerd"
 }

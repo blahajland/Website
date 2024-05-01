@@ -1,6 +1,6 @@
 <script setup>
 import VerticalCard from '@/components/cards/VerticalCard.vue'
-import BlahajButton from '@/components/inputs/BlahajButton.vue'
+import BlahajButton from '@/components/library/BlahajButton.vue'
 import CustomGap from '@/components/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SlideableContainer from '@/components/containers/SlideableContainer.vue'
@@ -12,6 +12,8 @@ import RandomTitle from '@/fetchables/RandomTitle.vue'
 import AppsList from '@/fetchables/AppsList.vue'
 import UsersList from '@/fetchables/UsersList.vue'
 import DonatorsList from '@/fetchables/DonatorsList.vue'
+
+import links from '@/assets/json/links.json'
 
 import { changeLoc } from '@/assets/js/linkTools.js'
 </script>
@@ -50,19 +52,19 @@ import { changeLoc } from '@/assets/js/linkTools.js'
         </VerticalCard>
         <VerticalCard color="#F0C1B7">
           <p>Create your account and <b>pass the vibe check &gt;:3</b></p>
-          <BlahajButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
+          <BlahajButton>
             <p>Sign up</p>
           </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#B1BCE1">
           <p>Just want to hang around? Join our <b>Discord</b></p>
-          <BlahajButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
+          <BlahajButton @click="changeLoc(links.join)">
             <p>Join</p>
           </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#DCDCDC">
           <p>Already part of the community? Get access to <b>all the apps</b></p>
-          <BlahajButton @click="changeLoc('https://blahaj.land/yunohost/sso/')">
+          <BlahajButton @click="changeLoc(links.open)">
             <p>Open Dashboard</p>
           </BlahajButton>
         </VerticalCard>
@@ -145,7 +147,7 @@ import { changeLoc } from '@/assets/js/linkTools.js'
             <br />&bull; One
             <b>hosted site</b>
           </p>
-          <BlahajButton @click="changeLoc('https://discord.gg/23ScBhN7xx')">
+          <BlahajButton @click="changeLoc(links.join)">
             <p>Join</p>
           </BlahajButton>
         </VerticalCard>
@@ -156,7 +158,7 @@ import { changeLoc } from '@/assets/js/linkTools.js'
             &bull; <b>10GB</b> of Nextcloud storage <br />&bull; <b>Unlimited</b> site hosting
             <br />&bull; All the advantages of the <b>Starter</b> tier
           </p>
-          <BlahajButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
+          <BlahajButton @click="changeLoc(links.donate)">
             <p>Donate</p>
           </BlahajButton>
         </VerticalCard>
@@ -167,7 +169,7 @@ import { changeLoc } from '@/assets/js/linkTools.js'
             &bull; <b>250GB</b> of Nextcloud storage <br />&bull; <b>Discord bot</b> hosting
             <br />&bull; All the advantages of the <b>Supporter</b> tier
           </p>
-          <BlahajButton @click="changeLoc('https://ko-fi.com/eryncloud/')">
+          <BlahajButton @click="changeLoc(links.donate)">
             <p>Donate</p>
           </BlahajButton>
         </VerticalCard>

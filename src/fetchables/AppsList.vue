@@ -1,12 +1,12 @@
 <script setup>
 import { onBeforeMount, ref } from 'vue'
 import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
-import links from '@/assets/json/links.json'
+import fetchable from '@/assets/json/fetchable.json'
 import RowCard from '@/components/cards/RowCard.vue'
 
 const appList = ref([])
 onBeforeMount(async () => {
-  let data = await fetchDataAsJson(links.apps, 'apps')
+  let data = await fetchDataAsJson(fetchable.apps, 'apps')
   appList.value = data.filter(
     (elem) => !(Object.prototype.hasOwnProperty.call(elem, 'noDisplay') && elem['noDisplay'])
   )

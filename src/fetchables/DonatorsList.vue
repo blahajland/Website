@@ -2,12 +2,12 @@
 import SmallCard from '@/components/cards/SmallCard.vue'
 import { onBeforeMount, ref } from 'vue'
 import { fetchDataAsJson } from '@/assets/js/fetchTools.js'
-import links from '@/assets/json/links.json'
+import fetchable from '@/assets/json/fetchable.json'
 
 const donationsList = ref([])
 
 onBeforeMount(async () => {
-  donationsList.value = await fetchDataAsJson(links.donations, 'donations')
+  donationsList.value = await fetchDataAsJson(fetchable.donations, 'donations')
 })
 </script>
 
