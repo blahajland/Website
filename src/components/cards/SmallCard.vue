@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="SmallCard" :class="{ clickable: clickable }">
+  <div :class="{ clickable: clickable }" class="SmallCard">
     <slot></slot>
   </div>
 </template>

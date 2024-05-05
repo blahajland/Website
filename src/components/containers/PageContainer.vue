@@ -1,5 +1,5 @@
 <script setup>
-import CustomGap from '@/components/CustomGap.vue'
+import CustomGap from '@/library/vue/CustomGap.vue'
 
 defineProps({
   last: {

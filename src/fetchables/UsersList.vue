@@ -16,11 +16,11 @@ onBeforeMount(async () => {
   <SmallCard
     v-for="(e, i) in usersList"
     :key="i"
+    :clickable="true"
     :color="e.color"
     @click="changeLoc(e.href)"
-    :clickable="true"
   >
-    <img :src="e.img" :alt="e.title" />
+    <img :alt="e.title" :src="e.img" />
     <h3>{{ e.title }}</h3>
   </SmallCard>
 </template>

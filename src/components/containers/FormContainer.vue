@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<style scoped lang="sass">
+<style lang="sass" scoped>
 .FormContainer
   padding: 0 256px
   display: flex

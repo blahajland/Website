@@ -16,7 +16,7 @@ onBeforeMount(async () => {
 <template>
   <RowCard v-for="(e, i) in appList" :key="i" :color="e.color">
     <template #image>
-      <img :src="e.img" :alt="e.title" />
+      <img :alt="e.title" :src="e.img" />
     </template>
     <h3>{{ e.title }}</h3>
     <p v-html="e.desc"></p>

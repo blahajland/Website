@@ -15,13 +15,13 @@ function scroll(amount) {
 <template>
   <div class="SlideableContainer">
     <div class="SlideButton" @click="scroll(-1 * SCROLL_AMOUNT)">
-      <img src="/icons/left.png" alt="&lt;" />
+      <img alt="&lt;" src="/icons/left.png" />
     </div>
-    <div class="SlideContainer" ref="scrollComp">
+    <div ref="scrollComp" class="SlideContainer">
       <slot></slot>
     </div>
     <div class="SlideButton" @click="scroll(SCROLL_AMOUNT)">
-      <img src="/icons/right.png" alt="&gt;" />
+      <img alt="&gt;" src="/icons/right.png" />
     </div>
   </div>
 </template>

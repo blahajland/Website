@@ -6,33 +6,43 @@ import { changeLoc } from '@/library/js/linkTools.js'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 
 import links from '@/assets/json/links.json'
+import TabGroup from '@/components/containers/TabGroup.vue'
+import HomeTabs from '@/views/tabs/HomeTabs.vue'
+import RulesTabs from '@/views/tabs/RulesTabs.vue'
+import NavBar from '@/components/containers/NavBar.vue'
 
 setThemeFromCookie()
 </script>
 
 <template>
-  <TopBar>
-    <BlahajButton @click="changeLoc(links.donate)">
-      <img src="/icons/donate.png" alt="Donate" />
-      <p>Donate</p>
-    </BlahajButton>
-    <BlahajButton>
-      <img src="/icons/join.png" alt="Join" />
-      <p>Sign up</p>
-    </BlahajButton>
-    <BlahajButton @click="changeLoc(links.open)">
-      <img src="/icons/open.png" alt="Open" />
-      <p>Log in</p>
-    </BlahajButton>
-    <BlahajButton @click="switchTheme()">
-      <img src="/icons/theme.png" alt="Theme" />
-      <p>Theme</p>
-    </BlahajButton>
-  </TopBar>
+  <NavBar>
+    <TopBar>
+      <BlahajButton @click="changeLoc(links.donate)">
+        <img alt="Donate" src="/icons/donate.png" />
+        <p>Donate</p>
+      </BlahajButton>
+      <BlahajButton>
+        <img alt="Join" src="/icons/join.png" />
+        <p>Sign up</p>
+      </BlahajButton>
+      <BlahajButton @click="changeLoc(links.open)">
+        <img alt="Open" src="/icons/open.png" />
+        <p>Log in</p>
+      </BlahajButton>
+      <BlahajButton @click="switchTheme()">
+        <img alt="Theme" src="/icons/theme.png" />
+        <p>Theme</p>
+      </BlahajButton>
+    </TopBar>
+    <TabGroup>
+      <HomeTabs v-if="$route.name === 'home'" />
+      <RulesTabs v-if="$route.name === 'rules'" />
+    </TabGroup>
+  </NavBar>
   <RouterView></RouterView>
   <CustomFooter>
     <BlahajButton class="displayOnMobile" color="var(--surface1)" @click="switchTheme">
-      <img src="/icons/theme.png" alt="Theme" />
+      <img alt="Theme" src="/icons/theme.png" />
       <p>Theme</p>
     </BlahajButton>
     <p>&copy; <a :href="links.eryn">eryn</a> Some rights reserved</p>

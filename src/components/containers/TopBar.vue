@@ -3,7 +3,7 @@
 <template>
   <div class="TopBar">
     <RouterLink to="/">
-      <img src="/images/logo.png" alt="Logo" />
+      <img alt="Logo" src="/images/logo.png" />
     </RouterLink>
     <div>
       <slot></slot>
@@ -13,11 +13,6 @@
 
 <style lang="sass">
 .TopBar
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  background: var(--background)
   display: flex
   align-items: center
   z-index: 5

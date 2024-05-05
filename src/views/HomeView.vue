@@ -1,12 +1,10 @@
 <script setup>
 import VerticalCard from '@/components/cards/VerticalCard.vue'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
-import CustomGap from '@/components/CustomGap.vue'
+import CustomGap from '@/library/vue/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SlideableContainer from '@/components/containers/SlideableContainer.vue'
 import PageContainer from '@/components/containers/PageContainer.vue'
-import TabButton from '@/components/TabButton.vue'
-import TabGroup from '@/components/containers/TabGroup.vue'
 import SpinningBlahaj from '@/library/vue/SpinningBlahaj.vue'
 import RandomTitle from '@/fetchables/RandomTitle.vue'
 import AppsList from '@/fetchables/AppsList.vue'
@@ -20,23 +18,6 @@ import { changeLoc } from '@/library/js/linkTools.js'
 
 <template>
   <div class="ViewRules">
-    <TabGroup>
-      <TabButton @click="changeLoc('#p1', false)">
-        <p>Why?</p>
-      </TabButton>
-      <TabButton @click="changeLoc('#p2', false)">
-        <p>Services</p>
-      </TabButton>
-      <TabButton @click="changeLoc('#p3', false)">
-        <p>User Sites</p>
-      </TabButton>
-      <TabButton @click="changeLoc('#p4', false)">
-        <p>Tiers</p>
-      </TabButton>
-      <TabButton @click="changeLoc('#p5', false)">
-        <p>Donations</p>
-      </TabButton>
-    </TabGroup>
     <SpinningBlahaj />
     <PageContainer>
       <template #title>
@@ -78,22 +59,22 @@ import { changeLoc } from '@/library/js/linkTools.js'
       </template>
       <GridContainer>
         <VerticalCard color="#B1BCE1">
-          <img src="/icons/website.png" alt="Website" />
+          <img alt="Website" src="/icons/website.png" />
           <h3>Host your own website for free!</h3>
           <p>With <b>blahaj.land</b> you can easily host your own static site for free!</p>
         </VerticalCard>
         <VerticalCard color="#ACD3DC">
-          <img src="/icons/cloud.png" alt="Cloud" />
+          <img alt="Cloud" src="/icons/cloud.png" />
           <h3>Cloud storage</h3>
           <p>Starting at <b>1€&sol;month</b></p>
         </VerticalCard>
         <VerticalCard color="#C8E7FF">
-          <img src="/icons/communication.png" alt="Communication" />
+          <img alt="Communication" src="/icons/communication.png" />
           <h3>Communication services</h3>
           <p>E-mail, Fediverse, Send and <b>more</b>!</p>
         </VerticalCard>
         <VerticalCard color="#DEAAFF" gap="8px">
-          <img src="/icons/friend.png" alt="Communication" />
+          <img alt="Communication" src="/icons/friend.png" />
           <h3>Bring your friends in!</h3>
           <p>
             For every person you invite, you'll get <b>5GB</b> of storage. If they make a donation,
@@ -101,7 +82,7 @@ import { changeLoc } from '@/library/js/linkTools.js'
           </p>
         </VerticalCard>
         <VerticalCard color="#ECBCFD" gap="8px">
-          <img src="/icons/switch.png" alt="Communication" />
+          <img alt="Communication" src="/icons/switch.png" />
           <h3>You want to host your website?</h3>
           <p>
             If you switch from <b>neocities.org</b>, <b>Github Pages</b>, or any other host, you'll
@@ -109,7 +90,7 @@ import { changeLoc } from '@/library/js/linkTools.js'
           </p>
         </VerticalCard>
         <VerticalCard color="#FFCBF2">
-          <img src="/icons/rosa.png" alt="Communication" />
+          <img alt="Communication" src="/icons/rosa.png" />
           <h3>Queer-powered</h3>
           <p>Everybody is welcome here. You always will be.</p>
         </VerticalCard>
