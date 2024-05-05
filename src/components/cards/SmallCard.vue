@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   color: {
-    default: 'var(--blahaj)'
+    default: 'var(--surface2)'
   },
   font: {
     default: '#101010'
@@ -60,8 +60,8 @@ defineProps({
 
   &.clickable
     &:hover
-      background: color-mix(in srgb, v-bind(color), var(--hover))
+      background: color-mix(in srgb, v-bind(color), var(--surface1))
 
     &:active
-      background: var(--blahaj)
+      background: var(--surface2)
 </style>

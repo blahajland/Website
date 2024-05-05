@@ -2,7 +2,7 @@
 import { changeLoc } from '@/library/js/linkTools.js'
 import TabGroup from '@/components/containers/TabGroup.vue'
 import TabButton from '@/components/TabButton.vue'
-import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
+import SpinningBlahaj from '@/library/vue/SpinningBlahaj.vue'
 import RulesList from '@/fetchables/RulesList.vue'
 import TosList from '@/fetchables/TosList.vue'
 

@@ -31,7 +31,7 @@ setThemeFromCookie()
   </TopBar>
   <RouterView></RouterView>
   <CustomFooter>
-    <BlahajButton class="displayOnMobile" color="var(--hover)" @click="switchTheme">
+    <BlahajButton class="displayOnMobile" color="var(--surface1)" @click="switchTheme">
       <img src="/icons/theme.png" alt="Theme" />
       <p>Theme</p>
     </BlahajButton>

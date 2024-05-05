@@ -62,7 +62,7 @@ function scroll(amount) {
 
     &:hover
       padding: 8px
-      background: var(--hover)
+      background: var(--surface1)
       opacity: 1
 
     > img

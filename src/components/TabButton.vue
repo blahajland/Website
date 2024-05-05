@@ -28,19 +28,19 @@
   > hr
     margin: 0
     height: 3px
-    background: var(--hover)
+    background: var(--surface1)
     width: 100%
     border: none
     border-radius: var(--radius-inf)
 
   &:hover
-    background: var(--hover)
+    background: var(--surface1)
 
     > hr
-      background: var(--blahaj)
+      background: var(--surface2)
 
   &:active
-    background: var(--blahaj)
+    background: var(--surface2)
 
   @media (max-width: 1200px)
     display: none

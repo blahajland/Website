@@ -4,6 +4,13 @@
   --radius-med: 12px;
   --trans: all ease-out 0.25s;
 
+  --background: transparent;
+  --text: transparent;
+  --surface1: transparent;
+  --surface2: transparent;
+  --surface3: transparent;
+  --filter: none;
+
   @media (max-width: 1200px) {
     --radius-small: 2vw;
     --radius-med: 8vw;

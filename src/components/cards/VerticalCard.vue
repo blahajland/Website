@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   color: {
-    default: 'var(--blahaj)'
+    default: 'var(--surface2)'
   },
   font: {
     default: '#101010'
