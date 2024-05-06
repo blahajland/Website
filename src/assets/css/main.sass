@@ -11,16 +11,6 @@ body
   background: var(--background)
   color: var(--text)
 
-.ViewRules
-  display: flex
-  flex-direction: column
-  justify-content: start
-  align-items: stretch
-  gap: 8px
-
-  *
-    margin: 0
-
 @media (min-width: 1201px)
   body
     display: flex
@@ -31,11 +21,8 @@ body
   #app
     width: 1200px
 
-  .ViewRules
-    margin: 137px 0 64px
-
-    > h1
-      font-size: 2.5em
+  .displayOnDesktop
+    display: inherit !important
 
   .displayOnMobile
     display: none !important
@@ -45,11 +32,9 @@ body
     width: 100vw
     overflow: hidden
 
-  .ViewRules
-    padding: 96px 24px 0
+  .displayOnDesktop
+    display: none !important
 
-    > h1
-      font-size: 2em
 
   .displayOnMobile
     display: inherit !important

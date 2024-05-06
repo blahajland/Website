@@ -1,17 +1,31 @@
-<script setup>
-import CustomGap from '@/library/vue/CustomGap.vue'
-
-defineProps({
-  last: {
-    type: Boolean,
-    default: false
-  }
-})
-</script>
+<script setup></script>
 
 <template>
-  <slot name="title"></slot>
-  <CustomGap gap="16px" />
-  <slot></slot>
-  <CustomGap v-if="!last" gap="64px" />
+  <div class="PageContainer">
+    <slot></slot>
+  </div>
 </template>
+
+<style lang="sass">
+.PageContainer
+  display: flex
+  flex-direction: column
+  justify-content: start
+  align-items: stretch
+  gap: 8px
+
+  *
+    margin: 0
+
+  @media (min-width: 1201px)
+    margin: 137px 0 64px
+
+    > h1
+      font-size: 2.5em
+
+  @media (max-width: 1200px)
+    padding: 96px 24px 0
+
+    > h1
+      font-size: 2em
+</style>

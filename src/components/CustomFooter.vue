@@ -15,7 +15,7 @@
 
   @media (min-width: 1201px)
     flex-direction: row
-    gap: 24px
+    gap: 32px
     padding: 0 0 12px
 
   @media (max-width: 1200px)

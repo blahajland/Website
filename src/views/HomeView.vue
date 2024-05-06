@@ -4,24 +4,30 @@ import BlahajButton from '@/library/vue/BlahajButton.vue'
 import CustomGap from '@/library/vue/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SlideableContainer from '@/components/containers/SlideableContainer.vue'
-import PageContainer from '@/components/containers/PageContainer.vue'
+import ContentContainer from '@/components/containers/ContentContainer.vue'
 import SpinningBlahaj from '@/library/vue/SpinningBlahaj.vue'
 import RandomTitle from '@/fetchables/RandomTitle.vue'
 import AppsList from '@/fetchables/AppsList.vue'
 import UsersList from '@/fetchables/UsersList.vue'
-import DonatorsList from '@/fetchables/DonatorsList.vue'
 
 import links from '@/assets/json/links.json'
 
 import { changeLoc } from '@/library/js/linkTools.js'
+import LoadingState from '@/components/LoadingState.vue'
+import PageContainer from '@/components/containers/PageContainer.vue'
 </script>
 
 <template>
-  <div class="ViewRules">
+  <PageContainer>
     <SpinningBlahaj />
-    <PageContainer>
+    <ContentContainer>
       <template #title>
-        <RandomTitle />
+        <Suspense>
+          <RandomTitle />
+          <template #fallback>
+            <LoadingState />
+          </template>
+        </Suspense>
         <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
       </template>
       <GridContainer rows="4">
@@ -50,9 +56,9 @@ import { changeLoc } from '@/library/js/linkTools.js'
           </BlahajButton>
         </VerticalCard>
       </GridContainer>
-    </PageContainer>
+    </ContentContainer>
     <CustomGap gap="32px" />
-    <PageContainer>
+    <ContentContainer>
       <template #title>
         <h2 id="p1">Why?</h2>
         <p>Why should you consider <b>Blahaj Land</b> for your needs ? ;3</p>
@@ -95,26 +101,36 @@ import { changeLoc } from '@/library/js/linkTools.js'
           <p>Everybody is welcome here. You always will be.</p>
         </VerticalCard>
       </GridContainer>
-    </PageContainer>
-    <PageContainer>
+    </ContentContainer>
+    <ContentContainer>
       <template #title>
         <h2 id="p2">Services</h2>
         <p>The stuff we host >:3</p>
       </template>
-      <SlideableContainer>
-        <AppsList />
-      </SlideableContainer>
-    </PageContainer>
-    <PageContainer>
+      <Suspense>
+        <template #fallback>
+          <LoadingState />
+        </template>
+        <SlideableContainer>
+          <AppsList />
+        </SlideableContainer>
+      </Suspense>
+    </ContentContainer>
+    <ContentContainer>
       <template #title>
         <h2 id="p3">User sites</h2>
         <p>Here you can view our user's sites :3</p>
       </template>
-      <SlideableContainer>
-        <UsersList />
-      </SlideableContainer>
-    </PageContainer>
-    <PageContainer>
+      <Suspense>
+        <template #fallback>
+          <LoadingState />
+        </template>
+        <SlideableContainer>
+          <UsersList />
+        </SlideableContainer>
+      </Suspense>
+    </ContentContainer>
+    <ContentContainer>
       <template #title>
         <h2 id="p4">Tiers</h2>
         <p>Get more features and support the website >83</p>
@@ -155,15 +171,29 @@ import { changeLoc } from '@/library/js/linkTools.js'
           </BlahajButton>
         </VerticalCard>
       </GridContainer>
-    </PageContainer>
-    <PageContainer :last="true">
+    </ContentContainer>
+    <ContentContainer :last="true">
       <template #title>
         <h2 id="p5">Donations</h2>
         <p>Thanks for your <i>kind</i> donations &lt;3</p>
       </template>
       <SlideableContainer>
-        <DonatorsList />
+        <!--DonatorsList /-->
+        <VerticalCard color="#ECBCFD">
+          <h3>You're a Ko-Fi donator ?</h3>
+          <p>
+            We're now using <b>OpenCollective</b> for donations. If you made one through Ko-Fi, go
+            here.
+          </p>
+          <BlahajButton @click="$router.push('/kofi')">
+            <p>Ko-Fi donations</p>
+          </BlahajButton>
+        </VerticalCard>
+        <VerticalCard color="#ACD3DC">
+          <h3>Coming soon...</h3>
+          <p>Once you make a donation, it will appear here</p>
+        </VerticalCard>
       </SlideableContainer>
-    </PageContainer>
-  </div>
+    </ContentContainer>
+  </PageContainer>
 </template>
