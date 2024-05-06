@@ -180,7 +180,7 @@ import PageContainer from '@/components/containers/PageContainer.vue'
       <SlideableContainer>
         <!--DonatorsList /-->
         <VerticalCard color="#ECBCFD">
-          <h3>You're a Ko-Fi aficionado ?</h3>
+          <h3>You're a Ko-Fi donator ?</h3>
           <p>
             We're now using <b>OpenCollective</b> for donations. If you made one through Ko-Fi, go
             here.
