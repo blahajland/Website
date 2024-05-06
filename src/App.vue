@@ -18,19 +18,19 @@ setThemeFromCookie()
   <NavBar>
     <TopBar>
       <BlahajButton @click="changeLoc(links.donate)">
-        <img alt="Donate" src="/icons/donate.png" />
+        <img alt="Donate" src="/donate.png" />
         <p>Donate</p>
       </BlahajButton>
       <BlahajButton>
-        <img alt="Join" src="/icons/join.png" />
+        <img alt="Join" src="/join.png" />
         <p>Sign up</p>
       </BlahajButton>
       <BlahajButton @click="changeLoc(links.open)">
-        <img alt="Open" src="/icons/open.png" />
+        <img alt="Open" src="/open.png" />
         <p>Log in</p>
       </BlahajButton>
       <BlahajButton @click="switchTheme()">
-        <img alt="Theme" src="/icons/theme.png" />
+        <img alt="Theme" src="/theme.png" />
         <p>Theme</p>
       </BlahajButton>
     </TopBar>
@@ -42,7 +42,7 @@ setThemeFromCookie()
   <RouterView></RouterView>
   <CustomFooter>
     <BlahajButton class="displayOnMobile" color="var(--surface1)" @click="switchTheme">
-      <img alt="Theme" src="/icons/theme.png" />
+      <img alt="Theme" src="/theme.png" />
       <p>Theme</p>
     </BlahajButton>
     <p>&copy; <a :href="links.eryn">eryn</a> Some rights reserved</p>

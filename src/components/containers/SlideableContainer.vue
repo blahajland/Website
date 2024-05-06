@@ -1,5 +1,5 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 
 const SCROLL_AMOUNT = 500
 
@@ -19,19 +19,19 @@ function scroll(amount, vertical = false) {
 <template>
   <div class="SlideableContainer">
     <div class="SlideButton displayOnDesktop" @click="scroll(-1 * SCROLL_AMOUNT)">
-      <img alt="&lt;" src="/icons/left.png"/>
+      <img alt="&lt;" src="/left.png" />
     </div>
     <div class="SlideButton displayOnMobile" @click="scroll(-1 * SCROLL_AMOUNT, true)">
-      <img alt="&lt;" src="/icons/left.png"/>
+      <img alt="&lt;" src="/left.png" />
     </div>
     <div ref="scrollComp" class="SlideContainer">
       <slot></slot>
     </div>
     <div class="SlideButton displayOnMobile" @click="scroll(SCROLL_AMOUNT, true)">
-      <img alt="&gt;" src="/icons/right.png"/>
+      <img alt="&gt;" src="/right.png" />
     </div>
     <div class="SlideButton displayOnDesktop" @click="scroll(SCROLL_AMOUNT)">
-      <img alt="&gt;" src="/icons/right.png"/>
+      <img alt="&gt;" src="/right.png" />
     </div>
   </div>
 </template>
@@ -100,5 +100,4 @@ function scroll(amount, vertical = false) {
     max-height: 512px
     flex-direction: column
     overflow: hidden
-
 </style>

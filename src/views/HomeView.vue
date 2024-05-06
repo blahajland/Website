@@ -65,22 +65,22 @@ import PageContainer from '@/components/containers/PageContainer.vue'
       </template>
       <GridContainer>
         <VerticalCard color="#B1BCE1">
-          <img alt="Website" src="/icons/website.png" />
+          <img alt="Website" src="/website.png" />
           <h3>Host your own website for free!</h3>
           <p>With <b>blahaj.land</b> you can easily host your own static site for free!</p>
         </VerticalCard>
         <VerticalCard color="#ACD3DC">
-          <img alt="Cloud" src="/icons/cloud.png" />
+          <img alt="Cloud" src="/cloud.png" />
           <h3>Cloud storage</h3>
           <p>Starting at <b>1€&sol;month</b></p>
         </VerticalCard>
         <VerticalCard color="#C8E7FF">
-          <img alt="Communication" src="/icons/communication.png" />
+          <img alt="Communication" src="/communication.png" />
           <h3>Communication services</h3>
           <p>E-mail, Fediverse, Send and <b>more</b>!</p>
         </VerticalCard>
         <VerticalCard color="#DEAAFF" gap="8px">
-          <img alt="Communication" src="/icons/friend.png" />
+          <img alt="Communication" src="/friend.png" />
           <h3>Bring your friends in!</h3>
           <p>
             For every person you invite, you'll get <b>5GB</b> of storage. If they make a donation,
@@ -88,7 +88,7 @@ import PageContainer from '@/components/containers/PageContainer.vue'
           </p>
         </VerticalCard>
         <VerticalCard color="#ECBCFD" gap="8px">
-          <img alt="Communication" src="/icons/switch.png" />
+          <img alt="Communication" src="/switch.png" />
           <h3>You want to host your website?</h3>
           <p>
             If you switch from <b>neocities.org</b>, <b>Github Pages</b>, or any other host, you'll
@@ -96,7 +96,7 @@ import PageContainer from '@/components/containers/PageContainer.vue'
           </p>
         </VerticalCard>
         <VerticalCard color="#FFCBF2">
-          <img alt="Communication" src="/icons/rosa.png" />
+          <img alt="Communication" src="/rosa.png" />
           <h3>Queer-powered</h3>
           <p>Everybody is welcome here. You always will be.</p>
         </VerticalCard>
