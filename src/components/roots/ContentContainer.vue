@@ -11,7 +11,7 @@ defineProps({
 
 <template>
   <slot name="title"></slot>
-  <CustomGap gap="24px" />
+  <CustomGap gap="16px" />
   <slot></slot>
   <CustomGap v-if="!last" gap="72px" />
 </template>

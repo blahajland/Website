@@ -76,7 +76,10 @@ import DonatorsList from '@/fetchables/DonatorsList.vue'
           <p>Starting at <b>1€&sol;month</b></p>
         </VerticalCard>
         <VerticalCard color="#C8E7FF">
-          <img alt="Communication" src="https://blahaj.land/static/images/icons/communication.png" />
+          <img
+            alt="Communication"
+            src="https://blahaj.land/static/images/icons/communication.png"
+          />
           <h3>Communication services</h3>
           <p>E-mail, Fediverse, Send and <b>more</b>!</p>
         </VerticalCard>
