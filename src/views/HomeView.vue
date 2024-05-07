@@ -15,6 +15,7 @@ import links from '@/assets/json/links.json'
 import { changeLoc } from '@/library/js/linkTools.js'
 import LoadingState from '@/components/LoadingState.vue'
 import PageContainer from '@/components/containers/PageContainer.vue'
+import DonatorsList from '@/fetchables/DonatorsList.vue'
 </script>
 
 <template>
@@ -140,9 +141,8 @@ import PageContainer from '@/components/containers/PageContainer.vue'
           <h2>Starter</h2>
           <h3>Free</h3>
           <p>
-            &bull; Send, Vaultwarden, Haste <b>&amp; more </b><br />&bull; Email (500MB quota)
-            <br />&bull; One
-            <b>hosted site</b>
+            &bull; Email, Send, Vaultwarden, Haste <b>&amp; more </b> <br />&bull; <b>1GB</b> of
+            Nextcloud storage <br />&bull; One <b>hosted site</b>
           </p>
           <BlahajButton @click="changeLoc(links.join)">
             <p>Join</p>
@@ -177,23 +177,14 @@ import PageContainer from '@/components/containers/PageContainer.vue'
         <h2 id="p5">Donations</h2>
         <p>Thanks for your <i>kind</i> donations &lt;3</p>
       </template>
-      <SlideableContainer>
-        <!--DonatorsList /-->
-        <VerticalCard color="#ECBCFD">
-          <h3>You're a Ko-Fi donator ?</h3>
-          <p>
-            We're now using <b>OpenCollective</b> for donations. If you made one through Ko-Fi, go
-            here.
-          </p>
-          <BlahajButton @click="$router.push('/kofi')">
-            <p>Ko-Fi donations</p>
-          </BlahajButton>
-        </VerticalCard>
-        <VerticalCard color="#ACD3DC">
-          <h3>Coming soon...</h3>
-          <p>Once you make a donation, it will appear here</p>
-        </VerticalCard>
-      </SlideableContainer>
+      <Suspense>
+        <template #fallback>
+          <LoadingState />
+        </template>
+        <SlideableContainer>
+          <DonatorsList />
+        </SlideableContainer>
+      </Suspense>
     </ContentContainer>
   </PageContainer>
 </template>

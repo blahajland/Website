@@ -37,6 +37,7 @@ setThemeFromCookie()
     <TabGroup>
       <HomeTabs v-if="$route.name === 'home'" />
       <RulesTabs v-if="$route.name === 'rules'" />
+      <!-- Is there a better way to do it ? -->
     </TabGroup>
   </NavBar>
   <RouterView></RouterView>
