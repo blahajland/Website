@@ -34,10 +34,6 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
 </script>
 
 <template>
-  <VerticalCard v-if="donationsList.length === 0" color="var(--missing)">
-    <h3>The list is empty... It shouldn't</h3>
-    <p>If this card still appears, please contact the dev team.</p>
-  </VerticalCard>
   <VerticalCard v-for="(e, i) in donationsList" :key="i" color="#E2EDFF">
     <img
       :src="e['fromAccount']['imageUrl']"
@@ -50,7 +46,14 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
     </BlahajButton>
     <p></p>
   </VerticalCard>
-  <VerticalCard color="var(--missing)" v-if="donationsList.length !== 0">
+  <VerticalCard v-if="donationsList.length === 0" color="var(--missing)">
+    <h3>The list is empty...<br />Help us resolve that!</h3>
+    <p>You can donate through OpenCollective!</p>
+    <BlahajButton @click="changeLoc(links.donate)">
+      <p>Donate</p>
+    </BlahajButton>
+  </VerticalCard>
+  <VerticalCard color="#C8E7FF" v-else>
     <h3>And more !</h3>
     <p>Go to <b>OpenCollective</b> to see all the donations made so far.</p>
     <BlahajButton @click="changeLoc(links.donate)">
