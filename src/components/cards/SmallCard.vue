@@ -59,6 +59,8 @@ defineProps({
     -webkit-box-orient: vertical
 
   &.clickable
+    cursor: pointer
+
     &:hover
       background: color-mix(in srgb, v-bind(color), var(--surface1))
 

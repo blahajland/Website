@@ -15,7 +15,6 @@
 .TopBar
   display: flex
   align-items: center
-  z-index: 5
 
   > a > img
     filter: var(--filter)

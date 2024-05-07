@@ -1,10 +1,10 @@
 <script setup>
-import ContentContainer from '@/components/containers/ContentContainer.vue'
+import ContentContainer from '@/components/roots/ContentContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SpinningBlahaj from '@/library/vue/SpinningBlahaj.vue'
 import SmallCard from '@/components/cards/SmallCard.vue'
 import { changeLoc } from '@/library/js/linkTools.js'
-import PageContainer from '@/components/containers/PageContainer.vue'
+import PageContainer from '@/components/roots/PageContainer.vue'
 
 changeLoc('#', false)
 </script>

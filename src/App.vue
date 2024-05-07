@@ -9,7 +9,7 @@ import links from '@/assets/json/links.json'
 import TabGroup from '@/components/containers/TabGroup.vue'
 import HomeTabs from '@/views/tabs/HomeTabs.vue'
 import RulesTabs from '@/views/tabs/RulesTabs.vue'
-import NavBar from '@/components/containers/NavBar.vue'
+import NavBar from '@/components/roots/NavBar.vue'
 
 setThemeFromCookie()
 </script>
@@ -18,19 +18,19 @@ setThemeFromCookie()
   <NavBar>
     <TopBar>
       <BlahajButton @click="changeLoc(links.donate)">
-        <img alt="Donate" src="/donate.png" />
+        <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
         <p>Donate</p>
       </BlahajButton>
       <BlahajButton>
-        <img alt="Join" src="/join.png" />
+        <img alt="Join" src="https://blahaj.land/static/images/icons/join.png" />
         <p>Sign up</p>
       </BlahajButton>
       <BlahajButton @click="changeLoc(links.open)">
-        <img alt="Open" src="/open.png" />
+        <img alt="Open" src="https://blahaj.land/static/images/icons/open.png" />
         <p>Log in</p>
       </BlahajButton>
       <BlahajButton @click="switchTheme()">
-        <img alt="Theme" src="/theme.png" />
+        <img alt="Theme" src="https://blahaj.land/static/images/icons/theme.png" />
         <p>Theme</p>
       </BlahajButton>
     </TopBar>
@@ -43,7 +43,7 @@ setThemeFromCookie()
   <RouterView></RouterView>
   <CustomFooter>
     <BlahajButton class="displayOnMobile" color="var(--surface1)" @click="switchTheme">
-      <img alt="Theme" src="/theme.png" />
+      <img alt="Theme" src="https://blahaj.land/static/images/icons/theme.png" />
       <p>Theme</p>
     </BlahajButton>
     <p>&copy; <a :href="links.eryn">eryn</a> Some rights reserved</p>

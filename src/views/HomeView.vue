@@ -4,7 +4,7 @@ import BlahajButton from '@/library/vue/BlahajButton.vue'
 import CustomGap from '@/library/vue/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SlideableContainer from '@/components/containers/SlideableContainer.vue'
-import ContentContainer from '@/components/containers/ContentContainer.vue'
+import ContentContainer from '@/components/roots/ContentContainer.vue'
 import SpinningBlahaj from '@/library/vue/SpinningBlahaj.vue'
 import RandomTitle from '@/fetchables/RandomTitle.vue'
 import AppsList from '@/fetchables/AppsList.vue'
@@ -14,7 +14,7 @@ import links from '@/assets/json/links.json'
 
 import { changeLoc } from '@/library/js/linkTools.js'
 import LoadingState from '@/components/LoadingState.vue'
-import PageContainer from '@/components/containers/PageContainer.vue'
+import PageContainer from '@/components/roots/PageContainer.vue'
 import DonatorsList from '@/fetchables/DonatorsList.vue'
 </script>
 
@@ -66,22 +66,22 @@ import DonatorsList from '@/fetchables/DonatorsList.vue'
       </template>
       <GridContainer>
         <VerticalCard color="#B1BCE1">
-          <img alt="Website" src="/website.png" />
+          <img alt="Website" src="https://blahaj.land/static/images/icons/website.png" />
           <h3>Host your own website for free!</h3>
           <p>With <b>blahaj.land</b> you can easily host your own static site for free!</p>
         </VerticalCard>
         <VerticalCard color="#ACD3DC">
-          <img alt="Cloud" src="/cloud.png" />
+          <img alt="Cloud" src="https://blahaj.land/static/images/icons/cloud.png" />
           <h3>Cloud storage</h3>
           <p>Starting at <b>1€&sol;month</b></p>
         </VerticalCard>
         <VerticalCard color="#C8E7FF">
-          <img alt="Communication" src="/communication.png" />
+          <img alt="Communication" src="https://blahaj.land/static/images/icons/communication.png" />
           <h3>Communication services</h3>
           <p>E-mail, Fediverse, Send and <b>more</b>!</p>
         </VerticalCard>
         <VerticalCard color="#DEAAFF" gap="8px">
-          <img alt="Communication" src="/friend.png" />
+          <img alt="Friends" src="https://blahaj.land/static/images/icons/friend.png" />
           <h3>Bring your friends in!</h3>
           <p>
             For every person you invite, you'll get <b>5GB</b> of storage. If they make a donation,
@@ -89,7 +89,7 @@ import DonatorsList from '@/fetchables/DonatorsList.vue'
           </p>
         </VerticalCard>
         <VerticalCard color="#ECBCFD" gap="8px">
-          <img alt="Communication" src="/switch.png" />
+          <img alt="Switch server" src="https://blahaj.land/static/images/icons/switch.png" />
           <h3>You want to host your website?</h3>
           <p>
             If you switch from <b>neocities.org</b>, <b>Github Pages</b>, or any other host, you'll
@@ -97,7 +97,7 @@ import DonatorsList from '@/fetchables/DonatorsList.vue'
           </p>
         </VerticalCard>
         <VerticalCard color="#FFCBF2">
-          <img alt="Communication" src="/rosa.png" />
+          <img alt="Pride flag" src="https://blahaj.land/static/images/icons/rosa.png" />
           <h3>Queer-powered</h3>
           <p>Everybody is welcome here. You always will be.</p>
         </VerticalCard>

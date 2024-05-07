@@ -4,7 +4,7 @@ import SpinningBlahaj from '@/library/vue/SpinningBlahaj.vue'
 import RulesList from '@/fetchables/RulesList.vue'
 import TosList from '@/fetchables/TosList.vue'
 import LoadingState from '@/components/LoadingState.vue'
-import PageContainer from '@/components/containers/PageContainer.vue'
+import PageContainer from '@/components/roots/PageContainer.vue'
 
 changeLoc('#', false)
 </script>

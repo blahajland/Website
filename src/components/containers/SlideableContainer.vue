@@ -19,19 +19,19 @@ function scroll(amount, vertical = false) {
 <template>
   <div class="SlideableContainer">
     <div class="SlideButton displayOnDesktop" @click="scroll(-1 * SCROLL_AMOUNT)">
-      <img alt="&lt;" src="/left.png" />
+      <img alt="&lt;" src="https://blahaj.land/static/images/icons/left.png" />
     </div>
     <div class="SlideButton displayOnMobile" @click="scroll(-1 * SCROLL_AMOUNT, true)">
-      <img alt="&lt;" src="/left.png" />
+      <img alt="&lt;" src="https://blahaj.land/static/images/icons/left.png" />
     </div>
     <div ref="scrollComp" class="SlideContainer">
       <slot></slot>
     </div>
     <div class="SlideButton displayOnMobile" @click="scroll(SCROLL_AMOUNT, true)">
-      <img alt="&gt;" src="/right.png" />
+      <img alt="&gt;" src="https://blahaj.land/static/images/icons/right.png" />
     </div>
     <div class="SlideButton displayOnDesktop" @click="scroll(SCROLL_AMOUNT)">
-      <img alt="&gt;" src="/right.png" />
+      <img alt="&gt;" src="https://blahaj.land/static/images/icons/right.png" />
     </div>
   </div>
 </template>

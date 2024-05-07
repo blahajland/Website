@@ -27,7 +27,7 @@ appList.value = data.filter(
     <h3>The list is empty... It shouldn't</h3>
     <p>If this card still appears, please contact the dev team.</p>
   </RowCard>
-  <RowCard v-else color="#F3CBFF" font="var(--text)">
+  <RowCard v-else color="#F3CBFF">
     <template #image>
       <img alt="More" src="https://blahaj.land/static/images/apps/more.png" />
     </template>
