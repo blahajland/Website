@@ -5,7 +5,6 @@ import CustomGap from '@/library/vue/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import SlideableContainer from '@/components/containers/SlideableContainer.vue'
 import ContentContainer from '@/components/roots/ContentContainer.vue'
-import SpinningBlahaj from '@/library/vue/SpinningBlahaj.vue'
 import RandomTitle from '@/fetchables/RandomTitle.vue'
 import AppsList from '@/fetchables/AppsList.vue'
 import UsersList from '@/fetchables/UsersList.vue'
@@ -16,6 +15,7 @@ import { changeLoc } from '@/library/js/linkTools.js'
 import LoadingState from '@/components/LoadingState.vue'
 import PageContainer from '@/components/roots/PageContainer.vue'
 import DonatorsList from '@/fetchables/DonatorsList.vue'
+import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
 </script>
 
 <template>
