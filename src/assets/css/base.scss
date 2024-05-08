@@ -1,17 +1,12 @@
 :root {
   --radius-inf: 9999px;
-  --radius-small: 4px;
-  --radius-med: 12px;
   --trans: all ease-out 0.25s;
+  --missing: #dddddd;
 
-  --background: transparent;
-  --text: transparent;
-  --surface1: transparent;
-  --surface2: transparent;
-  --surface3: transparent;
-  --filter: none;
-
-  --missing: #aaaaaa;
+  @media (min-width: 1201px) {
+    --radius-small: 4px;
+    --radius-med: 12px;
+  }
 
   @media (max-width: 1200px) {
     --radius-small: 2vw;

@@ -13,13 +13,6 @@ appList.value = data.filter(
 </script>
 
 <template>
-  <RowCard v-if="appList.length === 0" color="var(--missing)">
-    <template #image>
-      <img alt="Unknown" src="https://blahaj.land/static/images/apps/unknown.png" />
-    </template>
-    <h3>The list is empty... It shouldn't</h3>
-    <p>If this card still appears, please contact the dev team.</p>
-  </RowCard>
   <RowCard v-for="(e, i) in appList" :key="i" :color="e.color">
     <template #image>
       <img :alt="e.title" :src="e.img" />
@@ -27,7 +20,14 @@ appList.value = data.filter(
     <h3>{{ e.title }}</h3>
     <p v-html="e.desc"></p>
   </RowCard>
-  <RowCard v-if="appList.length !== 0" color="#F3CBFF" font="var(--text)">
+  <RowCard v-if="appList.length === 0" color="var(--missing)">
+    <template #image>
+      <img alt="Unknown" src="https://blahaj.land/static/images/apps/unknown.png" />
+    </template>
+    <h3>The list is empty... It shouldn't</h3>
+    <p>If this card still appears, please contact the dev team.</p>
+  </RowCard>
+  <RowCard v-else color="#F3CBFF">
     <template #image>
       <img alt="More" src="https://blahaj.land/static/images/apps/more.png" />
     </template>

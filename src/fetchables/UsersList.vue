@@ -16,7 +16,7 @@ usersList.value = await fetchDataAsJson(fetchable.users, 'users')
   <VerticalCard color="var(--missing)" v-if="usersList.length === 0">
     <h3>The list is empty...<br />Help us resolve that!</h3>
     <p>If you want your own website, sign in !</p>
-    <BlahajButton @click="changeLoc(links.join)">
+    <BlahajButton @click="changeLoc(links.join)" color="var(--background)" hover="var(--surface1)">
       <p>Sign In</p>
     </BlahajButton>
   </VerticalCard>

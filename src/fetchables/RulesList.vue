@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { fetchDataAsJson } from '@/library/js/fetchTools.js'
 import fetchable from '@/assets/json/fetchable.json'
 import VerticalCard from '@/components/cards/VerticalCard.vue'
-import ContentContainer from '@/components/containers/ContentContainer.vue'
+import ContentContainer from '@/components/roots/ContentContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 
 const rLastUpdated = ref('__/__/____')

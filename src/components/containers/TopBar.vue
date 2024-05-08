@@ -3,7 +3,7 @@
 <template>
   <div class="TopBar">
     <RouterLink to="/">
-      <img alt="Logo" src="/images/logo.png" />
+      <img alt="Logo" src="https://blahaj.land/static/images/Logo.png" />
     </RouterLink>
     <div>
       <slot></slot>
@@ -15,7 +15,6 @@
 .TopBar
   display: flex
   align-items: center
-  z-index: 5
 
   > a > img
     filter: var(--filter)

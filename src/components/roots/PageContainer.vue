@@ -18,13 +18,13 @@
     margin: 0
 
   @media (min-width: 1201px)
-    margin: 137px 0 64px
+    margin: 137px 0 72px
 
     > h1
       font-size: 2.5em
 
   @media (max-width: 1200px)
-    padding: 96px 24px 0
+    padding: 96px 32px 0
 
     > h1
       font-size: 2em

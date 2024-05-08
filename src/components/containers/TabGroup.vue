@@ -14,7 +14,6 @@
   align-items: center
   padding: 0 0 8px 0
   gap: 16px
-  z-index: 5
 
   @media (max-width: 1200px)
     display: none
