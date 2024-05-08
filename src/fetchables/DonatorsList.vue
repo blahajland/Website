@@ -41,7 +41,7 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
       :alt="e['fromAccount']['name']"
     />
     <h3>{{ e['fromAccount']['name'] }}</h3>
-    <BlahajButton>
+    <BlahajButton color="var(--background)" hover="var(--surface1)">
       <p>{{ e['amount']['value'] }} €</p>
     </BlahajButton>
     <p></p>
@@ -49,21 +49,21 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
   <VerticalCard v-if="donationsList.length === 0" color="var(--missing)">
     <h3>The list is empty...<br />Help us resolve that!</h3>
     <p>You can donate through OpenCollective!</p>
-    <BlahajButton @click="changeLoc(links.donate)">
+    <BlahajButton @click="changeLoc(links.donate)" color="var(--background)" hover="var(--surface1)">
       <p>Donate</p>
     </BlahajButton>
   </VerticalCard>
   <VerticalCard color="#C8E7FF" v-else>
     <h3>And more !</h3>
     <p>Go to <b>OpenCollective</b> to see all the donations made so far.</p>
-    <BlahajButton @click="changeLoc(links.donate)">
+    <BlahajButton @click="changeLoc(links.donate)" color="var(--background)" hover="var(--surface1)">
       <p>Donate</p>
     </BlahajButton>
   </VerticalCard>
   <VerticalCard color="#ECBCFD">
     <h3>You're a Ko-Fi donator ?</h3>
     <p>If you made a donation through Ko-Fi, go here.</p>
-    <BlahajButton @click="$router.push('/kofi')">
+    <BlahajButton @click="$router.push('/kofi')" color="var(--background)" hover="var(--surface1)">
       <p>Ko-Fi donations</p>
     </BlahajButton>
   </VerticalCard>
