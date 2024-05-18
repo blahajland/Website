@@ -6,8 +6,7 @@ import RowCard from '@/components/cards/RowCard.vue'
 
 const appList = ref([])
 
-let data = await fetchDataAsJson(fetchable.apps, 'apps')
-appList.value = data.filter(
+appList.value = (await fetchDataAsJson(fetchable.apps, 'apps')).filter(
   (elem) => !(Object.prototype.hasOwnProperty.call(elem, 'noDisplay') && elem['noDisplay'])
 )
 </script>

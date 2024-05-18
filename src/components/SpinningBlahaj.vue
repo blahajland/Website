@@ -1,12 +1,9 @@
-<script setup></script>
-
 <template>
   <a href="https://blahaj.itsjamie.dev/">
     <img src="https://blahaj.land/static/images/SpinningBlahaj.gif" alt="Blahaj" />
   </a>
 </template>
 
-<!-- scope warranted -->
 <style lang="sass" scoped>
 
 a

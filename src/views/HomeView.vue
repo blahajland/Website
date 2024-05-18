@@ -34,7 +34,11 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
       <GridContainer rows="4">
         <VerticalCard color="#ACD3DC">
           <p>Take a tour and see <b>what's inside :3</b></p>
-          <BlahajButton @click="changeLoc('#p1', false)" color="var(--background)" hover="var(--surface1)">
+          <BlahajButton
+            @click="changeLoc('#p1', false)"
+            color="var(--background)"
+            hover="var(--surface1)"
+          >
             <p>Discover</p>
           </BlahajButton>
         </VerticalCard>
@@ -46,13 +50,21 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
         </VerticalCard>
         <VerticalCard color="#B1BCE1">
           <p>Just want to hang around? Join our <b>Discord</b></p>
-          <BlahajButton @click="changeLoc(links.join)" color="var(--background)" hover="var(--surface1)">
+          <BlahajButton
+            @click="changeLoc(links.join)"
+            color="var(--background)"
+            hover="var(--surface1)"
+          >
             <p>Join</p>
           </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#DCDCDC">
           <p>Already part of the community? Get access to <b>all the apps</b></p>
-          <BlahajButton @click="changeLoc(links.open)" color="var(--background)" hover="var(--surface1)">
+          <BlahajButton
+            @click="changeLoc(links.open)"
+            color="var(--background)"
+            hover="var(--surface1)"
+          >
             <p>Open Dashboard</p>
           </BlahajButton>
         </VerticalCard>
@@ -147,7 +159,11 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             &bull; Email, Send, Vaultwarden, Haste <b>&amp; more </b> <br />&bull; <b>1GB</b> of
             Nextcloud storage <br />&bull; One <b>hosted site</b>
           </p>
-          <BlahajButton @click="changeLoc(links.join)" color="var(--background)" hover="var(--surface1)">
+          <BlahajButton
+            @click="changeLoc(links.join)"
+            color="var(--background)"
+            hover="var(--surface1)"
+          >
             <p>Join</p>
           </BlahajButton>
         </VerticalCard>
@@ -158,7 +174,11 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             &bull; <b>10GB</b> of Nextcloud storage <br />&bull; <b>Unlimited</b> site hosting
             <br />&bull; All the advantages of the <b>Starter</b> tier
           </p>
-          <BlahajButton @click="changeLoc(links.donate)" color="var(--background)" hover="var(--surface1)">
+          <BlahajButton
+            @click="changeLoc(links.donate)"
+            color="var(--background)"
+            hover="var(--surface1)"
+          >
             <p>Donate</p>
           </BlahajButton>
         </VerticalCard>
@@ -169,7 +189,11 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             &bull; <b>250GB</b> of Nextcloud storage <br />&bull; <b>Discord bot</b> hosting
             <br />&bull; All the advantages of the <b>Supporter</b> tier
           </p>
-          <BlahajButton @click="changeLoc(links.donate)" color="var(--background)" hover="var(--surface1)">
+          <BlahajButton
+            @click="changeLoc(links.donate)"
+            color="var(--background)"
+            hover="var(--surface1)"
+          >
             <p>Donate</p>
           </BlahajButton>
         </VerticalCard>

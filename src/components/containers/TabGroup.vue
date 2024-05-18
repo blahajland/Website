@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div class="TabGroup">
     <slot></slot>

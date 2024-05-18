@@ -49,14 +49,22 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
   <VerticalCard v-if="donationsList.length === 0" color="var(--missing)">
     <h3>The list is empty...<br />Help us resolve that!</h3>
     <p>You can donate through OpenCollective!</p>
-    <BlahajButton @click="changeLoc(links.donate)" color="var(--background)" hover="var(--surface1)">
+    <BlahajButton
+      @click="changeLoc(links.donate)"
+      color="var(--background)"
+      hover="var(--surface1)"
+    >
       <p>Donate</p>
     </BlahajButton>
   </VerticalCard>
   <VerticalCard color="#C8E7FF" v-else>
     <h3>And more !</h3>
     <p>Go to <b>OpenCollective</b> to see all the donations made so far.</p>
-    <BlahajButton @click="changeLoc(links.donate)" color="var(--background)" hover="var(--surface1)">
+    <BlahajButton
+      @click="changeLoc(links.donate)"
+      color="var(--background)"
+      hover="var(--surface1)"
+    >
       <p>Donate</p>
     </BlahajButton>
   </VerticalCard>

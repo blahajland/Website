@@ -17,7 +17,11 @@ setThemeFromCookie()
 <template>
   <NavBar>
     <TopBar>
-      <BlahajButton @click="changeLoc(links.donate)" color="var(--background)" hover="var(--surface1)">
+      <BlahajButton
+        @click="changeLoc(links.donate)"
+        color="var(--background)"
+        hover="var(--surface1)"
+      >
         <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
         <p>Donate</p>
       </BlahajButton>
@@ -25,7 +29,11 @@ setThemeFromCookie()
         <img alt="Join" src="https://blahaj.land/static/images/icons/join.png" />
         <p>Sign up</p>
       </BlahajButton>
-      <BlahajButton @click="changeLoc(links.open)" color="var(--background)" hover="var(--surface1)">
+      <BlahajButton
+        @click="changeLoc(links.open)"
+        color="var(--background)"
+        hover="var(--surface1)"
+      >
         <img alt="Open" src="https://blahaj.land/static/images/icons/open.png" />
         <p>Log in</p>
       </BlahajButton>
