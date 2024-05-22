@@ -9,7 +9,7 @@ import links from '@/assets/json/links.json'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 
 const usersList = ref([])
-usersList.value = await fetchDataAsJson(fetchable.users, 'users')
+usersList.value = (await fetchDataAsJson(fetchable.users))['users']
 </script>
 
 <template>

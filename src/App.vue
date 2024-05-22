@@ -23,11 +23,14 @@ setThemeFromCookie()
         hover="var(--surface1)"
       >
         <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
-        <p>Donate</p>
+        <p class="displayOnDesktop">Donate</p>
       </BlahajButton>
-      <BlahajButton color="var(--background)" hover="var(--surface1)">
+      <BlahajButton
+        color="var(--background)"
+        hover="var(--surface1)"
+      >
         <img alt="Join" src="https://blahaj.land/static/images/icons/join.png" />
-        <p>Sign up</p>
+        <p class="displayOnDesktop">Sign up</p>
       </BlahajButton>
       <BlahajButton
         @click="changeLoc(links.open)"
@@ -35,11 +38,15 @@ setThemeFromCookie()
         hover="var(--surface1)"
       >
         <img alt="Open" src="https://blahaj.land/static/images/icons/open.png" />
-        <p>Log in</p>
+        <p class="displayOnDesktop">Log in</p>
       </BlahajButton>
-      <BlahajButton @click="switchTheme()" color="var(--background)" hover="var(--surface1)">
+      <BlahajButton
+        @click="switchTheme()"
+        color="var(--background)"
+        hover="var(--surface1)"
+      >
         <img alt="Theme" src="https://blahaj.land/static/images/icons/theme.png" />
-        <p>Theme</p>
+        <p class="displayOnDesktop">Theme</p>
       </BlahajButton>
     </TopBar>
     <TabGroup>
@@ -50,10 +57,6 @@ setThemeFromCookie()
   </NavBar>
   <RouterView></RouterView>
   <CustomFooter>
-    <BlahajButton class="displayOnMobile" @click="switchTheme">
-      <img alt="Theme" src="https://blahaj.land/static/images/icons/theme.png" />
-      <p>Theme</p>
-    </BlahajButton>
     <p>&copy; <a :href="links.eryn">eryn</a> Some rights reserved</p>
     <p>Made by <a :href="links.blahaj">Blahaj Team</a></p>
     <RouterLink to="/rules">Rules & TOS</RouterLink>

@@ -17,6 +17,11 @@
   > a > img
     filter: var(--filter)
 
+  > div
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: stretch
 @media (min-width: 1201px)
   .TopBar
     flex-direction: row
@@ -27,21 +32,19 @@
       height: 32px
 
     > div
-      display: flex
-      flex-direction: row
-      justify-content: space-between
-      align-items: stretch
       gap: 8px
 
 @media (max-width: 1200px)
   .TopBar
     flex-direction: column
-    justify-content: start
-    padding: 24px 0
+    justify-content: center
+    gap: 16px
+    padding: 24px
 
     > a > img
       height: 36px
 
     > div
-      display: none
+      gap: 12px
+
 </style>

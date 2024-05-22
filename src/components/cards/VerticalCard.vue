@@ -29,16 +29,15 @@ defineProps({
   align-items: center
   transition: var(--trans)
   color: v-bind(font)
+  gap: v-bind(gap)
+
 
   @media (min-width: 1201px)
     padding: 32px
-    gap: v-bind(gap)
     flex: 0 0 300px
-
 
   @media (max-width: 1200px)
     padding: 24px 32px
-    gap: 24px
 
   p, h3, h1
     text-align: center
