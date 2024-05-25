@@ -13,14 +13,14 @@ defineProps({
 </script>
 
 <template>
-  <div class="VerticalCard">
+  <div class="BlockCard">
     <slot></slot>
   </div>
 </template>
 
 <style lang="sass">
 
-.VerticalCard
+.BlockCard
   background: v-bind(color)
   border-radius: var(--radius-small)
   display: flex

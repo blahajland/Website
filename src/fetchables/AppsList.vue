@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { fetchDataAsJson } from '@/library/js/fetchTools.js'
 import fetchable from '@/assets/json/fetchable.json'
-import RowCard from '@/components/cards/RowCard.vue'
+import AppCard from '@/components/cards/AppCard.vue'
 
 const appList = ref([])
 
@@ -14,25 +14,25 @@ if (Object.prototype.hasOwnProperty.call(fetchedData, 'apps'))
 </script>
 
 <template>
-  <RowCard v-for="(e, i) in appList" :key="i" :color="e.color">
+  <AppCard v-for="(e, i) in appList" :key="i" :color="e.color">
     <template #image>
       <img :alt="e.title" :src="e.img" />
     </template>
     <h3>{{ e.title }}</h3>
     <p v-html="e.desc"></p>
-  </RowCard>
-  <RowCard v-if="appList.length === 0" color="var(--missing)">
+  </AppCard>
+  <AppCard v-if="appList.length === 0" color="var(--missing)">
     <template #image>
       <img alt="Unknown" src="https://blahaj.land/static/images/apps/unknown.png" />
     </template>
     <h3>The list is empty... It shouldn't</h3>
     <p>If this card still appears, please contact the dev team.</p>
-  </RowCard>
-  <RowCard v-else color="#F3CBFF">
+  </AppCard>
+  <AppCard v-else color="#F3CBFF">
     <template #image>
       <img alt="More" src="https://blahaj.land/static/images/apps/more.png" />
     </template>
     <h3>And much...</h3>
     <p>...much much more !</p>
-  </RowCard>
+  </AppCard>
 </template>

@@ -1,5 +1,5 @@
 <script setup>
-import VerticalCard from '@/components/cards/VerticalCard.vue'
+import BlockCard from '@/components/cards/BlockCard.vue'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 import CustomGap from '@/library/vue/CustomGap.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
@@ -16,6 +16,7 @@ import LoadingState from '@/components/LoadingState.vue'
 import PageContainer from '@/components/roots/PageContainer.vue'
 import DonatorsList from '@/fetchables/DonatorsList.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
+import ThingsContainer from '@/components/containers/ThingsContainer.vue'
 </script>
 
 <template>
@@ -32,7 +33,7 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
         <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
       </template>
       <GridContainer rows="4">
-        <VerticalCard color="#ACD3DC">
+        <BlockCard color="#ACD3DC">
           <p>Take a tour and see <b>what's inside :3</b></p>
           <BlahajButton
             @click="changeLoc('#p1', false)"
@@ -42,8 +43,8 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             <img alt="Blahaj" src="https://blahaj.land/static/images/icons/open.png" />
             <p>Discover</p>
           </BlahajButton>
-        </VerticalCard>
-        <VerticalCard color="#F0C1B7">
+        </BlockCard>
+        <BlockCard color="#F0C1B7">
           <p>Create your account and <b>pass the vibe check &gt;:3</b></p>
           <BlahajButton
             color="var(--background)"
@@ -53,8 +54,8 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
             <p>Sign up</p>
           </BlahajButton>
-        </VerticalCard>
-        <VerticalCard color="#B1BCE1">
+        </BlockCard>
+        <BlockCard color="#B1BCE1">
           <p>Just want to hang around? Join our <b>Discord</b></p>
           <BlahajButton
             @click="changeLoc(links.discord)"
@@ -64,8 +65,8 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             <img alt="Discord" src="https://blahaj.land/static/images/icons/discord.png" />
             <p>Join</p>
           </BlahajButton>
-        </VerticalCard>
-        <VerticalCard color="#DCDCDC">
+        </BlockCard>
+        <BlockCard color="#DCDCDC">
           <p>Already part of the community? Get access to <b>all the apps</b></p>
           <BlahajButton
             @click="changeLoc(links.login)"
@@ -75,7 +76,7 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             <img alt="Log in" src="https://blahaj.land/static/images/icons/login.png" />
             <p>Open Dashboard</p>
           </BlahajButton>
-        </VerticalCard>
+        </BlockCard>
       </GridContainer>
     </ContentContainer>
     <CustomGap gap="32px" />
@@ -85,45 +86,45 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
         <p>Why should you consider <b>Blahaj Land</b> for your needs ? ;3</p>
       </template>
       <GridContainer>
-        <VerticalCard color="#B1BCE1">
+        <BlockCard color="#B1BCE1">
           <img alt="Website" src="https://blahaj.land/static/images/icons/website.png" />
           <h3>Host your own website for free!</h3>
           <p>With <b>blahaj.land</b> you can easily host your own static site for free!</p>
-        </VerticalCard>
-        <VerticalCard color="#ACD3DC">
+        </BlockCard>
+        <BlockCard color="#ACD3DC">
           <img alt="Cloud" src="https://blahaj.land/static/images/icons/cloud.png" />
           <h3>Cloud storage</h3>
           <p><b>1GB</b> of free storage. Get more storage, starting at <b>1€&sol;month</b></p>
-        </VerticalCard>
-        <VerticalCard color="#C8E7FF">
+        </BlockCard>
+        <BlockCard color="#C8E7FF">
           <img
             alt="Communication"
             src="https://blahaj.land/static/images/icons/communication.png"
           />
           <h3>Communication services</h3>
           <p>E-mail, Fediverse, Send and <b>more</b>!</p>
-        </VerticalCard>
-        <VerticalCard color="#DEAAFF" gap="8px">
+        </BlockCard>
+        <BlockCard color="#DEAAFF" gap="8px">
           <img alt="Friends" src="https://blahaj.land/static/images/icons/friend.png" />
           <h3>Bring your friends in!</h3>
           <p>
             For every person you invite, you'll get <b>5GB</b> of storage. If they make a donation,
             you'll get an extra <b>10GB</b>.
           </p>
-        </VerticalCard>
-        <VerticalCard color="#ECBCFD" gap="8px">
+        </BlockCard>
+        <BlockCard color="#ECBCFD" gap="8px">
           <img alt="Switch server" src="https://blahaj.land/static/images/icons/switch.png" />
           <h3>You want to host your website?</h3>
           <p>
             If you switch from <b>neocities.org</b>, <b>Github Pages</b>, or any other host, you'll
             get <b>15GB</b> of storage and a month of <b>Premium</b> for free.
           </p>
-        </VerticalCard>
-        <VerticalCard color="#FFCBF2">
+        </BlockCard>
+        <BlockCard color="#FFCBF2">
           <img alt="Pride flag" src="https://blahaj.land/static/images/icons/rosa.png" />
           <h3>Queer powered, queer friendly</h3>
           <p>Everybody is welcome here. You always will be.</p>
-        </VerticalCard>
+        </BlockCard>
       </GridContainer>
     </ContentContainer>
     <ContentContainer>
@@ -160,7 +161,7 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
         <p>Get more features and support the website >83</p>
       </template>
       <GridContainer>
-        <VerticalCard color="#BCDBFF">
+        <BlockCard color="#BCDBFF">
           <h2>Starter</h2>
           <h3>Free</h3>
           <p>
@@ -168,15 +169,15 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             Nextcloud storage <br />&bull; One <b>hosted site</b>
           </p>
           <BlahajButton
-            @click="changeLoc(links.login)"
+            @click="changeLoc(links.signup)"
             color="var(--background)"
             hover="var(--surface1)"
           >
             <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
             <p>Join</p>
           </BlahajButton>
-        </VerticalCard>
-        <VerticalCard color="#FFCEF1">
+        </BlockCard>
+        <BlockCard color="#FFCEF1">
           <h2>Supporter</h2>
           <h3>Starting at 1€/month</h3>
           <p>
@@ -191,8 +192,8 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
             <p>Donate</p>
           </BlahajButton>
-        </VerticalCard>
-        <VerticalCard color="#FFE5A3">
+        </BlockCard>
+        <BlockCard color="#FFE5A3">
           <h2>Premium</h2>
           <h3>Starting at 5€/month</h3>
           <p>
@@ -207,10 +208,10 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
             <p>Donate</p>
           </BlahajButton>
-        </VerticalCard>
+        </BlockCard>
       </GridContainer>
     </ContentContainer>
-    <ContentContainer :last="true">
+    <ContentContainer>
       <template #title>
         <h2 id="p5">Donations</h2>
         <p>Thanks for your <i>kind</i> donations &lt;3</p>
@@ -223,6 +224,29 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
           <DonatorsList />
         </SlideableContainer>
       </Suspense>
+    </ContentContainer>
+    <ContentContainer :last="true">
+      <template #title>
+        <h3>Let's keep in touch</h3>
+      </template>
+      <ThingsContainer>
+        <BlahajButton @click="changeLoc(links.mail)">
+          <img alt="Mail" src="https://blahaj.land/static/images/icons/mail.png" />
+          <p class="displayOnDesktop">E-mail</p>
+        </BlahajButton>
+        <BlahajButton @click="changeLoc(links.discord)">
+          <img alt="Discord" src="https://blahaj.land/static/images/icons/discord.png" />
+          <p class="displayOnDesktop">Discord</p>
+        </BlahajButton>
+        <BlahajButton @click="changeLoc(links.github)">
+          <img alt="GitHub" src="https://blahaj.land/static/images/icons/github.png" />
+          <p class="displayOnDesktop">GitHub</p>
+        </BlahajButton>
+        <BlahajButton @click="changeLoc(links.tiktok)">
+          <img alt="TikTok" src="https://blahaj.land/static/images/icons/tiktok.png" />
+          <p class="displayOnDesktop">TikTok</p>
+        </BlahajButton>
+      </ThingsContainer>
     </ContentContainer>
   </PageContainer>
 </template>

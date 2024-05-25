@@ -6,7 +6,6 @@ import { ref } from 'vue'
 const randomTitle = ref('')
 
 let fetchedData = await fetchDataAsJson(fetchable.titles)
-console.log(fetchedData)
 if (Object.prototype.hasOwnProperty.call(fetchedData, 'randomTitles')) {
   let randomTitles = fetchedData['randomTitles']
   randomTitle.value = randomTitles[Math.floor(Math.random() * randomTitles.length)]

@@ -54,7 +54,7 @@ setThemeFromCookie()
   <RouterView></RouterView>
   <CustomFooter>
     <p>&copy; <b>eryn</b> Some rights reserved</p>
-    <p>Made by <a :href="links.blahaj">Blahaj Team</a></p>
+    <p>Website by <b>Blahaj Team</b></p>
     <RouterLink to="/rules">Rules & TOS</RouterLink>
     <a :href="links.status">Apps status</a>
   </CustomFooter>

@@ -1,8 +1,11 @@
 {
   "signup": "https://discord.gg/23ScBhN7xx",
-  "discord": "https://discord.gg/23ScBhN7xx",
   "login": "https://blahaj.land/yunohost/sso/",
   "donate": "https://opencollective.com/blahajland/",
-  "blahaj": "https://github.com/blahajland",
-  "status": "https://status.blahaj.land/status/apps"
+  "status": "https://status.blahaj.land/status/apps",
+
+  "discord": "https://discord.gg/23ScBhN7xx",
+  "mail": "mailto:contact@blahaj.land",
+  "github": "https://github.com/blahajland",
+  "tiktok": "https://www.tiktok.com/@blahaj_land"
 }

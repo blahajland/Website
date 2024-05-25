@@ -6,9 +6,6 @@ defineProps({
   font: {
     default: '#101010'
   },
-  orientation: {
-    default: 'row'
-  },
   clickable: {
     default: false
   }
@@ -16,18 +13,18 @@ defineProps({
 </script>
 
 <template>
-  <div :class="{ clickable: clickable }" class="SmallCard">
+  <div :class="{ clickable: clickable }" class="UserCard">
     <slot></slot>
   </div>
 </template>
 
 <style lang="sass">
 
-.SmallCard
+.UserCard
   background: v-bind(color)
   border-radius: var(--radius-small)
   display: flex
-  flex-direction: v-bind(orientation)
+  flex-direction: row
   align-items: center
   transition: var(--trans)
   color: v-bind(font)

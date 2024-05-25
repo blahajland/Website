@@ -1,11 +1,15 @@
+<script setup>
+import ThingsContainer from '@/components/containers/ThingsContainer.vue'
+</script>
+
 <template>
   <div class="TopBar">
     <RouterLink to="/">
       <img alt="Logo" src="https://blahaj.land/static/images/Logo.png" />
     </RouterLink>
-    <div>
+    <ThingsContainer>
       <slot></slot>
-    </div>
+    </ThingsContainer>
   </div>
 </template>
 
@@ -16,13 +20,6 @@
 
   > a > img
     filter: var(--filter)
-
-  > div
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: stretch
-    gap: 12px
 
 @media (min-width: 1201px)
   .TopBar
