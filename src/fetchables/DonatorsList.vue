@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { fetchDataFromGql } from '@/library/js/fetchTools.js'
 import fetchable from '@/assets/json/fetchable.json'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
-import VerticalCard from '@/components/cards/VerticalCard.vue'
+import BlockCard from '@/components/cards/BlockCard.vue'
 import { changeLoc } from '@/library/js/linkTools.js'
 import links from '@/assets/json/links.json'
 import DonatorCard from '@/components/cards/DonatorCard.vue'
@@ -23,6 +23,7 @@ query Transactions {
         amount {
           value
         }
+        description
       }
     }
   }
@@ -32,21 +33,24 @@ let data = await fetchDataFromGql(fetchable.donations, donationsQuery, {})
 if (Object.prototype.hasOwnProperty.call(data, 'data')) {
   donationsList.value = data['data']['account']['transactions']['nodes']
 }
+
+const getTier = (desc = '') => {
+  let extractedTiers = desc.match(RegExp('^.*\\(([a-z]*)\\)$', 'mi'))
+  if (extractedTiers === null) return ''
+  else return extractedTiers[1].charAt(0).toUpperCase() + extractedTiers[1].slice(1)
+}
 </script>
 
 <template>
-  <DonatorCard v-for="(e, i) in donationsList" :key="i" color="#E2EDFF">
-    <img
-      :src="e['fromAccount']['imageUrl']"
-      style="border-radius: var(--radius-inf)"
-      :alt="e['fromAccount']['name']"
-    />
-    <h3>{{ e['fromAccount']['name'] }}</h3>
-    <BlahajButton color="var(--background)" hover="var(--background)">
-      <p>{{ e['amount']['value'] }} €</p>
-    </BlahajButton>
-  </DonatorCard>
-  <VerticalCard v-if="donationsList.length === 0" color="var(--missing)">
+  <DonatorCard
+    v-for="(e, i) in donationsList"
+    :key="i"
+    :donation-amount="e['amount']['value']"
+    :donation-tier="getTier(e['description'])"
+    :donator-image="e['fromAccount']['imageUrl']"
+    :donator-name="e['fromAccount']['name']"
+  />
+  <BlockCard v-if="donationsList.length === 0" color="var(--missing)">
     <h3>The list is empty...<br />Help us resolve that!</h3>
     <p>You can donate through OpenCollective!</p>
     <BlahajButton
@@ -57,8 +61,8 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
       <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
       <p>Donate</p>
     </BlahajButton>
-  </VerticalCard>
-  <VerticalCard color="#C8E7FF" v-else>
+  </BlockCard>
+  <BlockCard color="#C8E7FF" v-if="donationsList.length >= maxNbOfDonations">
     <h3>And more !</h3>
     <p>Go to <b>OpenCollective</b> to see all the donations made so far.</p>
     <BlahajButton
@@ -69,13 +73,13 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
       <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
       <p>Donate</p>
     </BlahajButton>
-  </VerticalCard>
-  <VerticalCard color="#ECBCFD">
+  </BlockCard>
+  <BlockCard color="#ECBCFD">
     <h3>You're a Ko-Fi donator ?</h3>
     <p>If you made a donation through Ko-Fi, go check here.</p>
     <BlahajButton @click="$router.push('/kofi')" color="var(--background)" hover="var(--surface1)">
       <img alt="KoFi" src="https://blahaj.land/static/images/icons/kofi.png" />
       <p>Ko-Fi donations</p>
     </BlahajButton>
-  </VerticalCard>
+  </BlockCard>
 </template>

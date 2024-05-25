@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="RowCard">
+  <div class="AppCard">
     <div>
       <slot name="image"></slot>
     </div>
@@ -22,7 +22,7 @@ defineProps({
 
 <style lang="sass">
 
-.RowCard
+.AppCard
   background: v-bind(color)
   border-radius: var(--radius-small)
   display: flex
@@ -33,13 +33,13 @@ defineProps({
   color: v-bind(font)
 
   @media (min-width: 1201px)
-    padding: 24px
+    padding: 24px 32px
     gap: 32px
-    flex: 0 0 324px
+    flex: 0 0 320px
 
   @media (max-width: 1200px)
-  padding: 24px 32px
-  gap: 24px
+    padding: 24px
+    gap: 24px
 
   > div
     display: flex
@@ -49,7 +49,7 @@ defineProps({
     gap: 4px
 
     > img
-      height: 64px
+      height: 56px
 
     &:last-of-type
       flex-grow: 1

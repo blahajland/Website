@@ -13,14 +13,14 @@ defineProps({
 </script>
 
 <template>
-  <div :class="{ clickable: clickable }" class="SmallCard">
+  <div :class="{ clickable: clickable }" class="UserCard">
     <slot></slot>
   </div>
 </template>
 
 <style lang="sass">
 
-.SmallCard
+.UserCard
   background: v-bind(color)
   border-radius: var(--radius-small)
   display: flex
