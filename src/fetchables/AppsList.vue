@@ -11,7 +11,6 @@ if (Object.prototype.hasOwnProperty.call(fetchedData, 'apps'))
   appList.value = fetchedData['apps'].filter(
     (elem) => !(Object.prototype.hasOwnProperty.call(elem, 'noDisplay') && elem['noDisplay'])
   )
-
 </script>
 
 <template>

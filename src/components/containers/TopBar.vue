@@ -22,6 +22,8 @@
     flex-direction: row
     justify-content: space-between
     align-items: stretch
+    gap: 12px
+
 @media (min-width: 1201px)
   .TopBar
     flex-direction: row
@@ -30,9 +32,6 @@
 
     > a > img
       height: 32px
-
-    > div
-      gap: 8px
 
 @media (max-width: 1200px)
   .TopBar
@@ -43,8 +42,4 @@
 
     > a > img
       height: 36px
-
-    > div
-      gap: 12px
-
 </style>

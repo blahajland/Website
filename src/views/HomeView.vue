@@ -26,7 +26,7 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
         <Suspense>
           <RandomTitle />
           <template #fallback>
-            <LoadingState />
+            <h1>:3</h1>
           </template>
         </Suspense>
         <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
@@ -39,32 +39,40 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             color="var(--background)"
             hover="var(--surface1)"
           >
+            <img alt="Blahaj" src="https://blahaj.land/static/images/icons/open.png" />
             <p>Discover</p>
           </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#F0C1B7">
           <p>Create your account and <b>pass the vibe check &gt;:3</b></p>
-          <BlahajButton color="var(--background)" hover="var(--surface1)">
+          <BlahajButton
+            color="var(--background)"
+            hover="var(--surface1)"
+            @click="changeLoc(links.signup)"
+          >
+            <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
             <p>Sign up</p>
           </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#B1BCE1">
           <p>Just want to hang around? Join our <b>Discord</b></p>
           <BlahajButton
-            @click="changeLoc(links.join)"
+            @click="changeLoc(links.discord)"
             color="var(--background)"
             hover="var(--surface1)"
           >
+            <img alt="Discord" src="https://blahaj.land/static/images/icons/discord.png" />
             <p>Join</p>
           </BlahajButton>
         </VerticalCard>
         <VerticalCard color="#DCDCDC">
           <p>Already part of the community? Get access to <b>all the apps</b></p>
           <BlahajButton
-            @click="changeLoc(links.open)"
+            @click="changeLoc(links.login)"
             color="var(--background)"
             hover="var(--surface1)"
           >
+            <img alt="Log in" src="https://blahaj.land/static/images/icons/login.png" />
             <p>Open Dashboard</p>
           </BlahajButton>
         </VerticalCard>
@@ -85,7 +93,7 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
         <VerticalCard color="#ACD3DC">
           <img alt="Cloud" src="https://blahaj.land/static/images/icons/cloud.png" />
           <h3>Cloud storage</h3>
-          <p>Starting at <b>1€&sol;month</b></p>
+          <p><b>1GB</b> of free storage. Get more storage, starting at <b>1€&sol;month</b></p>
         </VerticalCard>
         <VerticalCard color="#C8E7FF">
           <img
@@ -113,7 +121,7 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
         </VerticalCard>
         <VerticalCard color="#FFCBF2">
           <img alt="Pride flag" src="https://blahaj.land/static/images/icons/rosa.png" />
-          <h3>Queer-powered</h3>
+          <h3>Queer powered, queer friendly</h3>
           <p>Everybody is welcome here. You always will be.</p>
         </VerticalCard>
       </GridContainer>
@@ -160,10 +168,11 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             Nextcloud storage <br />&bull; One <b>hosted site</b>
           </p>
           <BlahajButton
-            @click="changeLoc(links.join)"
+            @click="changeLoc(links.login)"
             color="var(--background)"
             hover="var(--surface1)"
           >
+            <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
             <p>Join</p>
           </BlahajButton>
         </VerticalCard>
@@ -179,6 +188,7 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             color="var(--background)"
             hover="var(--surface1)"
           >
+            <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
             <p>Donate</p>
           </BlahajButton>
         </VerticalCard>
@@ -194,6 +204,7 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             color="var(--background)"
             hover="var(--surface1)"
           >
+            <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
             <p>Donate</p>
           </BlahajButton>
         </VerticalCard>

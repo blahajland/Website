@@ -6,6 +6,7 @@ import BlahajButton from '@/library/vue/BlahajButton.vue'
 import VerticalCard from '@/components/cards/VerticalCard.vue'
 import { changeLoc } from '@/library/js/linkTools.js'
 import links from '@/assets/json/links.json'
+import DonatorCard from '@/components/cards/DonatorCard.vue'
 
 const donationsList = ref([])
 const projectSlug = 'blahajland'
@@ -34,18 +35,17 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
 </script>
 
 <template>
-  <VerticalCard v-for="(e, i) in donationsList" :key="i" color="#E2EDFF">
+  <DonatorCard v-for="(e, i) in donationsList" :key="i" color="#E2EDFF">
     <img
       :src="e['fromAccount']['imageUrl']"
       style="border-radius: var(--radius-inf)"
       :alt="e['fromAccount']['name']"
     />
     <h3>{{ e['fromAccount']['name'] }}</h3>
-    <BlahajButton color="var(--background)" hover="var(--surface1)">
+    <BlahajButton color="var(--background)" hover="var(--background)">
       <p>{{ e['amount']['value'] }} €</p>
     </BlahajButton>
-    <p></p>
-  </VerticalCard>
+  </DonatorCard>
   <VerticalCard v-if="donationsList.length === 0" color="var(--missing)">
     <h3>The list is empty...<br />Help us resolve that!</h3>
     <p>You can donate through OpenCollective!</p>
@@ -54,6 +54,7 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
       color="var(--background)"
       hover="var(--surface1)"
     >
+      <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
       <p>Donate</p>
     </BlahajButton>
   </VerticalCard>
@@ -65,13 +66,15 @@ if (Object.prototype.hasOwnProperty.call(data, 'data')) {
       color="var(--background)"
       hover="var(--surface1)"
     >
+      <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
       <p>Donate</p>
     </BlahajButton>
   </VerticalCard>
   <VerticalCard color="#ECBCFD">
     <h3>You're a Ko-Fi donator ?</h3>
-    <p>If you made a donation through Ko-Fi, go here.</p>
+    <p>If you made a donation through Ko-Fi, go check here.</p>
     <BlahajButton @click="$router.push('/kofi')" color="var(--background)" hover="var(--surface1)">
+      <img alt="KoFi" src="https://blahaj.land/static/images/icons/kofi.png" />
       <p>Ko-Fi donations</p>
     </BlahajButton>
   </VerticalCard>

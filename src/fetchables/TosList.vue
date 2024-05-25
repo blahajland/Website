@@ -10,9 +10,8 @@ const lastUpdated = ref('__/__/____')
 const tosList = ref([])
 
 let fetchedData = await fetchDataAsJson(fetchable.tos)
-if(Object.prototype.hasOwnProperty.call(fetchedData, 'tos'))
-  tosList.value = fetchedData['tos']
-if(Object.prototype.hasOwnProperty.call(fetchedData, 'updated'))
+if (Object.prototype.hasOwnProperty.call(fetchedData, 'tos')) tosList.value = fetchedData['tos']
+if (Object.prototype.hasOwnProperty.call(fetchedData, 'updated'))
   lastUpdated.value = fetchedData['updated']
 </script>
 

@@ -10,9 +10,9 @@ const lastUpdated = ref('__/__/____')
 const rulesList = ref([])
 
 let fetchedData = await fetchDataAsJson(fetchable.rules)
-if(Object.prototype.hasOwnProperty.call(fetchedData, 'rules'))
+if (Object.prototype.hasOwnProperty.call(fetchedData, 'rules'))
   rulesList.value = fetchedData['rules']
-if(Object.prototype.hasOwnProperty.call(fetchedData, 'updated'))
+if (Object.prototype.hasOwnProperty.call(fetchedData, 'updated'))
   lastUpdated.value = fetchedData['updated']
 </script>
 
