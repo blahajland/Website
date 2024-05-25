@@ -5,46 +5,56 @@ defineProps({
   },
   font: {
     default: '#101010'
-  },
-  gap: {
-    default: '16px'
   }
 })
 </script>
 
 <template>
-  <div class="VerticalCard">
+  <div class="DonatorCard">
     <slot></slot>
   </div>
 </template>
 
 <style lang="sass">
 
-.VerticalCard
+.DonatorCard
   background: v-bind(color)
   border-radius: var(--radius-small)
   display: flex
-  flex-direction: column
   justify-content: start
   align-items: center
   transition: var(--trans)
   color: v-bind(font)
-  gap: v-bind(gap)
+  gap: 16px
 
+  > h3
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
 
   @media (min-width: 1201px)
+    flex-direction: column
     padding: 32px
-    flex: 0 0 300px
+    flex: 0 0 128px
+    width: 128px
+
+    > h3
+      width: 100%
 
   @media (max-width: 1200px)
-    padding: 24px 32px
+    padding: 24px 16px
+    flex-direction: row
 
-  p, h3, h1
-    text-align: center
+    > h3
+      flex-grow: 1
+      text-align: left
 
   *
     margin: 0
+    text-align: center
 
   > img
-    height: 32px
+    height: 64px
+    width: 64px
+    object-fit: cover
 </style>

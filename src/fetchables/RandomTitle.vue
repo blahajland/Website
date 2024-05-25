@@ -5,8 +5,12 @@ import { ref } from 'vue'
 
 const randomTitle = ref('')
 
-const randomTitles = await fetchDataAsJson(fetchable.titles, 'randomTitles')
-randomTitle.value = randomTitles[Math.floor(Math.random() * randomTitles.length)]
+let fetchedData = await fetchDataAsJson(fetchable.titles)
+console.log(fetchedData)
+if (Object.prototype.hasOwnProperty.call(fetchedData, 'randomTitles')) {
+  let randomTitles = fetchedData['randomTitles']
+  randomTitle.value = randomTitles[Math.floor(Math.random() * randomTitles.length)]
+}
 </script>
 
 <template>

@@ -17,37 +17,45 @@ setThemeFromCookie()
 <template>
   <NavBar>
     <TopBar>
-      <BlahajButton @click="changeLoc(links.donate)" color="var(--background)" hover="var(--surface1)">
+      <BlahajButton
+        @click="changeLoc(links.donate)"
+        color="var(--background)"
+        hover="var(--surface1)"
+      >
         <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
-        <p>Donate</p>
+        <p class="displayOnDesktop">Donate</p>
       </BlahajButton>
-      <BlahajButton color="var(--background)" hover="var(--surface1)">
-        <img alt="Join" src="https://blahaj.land/static/images/icons/join.png" />
-        <p>Sign up</p>
+      <BlahajButton
+        color="var(--background)"
+        hover="var(--surface1)"
+        @click="changeLoc(links.signup)"
+      >
+        <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
+        <p class="displayOnDesktop">Sign up</p>
       </BlahajButton>
-      <BlahajButton @click="changeLoc(links.open)" color="var(--background)" hover="var(--surface1)">
-        <img alt="Open" src="https://blahaj.land/static/images/icons/open.png" />
-        <p>Log in</p>
+      <BlahajButton
+        @click="changeLoc(links.login)"
+        color="var(--background)"
+        hover="var(--surface1)"
+      >
+        <img alt="Log in" src="https://blahaj.land/static/images/icons/login.png" />
+        <p class="displayOnDesktop">Log in</p>
       </BlahajButton>
       <BlahajButton @click="switchTheme()" color="var(--background)" hover="var(--surface1)">
         <img alt="Theme" src="https://blahaj.land/static/images/icons/theme.png" />
-        <p>Theme</p>
+        <p class="displayOnDesktop">Theme</p>
       </BlahajButton>
     </TopBar>
     <TabGroup>
       <HomeTabs v-if="$route.name === 'home'" />
       <RulesTabs v-if="$route.name === 'rules'" />
-      <!-- Is there a better way to do it ? -->
     </TabGroup>
   </NavBar>
   <RouterView></RouterView>
   <CustomFooter>
-    <BlahajButton class="displayOnMobile" @click="switchTheme">
-      <img alt="Theme" src="https://blahaj.land/static/images/icons/theme.png" />
-      <p>Theme</p>
-    </BlahajButton>
-    <p>&copy; <a :href="links.eryn">eryn</a> Some rights reserved</p>
+    <p>&copy; <b>eryn</b> Some rights reserved</p>
     <p>Made by <a :href="links.blahaj">Blahaj Team</a></p>
     <RouterLink to="/rules">Rules & TOS</RouterLink>
+    <a :href="links.status">Apps status</a>
   </CustomFooter>
 </template>

@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div class="CustomFooter">
     <slot></slot>
@@ -13,6 +11,21 @@
   justify-content: center
   align-items: center
 
+  > *
+    margin: 0
+
+  a
+    font-weight: 700
+    text-decoration: none
+    color: var(--surface2)
+    transition: var(--trans)
+
+    &:hover
+      opacity: 0.75
+
+    &:active
+      opacity: 0.5
+
   @media (min-width: 1201px)
     flex-direction: row
     gap: 32px
@@ -22,12 +35,4 @@
     flex-direction: column
     gap: 16px
     padding: 64px 0 32px
-
-  > *
-    margin: 0
-
-  a
-    font-weight: 700
-    text-decoration: none
-    color: inherit
 </style>

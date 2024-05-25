@@ -6,19 +6,21 @@ import VerticalCard from '@/components/cards/VerticalCard.vue'
 import ContentContainer from '@/components/roots/ContentContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 
-const rLastUpdated = ref('__/__/____')
+const lastUpdated = ref('__/__/____')
 const rulesList = ref([])
 
-const data = await fetchDataAsJson(fetchable.rules)
-rulesList.value = data['rules']
-rLastUpdated.value = data['updated']
+let fetchedData = await fetchDataAsJson(fetchable.rules)
+if (Object.prototype.hasOwnProperty.call(fetchedData, 'rules'))
+  rulesList.value = fetchedData['rules']
+if (Object.prototype.hasOwnProperty.call(fetchedData, 'updated'))
+  lastUpdated.value = fetchedData['updated']
 </script>
 
 <template>
   <ContentContainer>
     <template #title>
       <h1 id="r1">Rules</h1>
-      <p>Last updated : {{ rLastUpdated }}</p>
+      <p>Last updated : {{ lastUpdated }}</p>
     </template>
     <GridContainer>
       <VerticalCard color="var(--missing)" v-if="rulesList.length === 0">

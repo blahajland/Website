@@ -1,7 +1,8 @@
 {
-  "join": "https://discord.gg/23ScBhN7xx",
-  "open": "https://blahaj.land/yunohost/sso/",
+  "signup": "https://discord.gg/23ScBhN7xx",
+  "discord": "https://discord.gg/23ScBhN7xx",
+  "login": "https://blahaj.land/yunohost/sso/",
   "donate": "https://opencollective.com/blahajland/",
-  "eryn": "https://blog.blahaj.land/",
-  "blahaj": "https://github.com/blahajland"
+  "blahaj": "https://github.com/blahajland",
+  "status": "https://status.blahaj.land/status/apps"
 }

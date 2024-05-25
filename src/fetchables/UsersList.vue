@@ -9,15 +9,20 @@ import links from '@/assets/json/links.json'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 
 const usersList = ref([])
-usersList.value = await fetchDataAsJson(fetchable.users, 'users')
+usersList.value = (await fetchDataAsJson(fetchable.users))['users']
 </script>
 
 <template>
   <VerticalCard color="var(--missing)" v-if="usersList.length === 0">
     <h3>The list is empty...<br />Help us resolve that!</h3>
-    <p>If you want your own website, sign in !</p>
-    <BlahajButton @click="changeLoc(links.join)" color="var(--background)" hover="var(--surface1)">
-      <p>Sign In</p>
+    <p>If you want your own website, sign up !</p>
+    <BlahajButton
+      @click="changeLoc(links.signup)"
+      color="var(--background)"
+      hover="var(--surface1)"
+    >
+      <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
+      <p>Sign Up</p>
     </BlahajButton>
   </VerticalCard>
   <SmallCard

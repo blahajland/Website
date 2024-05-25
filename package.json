@@ -12,6 +12,7 @@
     "final": "npm run lint && npm run format && node_modules/.bin/vite build --base=/landing/"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },

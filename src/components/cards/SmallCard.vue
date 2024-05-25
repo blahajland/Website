@@ -33,10 +33,10 @@ defineProps({
   color: v-bind(font)
 
   @media (min-width: 1201px)
-    justify-content: start
+    justify-content: center
     padding: 24px
-    gap: 16px
-    flex: 0 0 128px
+    gap: 24px
+    flex: 0 0 200px
 
   @media (max-width: 1200px)
     justify-content: center

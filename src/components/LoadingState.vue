@@ -1,5 +1,3 @@
-<!--temporary content, may be replaced in the future -->
-
 <template>
   <div class="LoadingState">
     <img alt="Loading..." src="https://blahaj.land/static/images/Loading.png" />
