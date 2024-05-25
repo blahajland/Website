@@ -6,9 +6,6 @@ defineProps({
   font: {
     default: '#101010'
   },
-  orientation: {
-    default: 'row'
-  },
   clickable: {
     default: false
   }
@@ -27,7 +24,7 @@ defineProps({
   background: v-bind(color)
   border-radius: var(--radius-small)
   display: flex
-  flex-direction: v-bind(orientation)
+  flex-direction: row
   align-items: center
   transition: var(--trans)
   color: v-bind(font)

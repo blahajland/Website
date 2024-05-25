@@ -168,7 +168,7 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
             Nextcloud storage <br />&bull; One <b>hosted site</b>
           </p>
           <BlahajButton
-            @click="changeLoc(links.login)"
+            @click="changeLoc(links.signup)"
             color="var(--background)"
             hover="var(--surface1)"
           >
