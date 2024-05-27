@@ -5,7 +5,7 @@ const SCROLL_AMOUNT = 500
 
 const scrollComp = ref(null)
 
-function scroll(amount: number, vertical = false) {
+const scroll = (amount: number, vertical = false) => {
   if (!scrollComp.value) return
   let divElement = scrollComp.value as HTMLDivElement
   if (vertical) divElement.scrollTop += amount

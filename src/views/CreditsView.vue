@@ -5,7 +5,7 @@ import ContentContainer from '@/components/roots/ContentContainer.vue'
 import PageContainer from '@/components/roots/PageContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
-import { changeLoc } from '@/library/ts/link-tools'
+import { changeLoc } from '@/library/ts/common-tools'
 
 changeLoc('#', false)
 </script>

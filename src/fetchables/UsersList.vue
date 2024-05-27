@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { changeLoc } from '@/library/ts/link-tools'
+import { changeLoc } from '@/library/ts/common-tools'
 import UserCard from '@/components/cards/UserCard.vue'
 import { fetchDataAsJson } from '@/library/ts/fetch-tools'
 import fetchable from '@/assets/json/fetchable.json'

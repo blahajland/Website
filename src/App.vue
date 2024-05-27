@@ -2,7 +2,7 @@
 import TopBar from '@/components/containers/TopBar.vue'
 import CustomFooter from '@/components/CustomFooter.vue'
 import { setThemeFromCookie, switchTheme } from '@/library/ts/theme-tools'
-import { changeLoc } from '@/library/ts/link-tools'
+import { changeLoc } from '@/library/ts/common-tools'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 
 import links from '@/assets/json/links.json'

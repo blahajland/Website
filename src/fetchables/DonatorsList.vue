@@ -4,7 +4,7 @@ import { fetchDataFromGql } from '@/library/ts/fetch-tools'
 import fetchable from '@/assets/json/fetchable.json'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 import BlockCard from '@/components/cards/BlockCard.vue'
-import { changeLoc } from '@/library/ts/link-tools'
+import { changeLoc } from '@/library/ts/common-tools'
 import links from '@/assets/json/links.json'
 import DonatorCard from '@/components/cards/DonatorCard.vue'
 

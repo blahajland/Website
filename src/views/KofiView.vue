@@ -2,7 +2,7 @@
 import ContentContainer from '@/components/roots/ContentContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import BlockCard from '@/components/cards/BlockCard.vue'
-import { changeLoc } from '@/library/ts/link-tools'
+import { changeLoc } from '@/library/ts/common-tools'
 import PageContainer from '@/components/roots/PageContainer.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
 

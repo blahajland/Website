@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { changeLoc } from '@/library/ts/link-tools'
+import { changeLoc } from '@/library/ts/common-tools'
 import RulesList from '@/fetchables/RulesList.vue'
 import TosList from '@/fetchables/TosList.vue'
 import LoadingState from '@/components/LoadingState.vue'

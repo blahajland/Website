@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { changeLoc } from '@/library/ts/link-tools'
+import { changeLoc } from '@/library/ts/common-tools'
 </script>
 
 <template>

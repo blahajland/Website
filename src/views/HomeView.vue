@@ -11,7 +11,7 @@ import UsersList from '@/fetchables/UsersList.vue'
 
 import links from '@/assets/json/links.json'
 
-import { changeLoc } from '@/library/ts/link-tools'
+import { changeLoc } from '@/library/ts/common-tools'
 import LoadingState from '@/components/LoadingState.vue'
 import PageContainer from '@/components/roots/PageContainer.vue'
 import DonatorsList from '@/fetchables/DonatorsList.vue'
