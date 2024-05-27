@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import CustomGap from '@/library/vue/CustomGap.vue'
 
 defineProps({

@@ -1,26 +1,36 @@
-<script setup>
+<script setup lang="ts">
 import BlahajButton from '@/library/vue/BlahajButton.vue'
+import { isValidColorName } from '@/library/ts/common-tools'
 
 defineProps({
   color: {
+    type: String,
+    validator: isValidColorName,
     default: '#E2EDFF'
   },
   font: {
+    type: String,
+    validator: isValidColorName,
     default: '#101010'
   },
   donatorName: {
+    type: String,
     required: true
   },
   donationAmount: {
+    type: Number,
     required: true
   },
   donationTier: {
+    type: String,
     default: ''
   },
   donatorImage: {
+    type: String,
     required: true
   },
   donationCurrency: {
+    type: String,
     default: '&euro;'
   }
 })
@@ -33,7 +43,7 @@ defineProps({
       <h3>{{ donatorName }}</h3>
       <h4 v-if="donationTier !== ''">{{ donationTier }}</h4>
     </div>
-    <BlahajButton color="var(--background)" hover="var(--background)">
+    <BlahajButton background="var(--background)" hover="var(--background)">
       <p v-html="donationAmount + ' ' + donationCurrency"></p>
     </BlahajButton>
   </div>

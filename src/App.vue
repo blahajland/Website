@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import TopBar from '@/components/containers/TopBar.vue'
 import CustomFooter from '@/components/CustomFooter.vue'
-import { setThemeFromCookie, switchTheme } from '@/library/js/themeTools.js'
-import { changeLoc } from '@/library/js/linkTools.js'
+import { setThemeFromCookie, switchTheme } from '@/library/ts/theme-tools'
+import { changeLoc } from '@/library/ts/link-tools'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 
 import links from '@/assets/json/links.json'
@@ -19,14 +19,14 @@ setThemeFromCookie()
     <TopBar>
       <BlahajButton
         @click="changeLoc(links.donate)"
-        color="var(--background)"
+        background="var(--background)"
         hover="var(--surface1)"
       >
         <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
         <p class="displayOnDesktop">Donate</p>
       </BlahajButton>
       <BlahajButton
-        color="var(--background)"
+        background="var(--background)"
         hover="var(--surface1)"
         @click="changeLoc(links.signup)"
       >
@@ -35,13 +35,13 @@ setThemeFromCookie()
       </BlahajButton>
       <BlahajButton
         @click="changeLoc(links.login)"
-        color="var(--background)"
+        background="var(--background)"
         hover="var(--surface1)"
       >
         <img alt="Log in" src="https://blahaj.land/static/images/icons/login.png" />
         <p class="displayOnDesktop">Log in</p>
       </BlahajButton>
-      <BlahajButton @click="switchTheme()" color="var(--background)" hover="var(--surface1)">
+      <BlahajButton @click="switchTheme()" background="var(--background)" hover="var(--surface1)">
         <img alt="Theme" src="https://blahaj.land/static/images/icons/theme.png" />
         <p class="displayOnDesktop">Theme</p>
       </BlahajButton>
@@ -55,6 +55,7 @@ setThemeFromCookie()
   <CustomFooter>
     <p>&copy; <b>eryn</b> Some rights reserved</p>
     <p>Website by <b>Blahaj Team</b></p>
+    <RouterLink to="/credits">Credits</RouterLink>
     <RouterLink to="/rules">Rules & TOS</RouterLink>
     <a :href="links.status">Apps status</a>
   </CustomFooter>

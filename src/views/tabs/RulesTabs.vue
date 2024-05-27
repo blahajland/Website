@@ -1,5 +1,5 @@
-<script setup>
-import { changeLoc } from '@/library/js/linkTools.js'
+<script setup lang="ts">
+import { changeLoc } from '@/library/ts/link-tools'
 import TabButton from '@/components/TabButton.vue'
 </script>
 

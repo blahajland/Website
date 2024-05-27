@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import ThingsContainer from '@/components/containers/ThingsContainer.vue'
 </script>
 

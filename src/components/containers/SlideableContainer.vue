@@ -1,14 +1,15 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const SCROLL_AMOUNT = 500
 
 const scrollComp = ref(null)
 
-function scroll(amount, vertical = false) {
-  if (scrollComp.value)
-    if (vertical) scrollComp.value.scrollTop += amount
-    else scrollComp.value.scrollLeft += amount
+function scroll(amount: number, vertical = false) {
+  if (!scrollComp.value) return
+  let divElement = scrollComp.value as HTMLDivElement
+  if (vertical) divElement.scrollTop += amount
+  else divElement.scrollLeft += amount
 }
 </script>
 

@@ -1,12 +1,21 @@
-<script setup>
+<script setup lang="ts">
+import { isValidColorName } from '@/library/ts/common-tools'
+import type { PropType } from 'vue'
+import type { PixelSize } from '@/library/ts/common-types'
+
 defineProps({
   color: {
+    type: String,
+    validator: isValidColorName,
     default: 'var(--surface2)'
   },
   font: {
+    type: String,
+    validator: isValidColorName,
     default: '#101010'
   },
   gap: {
+    type: String as PropType<PixelSize>,
     default: '16px'
   }
 })

@@ -1,15 +1,28 @@
-<script setup>
-import { changeLoc } from '@/library/js/linkTools.js'
+<script setup lang="ts">
+import { changeLoc } from '@/library/ts/link-tools'
 import UserCard from '@/components/cards/UserCard.vue'
-import { fetchDataAsJson } from '@/library/js/fetchTools.js'
+import { fetchDataAsJson } from '@/library/ts/fetch-tools'
 import fetchable from '@/assets/json/fetchable.json'
-import { ref } from 'vue'
+import { type Ref, ref } from 'vue'
 import BlockCard from '@/components/cards/BlockCard.vue'
 import links from '@/assets/json/links.json'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 
-const usersList = ref([])
-usersList.value = (await fetchDataAsJson(fetchable.users))['users']
+interface User {
+  color: string
+  img: string
+  title: string
+  href: string
+}
+
+interface UsersList {
+  users: Array<User>
+}
+
+const usersList: Ref<Array<User>> = ref([])
+
+let fetchedData = await fetchDataAsJson(fetchable.users)
+if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
 </script>
 
 <template>
@@ -18,7 +31,7 @@ usersList.value = (await fetchDataAsJson(fetchable.users))['users']
     <p>If you want your own website, sign up !</p>
     <BlahajButton
       @click="changeLoc(links.signup)"
-      color="var(--background)"
+      background="var(--background)"
       hover="var(--surface1)"
     >
       <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
@@ -28,7 +41,7 @@ usersList.value = (await fetchDataAsJson(fetchable.users))['users']
   <UserCard
     v-for="(e, i) in usersList"
     :key="i"
-    :clickable="true"
+    clickable
     :color="e.color"
     @click="changeLoc(e.href)"
   >
