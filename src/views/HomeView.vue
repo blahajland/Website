@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import BlockCard from '@/components/cards/BlockCard.vue'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 import CustomGap from '@/library/vue/CustomGap.vue'
@@ -11,7 +11,7 @@ import UsersList from '@/fetchables/UsersList.vue'
 
 import links from '@/assets/json/links.json'
 
-import { changeLoc } from '@/library/js/linkTools.js'
+import { changeLoc } from '@/library/ts/link-tools'
 import LoadingState from '@/components/LoadingState.vue'
 import PageContainer from '@/components/roots/PageContainer.vue'
 import DonatorsList from '@/fetchables/DonatorsList.vue'
@@ -32,12 +32,12 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
         </Suspense>
         <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
       </template>
-      <GridContainer rows="4">
+      <GridContainer :rows="4">
         <BlockCard color="#ACD3DC">
           <p>Take a tour and see <b>what's inside :3</b></p>
           <BlahajButton
             @click="changeLoc('#p1', false)"
-            color="var(--background)"
+            background="var(--background)"
             hover="var(--surface1)"
           >
             <img alt="Blahaj" src="https://blahaj.land/static/images/icons/open.png" />
@@ -47,7 +47,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
         <BlockCard color="#F0C1B7">
           <p>Create your account and <b>pass the vibe check &gt;:3</b></p>
           <BlahajButton
-            color="var(--background)"
+            background="var(--background)"
             hover="var(--surface1)"
             @click="changeLoc(links.signup)"
           >
@@ -59,7 +59,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
           <p>Just want to hang around? Join our <b>Discord</b></p>
           <BlahajButton
             @click="changeLoc(links.discord)"
-            color="var(--background)"
+            background="var(--background)"
             hover="var(--surface1)"
           >
             <img alt="Discord" src="https://blahaj.land/static/images/icons/discord.png" />
@@ -70,7 +70,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
           <p>Already part of the community? Get access to <b>all the apps</b></p>
           <BlahajButton
             @click="changeLoc(links.login)"
-            color="var(--background)"
+            background="var(--background)"
             hover="var(--surface1)"
           >
             <img alt="Log in" src="https://blahaj.land/static/images/icons/login.png" />
@@ -170,7 +170,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
           </p>
           <BlahajButton
             @click="changeLoc(links.signup)"
-            color="var(--background)"
+            background="var(--background)"
             hover="var(--surface1)"
           >
             <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
@@ -186,7 +186,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
           </p>
           <BlahajButton
             @click="changeLoc(links.donate)"
-            color="var(--background)"
+            background="var(--background)"
             hover="var(--surface1)"
           >
             <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
@@ -202,7 +202,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
           </p>
           <BlahajButton
             @click="changeLoc(links.donate)"
-            color="var(--background)"
+            background="var(--background)"
             hover="var(--surface1)"
           >
             <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
@@ -225,7 +225,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
         </SlideableContainer>
       </Suspense>
     </ContentContainer>
-    <ContentContainer :last="true">
+    <ContentContainer last>
       <template #title>
         <h3>Let's keep in touch</h3>
       </template>

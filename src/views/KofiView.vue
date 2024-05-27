@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
 import ContentContainer from '@/components/roots/ContentContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import BlockCard from '@/components/cards/BlockCard.vue'
-import { changeLoc } from '@/library/js/linkTools.js'
+import { changeLoc } from '@/library/ts/link-tools'
 import PageContainer from '@/components/roots/PageContainer.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
 
@@ -14,7 +14,7 @@ changeLoc('#', false)
 <template>
   <PageContainer>
     <SpinningBlahaj />
-    <ContentContainer :last="true">
+    <ContentContainer last>
       <template #title>
         <h1>Donations from Ko-Fi</h1>
         <p>
@@ -22,7 +22,7 @@ changeLoc('#', false)
           support &lt;:3
         </p>
       </template>
-      <GridContainer rows="4">
+      <GridContainer :rows="4">
         <BlockCard color="#C8DDFF">
           <img alt="Kofi" src="https://blahaj.land/static/images/icons/kofi.png" />
           <h3>michal</h3>
@@ -65,5 +65,3 @@ changeLoc('#', false)
     </ContentContainer>
   </PageContainer>
 </template>
-
-<style scoped lang="sass"></style>

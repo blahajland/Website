@@ -1,13 +1,17 @@
-<script setup>
-import { fetchDataAsJson } from '@/library/js/fetchTools.js'
+<script setup lang="ts">
+import { fetchDataAsJson } from '@/library/ts/fetch-tools'
 import fetchable from '@/assets/json/fetchable.json'
 import { ref } from 'vue'
 
 const randomTitle = ref('')
 
+interface RandomTitles {
+  randomTitles: Array<string>
+}
+
 let fetchedData = await fetchDataAsJson(fetchable.titles)
-if (Object.prototype.hasOwnProperty.call(fetchedData, 'randomTitles')) {
-  let randomTitles = fetchedData['randomTitles']
+if ('randomTitles' in fetchedData) {
+  let randomTitles = (fetchedData as RandomTitles).randomTitles
   randomTitle.value = randomTitles[Math.floor(Math.random() * randomTitles.length)]
 }
 </script>

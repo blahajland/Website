@@ -1,7 +1,8 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   rows: {
-    default: '3'
+    type: Number,
+    default: 3
   }
 })
 </script>

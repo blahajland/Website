@@ -1,9 +1,15 @@
-<script setup>
+<script setup lang="ts">
+import { isValidColorName } from '@/library/ts/common-tools'
+
 defineProps({
   color: {
+    type: String,
+    validator: isValidColorName,
     default: 'var(--surface2)'
   },
   font: {
+    type: String,
+    validator: isValidColorName,
     default: '#101010'
   }
 })

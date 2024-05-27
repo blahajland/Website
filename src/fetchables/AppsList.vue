@@ -1,15 +1,28 @@
-<script setup>
-import { ref } from 'vue'
-import { fetchDataAsJson } from '@/library/js/fetchTools.js'
+<script setup lang="ts">
+import { type Ref, ref } from 'vue'
+import { fetchDataAsJson } from '@/library/ts/fetch-tools'
 import fetchable from '@/assets/json/fetchable.json'
 import AppCard from '@/components/cards/AppCard.vue'
 
-const appList = ref([])
+interface AppDescriptor {
+  color: string
+  img: string
+  title: string
+  desc: string
+  noDisplay?: boolean
+  yuno?: string
+}
+
+interface AppsList {
+  apps: Array<AppDescriptor>
+}
+
+const appList: Ref<Array<AppDescriptor>> = ref([])
 
 let fetchedData = await fetchDataAsJson(fetchable.apps)
-if (Object.prototype.hasOwnProperty.call(fetchedData, 'apps'))
-  appList.value = fetchedData['apps'].filter(
-    (elem) => !(Object.prototype.hasOwnProperty.call(elem, 'noDisplay') && elem['noDisplay'])
+if ('apps' in fetchedData)
+  appList.value = (fetchedData as AppsList).apps.filter(
+    (elem: AppDescriptor) => !('noDisplay' in elem && elem['noDisplay'])
   )
 </script>
 
