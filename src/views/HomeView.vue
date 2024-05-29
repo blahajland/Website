@@ -18,6 +18,8 @@ import links from '@/assets/json/links.json'
 
 import { assets } from '@/library/ts/static-tools'
 import { changeLoc } from '@/library/ts/common-tools'
+import BulletpointContainer from '@/components/containers/BulletpointContainer.vue'
+import BulletpointCard from '@/components/cards/BulletpointCard.vue'
 </script>
 
 <template lang="pug">
@@ -68,32 +70,39 @@ import { changeLoc } from '@/library/ts/common-tools'
       template(#title)
         h2#p1 Why?
         p Why should you consider #[b Blahaj Land] for your needs ? ;3
-      GridContainer
-        BlockCard(color="#B1BCE1")
+      BulletpointContainer(color="#B1BCE1")
+        template(#image)
+          img(:src="assets.images.screenshots.get('screenshot1')", alt="Screenshot 1")
+        BulletpointCard
           img(alt="Website", :src="assets.images.icons.get('website')")
           h3 Host your own website for free!
           p With #[b blahaj.land] you can easily host your own static site for free!
-        BlockCard(color="#ACD3DC")
-          img(alt="Cloud", :src="assets.images.icons.get('cloud')")
-          h3 Cloud storage
-          p #[b 1GB] of free storage. Get more storage, starting at #[b 1€&sol;month]
-        BlockCard(color="#C8E7FF")
-          img(alt="Communication", :src="assets.images.icons.get('communication')")
-          h3 Communication services
-          p E-mail, Fediverse, Send and #[b more]!
-        BlockCard(color="#DEAAFF", gap="8px")
+        BulletpointCard
+          img(alt="Switch server", :src="assets.images.icons.get('switch')")
+          h3 Transition with ease
+          p
+            | If you switch from #[b neocities.org], #[b Github Pages], or any other host, you'll
+            | get #[b 15GB] of storage and a month of #[b Premium] for free.
+
+        BulletpointCard
           img(alt="Friends", :src="assets.images.icons.get('friend')")
           h3 Bring your friends in!
           p
             | For every person you invite, you'll get #[b 5GB] of storage. If they make a donation,
             | you'll get an extra #[b 10GB].
-        BlockCard(color="#ECBCFD", gap="8px")
-          img(alt="Switch server", :src="assets.images.icons.get('switch')")
-          h3 You want to host your website?
-          p
-            | If you switch from #[b neocities.org], #[b Github Pages], or any other host, you'll 
-            | get #[b 15GB] of storage and a month of #[b Premium] for free.
-        BlockCard(color="#FFCBF2")
+      CustomGap(gap="32px")
+      BulletpointContainer(is-inverted, color="#ECBCFD" )
+        template(#image)
+          img(:src="assets.images.screenshots.get('screenshot2')", alt="Screenshot 2")
+        BulletpointCard
+          img(alt="Communication", :src="assets.images.icons.get('communication')")
+          h3 Communication services
+          p E-mail, Fediverse, Send and #[b more]!
+        BulletpointCard
+          img(alt="Cloud", :src="assets.images.icons.get('cloud')")
+          h3 Cloud storage
+          p #[b 1GB] of free storage. Get more storage, starting at #[b 1€&sol;month]
+        BulletpointCard
           img(alt="Pride flag", :src="assets.images.icons.get('rosa')")
           h3 Queer powered, queer friendly
           p Everybody is welcome here. You always will be.
