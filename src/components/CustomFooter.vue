@@ -1,7 +1,6 @@
-<template>
-  <div class="CustomFooter">
-    <slot></slot>
-  </div>
+<template lang="pug">
+div.CustomFooter
+  slot
 </template>
 
 <style lang="sass">

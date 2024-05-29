@@ -9,20 +9,15 @@ import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
 changeLoc('#', false)
 </script>
 
-<template>
-  <PageContainer>
-    <SpinningBlahaj />
-    <Suspense>
-      <RulesList />
-      <template #fallback>
-        <LoadingState />
-      </template>
-    </Suspense>
-    <Suspense>
-      <TosList />
-      <template #fallback>
-        <LoadingState />
-      </template>
-    </Suspense>
-  </PageContainer>
+<template lang="pug">
+PageContainer
+  SpinningBlahaj
+  Suspense
+    RulesList
+    template(#fallback)
+      LoadingState
+  Suspense
+    TosList
+    template(#fallback)
+      LoadingState
 </template>

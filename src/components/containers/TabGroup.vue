@@ -1,7 +1,6 @@
-<template>
-  <div class="TabGroup">
-    <slot></slot>
-  </div>
+<template lang="pug">
+div.TabGroup
+  slot
 </template>
 
 <style lang="sass">

@@ -25,27 +25,14 @@ let fetchedData = await fetchDataAsJson(fetchable.users)
 if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
 </script>
 
-<template>
-  <BlockCard color="var(--missing)" v-if="usersList.length === 0">
-    <h3>The list is empty...<br />Help us resolve that!</h3>
-    <p>If you want your own website, sign up !</p>
-    <BlahajButton
-      @click="changeLoc(links.signup)"
-      background="var(--background)"
-      hover="var(--surface1)"
-    >
-      <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
-      <p>Sign Up</p>
-    </BlahajButton>
-  </BlockCard>
-  <UserCard
-    v-for="(e, i) in usersList"
-    :key="i"
-    clickable
-    :color="e.color"
-    @click="changeLoc(e.href)"
-  >
-    <img :alt="e.title" :src="e.img" />
-    <h3>{{ e.title }}</h3>
-  </UserCard>
+<template lang="pug">
+BlockCard(v-if="usersList.length === 0", color="var(--missing)")
+  h3 The list is empty... #[br] Help us resolve that!
+  p If you want your own website, sign up !
+  BlahajButton(background="var(--background)", hover="var(--surface1)", @click="changeLoc(links.signup)")
+    img(alt="Sign up", src="https://blahaj.land/static/images/icons/signup.png")
+    p Sign Up
+UserCard(v-for="(e, i) in usersList", :key="i", clickable, :color="e.color", @click="changeLoc(e.href)")
+  img(:alt="e.title", :src="e.img")
+  h3 {{ e.title }}
 </template>

@@ -28,21 +28,16 @@ if ('tos' in fetchedData && 'updated' in fetchedData) {
 }
 </script>
 
-<template>
-  <ContentContainer last>
-    <template #title>
-      <h1 id="r2">Terms of Service</h1>
-      <p>Last updated : {{ lastUpdated }}</p>
-    </template>
-    <GridContainer>
-      <BlockCard color="var(--missing)" v-if="tosList.length === 0">
-        <h3>The list is empty... It shouldn't</h3>
-        <p>If this card still appears, please contact the dev team.</p>
-      </BlockCard>
-      <BlockCard v-for="(e, i) in tosList" :key="i" :color="e.color">
-        <h3>{{ e.title }}</h3>
-        <p v-html="e.desc"></p>
-      </BlockCard>
-    </GridContainer>
-  </ContentContainer>
+<template lang="pug">
+ContentContainer(last)
+  template(#title)
+    h1#r2 Terms of Service
+    p Last updated : {{ lastUpdated }}
+  GridContainer
+    BlockCard(color="var(--missing)", v-if="tosList.length === 0")
+      h3 The list is empty... It shouldn't
+      p If this card still appears, please contact the dev team.
+    BlockCard(v-for="(e, i) in tosList", :key="i", :color="e.color")
+      h3 {{ e.title }}
+      p(v-html="e.desc")
 </template>

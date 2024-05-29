@@ -21,10 +21,9 @@ defineProps({
 })
 </script>
 
-<template>
-  <div class="BlockCard">
-    <slot></slot>
-  </div>
+<template lang="pug">
+div.BlockCard
+  slot
 </template>
 
 <style lang="sass">

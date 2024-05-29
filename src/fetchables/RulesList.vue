@@ -28,21 +28,16 @@ if ('rules' in fetchedData && 'updated' in fetchedData) {
 }
 </script>
 
-<template>
-  <ContentContainer>
-    <template #title>
-      <h1 id="r1">Rules</h1>
-      <p>Last updated : {{ lastUpdated }}</p>
-    </template>
-    <GridContainer>
-      <BlockCard color="var(--missing)" v-if="rulesList.length === 0">
-        <h3>The list is empty... It shouldn't</h3>
-        <p>If this card still appears, please contact the dev team.</p>
-      </BlockCard>
-      <BlockCard v-for="(e, i) in rulesList" :key="i" :color="e.color">
-        <h3>{{ e.title }}</h3>
-        <p v-html="e.desc"></p>
-      </BlockCard>
-    </GridContainer>
-  </ContentContainer>
+<template lang="pug">
+ContentContainer
+  template(#title)
+    h1#r1 Rules
+    p Last updated : {{ lastUpdated }}
+  GridContainer
+    BlockCard(v-if="rulesList.length === 0", color="var(--missing)")
+      h3 The list is empty... It shouldn't
+      p If this card still appears, please contact the dev team.
+    BlockCard(v-for="(e, i) in rulesList", :key="i", :color="e.color")
+      h3 {{ e.title }}
+      p(v-html="e.desc")
 </template>

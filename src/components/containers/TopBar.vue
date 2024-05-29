@@ -1,16 +1,14 @@
 <script setup lang="ts">
 import ThingsContainer from '@/components/containers/ThingsContainer.vue'
+import { assets } from '@/library/ts/static-tools'
 </script>
 
-<template>
-  <div class="TopBar">
-    <RouterLink to="/">
-      <img alt="Logo" src="https://blahaj.land/static/images/Logo.png" />
-    </RouterLink>
-    <ThingsContainer>
-      <slot></slot>
-    </ThingsContainer>
-  </div>
+<template lang="pug">
+div.TopBar
+  RouterLink(to="/")
+    img(alt="Logo", :src="assets.images.get('Logo')")
+  ThingsContainer
+    slot
 </template>
 
 <style lang="sass">

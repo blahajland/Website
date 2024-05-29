@@ -1,7 +1,6 @@
-<template>
-  <div class="NavBar">
-    <slot></slot>
-  </div>
+<template lang="pug">
+div.NavBar
+  slot
 </template>
 
 <style lang="sass">

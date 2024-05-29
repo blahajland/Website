@@ -19,10 +19,9 @@ defineProps({
 })
 </script>
 
-<template>
-  <div :class="{ clickable: clickable }" class="UserCard">
-    <slot></slot>
-  </div>
+<template lang="pug">
+div(:class="{ clickable: clickable }").UserCard
+  slot
 </template>
 
 <style lang="sass">

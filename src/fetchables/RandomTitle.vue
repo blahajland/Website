@@ -16,6 +16,6 @@ if ('randomTitles' in fetchedData) {
 }
 </script>
 
-<template>
-  <h1>{{ randomTitle }}</h1>
+<template lang="pug">
+h1 {{ randomTitle }}
 </template>

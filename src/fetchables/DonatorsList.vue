@@ -2,6 +2,7 @@
 import { type Ref, ref } from 'vue'
 import { fetchDataFromGql } from '@/library/ts/fetch-tools'
 import fetchable from '@/assets/json/fetchable.json'
+import { assets } from '@/library/ts/static-tools'
 import BlahajButton from '@/library/vue/BlahajButton.vue'
 import BlockCard from '@/components/cards/BlockCard.vue'
 import { changeLoc } from '@/library/ts/common-tools'
@@ -61,49 +62,24 @@ const getTier = (desc = '') => {
 }
 </script>
 
-<template>
-  <DonatorCard
-    v-for="(e, i) in donationsList"
-    :key="i"
-    :donation-amount="e.amount.value"
-    :donation-tier="getTier(e.description)"
-    :donator-image="e.fromAccount.imageUrl"
-    :donator-name="e.fromAccount.name"
-  />
-  <BlockCard v-if="donationsList.length === 0" color="var(--missing)">
-    <h3>The list is empty...<br />Help us resolve that!</h3>
-    <p>You can donate through OpenCollective!</p>
-    <BlahajButton
-      @click="changeLoc(links.donate)"
-      background="var(--background)"
-      hover="var(--surface1)"
-    >
-      <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
-      <p>Donate</p>
-    </BlahajButton>
-  </BlockCard>
-  <BlockCard color="#C8E7FF" v-if="donationsList.length >= maxNbOfDonations">
-    <h3>And more !</h3>
-    <p>Go to <b>OpenCollective</b> to see all the donations made so far.</p>
-    <BlahajButton
-      @click="changeLoc(links.donate)"
-      background="var(--background)"
-      hover="var(--surface1)"
-    >
-      <img alt="Donate" src="https://blahaj.land/static/images/icons/donate.png" />
-      <p>Donate</p>
-    </BlahajButton>
-  </BlockCard>
-  <BlockCard color="#ECBCFD">
-    <h3>You're a Ko-Fi donator ?</h3>
-    <p>If you made a donation through Ko-Fi, go check here.</p>
-    <BlahajButton
-      @click="$router.push('/kofi')"
-      background="var(--background)"
-      hover="var(--surface1)"
-    >
-      <img alt="KoFi" src="https://blahaj.land/static/images/icons/kofi.png" />
-      <p>Ko-Fi donations</p>
-    </BlahajButton>
-  </BlockCard>
+<template lang="pug">
+DonatorCard(v-for="(e, i) in donationsList", :key="i", donation-currency="€" ,:donation-amount="e.amount.value", :donation-tier="getTier(e.description)", :donator-image="e.fromAccount.imageUrl", :donator-name="e.fromAccount.name")
+BlockCard(v-if="donationsList.length === 0", color="var(--missing)")
+  h3 The list is empty... #[br] Help us resolve that!
+  p You can donate through OpenCollective!
+  BlahajButton(@click="changeLoc(links.donate)", background="var(--background)", hover="var(--surface1)")
+    img(alt="Donate", :src="assets.images.icons.get('donate')")
+    p Donate
+BlockCard(color="#C8E7FF", v-if="donationsList.length >= maxNbOfDonations")
+  h3 And more !
+  p Go to #[b OpenCollective] to see all the donations made so far.
+  BlahajButton(background="var(--background)", @click="changeLoc(links.donate)", hover="var(--surface1)")
+    img(alt="Donate", :src="assets.images.icons.get('donate')")
+    p Donate
+BlockCard(color="#ECBCFD")
+  h3 You're a Ko-Fi donator ?
+  p If you made a donation through Ko-Fi, go check here.
+  BlahajButton(background="var(--background)", hover="var(--surface1)", @click="$router.push('/kofi')")
+    img(alt="KoFi", :src="assets.images.icons.get('kofi')")
+    p Ko-Fi donations
 </template>

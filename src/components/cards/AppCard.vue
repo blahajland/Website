@@ -15,15 +15,12 @@ defineProps({
 })
 </script>
 
-<template>
-  <div class="AppCard">
-    <div>
-      <slot name="image"></slot>
-    </div>
-    <div>
-      <slot name="default"></slot>
-    </div>
-  </div>
+<template lang="pug">
+div.AppCard
+  div
+    slot(name="image")
+  div
+    slot(name="default")
 </template>
 
 <style lang="sass">

@@ -1,7 +1,6 @@
-<template>
-  <div class="ThingsContainer">
-    <slot></slot>
-  </div>
+<template lang="pug">
+div.ThingsContainer
+  slot
 </template>
 
 <style lang="sass">

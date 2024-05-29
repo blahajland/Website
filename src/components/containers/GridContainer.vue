@@ -7,10 +7,9 @@ defineProps({
 })
 </script>
 
-<template>
-  <div class="GridContainer">
-    <slot></slot>
-  </div>
+<template lang="pug">
+div.GridContainer
+  slot
 </template>
 
 <style lang="sass">
