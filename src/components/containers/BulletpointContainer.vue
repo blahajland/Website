@@ -9,6 +9,10 @@ const props = defineProps({
     validator: isValidColorName,
     default: 'var(--surface2)'
   },
+  gap: {
+    type: String as PropType<PixelSize>,
+    default: '16px'
+  },
   isInverted: {
     type: Boolean,
     default: false
@@ -16,6 +20,7 @@ const props = defineProps({
 })
 
 const flexDirection = props.isInverted ? 'row-reverse' : 'row'
+const transform = props.isInverted ? '-16px' : '16px'
 </script>
 
 <template lang="pug">
@@ -32,38 +37,38 @@ div.BulletpointContainer
   flex-direction: v-bind(flexDirection)
   justify-content: stretch
   align-items: stretch
-  background: v-bind(color)
+  gap: v-bind(gap)
 
   > div
+    border-radius: var(--radius-small)
     display: flex
     flex-direction: column
     align-items: stretch
 
     &:first-of-type
-      gap: 32px
+      gap: v-bind(gap)
       justify-content: center
 
     &:nth-of-type(2)
+      background: v-bind(color)
       justify-content: end
       flex: 1
+      overflow: hidden
+
+      &:hover > img
+        transform: translate(v-bind(transform), 8px)
 
       > img
         width: 100%
+        transition: var(--trans)
 
   @media (min-width: 1201px)
-    background: v-bind(color)
-    border-radius: var(--radius-med)
-
     > div:first-of-type
-      padding: 32px 48px
       flex: 0 0
       min-width: 400px
       max-width: 400px
 
   @media (max-width: 1200px)
-    border-radius: var(--radius-small)
-    padding: 32px
-
     > div:first-of-type
       width: 100%
 

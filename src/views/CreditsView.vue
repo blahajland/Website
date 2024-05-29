@@ -28,15 +28,6 @@ changeLoc('#', false)
             @click="changeLoc('https://www.github.com/hericiumvevo/')")
             img(:src="assets.images.icons.get('website')", alt="Link")
             p GitHub
-        BlockCard(color="#F6D4FF")
-          img(:src="assets.images.icons.get('open')", alt="Website")
-          h3 Icons
-          p by #[b Nerd]
-          BlahajButton(
-            background="var(--background)",
-            @click="changeLoc('https://www.github.com/imalonelynerd')")
-            img(:src="assets.images.icons.get('website')", alt="Link")
-            p GitHub
         BlockCard(color="#FFD4D9")
           img(:src="assets.images.icons.get('website')", alt="Website")
           h3 Website
@@ -45,6 +36,15 @@ changeLoc('#', false)
             background="var(--background)",
             @click="changeLoc('https://www.github.com/imalonelynerd')")
             img(:src="assets.images.icons.get('website')", alt="Website")
+            p GitHub
+        BlockCard(color="#F6D4FF")
+          img(:src="assets.images.icons.get('open')", alt="Website")
+          h3 Icons
+          p by #[b Nerd]
+          BlahajButton(
+            background="var(--background)",
+            @click="changeLoc('https://www.github.com/imalonelynerd')")
+            img(:src="assets.images.icons.get('website')", alt="Link")
             p GitHub
         BlockCard(color="#ACD3DC")
           img(:src="assets.images.get('Favicon')", alt="Blobhaj")

@@ -4,12 +4,12 @@
   --missing: #dddddd;
 
   @media (min-width: 1201px) {
-    --radius-small: 4px;
+    --radius-small: 12px;
     --radius-med: 12px;
   }
 
   @media (max-width: 1200px) {
-    --radius-small: 2vw;
-    --radius-med: 8vw;
+    --radius-small: 4vw;
+    --radius-med: 4vw;
   }
 }

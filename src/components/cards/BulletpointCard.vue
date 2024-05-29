@@ -4,6 +4,11 @@ import type { PropType } from 'vue'
 import type { PixelSize } from '@/library/ts/common-types'
 
 defineProps({
+  color: {
+    type: String,
+    validator: isValidColorName,
+    default: 'var(--surface2)'
+  },
   font: {
     type: String,
     validator: isValidColorName,
@@ -23,6 +28,9 @@ div.BulletpointCard
 
 <style lang="sass">
 .BulletpointCard
+  padding: 24px
+  flex-grow: 1
+  background: v-bind(color)
   border-radius: var(--radius-small)
   display: flex
   flex-direction: column
@@ -37,7 +45,7 @@ div.BulletpointCard
     height: 28px
 
   @media (min-width: 1201px)
-    justify-content: start
+    justify-content: center
     align-items: start
 
   @media (max-width: 1200px)

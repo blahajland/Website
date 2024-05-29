@@ -70,39 +70,39 @@ import BulletpointCard from '@/components/cards/BulletpointCard.vue'
       template(#title)
         h2#p1 Why?
         p Why should you consider #[b Blahaj Land] for your needs ? ;3
-      BulletpointContainer(color="#B1BCE1")
+      BulletpointContainer(color="#d3ddff")
         template(#image)
           img(:src="assets.images.screenshots.get('screenshot1')", alt="Screenshot 1")
-        BulletpointCard
+        BulletpointCard(color="#B1BCE1")
           img(alt="Website", :src="assets.images.icons.get('website')")
           h3 Host your own website for free!
           p With #[b blahaj.land] you can easily host your own static site for free!
-        BulletpointCard
+        BulletpointCard(color="#ACD3DC")
           img(alt="Switch server", :src="assets.images.icons.get('switch')")
           h3 Transition with ease
           p
             | If you switch from #[b neocities.org], #[b Github Pages], or any other host, you'll
             | get #[b 15GB] of storage and a month of #[b Premium] for free.
-
-        BulletpointCard
+        BulletpointCard(color="#C8E7FF")
           img(alt="Friends", :src="assets.images.icons.get('friend')")
           h3 Bring your friends in!
           p
             | For every person you invite, you'll get #[b 5GB] of storage. If they make a donation,
             | you'll get an extra #[b 10GB].
-      CustomGap(gap="32px")
-      BulletpointContainer(is-inverted, color="#ECBCFD" )
+      CustomGap(gap="48px").displayOnDesktop
+      CustomGap(gap="0").displayOnMobile
+      BulletpointContainer(is-inverted, color="#f3d8ff" )
         template(#image)
           img(:src="assets.images.screenshots.get('screenshot2')", alt="Screenshot 2")
-        BulletpointCard
+        BulletpointCard(color="#DEAAFF")
           img(alt="Communication", :src="assets.images.icons.get('communication')")
           h3 Communication services
           p E-mail, Fediverse, Send and #[b more]!
-        BulletpointCard
+        BulletpointCard(color="#ECBCFD")
           img(alt="Cloud", :src="assets.images.icons.get('cloud')")
           h3 Cloud storage
           p #[b 1GB] of free storage. Get more storage, starting at #[b 1€&sol;month]
-        BulletpointCard
+        BulletpointCard(color="#FFCBF2")
           img(alt="Pride flag", :src="assets.images.icons.get('rosa')")
           h3 Queer powered, queer friendly
           p Everybody is welcome here. You always will be.
