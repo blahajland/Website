@@ -33,22 +33,34 @@ import { changeLoc } from '@/library/ts/common-tools'
       GridContainer(:rows="4")
         BlockCard(color="#ACD3DC")
           p Take a tour and see #[b what's inside :3]
-          BlahajButton(@click="changeLoc('#p1', false)", background="var(--background)", hover="var(--surface1)")
+          BlahajButton(
+            background="var(--background)",
+            hover="var(--surface1)",
+            @click="changeLoc('#p1', false)")
             img(alt="Blahaj", :src="assets.images.icons.get('open')")
             p Discover
         BlockCard(color="#F0C1B7")
           p Create your account and #[b pass the vibe check &gt;:3]
-          BlahajButton(background="var(--background)", hover="var(--surface1)", @click="changeLoc(links.signup)")
+          BlahajButton(
+            background="var(--background)",
+            hover="var(--surface1)",
+            @click="changeLoc(links.signup)")
             img(alt="Sign up", :src="assets.images.icons.get('signup')")
             p Sign up
         BlockCard(color="#B1BCE1")
           p Just want to hang around? Join our #[b Discord]
-          BlahajButton(@click="changeLoc(links.discord)", background="var(--background)", hover="var(--surface1)")
+          BlahajButton(
+            background="var(--background)",
+            hover="var(--surface1)",
+            @click="changeLoc(links.discord)")
             img(alt="Discord", :src="assets.images.icons.get('discord')")
             p Join
         BlockCard(color="#DCDCDC")
           p Already part of the community? Get access to #[b all the apps]
-          BlahajButton(@click="changeLoc(links.login)", background="var(--background)", hover="var(--surface1)")
+          BlahajButton(
+            background="var(--background)",
+            hover="var(--surface1)",
+            @click="changeLoc(links.login)")
             img(alt="Log in", :src="assets.images.icons.get('login')")
             p Open Dashboard
     CustomGap(gap="32px")
@@ -72,11 +84,15 @@ import { changeLoc } from '@/library/ts/common-tools'
         BlockCard(color="#DEAAFF", gap="8px")
           img(alt="Friends", :src="assets.images.icons.get('friend')")
           h3 Bring your friends in!
-          p For every person you invite, you'll get #[b 5GB] of storage. If they make a donation, you'll get an extra #[b 10GB].
+          p
+            | For every person you invite, you'll get #[b 5GB] of storage. If they make a donation,
+            | you'll get an extra #[b 10GB].
         BlockCard(color="#ECBCFD", gap="8px")
           img(alt="Switch server", :src="assets.images.icons.get('switch')")
           h3 You want to host your website?
-          p If you switch from #[b neocities.org], #[b Github Pages], or any other host, you'll get #[b 15GB] of storage and a month of #[b Premium] for free.
+          p
+            | If you switch from #[b neocities.org], #[b Github Pages], or any other host, you'll 
+            | get #[b 15GB] of storage and a month of #[b Premium] for free.
         BlockCard(color="#FFCBF2")
           img(alt="Pride flag", :src="assets.images.icons.get('rosa')")
           h3 Queer powered, queer friendly
@@ -107,22 +123,37 @@ import { changeLoc } from '@/library/ts/common-tools'
         BlockCard(color="#BCDBFF")
           h2 Starter
           h3 Free
-          p &bull; Email, Send, Vaultwarden, Haste #[b &amp; more] #[br] &bull; #[b 1GB] of Nextcloud storage #[br] &bull; One #[b hosted site]
-          BlahajButton(@click="changeLoc(links.signup)", background="var(--background)", hover="var(--surface1)")
+          p
+            | &bull; Email, Send, Vaultwarden, Haste #[b &amp; more] #[br] &bull; #[b 1GB] of 
+            | Nextcloud storage #[br] &bull; One #[b hosted site]
+          BlahajButton(
+            background="var(--background)",
+            hover="var(--surface1)",
+            @click="changeLoc(links.signup)")
             img(alt="Sign up", :src="assets.images.icons.get('signup')")
             p Join
         BlockCard(color="#FFCEF1")
           h2 Supporter
           h3 Starting at 1€/month
-          p &bull; #[b 10GB] of Nextcloud storage #[br] &bull; #[b Unlimited] site hosting #[br] &bull; All the advantages of the #[b Starter] tier
-          BlahajButton(@click="changeLoc(links.donate)", background="var(--background)", hover="var(--surface1)")
+          p
+            | &bull; #[b 10GB] of Nextcloud storage #[br] &bull; #[b Unlimited] site hosting #[br]
+            | &bull; All the advantages of the #[b Starter] tier
+          BlahajButton(
+            background="var(--background)",
+            hover="var(--surface1)",
+            @click="changeLoc(links.donate)")
             img(alt="Donate", :src="assets.images.icons.get('donate')")
             p Donate
         BlockCard(color="#FFE5A3")
           h2 Premium
           h3 Starting at 5€/month
-          p &bull; #[b 250GB] of Nextcloud storage #[br] &bull; #[b Discord bot] hosting #[br] &bull; All the advantages of the #[b Supporter] tier
-          BlahajButton(@click="changeLoc(links.donate)", background="var(--background)", hover="var(--surface1)")
+          p
+            | &bull; #[b 250GB] of Nextcloud storage #[br] &bull; #[b Discord bot] hosting #[br]
+            | &bull; All the advantages of the #[b Supporter] tier
+          BlahajButton(
+            background="var(--background)",
+            hover="var(--surface1)",
+            @click="changeLoc(links.donate)")
             img(alt="Donate", :src="assets.images.icons.get('donate')")
             p Donate
     ContentContainer

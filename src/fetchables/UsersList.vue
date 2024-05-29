@@ -29,10 +29,17 @@ if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
 BlockCard(v-if="usersList.length === 0", color="var(--missing)")
   h3 The list is empty... #[br] Help us resolve that!
   p If you want your own website, sign up !
-  BlahajButton(background="var(--background)", hover="var(--surface1)", @click="changeLoc(links.signup)")
+  BlahajButton(
+    background="var(--background)",
+    hover="var(--surface1)",
+    @click="changeLoc(links.signup)")
     img(alt="Sign up", src="https://blahaj.land/static/images/icons/signup.png")
     p Sign Up
-UserCard(v-for="(e, i) in usersList", :key="i", clickable, :color="e.color", @click="changeLoc(e.href)")
+UserCard(
+  v-for="(e, i) in usersList",
+  :key="i", clickable,
+  :color="e.color",
+  @click="changeLoc(e.href)")
   img(:alt="e.title", :src="e.img")
   h3 {{ e.title }}
 </template>

@@ -23,28 +23,36 @@ changeLoc('#', false)
           img(:src="assets.images.icons.get('cloud')", alt="Cloud")
           h3 Services
           p Hosted by #[b eryn]
-          BlahajButton(background="var(--background)", @click="changeLoc('https://www.github.com/hericiumvevo/')")
+          BlahajButton(
+            background="var(--background)",
+            @click="changeLoc('https://www.github.com/hericiumvevo/')")
             img(:src="assets.images.icons.get('website')", alt="Link")
             p GitHub
         BlockCard(color="#F6D4FF")
           img(:src="assets.images.icons.get('open')", alt="Website")
           h3 Icons
           p by #[b Nerd]
-          BlahajButton(background="var(--background)", @click="changeLoc('https://www.github.com/imalonelynerd')")
+          BlahajButton(
+            background="var(--background)",
+            @click="changeLoc('https://www.github.com/imalonelynerd')")
             img(:src="assets.images.icons.get('website')", alt="Link")
             p GitHub
         BlockCard(color="#FFD4D9")
           img(:src="assets.images.icons.get('website')", alt="Website")
           h3 Website
           p by #[b Nerd]
-          BlahajButton(background="var(--background)", @click="changeLoc('https://www.github.com/imalonelynerd')")
+          BlahajButton(
+            background="var(--background)",
+            @click="changeLoc('https://www.github.com/imalonelynerd')")
             img(:src="assets.images.icons.get('website')", alt="Website")
             p GitHub
         BlockCard(color="#ACD3DC")
           img(:src="assets.images.get('Favicon')", alt="Blobhaj")
           h3 "Blobhaj" icons
           p by #[b heatherhorns]
-          BlahajButton(background="var(--background)", @click="changeLoc('https://www.reddit.com/user/heatherhorns/')")
+          BlahajButton(
+            background="var(--background)",
+            @click="changeLoc('https://www.reddit.com/user/heatherhorns/')")
             img(:src="assets.images.icons.get('website')", alt="Blobhaj")
             p Reddit
 </template>

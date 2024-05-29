@@ -18,7 +18,9 @@ PageContainer
   ContentContainer(last)
     template(#title)
       h1 Donations from Ko-Fi
-      p This page is dedicated to all the persons who donated through Ko-Fi. Thanks for your support &lt;:3
+      p
+        | This page is dedicated to all the persons who donated through Ko-Fi. Thanks for your
+        | support &lt;:3
     GridContainer(:rows="4")
       BlockCard(color="#C8DDFF")
         img(alt="Kofi", :src="kofiIcon")
