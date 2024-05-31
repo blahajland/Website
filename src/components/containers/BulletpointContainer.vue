@@ -24,11 +24,11 @@ const transform = props.isInverted ? '-16px' : '16px'
 </script>
 
 <template lang="pug">
-div.BulletpointContainer
+.BulletpointContainer
   div
     slot
   div
-    slot(name="image")
+    slot(name='image')
 </template>
 
 <style lang="sass">

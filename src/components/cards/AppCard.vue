@@ -16,11 +16,11 @@ defineProps({
 </script>
 
 <template lang="pug">
-div.AppCard
+.AppCard
   div
-    slot(name="image")
+    slot(name='image')
   div
-    slot(name="default")
+    slot(name='default')
 </template>
 
 <style lang="sass">

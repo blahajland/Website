@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { changeLoc } from '@/library/ts/common-tools'
 import RulesList from '@/fetchables/RulesList.vue'
 import TosList from '@/fetchables/TosList.vue'
 import LoadingState from '@/components/LoadingState.vue'
 import PageContainer from '@/components/roots/PageContainer.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
+import { goToTop } from '@/library/ts/common-tools'
 
-changeLoc('#', false)
+goToTop()
 </script>
 
 <template lang="pug">

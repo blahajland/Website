@@ -22,7 +22,7 @@ defineProps({
 </script>
 
 <template lang="pug">
-div.BulletpointCard
+.BulletpointCard
   slot
 </template>
 

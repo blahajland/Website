@@ -15,17 +15,17 @@ const scroll = (amount: number, vertical = false) => {
 </script>
 
 <template lang="pug">
-div.SlideableContainer
-  div(@click="scroll(-1 * SCROLL_AMOUNT)").SlideButton.displayOnDesktop
-    img(alt="&lt;", :src="assets.images.icons.get('left')")
-  div(@click="scroll(-1 * SCROLL_AMOUNT, true)").SlideButton.displayOnMobile
-    img(alt="&lt;", :src="assets.images.icons.get('up')")
-  div(ref="scrollComp").SlideContainer
+.SlideableContainer
+  div.SlideButton.displayOnDesktop(@click='scroll(-1 * SCROLL_AMOUNT)')
+    img(alt='&lt;', :src='assets.images.icons.get("left")')
+  div.SlideButton.displayOnMobile(@click='scroll(-1 * SCROLL_AMOUNT, true)')
+    img(alt='&lt;', :src='assets.images.icons.get("up")')
+  div.SlideContainer(ref='scrollComp')
     slot
-  div(@click="scroll(SCROLL_AMOUNT, true)").SlideButton.displayOnMobile
-    img(alt="&gt;", :src="assets.images.icons.get('down')")
-  div(@click="scroll(SCROLL_AMOUNT)").SlideButton.displayOnDesktop
-    img(alt="&gt;", :src="assets.images.icons.get('right')")
+  div.SlideButton.displayOnMobile(@click='scroll(SCROLL_AMOUNT, true)')
+    img(alt='&gt;', :src='assets.images.icons.get("down")')
+  div.SlideButton.displayOnDesktop(@click='scroll(SCROLL_AMOUNT)')
+    img(alt='&gt;', :src='assets.images.icons.get("right")')
 </template>
 
 <style lang="sass">

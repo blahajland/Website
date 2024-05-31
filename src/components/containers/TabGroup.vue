@@ -1,5 +1,5 @@
 <template lang="pug">
-div.TabGroup
+.TabGroup
   slot
 </template>
 

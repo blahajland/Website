@@ -1,5 +1,5 @@
 <template lang="pug">
-div.PageContainer
+.PageContainer
   slot
 </template>
 

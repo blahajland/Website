@@ -10,8 +10,8 @@ defineProps({
 </script>
 
 <template lang="pug">
-slot(name="title")
-CustomGap(gap="16px")
+slot(name='title')
+CustomGap(gap='16px')
 slot
-CustomGap(v-if="!last", gap="72px")
+CustomGap(v-if='!last', gap='72px')
 </template>

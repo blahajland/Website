@@ -1,5 +1,5 @@
 <template lang="pug">
-div.CustomFooter
+.CustomFooter
   slot
 </template>
 

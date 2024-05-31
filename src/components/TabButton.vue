@@ -1,5 +1,5 @@
 <template lang="pug">
-div.TabButton
+.TabButton
   slot
   hr
 </template>

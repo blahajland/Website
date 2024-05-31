@@ -3,8 +3,8 @@ import { assets } from '@/library/ts/static-tools'
 </script>
 
 <template lang="pug">
-div.LoadingState
-  img(alt="Loading...", :src="assets.images.get('Loading')")
+.LoadingState
+  img(alt='Loading...', :src='assets.images.pictures.get("loading-icon")')
   div
     h1 Loading...
     p It won't be long we promise :3

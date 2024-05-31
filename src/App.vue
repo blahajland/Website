@@ -17,39 +17,39 @@ setThemeFromCookie()
 
 <template lang="pug">
 NavBar
-    TopBar
-      BlahajButton(
-        background="var(--background)",
-        hover="var(--surface1)",
-        @click="changeLoc(links.donate)")
-        img(alt="Donate", :src="assets.images.icons.get('donate')")
-        p.displayOnDesktop Donate
-      BlahajButton(
-        background="var(--background)",
-        hover="var(--surface1)",
-        @click="changeLoc(links.signup)")
-        img(alt="Sign up", :src="assets.images.icons.get('signup')")
-        p.displayOnDesktop Sign up
-      BlahajButton(
-        background="var(--background)",
-        hover="var(--surface1)",
-        @click="changeLoc(links.login)")
-        img(alt="Log in", :src="assets.images.icons.get('login')")
-        p.displayOnDesktop Log in
-      BlahajButton(
-        background="var(--background)",
-        hover="var(--surface1)",
-        @click="switchTheme()")
-        img(alt="Theme", :src="assets.images.icons.get('theme')")
-        p.displayOnDesktop Theme
-    TabGroup
-      HomeTabs(v-if="$route.name === 'home'")
-      RulesTabs(v-if="$route.name === 'rules'")
+  TopBar
+    BlahajButton(
+      background='var(--background)',
+      hover='var(--surface1)',
+      @click='changeLoc(links.donate)'
+    )
+      img(alt='Donate', :src='assets.images.icons.get("donate")')
+      p.displayOnDesktop Donate
+    BlahajButton(
+      background='var(--background)',
+      hover='var(--surface1)',
+      @click='changeLoc(links.signup)'
+    )
+      img(alt='Sign up', :src='assets.images.icons.get("signup")')
+      p.displayOnDesktop Sign up
+    BlahajButton(
+      background='var(--background)',
+      hover='var(--surface1)',
+      @click='changeLoc(links.login)'
+    )
+      img(alt='Log in', :src='assets.images.icons.get("login")')
+      p.displayOnDesktop Log in
+    BlahajButton(background='var(--background)', hover='var(--surface1)', @click='switchTheme()')
+      img(alt='Theme', :src='assets.images.icons.get("theme")')
+      p.displayOnDesktop Theme
+  TabGroup
+    HomeTabs(v-if='$route.name === "home"')
+    RulesTabs(v-if='$route.name === "rules"')
 RouterView
 CustomFooter
   p &copy; #[b eryn] Some rights reserved
   p Website by #[b Blahaj Team]
-  RouterLink(to="/credits") Credits
-  RouterLink(to="/rules") Rules & TOS
-  a(:href="links.status") Apps status
+  RouterLink(to='/credits') Credits
+  RouterLink(to='/rules') Rules & TOS
+  a(:href='links.status') Apps status
 </template>

@@ -1,5 +1,5 @@
 <template lang="pug">
-div.NotificationBanner
+.NotificationBanner
   slot
 </template>
 

@@ -1,5 +1,5 @@
 <template lang="pug">
-div.ThingsContainer
+.ThingsContainer
   slot
 </template>
 

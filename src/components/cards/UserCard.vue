@@ -20,8 +20,11 @@ defineProps({
 </script>
 
 <template lang="pug">
-div(:class="{ clickable: clickable }").UserCard
-  slot
+div.UserCard(:class='{ clickable: clickable }')
+  div
+    slot(name='image')
+  div
+    slot
 </template>
 
 <style lang="sass">
@@ -34,32 +37,43 @@ div(:class="{ clickable: clickable }").UserCard
   align-items: center
   transition: var(--trans)
   color: v-bind(font)
+  gap: 24px
 
   @media (min-width: 1201px)
-    justify-content: center
+    justify-content: start
     padding: 24px
-    gap: 24px
-    flex: 0 0 200px
+    flex: 0 0
 
   @media (max-width: 1200px)
     justify-content: center
     padding: 24px 32px
-    gap: 24px
 
   *
     margin: 0
-    text-align: center
+    text-align: start
 
-  > img
+  div:first-of-type > img
     height: 64px
     border-radius: var(--radius-inf)
 
-  > p
-    overflow: hidden
-    line-clamp: 2
-    display: -webkit-box
-    -webkit-line-clamp: 2
-    -webkit-box-orient: vertical
+  div:nth-of-type(2)
+    display: flex
+    flex-direction: column
+    justify-content: start
+    align-items: start
+    width: 128px
+    gap: 4px
+
+    > p
+      box-sizing: border-box
+      max-width: 100%
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      font-family: monospace
+      padding: 4px 8px
+      background: #00000020
+      border-radius: var(--radius-inf)
 
   &.clickable
     cursor: pointer

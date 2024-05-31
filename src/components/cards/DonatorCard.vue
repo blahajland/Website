@@ -37,13 +37,13 @@ defineProps({
 </script>
 
 <template lang="pug">
-div.DonatorCard
-  img(:src="donatorImage", :alt="donatorName")
-  div.DonatorTitle
+.DonatorCard
+  img(:src='donatorImage', :alt='donatorName')
+  .DonatorTitle
     h3 {{ donatorName }}
-    h4(v-if="donationTier !== ''") {{ donationTier }}
-  BlahajButton(background="var(--background)", hover="var(--background)")
-    p {{donationAmount + ' ' + donationCurrency}}
+    h4(v-if='donationTier !== ""') {{ donationTier }}
+  BlahajButton(background='var(--background)', hover='var(--background)')
+    p {{ donationAmount + ' ' + donationCurrency }}
 </template>
 
 <style lang="sass">

@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template lang="pug">
-div.GridContainer
+.GridContainer
   slot
 </template>
 

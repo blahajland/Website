@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { type Ref, ref } from 'vue'
-import { fetchDataAsJson } from '@/library/ts/fetch-tools'
-import fetchable from '@/assets/json/fetchable.json'
+
 import BlockCard from '@/components/cards/BlockCard.vue'
 import ContentContainer from '@/components/roots/ContentContainer.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
+import { assets } from '@/library/ts/static-tools'
 
 interface Rule {
   color: string
@@ -20,7 +20,7 @@ interface RulesList {
 const lastUpdated = ref('__/__/____')
 const rulesList: Ref<Array<Rule>> = ref([])
 
-let fetchedData = await fetchDataAsJson(fetchable.rules)
+let fetchedData = await assets.json.get('rules')
 if ('rules' in fetchedData && 'updated' in fetchedData) {
   let rulesListObj = fetchedData as RulesList
   rulesList.value = rulesListObj.rules
@@ -34,10 +34,10 @@ ContentContainer
     h1#r1 Rules
     p Last updated : {{ lastUpdated }}
   GridContainer
-    BlockCard(v-if="rulesList.length === 0", color="var(--missing)")
+    BlockCard(v-if='rulesList.length === 0', color='var(--missing)')
       h3 The list is empty... It shouldn't
       p If this card still appears, please contact the dev team.
-    BlockCard(v-for="(e, i) in rulesList", :key="i", :color="e.color")
+    BlockCard(v-for='(e, i) in rulesList', :key='i', :color='e.color')
       h3 {{ e.title }}
-      p(v-html="e.desc")
+      p(v-html='e.desc')
 </template>

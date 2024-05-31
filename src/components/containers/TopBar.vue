@@ -4,9 +4,9 @@ import { assets } from '@/library/ts/static-tools'
 </script>
 
 <template lang="pug">
-div.TopBar
-  RouterLink(to="/")
-    img(alt="Logo", :src="assets.images.get('Logo')")
+.TopBar
+  RouterLink(to='/')
+    img(alt='Logo', :src='assets.images.pictures.get("text-logo")')
   ThingsContainer
     slot
 </template>
