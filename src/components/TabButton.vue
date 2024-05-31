@@ -1,8 +1,7 @@
-<template>
-  <div class="TabButton">
-    <slot></slot>
-    <hr />
-  </div>
+<template lang="pug">
+.TabButton
+  slot
+  hr
 </template>
 
 <style lang="sass">

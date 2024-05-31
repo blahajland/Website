@@ -36,17 +36,14 @@ defineProps({
 })
 </script>
 
-<template>
-  <div class="DonatorCard">
-    <img :src="donatorImage" :alt="donatorName" />
-    <div class="DonatorTitle">
-      <h3>{{ donatorName }}</h3>
-      <h4 v-if="donationTier !== ''">{{ donationTier }}</h4>
-    </div>
-    <BlahajButton background="var(--background)" hover="var(--background)">
-      <p v-html="donationAmount + ' ' + donationCurrency"></p>
-    </BlahajButton>
-  </div>
+<template lang="pug">
+.DonatorCard
+  img(:src='donatorImage', :alt='donatorName')
+  .DonatorTitle
+    h3 {{ donatorName }}
+    h4(v-if='donationTier !== ""') {{ donationTier }}
+  BlahajButton(background='var(--background)', hover='var(--background)')
+    p {{ donationAmount + ' ' + donationCurrency }}
 </template>
 
 <style lang="sass">

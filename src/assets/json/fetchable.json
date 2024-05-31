@@ -1,8 +1,0 @@
-{
-  "apps": "https://blahaj.land/static/data/json/?json=apps",
-  "users": "https://blahaj.land/static/data/json/?json=users",
-  "donations": "https://api.opencollective.com/graphql/v2",
-  "titles": "https://blahaj.land/static/data/json/?json=titles",
-  "rules": "https://blahaj.land/static/data/json/?json=rules",
-  "tos": "https://blahaj.land/static/data/json/?json=tos"
-}

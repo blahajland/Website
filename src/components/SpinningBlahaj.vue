@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { changeLoc } from '@/library/ts/link-tools'
+import { changeLoc } from '@/library/ts/common-tools'
+import { assets } from '@/library/ts/static-tools'
+import links from '@/assets/json/links.json'
 </script>
 
-<template>
-  <div class="SpinningBlahaj" @click="changeLoc('https://blahaj.itsjamie.dev/')">
-    <img src="https://blahaj.land/static/images/SpinningBlahaj.gif" alt="Blahaj" />
-  </div>
+<template lang="pug">
+div.SpinningBlahaj(@click='changeLoc(links.blahaj)')
+  img(:src='assets.images.gifs.get("spinning-blahaj")', alt='Blahaj')
 </template>
 
 <style lang="sass">

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { isValidColorName } from '@/library/ts/common-tools'
+import type { PropType } from 'vue'
+import type { PixelSize } from '@/library/ts/common-types'
 
 defineProps({
   color: {
@@ -11,52 +13,45 @@ defineProps({
     type: String,
     validator: isValidColorName,
     default: '#101010'
+  },
+  gap: {
+    type: String as PropType<PixelSize>,
+    default: '12px'
   }
 })
 </script>
 
 <template lang="pug">
-.AppCard
-  div
-    slot(name='image')
-  div
-    slot(name='default')
+.BulletpointCard
+  slot
 </template>
 
 <style lang="sass">
-
-.AppCard
+.BulletpointCard
+  padding: 24px
+  flex-grow: 1
   background: v-bind(color)
   border-radius: var(--radius-small)
   display: flex
-  flex-direction: row
-  justify-content: center
-  align-items: center
+  flex-direction: column
   transition: var(--trans)
   color: v-bind(font)
-
-  @media (min-width: 1201px)
-    padding: 24px 32px
-    gap: 32px
-    flex: 0 0 320px
-
-  @media (max-width: 1200px)
-    padding: 24px
-    gap: 24px
-
-  > div
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: start
-    gap: 4px
-
-    > img
-      height: 56px
-
-    &:last-of-type
-      flex-grow: 1
+  gap: v-bind(gap)
 
   *
     margin: 0
+
+  > img
+    height: 28px
+
+  @media (min-width: 1201px)
+    justify-content: center
+    align-items: start
+
+  @media (max-width: 1200px)
+    justify-content: start
+    align-items: center
+
+    p, h1, h2, h3
+      text-align: center
 </style>
