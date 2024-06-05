@@ -1,10 +1,11 @@
-<template lang="pug">
-.PageContainer
-  slot
+<template>
+  <div class="PageFrame">
+    <slot></slot>
+  </div>
 </template>
 
 <style lang="sass">
-.PageContainer
+.PageFrame
   display: flex
   flex-direction: column
   justify-content: start
@@ -21,7 +22,7 @@
       font-size: 2.5em
 
   @media (max-width: 1200px)
-    padding: 96px 32px 0
+    padding: 96px 24px 0
 
     > h1
       font-size: 2em

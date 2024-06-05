@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { assets } from '@/library/ts/static-tools'
+import { assets } from 'blahaj-library'
 
 const SCROLL_AMOUNT = 500
 
@@ -14,18 +14,24 @@ const scroll = (amount: number, vertical = false) => {
 }
 </script>
 
-<template lang="pug">
-.SlideableContainer
-  div.SlideButton.displayOnDesktop(@click='scroll(-1 * SCROLL_AMOUNT)')
-    img(alt='&lt;', :src='assets.images.icons.get("left")')
-  div.SlideButton.displayOnMobile(@click='scroll(-1 * SCROLL_AMOUNT, true)')
-    img(alt='&lt;', :src='assets.images.icons.get("up")')
-  div.SlideContainer(ref='scrollComp')
-    slot
-  div.SlideButton.displayOnMobile(@click='scroll(SCROLL_AMOUNT, true)')
-    img(alt='&gt;', :src='assets.images.icons.get("down")')
-  div.SlideButton.displayOnDesktop(@click='scroll(SCROLL_AMOUNT)')
-    img(alt='&gt;', :src='assets.images.icons.get("right")')
+<template>
+  <div class="SlideableContainer">
+    <div class="SlideButton displayOnDesktop" @click="scroll(-1 * SCROLL_AMOUNT)">
+      <img alt="&lt;" :src="assets.images.icons.get('left')" />
+    </div>
+    <div class="SlideButton displayOnMobile" @click="scroll(-1 * SCROLL_AMOUNT, true)">
+      <img alt="&lt;" :src="assets.images.icons.get('up')" />
+    </div>
+    <div ref="scrollComp" class="SlideContainer">
+      <slot></slot>
+    </div>
+    <div class="SlideButton displayOnMobile" @click="scroll(SCROLL_AMOUNT, true)">
+      <img alt="&gt;" :src="assets.images.icons.get('down')" />
+    </div>
+    <div class="SlideButton displayOnDesktop" @click="scroll(SCROLL_AMOUNT)">
+      <img alt="&gt;" :src="assets.images.icons.get('right')" />
+    </div>
+  </div>
 </template>
 
 <style lang="sass">

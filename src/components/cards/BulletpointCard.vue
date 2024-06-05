@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { isValidColorName } from '@/library/ts/common-tools'
 import type { PropType } from 'vue'
-import type { PixelSize } from '@/library/ts/common-types'
+import { colorsService, type PixelSize } from 'blahaj-library'
 
 defineProps({
   color: {
     type: String,
-    validator: isValidColorName,
+    validator: (clr: string) => colorsService.isValidColor(clr),
     default: 'var(--surface2)'
   },
   font: {
     type: String,
-    validator: isValidColorName,
+    validator: (clr: string) => colorsService.isValidColor(clr),
     default: '#101010'
   },
   gap: {
@@ -21,9 +20,10 @@ defineProps({
 })
 </script>
 
-<template lang="pug">
-.BulletpointCard
-  slot
+<template>
+  <div class="BulletpointCard">
+    <slot></slot>
+  </div>
 </template>
 
 <style lang="sass">

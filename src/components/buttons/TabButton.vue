@@ -1,7 +1,8 @@
-<template lang="pug">
-.TabButton
-  slot
-  hr
+<template>
+  <div class="TabButton">
+    <slot></slot>
+    <hr />
+  </div>
 </template>
 
 <style lang="sass">
@@ -13,7 +14,7 @@
   gap: 8px
   min-width: 180px
   padding-top: 8px
-  border-radius: var(--radius-small)
+  border-radius: var(--radius-small) var(--radius-small) 0 0
   transition: var(--trans)
   cursor: pointer
 

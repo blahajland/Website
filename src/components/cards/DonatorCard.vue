@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import BlahajButton from '@/library/vue/BlahajButton.vue'
-import { isValidColorName } from '@/library/ts/common-tools'
+import BlahajButton from '@/components/buttons/BlahajButton.vue'
+import { colorsService } from 'blahaj-library'
 
 defineProps({
   color: {
     type: String,
-    validator: isValidColorName,
+    validator: (clr: string) => colorsService.isValidColor(clr),
     default: '#E2EDFF'
   },
   font: {
     type: String,
-    validator: isValidColorName,
+    validator: (clr: string) => colorsService.isValidColor(clr),
     default: '#101010'
   },
   donatorName: {
@@ -36,14 +36,17 @@ defineProps({
 })
 </script>
 
-<template lang="pug">
-.DonatorCard
-  img(:src='donatorImage', :alt='donatorName')
-  .DonatorTitle
-    h3 {{ donatorName }}
-    h4(v-if='donationTier !== ""') {{ donationTier }}
-  BlahajButton(background='var(--background)', hover='var(--background)')
-    p {{ donationAmount + ' ' + donationCurrency }}
+<template>
+  <div class="DonatorCard">
+    <img :src="donatorImage" :alt="donatorName" />
+    <div class="DonatorTitle">
+      <h3>{{ donatorName }}</h3>
+      <h4 v-if="donationTier !== ''">{{ donationTier }}</h4>
+    </div>
+    <BlahajButton background="var(--background)" hover="var(--background)">
+      <p>{{ donationAmount + ' ' + donationCurrency }}</p>
+    </BlahajButton>
+  </div>
 </template>
 
 <style lang="sass">
