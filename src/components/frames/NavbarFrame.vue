@@ -1,10 +1,11 @@
-<template lang="pug">
-.NavBar
-  slot
+<template>
+  <div class="NavbarFrame">
+    <slot></slot>
+  </div>
 </template>
 
 <style lang="sass">
-.NavBar
+.NavbarFrame
   z-index: 5
   position: fixed
   top: 0

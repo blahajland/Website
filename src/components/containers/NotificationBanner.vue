@@ -1,6 +1,7 @@
-<template lang="pug">
-.NotificationBanner
-  slot
+<template>
+  <div class="NotificationBanner">
+    <slot></slot>
+  </div>
 </template>
 
 <style lang="sass">

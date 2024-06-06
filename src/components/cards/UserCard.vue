@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { isValidColorName } from '@/library/ts/common-tools'
+import { colorsService } from 'blahaj-library'
 
 defineProps({
   color: {
     type: String,
-    validator: isValidColorName,
+    validator: (clr: string) => colorsService.isValidColor(clr),
     default: 'var(--surface2)'
   },
   font: {
     type: String,
-    validator: isValidColorName,
+    validator: (clr: string) => colorsService.isValidColor(clr),
     default: '#101010'
   },
   clickable: {
@@ -19,12 +19,15 @@ defineProps({
 })
 </script>
 
-<template lang="pug">
-div.UserCard(:class='{ clickable: clickable }')
-  div
-    slot(name='image')
-  div
-    slot
+<template>
+  <div class="UserCard" :class="{ clickable: clickable }">
+    <div>
+      <slot name="image"></slot>
+    </div>
+    <div>
+      <slot></slot>
+    </div>
+  </div>
 </template>
 
 <style lang="sass">

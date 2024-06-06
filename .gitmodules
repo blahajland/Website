@@ -1,3 +1,0 @@
-[submodule "src/library"]
-	path = src/library
-	url = https://github.com/blahajland/Library.git

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { type Ref, ref } from 'vue'
-
+import DOMPurify from 'dompurify'
 import BlockCard from '@/components/cards/BlockCard.vue'
-import ContentContainer from '@/components/roots/ContentContainer.vue'
+import ContentContainer from '@/components/frames/ContentFrame.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
-import { assets } from '@/library/ts/static-tools'
+import { assets } from 'blahaj-library'
 
 interface Term {
   color: string
@@ -28,16 +28,21 @@ if ('tos' in fetchedData && 'updated' in fetchedData) {
 }
 </script>
 
-<template lang="pug">
-ContentContainer(last)
-  template(#title)
-    h1#r2 Terms of Service
-    p Last updated : {{ lastUpdated }}
-  GridContainer
-    BlockCard(color='var(--missing)', v-if='tosList.length === 0')
-      h3 The list is empty... It shouldn't
-      p If this card still appears, please contact the dev team.
-    BlockCard(v-for='(e, i) in tosList', :key='i', :color='e.color')
-      h3 {{ e.title }}
-      p(v-html='e.desc')
+<template>
+  <ContentContainer>
+    <template #title>
+      <h1 id="r1">Rules</h1>
+      <p>Last updated : {{ lastUpdated }}</p>
+    </template>
+    <GridContainer>
+      <BlockCard v-if="tosList.length === 0" color="var(--missing)">
+        <h3>The list is empty... It shouldn't</h3>
+        <p>If this card still appears, please contact the dev team.</p>
+      </BlockCard>
+      <BlockCard v-for="(e, i) in tosList" :key="i" :color="e.color">
+        <h3>{{ e.title }}</h3>
+        <p v-html="DOMPurify.sanitize(e.desc)"></p>
+      </BlockCard>
+    </GridContainer>
+  </ContentContainer>
 </template>

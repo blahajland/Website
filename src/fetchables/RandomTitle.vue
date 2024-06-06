@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { assets } from '@/library/ts/static-tools'
+import { assets } from 'blahaj-library'
 
 const randomTitle = ref('')
 
@@ -15,6 +15,6 @@ if ('randomTitles' in fetchedData) {
 }
 </script>
 
-<template lang="pug">
-h1 {{ randomTitle }}
+<template>
+  <h1>{{ randomTitle }}</h1>
 </template>

@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { isValidColorName } from '@/library/ts/common-tools'
 import type { PropType } from 'vue'
-import type { PixelSize } from '@/library/ts/common-types'
+import { colorsService, type PixelSize } from 'blahaj-library'
 
 const props = defineProps({
   color: {
     type: String,
-    validator: isValidColorName,
+    validator: (clr: string) => colorsService.isValidColor(clr),
     default: 'var(--surface2)'
   },
   gap: {
@@ -23,12 +22,15 @@ const flexDirection = props.isInverted ? 'row-reverse' : 'row'
 const transform = props.isInverted ? '-16px' : '16px'
 </script>
 
-<template lang="pug">
-.BulletpointContainer
-  div
-    slot
-  div
-    slot(name='image')
+<template>
+  <div class="BulletpointContainer">
+    <div>
+      <slot></slot>
+    </div>
+    <div>
+      <slot name="image"></slot>
+    </div>
+  </div>
 </template>
 
 <style lang="sass">

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { type Ref, ref } from 'vue'
-
+import DOMPurify from 'dompurify'
 import AppCard from '@/components/cards/AppCard.vue'
-import { assets } from '@/library/ts/static-tools'
+import { assets } from 'blahaj-library'
 
 interface AppDescriptor {
   color: string
@@ -26,20 +26,26 @@ if ('apps' in fetchedData)
   )
 </script>
 
-<template lang="pug">
-AppCard(v-for='(e, i) in appList', :key='i', :color='e.color')
-  template(#image)
-    img(:alt='e.title', :src='e.img')
-  h3 {{ e.title }}
-  p(v-html='e.desc')
-AppCard(v-if='appList.length === 0', color='var(--missing)')
-  template(#image)
-    img(alt='Unknown', :src='assets.images.apps.get("unknown")')
-  h3 The list is empty... It shouldn't
-  p If this card still appears, please contact the dev team.
-AppCard(v-else, color='#F3CBFF')
-  template(#image)
-    img(alt='More', :src='assets.images.apps.get("more")')
-  h3 And much...
-  p ...much much more !
+<template>
+  <AppCard v-for="(e, i) in appList" :key="i" :color="e.color">
+    <template #image>
+      <img :alt="e.title" :src="e.img" />
+    </template>
+    <h3>{{ e.title }}</h3>
+    <p v-html="DOMPurify.sanitize(e.desc)"></p>
+  </AppCard>
+  <AppCard v-if="appList.length === 0" color="var(--missing)">
+    <template #image>
+      <img alt="Unknown" :src="assets.images.apps.get('unknown')" />
+    </template>
+    <h3>The list is empty... It shouldn't</h3>
+    <p>If this card still appears, please contact the dev team.</p>
+  </AppCard>
+  <AppCard v-else color="#F3CBFF">
+    <template #image>
+      <img alt="More" :src="assets.images.apps.get('more')" />
+    </template>
+    <h3>And much...</h3>
+    <p>...much much more !</p>
+  </AppCard>
 </template>
