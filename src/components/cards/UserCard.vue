@@ -2,6 +2,18 @@
 import { colorsService } from 'blahaj-library'
 
 defineProps({
+  image: {
+    type: String,
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  website: {
+    type: String,
+    required: true
+  },
   color: {
     type: String,
     validator: (clr: string) => colorsService.isValidColor(clr),
@@ -17,15 +29,22 @@ defineProps({
     default: false
   }
 })
+
+const stripHttp = (link: string) => {
+  let res = new RegExp('^(?:http|https):\\/\\/([a-z0-9.\\-_]+).*$', 'i').exec(link)
+  if (!res || res.length < 2) return link
+  return res[1]
+}
 </script>
 
 <template>
   <div class="UserCard" :class="{ clickable: clickable }">
     <div>
-      <slot name="image"></slot>
+      <img :src="image" :alt="title" />
     </div>
     <div>
-      <slot></slot>
+      <h3>{{ title }}</h3>
+      <p>{{ stripHttp(website) }}</p>
     </div>
   </div>
 </template>
