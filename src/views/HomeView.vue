@@ -41,7 +41,7 @@ import ContactsBundle from '@/bundles/ContactsBundle.vue'
     <ContentContainer>
       <template #title
         ><h2 id="p1">Why?</h2>
-        <p>Why should you consider <b>Blahaj Land</b> for your needs ? ;3</p></template
+        <p>Why should you consider <b>Blahaj Land</b> for your needs? ;3</p></template
       >
       <BulletpointContainer color="#d3ddff">
         <template #image

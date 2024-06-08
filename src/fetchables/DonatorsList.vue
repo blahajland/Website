@@ -157,8 +157,8 @@ const isDonationsEmpty = () => donationsList.value.length === 0
     :donator-name="e.account.name"
   />
   <BlockCard v-if="collectiveInfo.nbOfDonators >= maxNbOfDonators" color="#C8E7FF">
-    <h3>And more !</h3>
-    <p>Go to <b>OpenCollective</b> to see all the donations made so far.</p>
+    <h3>And more!</h3>
+    <p>Go to <b>OpenCollective</b> to see all the donations that keep us going! </p>
     <BlahajButton
       background="var(--background)"
       hover="var(--surface1)"
@@ -169,8 +169,8 @@ const isDonationsEmpty = () => donationsList.value.length === 0
     </BlahajButton>
   </BlockCard>
   <BlockCard color="#ECBCFD">
-    <h3>You're a Ko-Fi donator ?</h3>
-    <p>If you made a donation through Ko-Fi, go check here.</p>
+    <h3>Are you a Ko-Fi donator?</h3>
+    <p>Ko-Fi donations are displayed here.</p>
     <BlahajButton
       background="var(--background)"
       hover="var(--surface1)"

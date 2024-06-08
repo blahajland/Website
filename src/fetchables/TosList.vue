@@ -37,7 +37,7 @@ if ('tos' in fetchedData && 'updated' in fetchedData) {
     <GridContainer>
       <BlockCard v-if="tosList.length === 0" color="var(--missing)">
         <h3>The list is empty... It shouldn't</h3>
-        <p>If this card still appears, please contact the dev team.</p>
+        <p>If this card appears empty after reloading, please contact the dev team.</p>
       </BlockCard>
       <BlockCard v-for="(e, i) in tosList" :key="i" :color="e.color">
         <h3>{{ e.title }}</h3>

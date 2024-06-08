@@ -30,7 +30,7 @@ if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
       The list is empty... <br />
       Help us resolve that!
     </h3>
-    <p>If you want your own website, sign up !</p>
+    <p>If you want to host your own website, sign up!</p>
     <BlahajButton
       background="var(--background)"
       hover="var(--surface1)"

@@ -16,8 +16,7 @@ goToTop()
       <template #title>
         <h1>Donations from Ko-Fi</h1>
         <p>
-          This page is dedicated to all the persons who donated through Ko-Fi. Thanks for your
-          support &lt;:3
+          This page is dedicated to Ko-Fi donators. Thanks for your support &lt;:3
         </p>
       </template>
       <GridContainer :rows="4">
