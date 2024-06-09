@@ -18,12 +18,6 @@ interface UsersList {
   users: Array<User>
 }
 
-const stripHttp = (link: string) => {
-  let res = new RegExp('^(?:http|https):\\/\\/([a-z0-9.\\-_]+).*$', 'i').exec(link)
-  if (!res || res.length < 2) return link
-  return res[1]
-}
-
 const usersList: Ref<Array<User>> = ref([])
 
 let fetchedData = await assets.json.get('users')
@@ -36,7 +30,7 @@ if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
       The list is empty... <br />
       Help us resolve that!
     </h3>
-    <p>If you want your own website, sign up !</p>
+    <p>If you want to host your own website, sign up!</p>
     <BlahajButton
       background="var(--background)"
       hover="var(--surface1)"
@@ -50,13 +44,10 @@ if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
     v-for="(e, i) in usersList"
     :key="i"
     clickable
+    :image="e.img"
+    :title="e.title"
+    :website="e.href"
     :color="e.color"
     @click="changeLoc(e.href)"
-  >
-    <template #image>
-      <img :alt="e.title" :src="e.img" />
-    </template>
-    <h3>{{ e.title }}</h3>
-    <p>{{ stripHttp(e.href) }}</p>
-  </UserCard>
+  />
 </template>

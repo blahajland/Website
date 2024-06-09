@@ -5,7 +5,7 @@ import { changeLoc } from 'blahaj-library'
 
 <template>
   <TabButton @click="changeLoc('#p1', false)">
-    <p>Why ?</p>
+    <p>Why?</p>
   </TabButton>
   <TabButton @click="changeLoc('#p2', false)">
     <p>Services</p>
