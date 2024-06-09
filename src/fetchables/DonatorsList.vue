@@ -158,7 +158,7 @@ const isDonationsEmpty = () => donationsList.value.length === 0
   />
   <BlockCard v-if="collectiveInfo.nbOfDonators >= maxNbOfDonators" color="#C8E7FF">
     <h3>And more!</h3>
-    <p>Go to <b>OpenCollective</b> to see all the donations that keep us going! </p>
+    <p>Go to <b>OpenCollective</b> to see all the donations that keep us going!</p>
     <BlahajButton
       background="var(--background)"
       hover="var(--surface1)"

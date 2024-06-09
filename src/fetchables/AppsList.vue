@@ -39,7 +39,7 @@ if ('apps' in fetchedData)
       <img alt="Unknown" :src="assets.images.apps.get('unknown')" />
     </template>
     <h3>The list is empty... It shouldn't</h3>
-    <p>If this card appears empty after reloading, please contact the dev team.</p>
+    <p>If this section appears empty after reloading, please contact the dev team.</p>
   </AppCard>
   <AppCard v-else color="#F3CBFF">
     <template #image>

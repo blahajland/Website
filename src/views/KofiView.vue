@@ -15,9 +15,7 @@ goToTop()
     <ContentContainer last>
       <template #title>
         <h1>Donations from Ko-Fi</h1>
-        <p>
-          This page is dedicated to Ko-Fi donators. Thanks for your support &lt;:3
-        </p>
+        <p>This page is dedicated to Ko-Fi donators. Thanks for your support &lt;:3</p>
       </template>
       <GridContainer :rows="4">
         <KofiBundle />
