@@ -6,6 +6,7 @@ import { type Ref, ref } from 'vue'
 import BlockCard from '@/components/cards/BlockCard.vue'
 import links from '@/assets/json/links.json'
 import { assets, changeLoc } from 'blahaj-library'
+import SlideableContainer from '@/components/containers/SlideableContainer.vue'
 
 interface User {
   color: string
@@ -25,29 +26,31 @@ if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
 </script>
 
 <template>
-  <BlockCard v-if="usersList.length === 0" color="var(--missing)">
-    <h3>
-      The list is empty... <br />
-      Help us resolve that!
-    </h3>
-    <p>If you want to host your own website, sign up!</p>
-    <BlahajButton
-      background="var(--background)"
-      hover="var(--surface1)"
-      @click="changeLoc(links.signup)"
-    >
-      <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
-      <p>Sign Up</p>
-    </BlahajButton>
-  </BlockCard>
-  <UserCard
-    v-for="(e, i) in usersList"
-    :key="i"
-    clickable
-    :image="e.img"
-    :title="e.title"
-    :website="e.href"
-    :color="e.color"
-    @click="changeLoc(e.href)"
-  />
+  <SlideableContainer>
+    <BlockCard v-if="usersList.length === 0" color="var(--missing)">
+      <h3>
+        The list is empty... <br />
+        Help us resolve that!
+      </h3>
+      <p>If you want to host your own website, sign up!</p>
+      <BlahajButton
+        background="var(--background)"
+        hover="var(--surface1)"
+        @click="changeLoc(links.signup)"
+      >
+        <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
+        <p>Sign Up</p>
+      </BlahajButton>
+    </BlockCard>
+    <UserCard
+      v-for="(e, i) in usersList"
+      :key="i"
+      clickable
+      :image="e.img"
+      :title="e.title"
+      :website="e.href"
+      :color="e.color"
+      @click="changeLoc(e.href)"
+    />
+  </SlideableContainer>
 </template>

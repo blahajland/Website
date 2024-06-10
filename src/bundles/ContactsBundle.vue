@@ -22,5 +22,3 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
     <p class="displayOnDesktop">TikTok</p>
   </BlahajButton>
 </template>
-
-<style scoped lang="sass"></style>

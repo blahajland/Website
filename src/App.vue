@@ -21,7 +21,7 @@ themeService.setThemeFromCookie()
       <HomeTabs v-if="$route.name === 'home'" />
     </TabGroup>
   </NavbarFrame>
-  <RouterView></RouterView>
+  <RouterView />
   <CustomFooter>
     <FooterBundle />
   </CustomFooter>
