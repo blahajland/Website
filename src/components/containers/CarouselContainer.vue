@@ -15,14 +15,14 @@ const scroll = (amount: number, vertical = false) => {
 </script>
 
 <template>
-  <div class="SlideableContainer">
+  <div class="CarouselContainer">
     <div class="SlideButton displayOnDesktop" @click="scroll(-1 * SCROLL_AMOUNT)">
       <img alt="&lt;" :src="assets.images.icons.get('left')" />
     </div>
     <div class="SlideButton displayOnMobile" @click="scroll(-1 * SCROLL_AMOUNT, true)">
       <img alt="&lt;" :src="assets.images.icons.get('up')" />
     </div>
-    <div ref="scrollComp" class="SlideContainer">
+    <div ref="scrollComp" class="Carousel">
       <slot></slot>
     </div>
     <div class="SlideButton displayOnMobile" @click="scroll(SCROLL_AMOUNT, true)">
@@ -35,7 +35,7 @@ const scroll = (amount: number, vertical = false) => {
 </template>
 
 <style lang="sass">
-.SlideableContainer
+.CarouselContainer
   display: flex
   justify-content: stretch
   align-items: center
@@ -57,7 +57,7 @@ const scroll = (amount: number, vertical = false) => {
     height: 24px
     filter: var(--filter)
 
-.SlideContainer
+.Carousel
   -ms-overflow-style: none
   scrollbar-width: none
   display: flex
@@ -71,7 +71,7 @@ const scroll = (amount: number, vertical = false) => {
     display: none
 
 @media (min-width: 1201px)
-  .SlideableContainer
+  .CarouselContainer
     width: 100%
     flex-direction: row
     gap: 8px
@@ -79,13 +79,13 @@ const scroll = (amount: number, vertical = false) => {
   .SlideButton:hover
     padding: 8px
 
-  .SlideContainer
+  .Carousel
     flex: 1 0
     flex-direction: row
     overflow: scroll
 
 @media (max-width: 1200px)
-  .SlideableContainer
+  .CarouselContainer
     flex-direction: column
     gap: 4px
 
@@ -94,7 +94,7 @@ const scroll = (amount: number, vertical = false) => {
     width: 100%
     padding: 8px
 
-  .SlideContainer
+  .Carousel
     width: 100%
     max-height: 512px
     flex-direction: column

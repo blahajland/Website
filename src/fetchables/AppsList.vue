@@ -3,7 +3,7 @@ import { type Ref, ref } from 'vue'
 import DOMPurify from 'dompurify'
 import AppCard from '@/components/cards/AppCard.vue'
 import { assets } from 'blahaj-library'
-import SlideableContainer from '@/components/containers/SlideableContainer.vue'
+import ExpandableContainer from '@/components/containers/ExpandableContainer.vue'
 
 interface AppDescriptor {
   color: string
@@ -28,7 +28,7 @@ if ('apps' in fetchedData)
 </script>
 
 <template>
-  <SlideableContainer>
+  <ExpandableContainer>
     <AppCard v-for="(e, i) in appList" :key="i" :color="e.color">
       <template #image>
         <img :alt="e.title" :src="e.img" />
@@ -50,5 +50,5 @@ if ('apps' in fetchedData)
       <h3>And much...</h3>
       <p>...much much more!</p>
     </AppCard>
-  </SlideableContainer>
+  </ExpandableContainer>
 </template>

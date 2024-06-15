@@ -6,7 +6,7 @@ import links from '@/assets/json/links.json'
 import DonatorCard from '@/components/cards/DonatorCard.vue'
 import axios from 'axios'
 import BlahajButton from '@/components/buttons/BlahajButton.vue'
-import SlideableContainer from '@/components/containers/SlideableContainer.vue'
+import CarouselContainer from '@/components/containers/CarouselContainer.vue'
 
 const apiLink = 'https://api.opencollective.com/graphql/v2'
 const projectSlug = 'blahajland'
@@ -127,7 +127,7 @@ const isDonationsEmpty = () => donationsList.value.length === 0
 </script>
 
 <template>
-  <SlideableContainer>
+  <CarouselContainer>
     <BlockCard v-if="isDonationsEmpty()" color="var(--missing)">
       <h3>The list is empty... <br />Help us resolve that!</h3>
       <p>You can donate through OpenCollective!</p>
@@ -182,5 +182,5 @@ const isDonationsEmpty = () => donationsList.value.length === 0
         <p>Ko-Fi donations</p>
       </BlahajButton>
     </BlockCard>
-  </SlideableContainer>
+  </CarouselContainer>
 </template>

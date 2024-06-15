@@ -6,7 +6,7 @@ import { type Ref, ref } from 'vue'
 import BlockCard from '@/components/cards/BlockCard.vue'
 import links from '@/assets/json/links.json'
 import { assets, changeLoc } from 'blahaj-library'
-import SlideableContainer from '@/components/containers/SlideableContainer.vue'
+import CarouselContainer from '@/components/containers/CarouselContainer.vue'
 
 interface User {
   color: string
@@ -26,7 +26,7 @@ if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
 </script>
 
 <template>
-  <SlideableContainer>
+  <CarouselContainer>
     <BlockCard v-if="usersList.length === 0" color="var(--missing)">
       <h3>
         The list is empty... <br />
@@ -52,5 +52,5 @@ if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
       :color="e.color"
       @click="changeLoc(e.href)"
     />
-  </SlideableContainer>
+  </CarouselContainer>
 </template>
