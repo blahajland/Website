@@ -67,6 +67,9 @@ const scroll = (amount: number, vertical = false) => {
   scroll-behavior: smooth
   border-radius: var(--radius-small)
 
+  > *
+    animation: var(--anim)
+
   &::-webkit-scrollbar
     display: none
 

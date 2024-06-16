@@ -13,4 +13,8 @@
   justify-content: start
   align-items: stretch
   gap: 12px
+
+  > *
+    animation: var(--anim)
+
 </style>

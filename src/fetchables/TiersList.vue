@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
 import { assets, changeLoc } from 'blahaj-library'
-import links from '@/assets/json/links.json'
+import links from '@/assets/data/links.json'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import BlahajButton from '@/components/buttons/BlahajButton.vue'
 import BlockCard from '@/components/cards/BlockCard.vue'
@@ -44,7 +44,7 @@ const createBulletpoints = (bulletPoints: Array<string>) => bulletPoints.join(' 
         v-if="e.isFree"
         background="var(--background)"
         hover="var(--surface1)"
-        @click="changeLoc(links.signup)"
+        @click="changeLoc(links.portals.signup)"
       >
         <img alt="Sign up" :src="assets.images.icons.get('signup')" />
         <p>Join</p>
@@ -53,7 +53,7 @@ const createBulletpoints = (bulletPoints: Array<string>) => bulletPoints.join(' 
         v-else
         background="var(--background)"
         hover="var(--surface1)"
-        @click="changeLoc(links.donate)"
+        @click="changeLoc(links.portals.donate)"
       >
         <img alt="Donate" :src="assets.images.icons.get('donate')" />
         <p>Donate</p>

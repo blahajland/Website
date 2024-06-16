@@ -2,7 +2,7 @@
 import { type Ref, ref } from 'vue'
 import { assets, changeLoc } from 'blahaj-library'
 import BlockCard from '@/components/cards/BlockCard.vue'
-import links from '@/assets/json/links.json'
+import links from '@/assets/data/links.json'
 import DonatorCard from '@/components/cards/DonatorCard.vue'
 import axios from 'axios'
 import BlahajButton from '@/components/buttons/BlahajButton.vue'
@@ -134,7 +134,7 @@ const isDonationsEmpty = () => donationsList.value.length === 0
       <BlahajButton
         hover="var(--surface1)"
         background="var(--background)"
-        @click="changeLoc(links.donate)"
+        @click="changeLoc(links.portals.donate)"
       >
         <img alt="Donate" :src="assets.images.icons.get('donate')" />
         <p>Donate</p>
@@ -164,7 +164,7 @@ const isDonationsEmpty = () => donationsList.value.length === 0
       <BlahajButton
         background="var(--background)"
         hover="var(--surface1)"
-        @click="changeLoc(links.donate)"
+        @click="changeLoc(links.portals.donate)"
       >
         <img alt="Donate" :src="assets.images.icons.get('donate')" />
         <p>Donate</p>
@@ -176,7 +176,7 @@ const isDonationsEmpty = () => donationsList.value.length === 0
       <BlahajButton
         background="var(--background)"
         hover="var(--surface1)"
-        @click="$router.push('/kofi')"
+        @click="changeLoc(links.documentation.kofi)"
       >
         <img alt="KoFi" :src="assets.images.icons.get('kofi')" />
         <p>Ko-Fi donations</p>

@@ -47,6 +47,9 @@ const transform = props.isInverted ? '-16px' : '16px'
     flex-direction: column
     align-items: stretch
 
+    > *
+      animation: var(--anim)
+
     &:first-of-type
       gap: v-bind(gap)
       justify-content: center

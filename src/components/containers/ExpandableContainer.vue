@@ -24,10 +24,13 @@ const isExpanded = ref(false)
   flex-direction: column
   justify-content: start
   align-items: center
-  gap: 16px
+  gap: 24px
 
 .Expandable
   gap: 16px
+
+  > *
+    animation: var(--anim)
 
   @media (min-width: 1201px)
     display: grid

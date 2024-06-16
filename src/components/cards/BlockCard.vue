@@ -33,16 +33,16 @@ defineProps({
   border-radius: var(--radius-small)
   display: flex
   flex-direction: column
-  justify-content: start
+  justify-content: center
   align-items: center
   transition: var(--trans)
   color: v-bind(font)
   gap: v-bind(gap)
-
+  box-sizing: border-box
 
   @media (min-width: 1201px)
     padding: 32px
-    flex: 0 0 300px
+    flex: 0 0 352px
 
   @media (max-width: 1200px)
     padding: 24px 32px

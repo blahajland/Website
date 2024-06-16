@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { assets, changeLoc } from 'blahaj-library'
-import links from '@/assets/json/links.json'
+import links from '@/assets/data/links.json'
 </script>
 
 <template>
-  <div class="SpinningBlahaj" @click="changeLoc(links.blahaj)">
+  <div class="SpinningBlahaj" @click="changeLoc(links.portals.blahaj)">
     <img :src="assets.images.gifs.get('spinning-blahaj')" alt="Blahaj" />
   </div>
 </template>
