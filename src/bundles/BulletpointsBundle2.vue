@@ -20,5 +20,3 @@ import BulletpointCard from '@/components/cards/BulletpointCard.vue'
     <p>Everybody is welcome here. You always will be.</p>
   </BulletpointCard>
 </template>
-
-<style scoped lang="sass"></style>

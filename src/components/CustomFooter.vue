@@ -35,5 +35,8 @@
   @media (max-width: 1200px)
     flex-wrap: wrap
     gap: 16px
-    padding: 64px 32px 32px
+    margin-top: 32px
+    padding: 32px
+    background: var(--surface1)
+    border-radius: var(--radius-small) var(--radius-small) 0 0
 </style>

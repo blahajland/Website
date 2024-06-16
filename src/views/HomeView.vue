@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import BlockCard from '@/components/cards/BlockCard.vue'
 import GridContainer from '@/components/containers/GridContainer.vue'
-import SlideableContainer from '@/components/containers/SlideableContainer.vue'
 import ContentContainer from '@/components/frames/ContentFrame.vue'
 import RandomTitle from '@/fetchables/RandomTitle.vue'
 import AppsList from '@/fetchables/AppsList.vue'
@@ -18,17 +16,17 @@ import CustomGap from '@/components/CustomGap.vue'
 import WelcomeBundle from '@/bundles/WelcomeBundle.vue'
 import BulletpointsBundle1 from '@/bundles/BulletpointsBundle1.vue'
 import BulletpointsBundle2 from '@/bundles/BulletpointsBundle2.vue'
-import TiersBundle from '@/bundles/TiersBundle.vue'
 import ContactsBundle from '@/bundles/ContactsBundle.vue'
+import TiersList from '@/fetchables/TiersList.vue'
 </script>
 
 <template>
   <PageFrame>
-    <SpinningBlahaj></SpinningBlahaj>
+    <SpinningBlahaj />
     <ContentContainer>
       <template #title>
         <Suspense>
-          <RandomTitle></RandomTitle>
+          <RandomTitle />
           <template #fallback><h1>:3</h1></template>
         </Suspense>
         <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
@@ -37,20 +35,20 @@ import ContactsBundle from '@/bundles/ContactsBundle.vue'
         <WelcomeBundle />
       </GridContainer>
     </ContentContainer>
-    <CustomGap gap="32px"></CustomGap>
+    <CustomGap gap="32px" />
     <ContentContainer>
       <template #title
         ><h2 id="p1">Why?</h2>
-        <p>Why should you consider <b>Blahaj Land</b> for your needs? ;3</p></template
-      >
+        <p>Why should you consider <b>Blahaj Land</b> for your needs? ;3</p>
+      </template>
       <BulletpointContainer color="#d3ddff">
         <template #image
           ><img :src="assets.images.pictures.get('screenshot1')" alt="Screenshot 1"
         /></template>
         <BulletpointsBundle1 />
       </BulletpointContainer>
-      <CustomGap class="displayOnDesktop" gap="48px"></CustomGap>
-      <CustomGap class="displayOnMobile" gap="0px"></CustomGap>
+      <CustomGap class="displayOnDesktop" gap="48px" />
+      <CustomGap class="displayOnMobile" gap="0px" />
       <BulletpointContainer is-inverted color="#f3d8ff">
         <template #image
           ><img :src="assets.images.pictures.get('screenshot2')" alt="Screenshot 2"
@@ -65,11 +63,9 @@ import ContactsBundle from '@/bundles/ContactsBundle.vue'
       >
       <Suspense>
         <template #fallback>
-          <LoadingState></LoadingState>
+          <LoadingState />
         </template>
-        <SlideableContainer>
-          <AppsList></AppsList>
-        </SlideableContainer>
+        <AppsList />
       </Suspense>
     </ContentContainer>
     <ContentContainer>
@@ -77,9 +73,12 @@ import ContactsBundle from '@/bundles/ContactsBundle.vue'
         ><h2 id="p3">Tiers</h2>
         <p>Get more features and support the website >83</p></template
       >
-      <GridContainer>
-        <TiersBundle />
-      </GridContainer>
+      <Suspense>
+        <template #fallback>
+          <LoadingState />
+        </template>
+        <TiersList />
+      </Suspense>
     </ContentContainer>
     <ContentContainer>
       <template #title
@@ -88,11 +87,9 @@ import ContactsBundle from '@/bundles/ContactsBundle.vue'
       >
       <Suspense>
         <template #fallback>
-          <LoadingState></LoadingState>
+          <LoadingState />
         </template>
-        <SlideableContainer>
-          <UsersList></UsersList>
-        </SlideableContainer>
+        <UsersList />
       </Suspense>
     </ContentContainer>
     <ContentContainer>
@@ -102,11 +99,9 @@ import ContactsBundle from '@/bundles/ContactsBundle.vue'
       >
       <Suspense>
         <template #fallback>
-          <LoadingState></LoadingState>
+          <LoadingState />
         </template>
-        <SlideableContainer>
-          <DonatorsList></DonatorsList>
-        </SlideableContainer>
+        <DonatorsList />
       </Suspense>
     </ContentContainer>
     <ContentContainer last>

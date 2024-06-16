@@ -17,6 +17,9 @@ defineProps({
 .GridContainer
   gap: 16px
 
+  > *
+    animation: var(--anim)
+
   @media (min-width: 1201px)
     display: grid
     grid-auto-rows: 1fr
