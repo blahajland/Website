@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import BlahajInfo from "@/assets/data/info";
 import links from "@/assets/data/links.json";
 import CustomFooter from "@/components/CustomFooter.vue";
 import { assets } from "blahaj-library";
@@ -10,12 +11,7 @@ import { assets } from "blahaj-library";
       <h2>About</h2>
       <p>&copy; <b>eryn</b> Some rights reserved</p>
       <p>Website by <b>Blahaj Team</b></p>
-      <span
-        >Blahaj Land is a free service offering everything from email and
-        Nextcloud to static page hosting, a fast and reliable git forge,
-        collaborative HedgeDoc documents, and even privacy-focused video
-        streaming with Piped and Invidious!</span
-      >
+      <span> {{ BlahajInfo.description }} </span>
     </div>
     <div>
       <h2>Socials</h2>

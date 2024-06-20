@@ -5,6 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "clean": "rm -rf .output && rm -rf dist",
     "dev": "nuxt dev",
     "build": "nuxt build",
     "build:static": "nuxt generate",
