@@ -1,15 +1,18 @@
 {
-  "name": "nuxt-app",
+  "name": "blahajland",
+  "version": "3.0.1",
+  "description": "(Nuxt version)",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "build": "nuxt build",
+    "build:static": "nuxt generate",
+    "serve": "node .output/server/index.mjs",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "format": "prettier --write --list-different ."
+    "format": "prettier --write --list-different .",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "blahaj-library": "github:blahajland/Library",
