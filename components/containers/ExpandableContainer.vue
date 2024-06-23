@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import BlahajButton from "@/components/buttons/BlahajButton.vue";
-import { assets } from "blahaj-library";
+import { getAsset } from "blahaj-library";
 
 const isExpanded = ref(false);
 </script>
@@ -12,7 +12,8 @@ const isExpanded = ref(false);
       <slot />
     </div>
     <BlahajButton @click="isExpanded = !isExpanded">
-      <img :src="assets.images.icons.get(isExpanded ? 'up' : 'down')" alt="" />
+      <img v-if="isExpanded" :src="getAsset(`icons/up.png`)" alt="Up" />
+      <img v-else :src="getAsset(`icons/down.png`)" alt="Down" />
       <p>{{ isExpanded ? "Shrink" : "Expand" }}</p>
     </BlahajButton>
   </div>

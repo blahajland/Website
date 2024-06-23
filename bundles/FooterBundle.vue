@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import BlahajInfo from "@/assets/data/info";
-import links from "@/assets/data/links.json";
+import blahajInfo from "@/assets/data/info";
+import links from "@/assets/data/links";
 import CustomFooter from "@/components/CustomFooter.vue";
-import { assets } from "blahaj-library";
+import { getAsset } from "blahaj-library";
 </script>
 
 <template>
@@ -11,24 +11,24 @@ import { assets } from "blahaj-library";
       <h2>About</h2>
       <p>&copy; <b>eryn</b> Some rights reserved</p>
       <p>Website by <b>Blahaj Team</b></p>
-      <span> {{ BlahajInfo.description }} </span>
+      <span> {{ blahajInfo.description }} </span>
     </div>
     <div>
       <h2>Socials</h2>
       <a :href="links.socials.mail">
-        <img :src="assets.images.icons.get('mail')" alt="Mail" />
+        <img :src="getAsset('icons/mail.png')" alt="Mail" />
         <p>E-mail</p>
       </a>
       <a :href="links.socials.discord">
-        <img :src="assets.images.icons.get('discord')" alt="Discord" />
+        <img :src="getAsset('icons/discord.png')" alt="Discord" />
         <p>Discord</p>
       </a>
       <a :href="links.socials.github">
-        <img :src="assets.images.icons.get('github')" alt="GitHub" />
+        <img :src="getAsset('icons/github.png')" alt="GitHub" />
         <p>GitHub</p>
       </a>
       <a :href="links.socials.tiktok">
-        <img :src="assets.images.icons.get('tiktok')" alt="TikTok" />
+        <img :src="getAsset('icons/tiktok.png')" alt="TikTok" />
         <p>TikTok</p>
       </a>
     </div>

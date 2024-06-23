@@ -1,25 +1,3 @@
-import axios from "axios";
-
-export const fetchDataFromGql = async (
-  url: string,
-  query: string,
-  variables: object,
-) => {
-  const response = await axios.post(
-    url,
-    {
-      query: query,
-      variables: variables,
-    },
-    {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    },
-  );
-  return response.status !== 200 ? {} : response.data;
-};
-
 export const API_LINK = "https://api.opencollective.com/graphql/v2";
 export const PROJECT_SLUG = "blahajland";
 export const ADMIN_NB = 3;

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { assets, themeService } from "blahaj-library";
-import links from "@/assets/data/links.json";
+import { getAsset, themeService } from "blahaj-library";
+import links from "@/assets/data/links";
 import BlahajButton from "@/components/buttons/BlahajButton.vue";
 import NavbarFrame from "~/components/frames/NavbarFrame.vue";
 import TopBar from "~/components/containers/TopBar.vue";
@@ -12,19 +12,19 @@ import TabButton from "~/components/buttons/TabButton.vue";
   <NavbarFrame>
     <TopBar>
       <BlahajButton :href="links.portals.donate">
-        <img :src="assets.images.icons.get('donate')" alt="Donate" />
+        <img :src="getAsset('/icons/donate.png')" alt="Donate" />
         <p class="displayOnDesktop">Donate</p>
       </BlahajButton>
       <BlahajButton :href="links.portals.signup">
-        <img :src="assets.images.icons.get('signup')" alt="Donate" />
+        <img :src="getAsset('/icons/signup.png')" alt="Donate" />
         <p class="displayOnDesktop">Sign up</p>
       </BlahajButton>
       <BlahajButton :href="links.portals.login">
-        <img :src="assets.images.icons.get('login')" alt="Donate" />
+        <img :src="getAsset('/icons/login.png')" alt="Donate" />
         <p class="displayOnDesktop">Log in</p>
       </BlahajButton>
       <BlahajButton @click="themeService.switchTheme()">
-        <img :src="assets.images.icons.get('theme')" alt="Donate" />
+        <img :src="getAsset('/icons/theme.png')" alt="Donate" />
         <p class="displayOnDesktop">Theme</p>
       </BlahajButton>
     </TopBar>

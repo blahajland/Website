@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import ThingsContainer from "@/components/containers/ThingsContainer.vue";
-import { assets } from "blahaj-library";
+import { getAsset } from "blahaj-library";
 </script>
 
 <template>
   <div class="TopBar">
     <RouterLink to="/">
-      <img :src="assets.images.pictures.get('text-logo')" alt="Logo" />
+      <img :src="getAsset('pictures/text-logo.png')" alt="Logo" />
     </RouterLink>
     <ThingsContainer>
       <slot />

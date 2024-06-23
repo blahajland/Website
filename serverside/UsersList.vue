@@ -2,9 +2,11 @@
 import UserCard from "@/components/cards/UserCard.vue";
 import BlahajButton from "@/components/buttons/BlahajButton.vue";
 import BlockCard from "@/components/cards/BlockCard.vue";
-import links from "@/assets/data/links.json";
-import { assets } from "blahaj-library";
+import links from "@/assets/data/links";
+
 import CarouselContainer from "@/components/containers/CarouselContainer.vue";
+import { getAsset } from "blahaj-library";
+import { fetchJson } from "assets/code/fetch-tools";
 
 interface User {
   color: string;
@@ -18,7 +20,7 @@ interface UsersList {
 }
 
 const fetchData = async () => {
-  const data = await assets.json.get("users");
+  const data = await fetchJson(getAsset("json/users.json"));
   if (!("users" in data)) return Promise.reject();
   return (data as UsersList).users;
 };

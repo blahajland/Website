@@ -1,28 +1,28 @@
-import BlahajInfo from "./assets/data/info";
+import blahajInfo from "./assets/data/info";
 
 export default defineNuxtConfig({
   app: {
-    baseURL: BlahajInfo.defaultPath,
+    baseURL: blahajInfo.defaultPath,
     head: {
-      title: BlahajInfo.title,
+      title: blahajInfo.title,
       meta: [
         { charset: "utf-8" },
-        { property: "og:title", content: BlahajInfo.catchphrase },
-        { property: "og:description", content: BlahajInfo.description },
-        { property: "og:image", content: BlahajInfo.image },
+        { property: "og:title", content: blahajInfo.catchphrase },
+        { property: "og:description", content: blahajInfo.description },
+        { property: "og:image", content: blahajInfo.image },
         { property: "twitter:card", content: "summary_large_image" },
-        { property: "twitter:image", content: BlahajInfo.twitterImage },
-        { property: "twitter:description", content: BlahajInfo.description },
+        { property: "twitter:image", content: blahajInfo.twitterImage },
+        { property: "twitter:description", content: blahajInfo.description },
         { name: "viewport", content: "width=device-width, initial-scale=1.0" },
       ],
       link: [
         {
           rel: "stylesheet",
-          href: "https://blahaj.land/static/api/?type=css&file=colors",
+          href: "https://assets.blahaj.land/css/colors.css",
         },
         {
           rel: "icon",
-          href: "https://blahaj.land/static/api/?type=image&bucket=pictures&file=favicon",
+          href: "https://assets.blahaj.land/pictures/favicon.png",
         },
       ],
     },

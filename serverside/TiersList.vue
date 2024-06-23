@@ -1,10 +1,12 @@
 <script lang="ts" setup>
-import { assets } from "blahaj-library";
-import links from "@/assets/data/links.json";
+import links from "@/assets/data/links";
 import GridContainer from "@/components/containers/GridContainer.vue";
 import BlahajButton from "@/components/buttons/BlahajButton.vue";
 import BlockCard from "@/components/cards/BlockCard.vue";
 import sanitizeHtml from "sanitize-html";
+import { getAsset } from "blahaj-library";
+import axios from "axios";
+import { fetchJson } from "assets/code/fetch-tools";
 
 interface Tier {
   color: string;
@@ -19,7 +21,7 @@ interface TiersList {
 }
 
 const fetchData = async () => {
-  const fetchedData = await assets.json.get("tiers");
+  const fetchedData = await fetchJson(getAsset("json/tiers.json"));
   if (!("tiers" in fetchedData)) return Promise.reject();
   const convertedData = fetchedData as TiersList;
   convertedData.tiers.forEach((e) =>
@@ -58,7 +60,7 @@ const createBulletpoints = (bulletPoints: Array<string>) =>
         background="var(--background)"
         hover="var(--surface1)"
       >
-        <img :src="assets.images.icons.get('signup')" alt="Sign up" />
+        <img :src="getAsset('icons/signup.png')" alt="Sign up" />
         <p>Join</p>
       </BlahajButton>
       <BlahajButton
@@ -67,7 +69,7 @@ const createBulletpoints = (bulletPoints: Array<string>) =>
         background="var(--background)"
         hover="var(--surface1)"
       >
-        <img :src="assets.images.icons.get('donate')" alt="Donate" />
+        <img :src="getAsset('icons/donate.png')" alt="Donate" />
         <p>Donate</p>
       </BlahajButton>
     </BlockCard>

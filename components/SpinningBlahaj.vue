@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { assets } from "blahaj-library";
-import links from "@/assets/data/links.json";
+import { getAsset } from "blahaj-library";
+import links from "@/assets/data/links";
 </script>
 
 <template>
   <a :href="links.portals.blahaj" class="SpinningBlahaj">
-    <img :src="assets.images.gifs.get('spinning-blahaj')" alt="Blahaj" />
+    <img :src="getAsset('gifs/spinning-blahaj.gif')" alt="Blahaj" />
   </a>
 </template>
 

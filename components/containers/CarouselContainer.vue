@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from "vue";
-import { assets } from "blahaj-library";
+import { getAsset } from "blahaj-library";
 
 const SCROLL_AMOUNT = 500;
 
@@ -20,13 +20,13 @@ const scroll = (amount: number, vertical = false) => {
       class="SlideButton displayOnDesktop"
       @click="scroll(-1 * SCROLL_AMOUNT)"
     >
-      <img :src="assets.images.icons.get('left')" alt="&lt;" />
+      <img :src="getAsset('icons/left.png')" alt="&lt;" />
     </div>
     <div
       class="SlideButton displayOnMobile"
       @click="scroll(-1 * SCROLL_AMOUNT, true)"
     >
-      <img :src="assets.images.icons.get('up')" alt="&lt;" />
+      <img :src="getAsset('icons/up.png')" alt="&lt;" />
     </div>
     <div ref="scrollComp" class="Carousel">
       <slot />
@@ -35,10 +35,10 @@ const scroll = (amount: number, vertical = false) => {
       class="SlideButton displayOnMobile"
       @click="scroll(SCROLL_AMOUNT, true)"
     >
-      <img :src="assets.images.icons.get('down')" alt="&gt;" />
+      <img :src="getAsset('icons/down.png')" alt="&gt;" />
     </div>
     <div class="SlideButton displayOnDesktop" @click="scroll(SCROLL_AMOUNT)">
-      <img :src="assets.images.icons.get('right')" alt="&gt;" />
+      <img :src="getAsset('icons/right.png')" alt="&gt;" />
     </div>
   </div>
 </template>

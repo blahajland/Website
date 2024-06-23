@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { assets, themeService } from "blahaj-library";
+import { getAsset, themeService } from "blahaj-library";
 
 // Bundles
 import NavbarBundle from "~/bundles/NavbarBundle.vue";
@@ -49,10 +49,7 @@ useNuxtApp().hook("app:mounted", () => themeService.setThemeFromCookie());
       </template>
       <BulletpointContainer color="#d3ddff">
         <template #image>
-          <img
-            :src="assets.images.pictures.get('screenshot1')"
-            alt="Screenshot 1"
-          />
+          <img :src="getAsset('pictures/screenshot1.png')" alt="Screenshot 1" />
         </template>
         <BulletpointsBundle1 />
       </BulletpointContainer>
@@ -60,10 +57,7 @@ useNuxtApp().hook("app:mounted", () => themeService.setThemeFromCookie());
       <CustomGap class="displayOnMobile" gap="0px" />
       <BulletpointContainer color="#f3d8ff" is-inverted>
         <template #image>
-          <img
-            :src="assets.images.pictures.get('screenshot2')"
-            alt="Screenshot 2"
-          />
+          <img :src="getAsset('pictures/screenshot2.png')" alt="Screenshot 2" />
         </template>
         <BulletpointsBundle2 />
       </BulletpointContainer>
