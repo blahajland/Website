@@ -5,14 +5,14 @@ import { getAsset } from "blahaj-library";
 
 <template>
   <BulletpointCard color="#B1BCE1"
-    ><img :src="getAsset('icons/website.png')" alt="Website" />
+    ><NuxtImg :src="getAsset('icons/website.svg')" alt="Website" />
     <h3>Host your own website for free!</h3>
     <p>
       With <b>blahaj.land</b> you can easily host your own static site for free!
     </p>
   </BulletpointCard>
   <BulletpointCard color="#ACD3DC"
-    ><img :src="getAsset('icons/switch.png')" alt="Switch server" />
+    ><NuxtImg :src="getAsset('icons/switch.svg')" alt="Switch server" />
     <h3>Transition with ease</h3>
     <p>
       If you switch from <b>neocities.org</b>, <b>Github Pages</b>, or any other
@@ -21,7 +21,7 @@ import { getAsset } from "blahaj-library";
     </p>
   </BulletpointCard>
   <BulletpointCard color="#C8E7FF"
-    ><img :src="getAsset('icons/friend.png')" alt="Friends" />
+    ><NuxtImg :src="getAsset('icons/friend.svg')" alt="Friends" />
     <h3>Bring your friends in!</h3>
     <p>
       For every person you invite, you'll get <b>5GB</b> of storage. If they

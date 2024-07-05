@@ -2,30 +2,11 @@
 import UserCard from "@/components/cards/UserCard.vue";
 import BlahajButton from "@/components/buttons/BlahajButton.vue";
 import BlockCard from "@/components/cards/BlockCard.vue";
-import links from "@/assets/data/links";
+import links from "assets/data/links";
 
 import CarouselContainer from "@/components/containers/CarouselContainer.vue";
-import { getAsset } from "blahaj-library";
-import { fetchJson } from "assets/code/fetch-tools";
 
-interface User {
-  color: string;
-  img: string;
-  title: string;
-  href: string;
-}
-
-interface UsersList {
-  users: Array<User>;
-}
-
-const fetchData = async () => {
-  const data = await fetchJson(getAsset("json/users.json"));
-  if (!("users" in data)) return Promise.reject();
-  return (data as UsersList).users;
-};
-
-const usersList = (await useAsyncData("fetchUsersList", fetchData)).data;
+const usersList = (await useFetch("/api/assets?file=users")).data;
 </script>
 
 <template>

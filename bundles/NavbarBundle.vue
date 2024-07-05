@@ -2,29 +2,29 @@
 import { getAsset, themeService } from "blahaj-library";
 import links from "@/assets/data/links";
 import BlahajButton from "@/components/buttons/BlahajButton.vue";
-import NavbarFrame from "~/components/frames/NavbarFrame.vue";
-import TopBar from "~/components/containers/TopBar.vue";
-import TabGroup from "~/components/containers/TabGroup.vue";
-import TabButton from "~/components/buttons/TabButton.vue";
+import NavbarFrame from "@/components/frames/NavbarFrame.vue";
+import TopBar from "@/components/containers/TopBar.vue";
+import TabGroup from "@/components/containers/TabGroup.vue";
+import TabButton from "@/components/buttons/TabButton.vue";
 </script>
 
 <template>
   <NavbarFrame>
     <TopBar>
       <BlahajButton :href="links.portals.donate">
-        <img :src="getAsset('/icons/donate.png')" alt="Donate" />
+        <NuxtImg :src="getAsset('/icons/donate.svg')" alt="Donate" />
         <p class="displayOnDesktop">Donate</p>
       </BlahajButton>
       <BlahajButton :href="links.portals.signup">
-        <img :src="getAsset('/icons/signup.png')" alt="Donate" />
+        <NuxtImg :src="getAsset('/icons/signup.svg')" alt="Donate" />
         <p class="displayOnDesktop">Sign up</p>
       </BlahajButton>
       <BlahajButton :href="links.portals.login">
-        <img :src="getAsset('/icons/login.png')" alt="Donate" />
+        <NuxtImg :src="getAsset('/icons/login.svg')" alt="Donate" />
         <p class="displayOnDesktop">Log in</p>
       </BlahajButton>
       <BlahajButton @click="themeService.switchTheme()">
-        <img :src="getAsset('/icons/theme.png')" alt="Donate" />
+        <NuxtImg :src="getAsset('/icons/theme.svg')" alt="Donate" />
         <p class="displayOnDesktop">Theme</p>
       </BlahajButton>
     </TopBar>

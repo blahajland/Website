@@ -1,43 +1,14 @@
 <script lang="ts" setup>
 import BlockCard from "@/components/cards/BlockCard.vue";
-import links from "@/assets/data/links";
+import links from "assets/data/links";
 import DonatorCard from "@/components/cards/DonatorCard.vue";
 import BlahajButton from "@/components/buttons/BlahajButton.vue";
 import CarouselContainer from "@/components/containers/CarouselContainer.vue";
-import {
-  ADMIN_NB,
-  API_LINK,
-  COLLECTIVE_QUERY,
-  type CollectiveInfo,
-  DONATIONS_QUERY,
-  type DonatorsInfo,
-  type DonatorsList,
-  MAX_DONATORS,
-} from "@/assets/code/donators-tools";
-import { fetchGraphQl } from "assets/code/fetch-tools";
 import { getAsset } from "blahaj-library";
 
-const fetchDonators = async (): Promise<DonatorsList> => {
-  const data = await fetchGraphQl(API_LINK, DONATIONS_QUERY, {});
-  if (!("data" in data) || !data.data.collective) return Promise.reject();
-  const members = data.data.collective.members as DonatorsList;
-  return {
-    totalCount: members.totalCount - ADMIN_NB,
-    nodes: members.nodes.filter((e: DonatorsInfo) => e.tier),
-  };
-};
-
-const fetchCollective = async (): Promise<CollectiveInfo> => {
-  const data = await fetchGraphQl(API_LINK, COLLECTIVE_QUERY, {});
-  if (!("data" in data) || !data.data.collective) return Promise.reject();
-  return data.data.collective as CollectiveInfo;
-};
-
-const donationsList = (await useAsyncData("fetchDonatorsList", fetchDonators))
+const donationsList = (await useFetch("/api/collective/?type=donations")).data;
+const collectiveInfo = (await useFetch("/api/collective/?type=collective"))
   .data;
-const collectiveInfo = (
-  await useAsyncData("fetchCollectiveInfo", fetchCollective)
-).data;
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 </script>
@@ -52,7 +23,7 @@ const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
         background="var(--background)"
         hover="var(--surface1)"
       >
-        <img :src="getAsset('icons/donate.png')" alt="Donate" />
+        <NuxtImg :src="getAsset('icons/donate.svg')" alt="Donate" />
         <p>Donate</p>
       </BlahajButton>
     </BlockCard>
@@ -87,7 +58,7 @@ const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
         background="var(--background)"
         hover="var(--surface1)"
       >
-        <img :src="getAsset('icons/donate.png')" alt="Donate" />
+        <NuxtImg :src="getAsset('icons/donate.svg')" alt="Donate" />
         <p>Donate</p>
       </BlahajButton>
     </BlockCard>
@@ -99,7 +70,7 @@ const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
         background="var(--background)"
         hover="var(--surface1)"
       >
-        <img :src="getAsset('icons/kofi.png')" alt="KoFi" />
+        <NuxtImg :src="getAsset('icons/kofi.svg')" alt="KoFi" />
         <p>Ko-Fi donations</p>
       </BlahajButton>
     </BlockCard>

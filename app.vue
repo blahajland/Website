@@ -2,28 +2,28 @@
 import { getAsset, themeService } from "blahaj-library";
 
 // Bundles
-import NavbarBundle from "~/bundles/NavbarBundle.vue";
-import FooterBundle from "~/bundles/FooterBundle.vue";
-import BulletpointsBundle1 from "~/bundles/BulletpointsBundle1.vue";
-import BulletpointsBundle2 from "~/bundles/BulletpointsBundle2.vue";
-import WelcomeBundle from "~/bundles/WelcomeBundle.vue";
+import NavbarBundle from "@/bundles/NavbarBundle.vue";
+import FooterBundle from "@/bundles/FooterBundle.vue";
+import BulletpointsBundle1 from "@/bundles/BulletpointsBundle1.vue";
+import BulletpointsBundle2 from "@/bundles/BulletpointsBundle2.vue";
+import WelcomeBundle from "@/bundles/WelcomeBundle.vue";
 
 // SSR
-import RandomTitle from "~/serverside/RandomTitle.vue";
-import AppsList from "~/serverside/AppsList.vue";
-import TiersList from "~/serverside/TiersList.vue";
-import UsersList from "~/serverside/UsersList.vue";
-import DonatorsList from "~/serverside/DonatorsList.vue";
+import RandomTitle from "@/bundles/serverside/RandomTitle.vue";
+import AppsList from "@/bundles/serverside/AppsList.vue";
+import TiersList from "@/bundles/serverside/TiersList.vue";
+import UsersList from "@/bundles/serverside/UsersList.vue";
+import DonatorsList from "@/bundles/serverside/DonatorsList.vue";
 
 // Containers
-import ContentContainer from "~/components/frames/ContentFrame.vue";
-import PageFrame from "~/components/frames/PageFrame.vue";
-import GridContainer from "~/components/containers/GridContainer.vue";
-import BulletpointContainer from "~/components/containers/BulletpointContainer.vue";
+import ContentContainer from "@/components/frames/ContentFrame.vue";
+import PageFrame from "@/components/frames/PageFrame.vue";
+import GridContainer from "@/components/containers/GridContainer.vue";
+import BulletpointContainer from "@/components/containers/BulletpointContainer.vue";
 
 // Components
-import SpinningBlahaj from "~/components/SpinningBlahaj.vue";
-import CustomGap from "~/components/CustomGap.vue";
+import SpinningBlahaj from "@/components/SpinningBlahaj.vue";
+import CustomGap from "@/components/CustomGap.vue";
 
 useNuxtApp().hook("app:mounted", () => themeService.setThemeFromCookie());
 </script>
@@ -49,7 +49,10 @@ useNuxtApp().hook("app:mounted", () => themeService.setThemeFromCookie());
       </template>
       <BulletpointContainer color="#d3ddff">
         <template #image>
-          <img :src="getAsset('pictures/screenshot1.png')" alt="Screenshot 1" />
+          <NuxtImg
+            :src="getAsset('pictures/screenshot1.png')"
+            alt="Screenshot 1"
+          />
         </template>
         <BulletpointsBundle1 />
       </BulletpointContainer>
@@ -57,7 +60,10 @@ useNuxtApp().hook("app:mounted", () => themeService.setThemeFromCookie());
       <CustomGap class="displayOnMobile" gap="0px" />
       <BulletpointContainer color="#f3d8ff" is-inverted>
         <template #image>
-          <img :src="getAsset('pictures/screenshot2.png')" alt="Screenshot 2" />
+          <NuxtImg
+            :src="getAsset('pictures/screenshot2.png')"
+            alt="Screenshot 2"
+          />
         </template>
         <BulletpointsBundle2 />
       </BulletpointContainer>

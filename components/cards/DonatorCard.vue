@@ -38,7 +38,7 @@ defineProps({
 
 <template>
   <div class="DonatorCard">
-    <img :alt="donatorName" :src="donatorImage" />
+    <NuxtImg :alt="donatorName" :src="donatorImage" />
     <div class="DonatorTitle">
       <h3>{{ donatorName }}</h3>
       <h4 v-if="donationTier !== ''">{{ donationTier }}</h4>

@@ -42,7 +42,7 @@ const stripHttp = (link: string) => {
 <template>
   <a :class="{ clickable: href }" :href="href" class="UserCard">
     <div>
-      <img :alt="title" :src="image" />
+      <NuxtImg :alt="title" :src="image" />
     </div>
     <div>
       <h3>{{ title }}</h3>

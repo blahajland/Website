@@ -6,7 +6,7 @@ import { getAsset } from "blahaj-library";
 <template>
   <div class="TopBar">
     <RouterLink to="/">
-      <img :src="getAsset('pictures/text-logo.png')" alt="Logo" />
+      <NuxtImg :src="getAsset('pictures/text-logo.png')" alt="Logo" />
     </RouterLink>
     <ThingsContainer>
       <slot />

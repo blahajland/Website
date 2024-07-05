@@ -13,7 +13,7 @@ import { getAsset } from "blahaj-library";
       hover="var(--surface1)"
       href="#p1"
     >
-      <img :src="getAsset('icons/open.png')" alt="Blahaj" />
+      <NuxtImg :src="getAsset('icons/open.svg')" alt="Blahaj" />
       <p>Discover</p>
     </BlahajButton>
   </BlockCard>
@@ -23,7 +23,7 @@ import { getAsset } from "blahaj-library";
       :href="links.portals.signup"
       background="var(--background)"
       hover="var(--surface1)"
-      ><img :src="getAsset('icons/signup.png')" alt="Sign up" />
+      ><NuxtImg :src="getAsset('icons/signup.svg')" alt="Sign up" />
       <p>Sign up</p>
     </BlahajButton>
   </BlockCard>
@@ -33,7 +33,7 @@ import { getAsset } from "blahaj-library";
       :href="links.socials.discord"
       background="var(--background)"
       hover="var(--surface1)"
-      ><img :src="getAsset('icons/discord.png')" alt="Discord" />
+      ><NuxtImg :src="getAsset('icons/discord.svg')" alt="Discord" />
       <p>Join</p>
     </BlahajButton>
   </BlockCard>
@@ -43,7 +43,7 @@ import { getAsset } from "blahaj-library";
       :href="links.portals.login"
       background="var(--background)"
       hover="var(--surface1)"
-      ><img :src="getAsset('icons/login.png')" alt="Log in" />
+      ><NuxtImg :src="getAsset('icons/login.svg')" alt="Log in" />
       <p>Open Dashboard</p>
     </BlahajButton>
   </BlockCard>

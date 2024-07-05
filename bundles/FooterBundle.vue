@@ -16,19 +16,19 @@ import { getAsset } from "blahaj-library";
     <div>
       <h2>Socials</h2>
       <a :href="links.socials.mail">
-        <img :src="getAsset('icons/mail.png')" alt="Mail" />
+        <NuxtImg :src="getAsset('icons/mail.svg')" alt="Mail" />
         <p>E-mail</p>
       </a>
       <a :href="links.socials.discord">
-        <img :src="getAsset('icons/discord.png')" alt="Discord" />
+        <NuxtImg :src="getAsset('icons/discord.svg')" alt="Discord" />
         <p>Discord</p>
       </a>
       <a :href="links.socials.github">
-        <img :src="getAsset('icons/github.png')" alt="GitHub" />
+        <NuxtImg :src="getAsset('icons/github.svg')" alt="GitHub" />
         <p>GitHub</p>
       </a>
       <a :href="links.socials.tiktok">
-        <img :src="getAsset('icons/tiktok.png')" alt="TikTok" />
+        <NuxtImg :src="getAsset('icons/tiktok.svg')" alt="TikTok" />
         <p>TikTok</p>
       </a>
     </div>

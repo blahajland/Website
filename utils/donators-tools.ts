@@ -41,6 +41,17 @@ query Transactions {
 }
 `;
 
+export interface CollectiveInfo {
+  stats: {
+    balance: {
+      value: number;
+      currency: string;
+    };
+  };
+  imageUrl: string;
+  name: string;
+}
+
 export interface DonatorsInfo {
   tier: {
     name: string;
@@ -55,6 +66,11 @@ export interface DonatorsInfo {
   };
 }
 
+export interface DonatorsList {
+  totalCount: number;
+  nodes: Array<DonatorsInfo>;
+}
+
 export interface CollectiveInfo {
   stats: {
     balance: {
@@ -66,13 +82,23 @@ export interface CollectiveInfo {
   name: string;
 }
 
-export interface DonatorsList {
-  totalCount: number;
-  nodes: Array<DonatorsInfo>;
-}
-
 export interface OpenCollectiveData {
   data: {
-    collective: { members: DonatorsList } | CollectiveInfo;
+    collective: { members: DonatorsList } & CollectiveInfo;
   };
 }
+
+export const formatDonators = (data: any) => {
+  if (!data) return undefined;
+  const collective = (data as OpenCollectiveData).data.collective;
+  return {
+    nodes: collective.members.nodes.filter((e: DonatorsInfo) => e.tier),
+    totalCount: collective.members.totalCount - ADMIN_NB,
+  } as DonatorsList;
+};
+
+export const formatCollective = (data: any) => {
+  if (!data) return undefined;
+  const collective = (data as OpenCollectiveData).data.collective;
+  return collective as CollectiveInfo;
+};

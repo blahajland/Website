@@ -1,39 +1,11 @@
 <script lang="ts" setup>
-import links from "@/assets/data/links";
+import links from "assets/data/links";
 import GridContainer from "@/components/containers/GridContainer.vue";
 import BlahajButton from "@/components/buttons/BlahajButton.vue";
 import BlockCard from "@/components/cards/BlockCard.vue";
-import sanitizeHtml from "sanitize-html";
 import { getAsset } from "blahaj-library";
-import axios from "axios";
-import { fetchJson } from "assets/code/fetch-tools";
 
-interface Tier {
-  color: string;
-  title: string;
-  price: string;
-  bulletpoints: string[];
-  isFree: boolean;
-}
-
-interface TiersList {
-  tiers: Array<Tier>;
-}
-
-const fetchData = async () => {
-  const fetchedData = await fetchJson(getAsset("json/tiers.json"));
-  if (!("tiers" in fetchedData)) return Promise.reject();
-  const convertedData = fetchedData as TiersList;
-  convertedData.tiers.forEach((e) =>
-    e.bulletpoints.forEach((e, i, l) => {
-      let cleaned = sanitizeHtml(e);
-      l[i] = `&bull; ${cleaned}`;
-    }),
-  );
-  return convertedData.tiers;
-};
-
-const tiersList = (await useAsyncData("fetchTiers", fetchData)).data;
+const tiersList = (await useFetch("/api/assets?file=tiers")).data;
 
 const createBulletpoints = (bulletPoints: Array<string>) =>
   bulletPoints.join(" <br /> ");
@@ -60,7 +32,7 @@ const createBulletpoints = (bulletPoints: Array<string>) =>
         background="var(--background)"
         hover="var(--surface1)"
       >
-        <img :src="getAsset('icons/signup.png')" alt="Sign up" />
+        <NuxtImg :src="getAsset('icons/signup.svg')" alt="Sign up" />
         <p>Join</p>
       </BlahajButton>
       <BlahajButton
@@ -69,7 +41,7 @@ const createBulletpoints = (bulletPoints: Array<string>) =>
         background="var(--background)"
         hover="var(--surface1)"
       >
-        <img :src="getAsset('icons/donate.png')" alt="Donate" />
+        <NuxtImg :src="getAsset('icons/donate.svg')" alt="Donate" />
         <p>Donate</p>
       </BlahajButton>
     </BlockCard>
