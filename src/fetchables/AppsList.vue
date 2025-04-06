@@ -20,11 +20,16 @@ interface AppsList {
 
 const appList: Ref<Array<AppDescriptor>> = ref([])
 
-let fetchedData = await assets.json.get('apps')
-if ('apps' in fetchedData)
-  appList.value = (fetchedData as AppsList).apps.filter(
-    (elem: AppDescriptor) => !('noDisplay' in elem && elem['noDisplay'])
-  )
+try {
+  const response = await fetch('https://assets.blahaj.land/json/apps.json')
+  const fetchedData = await response.json()
+  if ('apps' in fetchedData)
+    appList.value = (fetchedData as AppsList).apps.filter(
+      (elem: AppDescriptor) => !('noDisplay' in elem && elem['noDisplay'])
+    )
+} catch (error) {
+  console.error('Failed to fetch apps data:', error)
+}
 </script>
 
 <template>
@@ -38,14 +43,14 @@ if ('apps' in fetchedData)
     </AppCard>
     <AppCard v-if="appList.length === 0" color="var(--missing)">
       <template #image>
-        <img alt="Unknown" :src="assets.images.apps.get('unknown')" />
+        <img alt="Unknown" src="https://assets.blahaj.land/apps/unknown.png" />
       </template>
       <h3>The list is empty... It shouldn't</h3>
       <p>If this section appears empty after reloading, please contact the dev team.</p>
     </AppCard>
     <AppCard v-else color="#F3CBFF">
       <template #image>
-        <img alt="More" :src="assets.images.apps.get('more')" />
+        <img alt="More" src="https://assets.blahaj.land/apps/more.png" />
       </template>
       <h3>And much...</h3>
       <p>...much much more!</p>

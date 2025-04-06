@@ -1,0 +1,18 @@
+:root:not([data-theme='dark']) {
+    --background: #ffffff;
+    --text: #000000;
+    --surface1: #F4F4F4;
+    --surface2: #577183;
+    --surface3: #000000;
+    --filter: none;
+  }
+  
+  :root[data-theme='dark'] {
+    --background: #181825;
+    --text: #ffffff;
+    --surface1: #313244;
+    --surface2: #74c7ec;
+    --surface3: #000000;
+    --filter: brightness(0%) invert(100%);
+  }
+  

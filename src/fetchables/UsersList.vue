@@ -5,7 +5,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
 import { type Ref, ref } from 'vue'
 import BlockCard from '@/components/cards/BlockCard.vue'
 import links from '@/assets/data/links.json'
-import { assets, changeLoc } from 'blahaj-library'
+import { changeLoc } from 'blahaj-library'
 import CarouselContainer from '@/components/containers/CarouselContainer.vue'
 
 interface User {
@@ -21,8 +21,13 @@ interface UsersList {
 
 const usersList: Ref<Array<User>> = ref([])
 
-let fetchedData = await assets.json.get('users')
-if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
+try {
+  const response = await fetch('https://assets.blahaj.land/json/users.json')
+  const fetchedData = await response.json()
+  if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
+} catch (error) {
+  console.error('Failed to fetch users data:', error)
+}
 </script>
 
 <template>
@@ -38,7 +43,7 @@ if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
         hover="var(--surface1)"
         @click="changeLoc(links.portals.signup)"
       >
-        <img alt="Sign up" src="https://blahaj.land/static/images/icons/signup.png" />
+        <img alt="Sign up" src="https://assets.blahaj.land/icons/signup.png" />
         <p>Sign Up</p>
       </BlahajButton>
     </BlockCard>

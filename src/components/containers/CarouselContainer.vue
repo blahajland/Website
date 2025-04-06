@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { assets } from 'blahaj-library'
-
 const SCROLL_AMOUNT = 500
 
 const scrollComp = ref(null)
@@ -17,19 +15,19 @@ const scroll = (amount: number, vertical = false) => {
 <template>
   <div class="CarouselContainer">
     <div class="SlideButton displayOnDesktop" @click="scroll(-1 * SCROLL_AMOUNT)">
-      <img alt="&lt;" :src="assets.images.icons.get('left')" />
+      <img alt="&lt;" src="https://assets.blahaj.land/icons/left.png" />
     </div>
     <div class="SlideButton displayOnMobile" @click="scroll(-1 * SCROLL_AMOUNT, true)">
-      <img alt="&lt;" :src="assets.images.icons.get('up')" />
+      <img alt="&lt;" src="https://assets.blahaj.land/icons/up.png" />
     </div>
     <div ref="scrollComp" class="Carousel">
       <slot></slot>
     </div>
     <div class="SlideButton displayOnMobile" @click="scroll(SCROLL_AMOUNT, true)">
-      <img alt="&gt;" :src="assets.images.icons.get('down')" />
+      <img alt="&gt;" src="https://assets.blahaj.land/icons/down.png" />
     </div>
     <div class="SlideButton displayOnDesktop" @click="scroll(SCROLL_AMOUNT)">
-      <img alt="&gt;" :src="assets.images.icons.get('right')" />
+      <img alt="&gt;" src="https://assets.blahaj.land/icons/right.png" />
     </div>
   </div>
 </template>

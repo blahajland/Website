@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
-import { assets, changeLoc } from 'blahaj-library'
+import { changeLoc } from 'blahaj-library'
 import links from '@/assets/data/links.json'
 import GridContainer from '@/components/containers/GridContainer.vue'
 import BlahajButton from '@/components/buttons/BlahajButton.vue'
@@ -20,11 +20,16 @@ interface TiersList {
 
 const tiersList: Ref<Array<Tier>> = ref([])
 
-let fetchedData = await assets.json.get('tiers')
-if ('tiers' in fetchedData) {
-  let convertedData = fetchedData as TiersList
-  convertedData.tiers.forEach((e) => e.bulletpoints.forEach((e, i, l) => (l[i] = `&bull; ${e}`)))
-  tiersList.value = convertedData.tiers
+try {
+  const response = await fetch('https://assets.blahaj.land/json/tiers.json')
+  const fetchedData = await response.json()
+  if ('tiers' in fetchedData) {
+    let convertedData = fetchedData as TiersList
+    convertedData.tiers.forEach((e) => e.bulletpoints.forEach((e, i, l) => (l[i] = `&bull; ${e}`)))
+    tiersList.value = convertedData.tiers
+  }
+} catch (error) {
+  console.error('Failed to fetch tiers data:', error)
 }
 
 const createBulletpoints = (bulletPoints: Array<string>) => bulletPoints.join(' <br /> ')
@@ -46,7 +51,7 @@ const createBulletpoints = (bulletPoints: Array<string>) => bulletPoints.join(' 
         hover="var(--surface1)"
         @click="changeLoc(links.portals.signup)"
       >
-        <img alt="Sign up" :src="assets.images.icons.get('signup')" />
+        <img alt="Sign up" src="https://assets.blahaj.land/icons/signup.png" />
         <p>Join</p>
       </BlahajButton>
       <BlahajButton
@@ -55,7 +60,7 @@ const createBulletpoints = (bulletPoints: Array<string>) => bulletPoints.join(' 
         hover="var(--surface1)"
         @click="changeLoc(links.portals.donate)"
       >
-        <img alt="Donate" :src="assets.images.icons.get('donate')" />
+        <img alt="Donate" src="https://assets.blahaj.land/icons/donate.png" />
         <p>Donate</p>
       </BlahajButton>
     </BlockCard>
