@@ -29,7 +29,7 @@ import TiersList from '@/fetchables/TiersList.vue'
           <RandomTitle />
           <template #fallback><h1>:3</h1></template>
         </Suspense>
-        <p>Welcome to <b>Blahaj Land</b>! Hope you enjoy your stay.</p>
+        <p>Welcome to <b>blahaj.land</b>! Hope you enjoy your stay.</p>
       </template>
       <GridContainer :rows="4">
         <WelcomeBundle />
@@ -39,7 +39,7 @@ import TiersList from '@/fetchables/TiersList.vue'
     <ContentContainer>
       <template #title
         ><h2 id="p1">Why?</h2>
-        <p>Why should you consider <b>Blahaj Land</b> for your needs? ;3</p>
+        <p>Why should you consider <b>blahaj.land</b> for your needs? ;3</p>
       </template>
       <BulletpointContainer color="#d3ddff">
         <template #image
