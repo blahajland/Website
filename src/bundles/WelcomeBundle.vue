@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { assets, changeLoc } from 'blahaj-library'
+import { changeLoc } from 'blahaj-library'
 import links from '@/assets/data/links.json'
 import BlockCard from '@/components/cards/BlockCard.vue'
 import BlahajButton from '@/components/buttons/BlahajButton.vue'
@@ -12,7 +12,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
       background="var(--background)"
       hover="var(--surface1)"
       @click="changeLoc('#p1', false)"
-      ><img alt="Blahaj" :src="assets.images.icons.get('open')" />
+      ><img alt="Blahaj" src="https://assets.blahaj.land/icons/open.png" />
       <p>Discover</p>
     </BlahajButton>
   </BlockCard>
@@ -22,7 +22,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
       background="var(--background)"
       hover="var(--surface1)"
       @click="changeLoc(links.portals.signup)"
-      ><img alt="Sign up" :src="assets.images.icons.get('signup')" />
+      ><img alt="Sign up" src="https://assets.blahaj.land/icons/signup.png" />
       <p>Sign up</p>
     </BlahajButton>
   </BlockCard>
@@ -32,7 +32,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
       background="var(--background)"
       hover="var(--surface1)"
       @click="changeLoc(links.socials.discord)"
-      ><img alt="Discord" :src="assets.images.icons.get('discord')" />
+      ><img alt="Discord" src="https://assets.blahaj.land/icons/discord.png" />
       <p>Join</p>
     </BlahajButton>
   </BlockCard>
@@ -42,7 +42,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
       background="var(--background)"
       hover="var(--surface1)"
       @click="changeLoc(links.portals.login)"
-      ><img alt="Log in" :src="assets.images.icons.get('login')" />
+      ><img alt="Log in" src="https://assets.blahaj.land/icons/login.png" />
       <p>Open Dashboard</p>
     </BlahajButton>
   </BlockCard>

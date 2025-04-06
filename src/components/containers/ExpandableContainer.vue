@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import BlahajButton from '@/components/buttons/BlahajButton.vue'
-import { assets } from 'blahaj-library'
 
 const isExpanded = ref(false)
 </script>
@@ -12,7 +11,7 @@ const isExpanded = ref(false)
       <slot></slot>
     </div>
     <BlahajButton @click="isExpanded = !isExpanded">
-      <img :src="assets.images.icons.get(isExpanded ? 'up' : 'down')" alt="" />
+      <img :src="isExpanded ? 'https://assets.blahaj.land/icons/up.png' : 'https://assets.blahaj.land/icons/down.png'" alt="" />
       <p>{{ isExpanded ? 'Shrink' : 'Expand' }}</p>
     </BlahajButton>
   </div>

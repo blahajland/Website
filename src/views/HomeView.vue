@@ -43,7 +43,7 @@ import TiersList from '@/fetchables/TiersList.vue'
       </template>
       <BulletpointContainer color="#d3ddff">
         <template #image
-          ><img :src="assets.images.pictures.get('screenshot1')" alt="Screenshot 1"
+          ><img src="https://assets.blahaj.land/pictures/screenshot1.png" alt="Screenshot 1"
         /></template>
         <BulletpointsBundle1 />
       </BulletpointContainer>
@@ -51,7 +51,7 @@ import TiersList from '@/fetchables/TiersList.vue'
       <CustomGap class="displayOnMobile" gap="0px" />
       <BulletpointContainer is-inverted color="#f3d8ff">
         <template #image
-          ><img :src="assets.images.pictures.get('screenshot2')" alt="Screenshot 2"
+          ><img src="https://assets.blahaj.land/pictures/screenshot2.png" alt="Screenshot 2"
         /></template>
         <BulletpointsBundle2 />
       </BulletpointContainer>

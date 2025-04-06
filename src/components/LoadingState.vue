@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { assets } from 'blahaj-library'
 </script>
 
 <template>
   <div class="LoadingState">
-    <img alt="Loading..." :src="assets.images.pictures.get('loading-icon')" />
+    <img alt="Loading..." src="https://assets.blahaj.land/pictures/loading-icon.png" />
     <div>
       <h1>Loading...</h1>
       <p>It won't be long we promise :3</p>
