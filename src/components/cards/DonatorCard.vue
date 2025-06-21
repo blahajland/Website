@@ -60,6 +60,13 @@ defineProps({
   transition: var(--trans)
   color: v-bind(font)
   gap: 16px
+  background: color-mix(in srgb, v-bind(color), transparent 58%)
+  backdrop-filter: blur(12px)
+  border-color: color-mix(in srgb, v-bind(color), transparent 58%)
+  border-radius: 24px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
+  border-radius: 24px
 
   *
     margin: 0

@@ -16,6 +16,6 @@
   justify-content: stretch
   align-items: stretch
   gap: 0
-  background: color-mix(in srgb, var(--background), transparent 33%)
+  background: color-mix(in srgb, var(--background), transparent 58%)
   backdrop-filter: blur(20px)
 </style>

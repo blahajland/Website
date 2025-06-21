@@ -60,6 +60,11 @@ const stripHttp = (link: string) => {
   transition: var(--trans)
   color: v-bind(font)
   gap: 24px
+  background: color-mix(in srgb, v-bind(color), transparent 58%)
+  backdrop-filter: blur(12px)
+  border-radius: 24px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
 
   @media (min-width: 1201px)
     justify-content: start

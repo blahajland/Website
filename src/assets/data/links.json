@@ -1,7 +1,7 @@
 {
   "portals": {
     "signup": "https://discord.gg/23ScBhN7xx",
-    "login": "https://blahaj.land/portal/",
+    "login": "https://sso.blahaj.land/",
     "donate": "https://opencollective.com/blahajland/",
     "status": "https://status.blahaj.land/status/apps",
     "blahaj": "https://blahaj.itsjamie.dev"

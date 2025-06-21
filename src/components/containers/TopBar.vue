@@ -5,7 +5,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
 <template>
   <div class="TopBar">
     <RouterLink to="/">
-      <img alt="Logo" src="https://assets.blahaj.land/pictures/text-logo.png" />
+      <img alt="Logo" src="https://assets.blahaj.land/logos/logo/Text/white%20-%20nonpadded.png" />
     </RouterLink>
     <ThingsContainer>
       <slot></slot>

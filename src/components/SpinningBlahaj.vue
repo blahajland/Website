@@ -14,6 +14,7 @@ import links from '@/assets/data/links.json'
 .SpinningBlahaj
   display: flex
   flex-direction: column
+  margin-top: 64px
   justify-content: center
   align-items: center
   cursor: pointer

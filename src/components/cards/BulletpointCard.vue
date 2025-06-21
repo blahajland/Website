@@ -31,12 +31,16 @@ defineProps({
   padding: 24px
   flex-grow: 1
   background: v-bind(color)
-  border-radius: var(--radius-small)
+  border-radius: 24px
   display: flex
   flex-direction: column
   transition: var(--trans)
   color: v-bind(font)
   gap: v-bind(gap)
+  background: color-mix(in srgb, v-bind(color), transparent 58%)
+  backdrop-filter: blur(12px)
+  border-radius: 24px
+  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
 
   *
     margin: 0

@@ -5,7 +5,7 @@ defineProps({
   font: {
     type: String,
     validator: (clr: string) => colorsService.isValidColor(clr),
-    default: 'var(--text)'
+    default: 'var(--surface3)'
   },
   background: {
     type: String,

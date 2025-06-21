@@ -37,6 +37,11 @@ defineProps({
   align-items: center
   transition: var(--trans)
   color: v-bind(font)
+  background: color-mix(in srgb, v-bind(color), transparent 58%)
+  backdrop-filter: blur(12px)
+  border-radius: 24px
+  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
+  border-radius: 24px
 
   @media (min-width: 1201px)
     padding: 24px 32px

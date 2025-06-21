@@ -39,6 +39,12 @@ defineProps({
   color: v-bind(font)
   gap: v-bind(gap)
   box-sizing: border-box
+  background: color-mix(in srgb, v-bind(color), transparent 58%)
+  backdrop-filter: blur(12px)
+  border-radius: 24px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
+  border-radius: 24px
 
   @media (min-width: 1201px)
     padding: 32px
