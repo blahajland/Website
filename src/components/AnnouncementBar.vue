@@ -66,17 +66,13 @@ const handleCallToActionClick = (url: string) => {
 <style lang="sass">
 @keyframes breathe
   0%
-      background: color-mix(in srgb, v-bind(color), transparent 58%)
+      background: color-mix(in srgb, var(--background), transparent 58%)
       backdrop-filter: blur(12px)
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
-      box-shadow: inset 0 0 10px color-mix(in srgb, v-bind(color), transparent 75%)
   50%
     background-color: rgba(201, 44, 62, 0.3)
   100%
-      background: color-mix(in srgb, v-bind(color), transparent 58%)
+      background: color-mix(in srgb, var(--background), transparent 58%)
       backdrop-filter: blur(12px)
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
-      box-shadow: inset 0 0 10px color-mix(in srgb, v-bind(color), transparent 75%)
 
 .AnnouncementBar
   width: 100%
@@ -89,10 +85,11 @@ const handleCallToActionClick = (url: string) => {
   align-items: center
   gap: 16px
 
+
   > p
     margin: 0
     font-size: 16px
-    color: var(--text)
+    color: var(--surface3)
 
     strong
       font-weight: bold
