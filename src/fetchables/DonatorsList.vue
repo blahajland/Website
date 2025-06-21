@@ -8,7 +8,7 @@ import axios from 'axios'
 import BlahajButton from '@/components/buttons/BlahajButton.vue'
 import CarouselContainer from '@/components/containers/CarouselContainer.vue'
 
-const apiLink = 'https://api.opencollective.com/graphql/v2'
+const apiLink = '/api/opencollective/graphql/v2'
 const projectSlug = 'blahajland'
 const maxNbOfDonators = 8
 const donationsQuery = `

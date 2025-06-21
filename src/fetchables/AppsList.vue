@@ -21,7 +21,7 @@ interface AppsList {
 const appList: Ref<Array<AppDescriptor>> = ref([])
 
 try {
-  const response = await fetch('https://assets.blahaj.land/json/apps.json')
+  const response = await fetch('/api/blahaj/json/apps.json')
   const fetchedData = await response.json()
   if ('apps' in fetchedData)
     appList.value = (fetchedData as AppsList).apps.filter(

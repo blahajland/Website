@@ -21,7 +21,7 @@ interface TiersList {
 const tiersList: Ref<Array<Tier>> = ref([])
 
 try {
-  const response = await fetch('https://assets.blahaj.land/json/tiers.json')
+  const response = await fetch('/api/blahaj/json/tiers.json')
   const fetchedData = await response.json()
   if ('tiers' in fetchedData) {
     let convertedData = fetchedData as TiersList

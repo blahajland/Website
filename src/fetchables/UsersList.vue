@@ -22,7 +22,7 @@ interface UsersList {
 const usersList: Ref<Array<User>> = ref([])
 
 try {
-  const response = await fetch('https://assets.blahaj.land/json/users.json')
+  const response = await fetch('/api/blahaj/json/users.json')
   const fetchedData = await response.json()
   if ('users' in fetchedData) usersList.value = (fetchedData as UsersList).users
 } catch (error) {

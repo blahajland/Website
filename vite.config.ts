@@ -13,5 +13,19 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    proxy: {
+      '/api/blahaj': {
+        target: 'https://assets.blahaj.land',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/blahaj/, '')
+      },
+      '/api/opencollective': {
+        target: 'https://api.opencollective.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/opencollective/, '')
+      }
+    }
   }
 })

@@ -8,7 +8,7 @@ interface RandomTitles {
 }
 
 try {
-  const response = await fetch('https://assets.blahaj.land/json/titles.json')
+  const response = await fetch('/api/blahaj/json/titles.json')
   const fetchedData = await response.json()
   if ('randomTitles' in fetchedData) {
     let randomTitles = (fetchedData as RandomTitles).randomTitles
