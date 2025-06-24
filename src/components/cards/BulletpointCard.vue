@@ -50,7 +50,7 @@ defineProps({
     left: 0
     right: 0
     bottom: 0
-    background: linear-gradient(color-mix(in srgb, v-bind(color), transparent 80%) 0%,rgba(0,125,255,0.000) 100%)
+    background: linear-gradient(color-mix(in srgb, v-bind(color), transparent 90%) 0%,rgba(0,125,255,0.000) 100%)
     border-radius: 34px
     pointer-events: none
 
