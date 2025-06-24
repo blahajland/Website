@@ -1,8 +1,8 @@
 import '@/assets/style/main.sass'
 import '@/assets/style/base.sass'
 import '@/assets/style/colors.css'
-
-
+import { ref } from 'vue'
+import { defineComponent } from 'vue'
 
 <template>
   <div class="TabButton">
@@ -38,11 +38,11 @@ import '@/assets/style/colors.css'
     border-radius: var(--radius-inf)
 
   &:hover
-    background: color-mix(in srgb, v-bind(--surface3) 60%, v-bind(--surface2) 40%)
+    background: color-mix(in srgb, v-bind(surface3) 60%, v-bind(surface2) 40%)
 
 
     > hr
-      background: color-mix(in srgb, v-bind(--surface3) 60%, v-bind(--surface2) 40%)
+      background: color-mix(in srgb, v-bind(surface3) 60%, v-bind(surface2) 40%)
 
   &:active
     background: var(--surface2)
