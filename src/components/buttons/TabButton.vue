@@ -38,11 +38,11 @@ import { defineComponent } from 'vue'
     border-radius: var(--radius-inf)
 
   &:hover
-    background: color-mix(in srgb, v-bind(surface3) 60%, v-bind(surface2) 40%)
+    background: var(--surface1)
 
 
     > hr
-      background: color-mix(in srgb, v-bind(surface3) 60%, v-bind(surface2) 40%)
+      background: var(--surface1)
 
   &:active
     background: var(--surface2)
