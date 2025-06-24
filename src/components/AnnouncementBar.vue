@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import BlahajButton from './buttons/BlahajButton.vue'
+import '@/assets/style/main.sass'
+import '@/assets/style/colors.css'
 
 const randomTitle = ref('')
 const randomContent = ref('')
@@ -89,7 +91,7 @@ const handleCallToActionClick = (url: string) => {
   > p
     margin: 0
     font-size: 16px
-    color: var(--surface3)
+    color: color-mix(in srgb, var(--background), #ffffff 90%)
 
     strong
       font-weight: bold
@@ -108,7 +110,6 @@ const handleCallToActionClick = (url: string) => {
   justify-content: spread
 
   .BlahajButton
-    border: 3px solid var(--font)
     white-space: nowrap
     font-weight: bold
 </style>

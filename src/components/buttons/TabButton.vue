@@ -32,11 +32,11 @@
     border-radius: var(--radius-inf)
 
   &:hover
-    background: color-mix(in srgb, v-bind(--surface1) 60%, v-bind(--surface2) 40%)
+    background: color-mix(in srgb, v-bind(--surface3) 60%, v-bind(--surface2) 40%)
 
 
     > hr
-      background: color-mix(in srgb, v-bind(--surface1) 60%, v-bind(--surface2) 40%)
+      background: color-mix(in srgb, v-bind(--surface3) 60%, v-bind(--surface2) 40%)
 
   &:active
     background: var(--surface2)

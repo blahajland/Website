@@ -62,9 +62,21 @@ const stripHttp = (link: string) => {
   gap: 24px
   background: color-mix(in srgb, v-bind(color), transparent 75%)
   backdrop-filter: blur(12px)
-  border-radius: 24px
+  border-radius: 34px
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
   box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
+  position: relative
+  
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(color-mix(in srgb, v-bind(color), transparent 80%) 0%,rgba(0,125,255,0.000) 100%)
+    border-radius: 34px
+    pointer-events: none
 
   @media (min-width: 1201px)
     justify-content: start

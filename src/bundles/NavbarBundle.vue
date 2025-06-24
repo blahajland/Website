@@ -10,15 +10,15 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
     <p class="displayOnDesktop">Donate</p>
   </BlahajButton>
   <BlahajButton @click="changeLoc(links.portals.signup)">
-    <img alt="Donate" src="https://assets.blahaj.land/icons/signup.png" />
+    <img alt="Donate" src="https://assets.blahaj.land/glyhps/png/signup.png" />
     <p class="displayOnDesktop">Sign up</p>
   </BlahajButton>
   <BlahajButton @click="changeLoc(links.portals.login)">
-    <img alt="Donate" src="https://assets.blahaj.land/icons/login.png" />
+    <img alt="Donate" src="https://assets.blahaj.land/glyhps/png/login.png" />
     <p class="displayOnDesktop">Log in</p>
   </BlahajButton>
   <BlahajButton @click="themeService.switchTheme()">
-    <img alt="Donate" src="https://assets.blahaj.land/icons/theme.png" />
+    <img alt="Donate" src="https://assets.blahaj.land/glyhps/png/theme.png" />
     <p class="displayOnDesktop">Theme</p>
   </BlahajButton>
 </template>

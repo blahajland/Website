@@ -55,10 +55,11 @@ const transform = props.isInverted ? '-16px' : '16px'
       justify-content: center
 
     &:nth-of-type(2)
-      background: v-bind(color)
+      background: color-mix(in srgb, v-bind(color) 75%, transparent)
       justify-content: end
       flex: 1
       overflow: hidden
+      border-radius: 34px
 
       &:hover > img
         transform: translate(v-bind(transform), 8px)
