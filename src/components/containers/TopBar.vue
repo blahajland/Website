@@ -26,6 +26,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
     flex-direction: row
     justify-content: space-between
     padding: 24px
+    border-radius: 0 0 24px 24px
 
     > a > img
       height: 32px
@@ -36,6 +37,7 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
     justify-content: center
     gap: 16px
     padding: 24px
+    border-radius: 0 0 24px 24px
 
     > a > img
       height: 36px

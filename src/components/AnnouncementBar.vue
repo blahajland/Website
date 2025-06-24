@@ -108,7 +108,7 @@ const handleCallToActionClick = (url: string) => {
   justify-content: spread
 
   .BlahajButton
-    border: 3px solid var(--surface1)
-    background: var(--surface1) !important
+    border: 3px solid var(--font)
     white-space: nowrap
+    font-weight: bold
 </style>

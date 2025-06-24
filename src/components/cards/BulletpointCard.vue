@@ -11,7 +11,7 @@ defineProps({
   font: {
     type: String,
     validator: (clr: string) => colorsService.isValidColor(clr),
-    default: '#101010'
+    default: '#ffffff'
   },
   gap: {
     type: String as PropType<PixelSize>,
@@ -35,9 +35,9 @@ defineProps({
   display: flex
   flex-direction: column
   transition: var(--trans)
-  color: v-bind(font)
+  color: color-mix(in srgb, v-bind(font) 60%, v-bind(color) 40%)
   gap: v-bind(gap)
-  background: color-mix(in srgb, v-bind(color), transparent 58%)
+  background: color-mix(in srgb, v-bind(color), transparent 75%)
   backdrop-filter: blur(12px)
   border-radius: 24px
   box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
@@ -47,6 +47,7 @@ defineProps({
 
   > img
     height: 28px
+    filter: brightness(0%) invert(100%)
 
   @media (min-width: 1201px)
     justify-content: center

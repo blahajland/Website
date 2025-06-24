@@ -18,4 +18,5 @@
   gap: 0
   background: color-mix(in srgb, var(--background), transparent 58%)
   backdrop-filter: blur(20px)
+  border-radius: 0 0 24px 24px
 </style>

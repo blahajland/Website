@@ -4,8 +4,9 @@
     --surface1: #F4F4F4;
     --surface2: #577183;
     --surface3: #000000;
-    --filter: none;
+    --filter: brightness(0%) invert(100%);
     --background-overlay: #adceff;
+    --font: #ffffff;
   }
   
   :root[data-theme='dark'] {
@@ -16,4 +17,5 @@
     --surface3: #d3e3ff;
     --filter: brightness(0%) invert(100%);
     --background-overlay: #576a9e;
+    --font: #ffffff
   }

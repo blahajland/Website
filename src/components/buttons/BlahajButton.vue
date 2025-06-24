@@ -29,15 +29,17 @@ defineProps({
 .BlahajButton
   padding: 10px 20px
   border-radius: var(--radius-inf)
-  background: v-bind(background) !important
   display: flex
   align-items: center
   justify-content: center
   cursor: pointer
   transition: var(--trans)
-  color: v-bind(font) !important
   gap: 10px
   flex: 0 0
+  color: color-mix(in srgb, v-bind(font) 10%, #ffffff 90%)
+  background: color-mix(in srgb, v-bind(font) 23%, transparent 77%)
+  backdrop-filter: blur(12px)
+  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
 
   > img
     height: 20px

@@ -22,7 +22,7 @@ defineProps({
   font: {
     type: String,
     validator: (clr: string) => colorsService.isValidColor(clr),
-    default: '#101010'
+    default: '#ffffff'
   },
   clickable: {
     type: Boolean,
@@ -58,9 +58,9 @@ const stripHttp = (link: string) => {
   flex-direction: row
   align-items: center
   transition: var(--trans)
-  color: v-bind(font)
+  color: color-mix(in srgb, v-bind(font) 60%, v-bind(color) 40%)
   gap: 24px
-  background: color-mix(in srgb, v-bind(color), transparent 58%)
+  background: color-mix(in srgb, v-bind(color), transparent 75%)
   backdrop-filter: blur(12px)
   border-radius: 24px
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)

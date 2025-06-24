@@ -10,7 +10,7 @@ defineProps({
   font: {
     type: String,
     validator: (clr: string) => colorsService.isValidColor(clr),
-    default: '#101010'
+    default: '#ffffff'
   }
 })
 </script>
@@ -36,8 +36,8 @@ defineProps({
   justify-content: center
   align-items: center
   transition: var(--trans)
-  color: v-bind(font)
-  background: color-mix(in srgb, v-bind(color), transparent 58%)
+  color: color-mix(in srgb, v-bind(font) 60%, v-bind(color) 40%)
+  background: color-mix(in srgb, v-bind(color), transparent 75%)
   backdrop-filter: blur(12px)
   border-radius: 24px
   box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)

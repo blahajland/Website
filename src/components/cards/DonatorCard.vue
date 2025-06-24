@@ -11,7 +11,7 @@ defineProps({
   font: {
     type: String,
     validator: (clr: string) => colorsService.isValidColor(clr),
-    default: '#101010'
+    default: '#ffffff'
   },
   donatorName: {
     type: String,
@@ -58,9 +58,9 @@ defineProps({
   justify-content: start
   align-items: center
   transition: var(--trans)
-  color: v-bind(font)
+  color: color-mix(in srgb, v-bind(font) 60%, v-bind(color) 40%)
   gap: 16px
-  background: color-mix(in srgb, v-bind(color), transparent 58%)
+  background: color-mix(in srgb, v-bind(color), transparent 75%)
   backdrop-filter: blur(12px)
   border-color: color-mix(in srgb, v-bind(color), transparent 58%)
   border-radius: 24px
