@@ -1,3 +1,9 @@
+import '@/assets/style/main.sass'
+import '@/assets/style/base.sass'
+import '@/assets/style/colors.css'
+
+
+
 <template>
   <div class="TabButton">
     <slot></slot>
