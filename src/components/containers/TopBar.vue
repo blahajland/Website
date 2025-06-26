@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ThingsContainer from '@/components/containers/ThingsContainer.vue'
+import AnnouncementBar from '@/components/AnnouncementBar.vue'
 </script>
 
 <template>
@@ -7,6 +8,12 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
     <RouterLink to="/">
       <img alt="Logo" src="https://assets.blahaj.land/logos/logo/Text/white%20-%20nonpadded.png" />
     </RouterLink>
+    <div class="announcement-pill-container">
+      <Suspense>
+        <AnnouncementBar />
+        <template #fallback></template>
+      </Suspense>
+    </div>
     <ThingsContainer>
       <slot></slot>
     </ThingsContainer>
@@ -20,6 +27,12 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
 
   > a > img
     filter: var(--filter)
+
+.announcement-pill-container
+  flex: 1
+  display: flex
+  justify-content: center
+  margin: 0 24px
 
 @media (min-width: 1201px)
   .TopBar
@@ -41,4 +54,8 @@ import ThingsContainer from '@/components/containers/ThingsContainer.vue'
 
     > a > img
       height: 36px
+
+  .announcement-pill-container
+    width: 100%
+    margin: 0
 </style>

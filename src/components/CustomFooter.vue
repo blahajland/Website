@@ -19,7 +19,7 @@
   a
     font-weight: 700
     text-decoration: none
-    color: var(--surface2)
+    color: var(--text2)
     transition: var(--trans)
 
     &:hover
@@ -37,6 +37,6 @@
     gap: 16px
     margin-top: 32px
     padding: 32px
-    background: var(--surface1)
+    background: color-mix(in srgb, var(--background), transparent 58%)
     border-radius: var(--radius-small) var(--radius-small) 0 0
 </style>

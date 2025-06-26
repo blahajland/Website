@@ -1,8 +1,9 @@
 :root:not([data-theme='dark']) {
     --background: #c2daff;
     --text: #d5e0ff;
+    --text2: #29396b;
     --surface1: #F4F4F4;
-    --surface2: #577183;
+    --surface2: #5c95be;
     --surface3: #000000;
     --filter: brightness(0%) invert(100%);
     --background-overlay: #adceff;
@@ -12,6 +13,7 @@
   :root[data-theme='dark'] {
     --background: #181825;
     --text: #adc3ff;
+    --text2: #ffffff;
     --surface1: #313244;
     --surface2: #74c7ec;
     --surface3: #d3e3ff;

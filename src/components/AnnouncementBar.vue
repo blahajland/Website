@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import BlahajButton from './buttons/BlahajButton.vue'
 import '@/assets/style/main.sass'
 import '@/assets/style/colors.css'
+import '@/assets/style/base.sass'
 
 const randomTitle = ref('')
 const randomContent = ref('')
@@ -68,48 +69,57 @@ const handleCallToActionClick = (url: string) => {
 <style lang="sass">
 @keyframes breathe
   0%
-      background: color-mix(in srgb, var(--background), transparent 58%)
+      background: rgba(201, 44, 62, 0.09)
       backdrop-filter: blur(12px)
   50%
     background-color: rgba(201, 44, 62, 0.3)
   100%
-      background: color-mix(in srgb, var(--background), transparent 58%)
+      background: rgba(201, 44, 62, 0.09)
       backdrop-filter: blur(12px)
+
+
 
 .AnnouncementBar
   width: 100%
-  padding: 12px 24px
+  max-width: 800px
+  padding: 8px 16px
   animation: breathe 10s ease-in-out infinite
+  backdrop-filter: blur(12px)
+  border-radius: var(--radius-inf)
   position: relative
-  z-index: 1000
   display: flex
   justify-content: center
   align-items: center
-  gap: 16px
+  gap: 12px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05)
+  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.08), -1px 1px 2px rgba(0,0,0,0.250)
 
 
   > p
     margin: 0
-    font-size: 16px
-    color: color-mix(in srgb, var(--background), #ffffff 90%)
+    font-size: 14px
+    color: #ffffff
+    text-align: center
 
     strong
       font-weight: bold
 
 @media (max-width: 768px)
   .AnnouncementBar
-    padding: 8px 16px
+    padding: 6px 12px
     flex-direction: column
-    gap: 8px
+    gap: 6px
     
     > p
-      font-size: 13px
+      font-size: 14px
 
 .cta-container
   display: flex
-  justify-content: spread
+  justify-content: center
 
   .BlahajButton
     white-space: nowrap
     font-weight: bold
+    font-size: 14px
+    padding: 6px 12px
 </style>

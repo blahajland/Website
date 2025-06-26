@@ -4,7 +4,6 @@ import CustomFooter from '@/components/CustomFooter.vue'
 import TabGroup from '@/components/containers/TabGroup.vue'
 import HomeTabs from '@/views/tabs/HomeTabs.vue'
 import NavbarFrame from '@/components/frames/NavbarFrame.vue'
-import AnnouncementBar from '@/components/AnnouncementBar.vue'
 
 import { themeService } from 'blahaj-library'
 import FooterBundle from '@/bundles/FooterBundle.vue'
@@ -15,10 +14,6 @@ themeService.setThemeFromCookie()
 
 <template>
   <NavbarFrame>
-    <Suspense>
-      <AnnouncementBar />
-      <template #fallback></template>
-    </Suspense>
     <TopBar>
       <NavbarBundle />
     </TopBar>
