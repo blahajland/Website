@@ -77,6 +77,22 @@ const stripHttp = (link: string) => {
     background: linear-gradient(color-mix(in srgb, v-bind(color), transparent 90%) 0%,rgba(0,125,255,0.000) 100%)
     border-radius: 34px
     pointer-events: none
+    
+    
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-image: url('/src/assets/filters/noise.svg')
+    background-repeat: repeat
+    opacity: 0.15
+    mix-blend-mode: color-burn
+    border-radius: 34px
+    pointer-events: none
+
 
   @media (min-width: 1201px)
     justify-content: start
@@ -118,7 +134,7 @@ const stripHttp = (link: string) => {
     cursor: pointer
 
     &:hover
-      background: color-mix(in srgb, v-bind(color), var(--surface1))
+      background: color-mix(in srgb, v-bind(color), var(--surface4))
 
     &:active
       background: var(--surface2)

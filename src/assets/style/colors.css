@@ -5,8 +5,9 @@
     --surface1: #F4F4F4;
     --surface2: #5c95be;
     --surface3: #000000;
+    --surface4: #000000;
     --filter: brightness(0%) invert(100%);
-    --background-overlay: #adceff;
+    --background-overlay: #98c1fe;
     --font: #ffffff;
   }
   
@@ -17,6 +18,7 @@
     --surface1: #313244;
     --surface2: #74c7ec;
     --surface3: #d3e3ff;
+    --surface4: #000000;
     --filter: brightness(0%) invert(100%);
     --background-overlay: #576a9e;
     --font: #ffffff

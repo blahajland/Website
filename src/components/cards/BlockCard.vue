@@ -58,6 +58,21 @@ defineProps({
   box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
   border-radius: 34px
   
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-image: url('/src/assets/filters/noise.svg')
+    background-repeat: repeat
+    opacity: 0.15
+    mix-blend-mode: color-burn
+    border-radius: 34px
+    pointer-events: none
+
+
 
   @media (min-width: 1201px)
     padding: 32px

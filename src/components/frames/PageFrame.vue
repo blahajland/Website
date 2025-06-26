@@ -21,6 +21,9 @@
     > h1
       font-size: 2.5em
 
+    > p 
+      font-size: 1.2em
+
   @media (max-width: 1200px)
     padding: 96px 24px 0
 

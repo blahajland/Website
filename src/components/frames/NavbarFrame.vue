@@ -61,4 +61,18 @@ onUnmounted(() => {
 
   &.navbar-hidden
     transform: translateY(-100%)
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-image: url('/src/assets/filters/noise.svg')
+    background-repeat: repeat
+    opacity: 0.15
+    mix-blend-mode: color-burn
+    pointer-events: none
+
 </style>

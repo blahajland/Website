@@ -81,6 +81,21 @@ defineProps({
     border-radius: 34px
     pointer-events: none
 
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-image: url('/src/assets/filters/noise.svg')
+    background-repeat: repeat
+    opacity: 0.15
+    mix-blend-mode: color-burn
+    border-radius: 34px
+    pointer-events: none
+
+
   *
     margin: 0
 
