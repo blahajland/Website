@@ -11,11 +11,11 @@ const handleScroll = () => {
       const currentScrollY = window.scrollY
       
       // Show navbar when scrolling up or at the top
-      if (currentScrollY < lastScrollY.value || currentScrollY < 100) {
+      if (currentScrollY < lastScrollY.value || currentScrollY < 200) {
         isVisible.value = true
       } 
       // Hide navbar when scrolling down past 100px
-      else if (currentScrollY > 100 && currentScrollY > lastScrollY.value) {
+      else if (currentScrollY > 50 && currentScrollY > lastScrollY.value) {
         isVisible.value = false
       }
       
@@ -63,6 +63,17 @@ onUnmounted(() => {
 
   &.navbar-hidden
     transform: translateY(-100%)
+
+@media (max-width: 1200px)
+  .NavbarFrame
+    top: auto
+    bottom: 0
+    border-radius: 24px 24px 0 0
+    transform: translateY(0)
+
+    &.navbar-hidden
+      transform: translateY(100%)
+
 
 
 </style>

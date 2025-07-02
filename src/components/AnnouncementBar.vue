@@ -80,7 +80,7 @@ const handleCallToActionClick = (url: string) => {
 
 
 .AnnouncementBar
-  display: flex
+  display: none
   width: 100%
   max-width: 800px
   padding: 8px 16px

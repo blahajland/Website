@@ -50,7 +50,7 @@ import AnnouncementBar from '@/components/AnnouncementBar.vue'
     justify-content: center
     gap: 16px
     padding: 24px
-    border-radius: 0 0 24px 24px
+    border-radius: 24px 24px 0 0
 
     > a > img
       height: 30px

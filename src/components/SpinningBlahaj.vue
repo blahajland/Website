@@ -31,7 +31,8 @@ import links from '@/assets/data/links.json'
       filter: contrast(5000%) brightness(90%) grayscale(1)
 
   @media (max-width: 1200px)
-    padding: 96px 0 16px
+    padding: 0 0 16px
+    margin-top: 0
 
     > img
       width: 80vw
