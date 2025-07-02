@@ -53,26 +53,16 @@ onUnmounted(() => {
   justify-content: stretch
   align-items: stretch
   gap: 0
-  background: color-mix(in srgb, var(--background), transparent 58%)
-  backdrop-filter: blur(20px)
+  background: color-mix(in srgb, var(--background), transparent 20%)
+  backdrop-filter: blur(20px) contrast(100%) grayscale(1)
+  background-blend-mode: difference
   border-radius: 0 0 24px 24px
+  border: 1px solid var(--surface1)
   transform: translateY(0)
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 
   &.navbar-hidden
     transform: translateY(-100%)
 
-  &::after
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background-image: url('/src/assets/filters/noise.svg')
-    background-repeat: repeat
-    opacity: 0.15
-    mix-blend-mode: color-burn
-    pointer-events: none
 
 </style>

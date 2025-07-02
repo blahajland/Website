@@ -12,6 +12,7 @@
   flex-direction: row
   justify-content: center
   align-items: center
+  transition: var(--trans)
 
   > *
     margin: 0
@@ -19,7 +20,7 @@
   a
     font-weight: 700
     text-decoration: none
-    color: var(--text2)
+    color: var(--text)
     transition: var(--trans)
 
     &:hover
@@ -37,6 +38,6 @@
     gap: 16px
     margin-top: 32px
     padding: 32px
-    background: color-mix(in srgb, var(--background), transparent 58%)
+    background: (in srgb, var(--background), transparent 58%)
     border-radius: var(--radius-small) var(--radius-small) 0 0
 </style>

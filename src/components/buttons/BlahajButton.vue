@@ -5,16 +5,16 @@ defineProps({
   font: {
     type: String,
     validator: (clr: string) => colorsService.isValidColor(clr),
-    default: 'var(--surface3)'
+    default: 'var(--text)'
   },
   background: {
     type: String,
     validator: (clr: string) => colorsService.isValidColor(clr),
-    default: 'var(--surface1)'
+    default: 'var(--button)'
   },
   hover: {
     type: String,
-    default: 'color-mix(in srgb, var(--surface1), var(--surface2))'
+    default: 'var(--button-hvr)'
   }
 })
 </script>
@@ -33,27 +33,37 @@ defineProps({
   align-items: center
   justify-content: center
   cursor: pointer
-  transition: var(--trans)
   gap: 10px
   flex: 0 0
-  color: color-mix(in srgb, v-bind(font) 10%, #ffffff 90%)
-  background: color-mix(in srgb, v-bind(font) 23%, transparent 77%)
+  color: var(--text)
+  background: var(--button)
   backdrop-filter: blur(12px)
-  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
+  border: 2px solid var(--surface1)
+  
+  font-size: 1.2rem
 
   > img
-    height: 20px
-    width: 20px
+    height: 25px
+    width: 25px
     filter: var(--filter)
 
   > p
     margin: 0
-    font-weight: bold
+    font-weight: 900
     white-space: nowrap
 
   &:hover
-    background: v-bind(hover) !important
+    border: 4px dashed var(--text2)
+    color: var(--text2)
+    background: var(--surface1) !important
+    margin: -2px -2px
+    transition: var(--trans)
+
+    > img
+      height: 25px
+      width: 25px
+      filter: var(--filter-anti)
 
   &:active
-    background: var(--surface2) !important
+    background: var(--button-hvr) !important
 </style>

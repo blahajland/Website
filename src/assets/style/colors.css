@@ -1,25 +1,31 @@
 :root:not([data-theme='dark']) {
-    --background: #c2daff;
-    --text: #d5e0ff;
-    --text2: #29396b;
-    --surface1: #F4F4F4;
-    --surface2: #5c95be;
+    --background: #ffffff;
+    --text: #000000;
+    --text2: #ffffff;
+    --surface1: #000000;
+    --surface2: #000000;
     --surface3: #000000;
-    --surface4: #000000;
-    --filter: brightness(0%) invert(100%);
-    --background-overlay: #98c1fe;
-    --font: #ffffff;
+    --surface4: #0000004f;
+    --button: #ffffff;
+    --button-hvr: #a8a8a8;
+    --filter: brightness(0%) invert(0%);
+    --filter-anti: brightness(0%) invert(100%);
+    --background-overlay: #ffffff;
+    --font: #000000;
   }
   
   :root[data-theme='dark'] {
-    --background: #181825;
-    --text: #adc3ff;
-    --text2: #ffffff;
-    --surface1: #313244;
-    --surface2: #74c7ec;
-    --surface3: #d3e3ff;
-    --surface4: #000000;
+    --background: #000000;
+    --text: #ffffff;
+    --text2: #000000;
+    --surface1: #ffffff;
+    --surface2: #000000;
+    --surface3: #000000;
+    --surface4: #ffffff70;
+    --button: #000000;
+    --button-hvr: #555555;
     --filter: brightness(0%) invert(100%);
-    --background-overlay: #576a9e;
-    --font: #ffffff
+    --filter-anti: brightness(0%) invert(0%);
+    --background-overlay: #000000;
+    --font: #ffffff;
   }

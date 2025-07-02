@@ -29,45 +29,21 @@ defineProps({
 <style lang="sass">
 
 .AppCard
-  background: v-bind(color)
+  background: var(--background)
   border-radius: var(--radius-small)
   display: flex
   flex-direction: row
   justify-content: center
   align-items: center
   transition: var(--trans)
-  color: color-mix(in srgb, v-bind(font) 60%, v-bind(color) 40%)
-  background: color-mix(in srgb, v-bind(color), transparent 75%)
+  color: var(--text2)
+  background: var(--surface1)
   backdrop-filter: blur(12px)
   border-radius: 34px
-  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
-  border-radius: 34px
-  position: relative
   
-  &::before
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background: linear-gradient(color-mix(in srgb, v-bind(color), transparent 90%) 0%,rgba(0,125,255,0.000) 100%)
-    border-radius: 34px
-    pointer-events: none
 
-  &::after
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background-image: url('/src/assets/filters/noise.svg')
-    background-repeat: repeat
-    opacity: 0.15
-    mix-blend-mode: color-burn
-    border-radius: 34px
-    pointer-events: none
+
+
 
 
   @media (min-width: 1201px)
@@ -87,7 +63,8 @@ defineProps({
     gap: 4px
 
     > img
-      height: 56px
+      height: 60px
+      filter: brightness(0.8) contrast(1.2) saturate(1.4) 
 
     &:last-of-type
       flex-grow: 1

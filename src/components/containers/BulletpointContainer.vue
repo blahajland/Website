@@ -55,7 +55,7 @@ const transform = props.isInverted ? '-16px' : '16px'
       justify-content: center
 
     &:nth-of-type(2)
-      background: color-mix(in srgb, v-bind(color) 75%, transparent)
+      background: var(--surface1)
       justify-content: end
       flex: 1
       overflow: hidden

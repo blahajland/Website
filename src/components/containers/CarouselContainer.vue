@@ -76,6 +76,7 @@ const scroll = (amount: number, vertical = false) => {
     width: 100%
     flex-direction: row
     gap: 8px
+    overflow: visible
 
   .SlideButton:hover
     padding: 8px

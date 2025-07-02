@@ -19,10 +19,10 @@
     margin: 137px 0 72px
 
     > h1
-      font-size: 2.5em
+      font-size: 3rem
 
     > p 
-      font-size: 1.2em
+      font-size: 1.4rem
 
   @media (max-width: 1200px)
     padding: 96px 24px 0

@@ -80,46 +80,50 @@ const handleCallToActionClick = (url: string) => {
 
 
 .AnnouncementBar
+  display: flex
   width: 100%
   max-width: 800px
   padding: 8px 16px
   animation: breathe 10s ease-in-out infinite
   backdrop-filter: blur(12px)
-  border-radius: var(--radius-inf)
+  border-radius: var(--radius-med)
+  background-blend-mode: color-burn
   position: relative
-  display: flex
   justify-content: center
   align-items: center
   gap: 12px
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05)
-  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.08), -1px 1px 2px rgba(0,0,0,0.250)
+  border: 2px dashed #ff0000
 
 
   > p
     margin: 0
-    font-size: 14px
-    color: #ffffff
+    font-size: 1.1rem
+    color: var(--text)
     text-align: center
 
     strong
-      font-weight: bold
+      font-weight: 900
 
 @media (max-width: 768px)
   .AnnouncementBar
-    padding: 6px 12px
+    padding: 10px 12px
     flex-direction: column
     gap: 6px
     
     > p
-      font-size: 14px
+      font-size: 1rem
+
 
 .cta-container
   display: flex
   justify-content: center
+  transition: var(--trans)
 
   .BlahajButton
     white-space: nowrap
-    font-weight: bold
-    font-size: 14px
     padding: 6px 12px
+    font-size: 1rem
+    font-weight: 900
+    transition: var(--trans)
+
 </style>

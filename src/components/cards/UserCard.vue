@@ -41,10 +41,10 @@ const stripHttp = (link: string) => {
   <div class="UserCard" :class="{ clickable: clickable }">
     <div>
       <img :src="image" :alt="title" />
+      <h3>{{ title }}</h3>
     </div>
     <div>
-      <h3>{{ title }}</h3>
-      <p>{{ stripHttp(website) }}</p>
+      <marquee>{{ stripHttp(website) }}</marquee>
     </div>
   </div>
 </template>
@@ -52,47 +52,21 @@ const stripHttp = (link: string) => {
 <style lang="sass">
 
 .UserCard
-  background: v-bind(color)
+  background: var(--background)
   border-radius: var(--radius-small)
   display: flex
-  flex-direction: row
+  flex-direction: column
   align-items: center
   transition: var(--trans)
-  color: color-mix(in srgb, v-bind(font) 60%, v-bind(color) 40%)
+  color: var(--text2)
   gap: 24px
-  background: color-mix(in srgb, v-bind(color), transparent 75%)
+  background: var(--surface1)
   backdrop-filter: blur(12px)
   border-radius: 34px
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
-  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
   position: relative
+  overflow: visible
+  border: 2px dashed var(--surface1)
   
-  &::before
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background: linear-gradient(color-mix(in srgb, v-bind(color), transparent 90%) 0%,rgba(0,125,255,0.000) 100%)
-    border-radius: 34px
-    pointer-events: none
-    
-    
-  &::after
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background-image: url('/src/assets/filters/noise.svg')
-    background-repeat: repeat
-    opacity: 0.15
-    mix-blend-mode: color-burn
-    border-radius: 34px
-    pointer-events: none
-
 
   @media (min-width: 1201px)
     justify-content: start
@@ -101,14 +75,14 @@ const stripHttp = (link: string) => {
 
   @media (max-width: 1200px)
     justify-content: center
-    padding: 24px 32px
+    padding: 24px 12px
 
   *
     margin: 0
     text-align: start
 
   div:first-of-type > img
-    height: 64px
+    height: 60px
     border-radius: var(--radius-inf)
 
   div:nth-of-type(2)
@@ -116,25 +90,31 @@ const stripHttp = (link: string) => {
     flex-direction: column
     justify-content: start
     align-items: start
-    width: 128px
+    width: 200px
     gap: 4px
 
-    > p
+    > marquee
+      display: flex
       box-sizing: border-box
-      max-width: 100%
+      width: 200px
       overflow: hidden
       white-space: nowrap
-      text-overflow: ellipsis
       font-family: monospace
-      padding: 4px 8px
-      background: #00000020
+      padding: 4px 8px 4px 8px
+      background: var(--text2)
+      color: var(--text)
       border-radius: var(--radius-inf)
+      behavior: scroll
+      transition: var(--trans)
+      scrollamount: -5
 
   &.clickable
     cursor: pointer
 
     &:hover
-      background: color-mix(in srgb, v-bind(color), var(--surface4))
+      border: 2px dashed var(--surface2)
+      transition: var(--trans)
+
 
     &:active
       background: var(--surface2)

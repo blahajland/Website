@@ -42,7 +42,7 @@ import AnnouncementBar from '@/components/AnnouncementBar.vue'
     border-radius: 0 0 24px 24px
 
     > a > img
-      height: 32px
+      height: 40px
 
 @media (max-width: 1200px)
   .TopBar
@@ -53,7 +53,7 @@ import AnnouncementBar from '@/components/AnnouncementBar.vue'
     border-radius: 0 0 24px 24px
 
     > a > img
-      height: 36px
+      height: 30px
 
   .announcement-pill-container
     width: 100%

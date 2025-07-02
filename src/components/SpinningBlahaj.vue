@@ -14,7 +14,7 @@ import links from '@/assets/data/links.json'
 .SpinningBlahaj
   display: flex
   flex-direction: column
-  margin-top: 64px
+  margin-top: 32px
   justify-content: center
   align-items: center
   cursor: pointer
@@ -27,11 +27,14 @@ import links from '@/assets/data/links.json'
     padding: 64px 0 32px
 
     > img
-      height: 220px
+      height: 230px
+      filter: contrast(5000%) brightness(90%) grayscale(1)
 
   @media (max-width: 1200px)
     padding: 96px 0 16px
 
     > img
       width: 80vw
+      filter: contrast(5000%) brightness(90%) grayscale(1) drop-shadow(8px 8px 10px var(--button-hvr))
+      
 </style>

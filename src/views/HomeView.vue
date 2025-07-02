@@ -9,8 +9,6 @@ import PageFrame from '@/components/frames/PageFrame.vue'
 import DonatorsList from '@/fetchables/DonatorsList.vue'
 import SpinningBlahaj from '@/components/SpinningBlahaj.vue'
 import ThingsContainer from '@/components/containers/ThingsContainer.vue'
-
-import { assets } from 'blahaj-library'
 import BulletpointContainer from '@/components/containers/BulletpointContainer.vue'
 import CustomGap from '@/components/CustomGap.vue'
 import WelcomeBundle from '@/bundles/WelcomeBundle.vue'
@@ -41,7 +39,7 @@ import TiersList from '@/fetchables/TiersList.vue'
         ><h2 id="p1">Why?</h2>
         <p>Why should you consider <b>blahaj.land</b> for your needs? ;3</p>
       </template>
-      <BulletpointContainer color="#d3ddff">
+      <BulletpointContainer color="#ffffff">
         <template #image
           ><img src="https://assets.blahaj.land/pictures/screenshot1.png" alt="Screenshot 1"
         /></template>
@@ -49,7 +47,7 @@ import TiersList from '@/fetchables/TiersList.vue'
       </BulletpointContainer>
       <CustomGap class="displayOnDesktop" gap="48px" />
       <CustomGap class="displayOnMobile" gap="0px" />
-      <BulletpointContainer is-inverted color="#f3d8ff">
+      <BulletpointContainer is-inverted color="#ffffff">
         <template #image
           ><img src="https://assets.blahaj.land/pictures/screenshot2.png" alt="Screenshot 2"
         /></template>

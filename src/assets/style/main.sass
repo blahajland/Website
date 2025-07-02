@@ -8,14 +8,11 @@ html
 body
   margin: 0
   font-family: 'Kumbh Sans', sans-serif
-  font-size: 2rm
-  background-image: url('https://assets.blahaj.land/pictures/backgrounds/waves-standard.png')
-  background-position: center
-  background-repeat: no-repeat
+  font-size: 1.2rem
   background-size: cover
   color: var(--text)
-  background-color: var(--background-overlay)
-  background-blend-mode: multiply
+  background: var(--background)
+  transition: var(--trans)
 
 @media (min-width: 1201px)
   body
@@ -26,7 +23,7 @@ body
     color: var(--text)
 
   #app
-    width: 1200px
+    width: 1300px
 
   .displayOnDesktop
     display: inherit !important
