@@ -107,6 +107,7 @@ const handleCallToActionClick = (url: string) => {
 
 @media (max-width: 768px)
   .AnnouncementBar
+    display: none
     padding: 6px 12px
     flex-direction: column
     gap: 6px

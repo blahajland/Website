@@ -58,19 +58,8 @@ onUnmounted(() => {
   border-radius: 0 0 24px 24px
   transform: translateY(0)
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)
-
-  &.navbar-hidden
-    transform: translateY(-100%)
-
-  @media (max-width: 1200px)
-  .NavbarFrame
-    top: auto
-    bottom: 0
-    border-radius: 24px 24px 0 0
-    transform: translateY(0)
-
-    &.navbar-hidden
-      transform: translateY(100%)
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  box-shadow: inset -1px 1px 2px rgba(255,255,255,0.200), -1px 1px 2px rgba(0,0,0,0.250)
 
   &::after
     content: ''
@@ -84,5 +73,21 @@ onUnmounted(() => {
     opacity: 0.15
     mix-blend-mode: color-burn
     pointer-events: none
+    border-radius: 24px 24px 0 0
+
+
+
+  &.navbar-hidden
+    transform: translateY(-100%)
+
+@media (max-width: 1200px)
+  .NavbarFrame
+    top: auto
+    bottom: 0
+    border-radius: 24px 24px 0 0
+    transform: translateY(0)
+
+    &.navbar-hidden
+      transform: translateY(100%)
 
 </style>

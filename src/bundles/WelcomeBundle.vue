@@ -6,7 +6,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
 </script>
 
 <template>
-  <BlockCard color="#ACD3DC">
+  <BlockCard color="#ACD3DC" class="discover-card">
     <p>Take a tour and see <b>what's inside :3</b></p>
     <BlahajButton
       background="var(--background)"
@@ -16,7 +16,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
       <p>Discover</p>
     </BlahajButton>
   </BlockCard>
-  <BlockCard color="#F0C1B7">
+  <BlockCard color="#F0C1B7" class="signup-card">
     <p>Create your account and <b>pass the vibe check &gt;:3</b></p>
     <BlahajButton
       background="var(--background)"
@@ -26,7 +26,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
       <p>Sign up</p>
     </BlahajButton>
   </BlockCard>
-  <BlockCard color="#B1BCE1">
+  <BlockCard color="#B1BCE1" class="discord-card">
     <p>Just want to hang around? Join our <b>Discord</b></p>
     <BlahajButton
       background="var(--background)"
@@ -36,7 +36,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
       <p>Join</p>
     </BlahajButton>
   </BlockCard>
-  <BlockCard color="#DCDCDC">
+  <BlockCard color="#DCDCDC" class="login-card">
     <p>Already part of the community? Get access to <b>all the apps</b></p>
     <BlahajButton
       background="var(--background)"
@@ -47,3 +47,18 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
     </BlahajButton>
   </BlockCard>
 </template>
+
+<style lang="sass">
+@media (max-width: 1200px)
+  .login-card
+    order: 1
+  
+  .discover-card
+    order: 2
+    
+  .signup-card
+    order: 3
+    
+  .discord-card
+    order: 4
+</style>
