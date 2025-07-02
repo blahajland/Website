@@ -30,7 +30,8 @@ import links from '@/assets/data/links.json'
       height: 220px
 
   @media (max-width: 1200px)
-    padding: 96px 0 16px
+    padding: 0 0 16px
+    margin-top: 0
 
     > img
       width: 80vw
