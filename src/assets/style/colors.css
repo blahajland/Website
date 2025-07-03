@@ -1,15 +1,18 @@
 :root:not([data-theme='dark']) {
     --background: #ffffff;
     --text: #000000;
-    --text2: #ffffff;
-    --surface1: #000000;
-    --surface2: #000000;
-    --surface3: #000000;
-    --surface4: #0000004f;
-    --button: #ffffff;
+    --text2: #ffff00;
+    --surface1: #0000ff;
+    --surface2: #00ff00;
+    --surface3: #ff00ff;
+    --surface4: #00ff00;
+    --button: #00ff00;
     --button-hvr: #a8a8a8;
+    --button-border: #ff00ff;
+    --button-hvr-text: #4b003e;
     --filter: brightness(0%) invert(0%);
-    --filter-anti: brightness(0%) invert(100%);
+    --filter-anti: brightness(0%) invert(0%);
+    --filter-bulletpoint: brightness(0%) invert(100%);
     --background-overlay: #ffffff;
     --font: #000000;
   }
@@ -20,12 +23,15 @@
     --text2: #000000;
     --surface1: #ffffff;
     --surface2: #000000;
-    --surface3: #000000;
-    --surface4: #ffffff70;
-    --button: #000000;
+    --surface3: #ffffff;
+    --surface4: #ffffff;
+    --button: #ffffff;
     --button-hvr: #555555;
+    --button-border: #000000;
+    --button-hvr-text: #000000;
     --filter: brightness(0%) invert(100%);
     --filter-anti: brightness(0%) invert(0%);
+    --filter-bulltetpoint: brightness(0%) invert(100%);
     --background-overlay: #000000;
     --font: #ffffff;
   }

@@ -57,7 +57,7 @@ onUnmounted(() => {
   backdrop-filter: blur(20px) contrast(100%) grayscale(1)
   background-blend-mode: difference
   border-radius: 0 0 24px 24px
-  border: 1px solid var(--surface1)
+  border: 2px solid var(--surface1)
   transform: translateY(0)
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 

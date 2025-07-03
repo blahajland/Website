@@ -51,7 +51,7 @@ defineProps({
 
   > img
     height: 28px
-    filter: var(--filter-anti)
+    filter: var(--filter-bulletpoint)
 
   @media (min-width: 1201px)
     justify-content: center

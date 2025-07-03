@@ -11,6 +11,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
     <BlahajButton
       background="var(--background)"
       hover="var(--surface1)"
+      tabindex="5"
       @click="changeLoc('#p1', false)"
       ><img alt="Blahaj" src="https://assets.blahaj.land/icons/open.png" />
       <p>Discover</p>
@@ -21,6 +22,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
     <BlahajButton
       background="var(--background)"
       hover="var(--surface1)"
+      tabindex="6"
       @click="changeLoc(links.portals.signup)"
       ><img alt="Sign up" src="https://assets.blahaj.land/icons/signup.png" />
       <p>Sign up</p>
@@ -31,6 +33,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
     <BlahajButton
       background="var(--background)"
       hover="var(--surface1)"
+      tabindex="7"
       @click="changeLoc(links.socials.discord)"
       ><img alt="Discord" src="https://assets.blahaj.land/icons/discord.png" />
       <p>Join</p>
@@ -41,6 +44,7 @@ import BlahajButton from '@/components/buttons/BlahajButton.vue'
     <BlahajButton
       background="var(--background)"
       hover="var(--surface1)"
+      tabindex="8"
       @click="changeLoc(links.portals.login)"
       ><img alt="Log in" src="https://assets.blahaj.land/icons/login.png" />
       <p>Open Dashboard</p>

@@ -36,9 +36,9 @@ defineProps({
   gap: 10px
   flex: 0 0
   color: var(--text)
-  background: var(--button)
+  background: var(--text2)
   backdrop-filter: blur(12px)
-  border: 2px solid var(--surface1)
+  border: 4px solid var(--surface1)
   
   font-size: 1.2rem
 
@@ -49,14 +49,13 @@ defineProps({
 
   > p
     margin: 0
-    font-weight: 900
+    font-weight: 800
     white-space: nowrap
 
   &:hover
-    border: 4px dashed var(--text2)
-    color: var(--text2)
-    background: var(--surface1) !important
-    margin: -2px -2px
+    border: 4px dashed var(--button-border)
+    color: var(--button-hvr-text)
+    background: var(--button) !important
     transition: var(--trans)
 
     > img

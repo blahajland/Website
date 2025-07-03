@@ -34,7 +34,7 @@ import TiersList from '@/fetchables/TiersList.vue'
       </GridContainer>
     </ContentContainer>
     <CustomGap gap="32px" />
-    <ContentContainer>
+    <ContentContainer tabindex="9">
       <template #title
         ><h2 id="p1">Why?</h2>
         <p>Why should you consider <b>blahaj.land</b> for your needs? ;3</p>
@@ -54,7 +54,7 @@ import TiersList from '@/fetchables/TiersList.vue'
         <BulletpointsBundle2 />
       </BulletpointContainer>
     </ContentContainer>
-    <ContentContainer>
+    <ContentContainer tabindex="10">
       <template #title
         ><h2 id="p2">Services</h2>
         <p>The stuff we host >:3</p></template
@@ -66,7 +66,7 @@ import TiersList from '@/fetchables/TiersList.vue'
         <AppsList />
       </Suspense>
     </ContentContainer>
-    <ContentContainer>
+    <ContentContainer tabindex="11">
       <template #title
         ><h2 id="p3">Tiers</h2>
         <p>Get more features and support the website >83</p></template
@@ -78,7 +78,7 @@ import TiersList from '@/fetchables/TiersList.vue'
         <TiersList />
       </Suspense>
     </ContentContainer>
-    <ContentContainer>
+    <ContentContainer tabindex="12">
       <template #title
         ><h2 id="p4">User sites</h2>
         <p>Here you can view our user's sites :3</p></template
@@ -90,7 +90,7 @@ import TiersList from '@/fetchables/TiersList.vue'
         <UsersList />
       </Suspense>
     </ContentContainer>
-    <ContentContainer>
+    <ContentContainer tabindex="13">
       <template #title
         ><h2 id="p5">Donations</h2>
         <p>Thanks for your <i>kind</i> donations &lt;3</p></template
@@ -102,7 +102,7 @@ import TiersList from '@/fetchables/TiersList.vue'
         <DonatorsList />
       </Suspense>
     </ContentContainer>
-    <ContentContainer last>
+    <ContentContainer last tabindex="14">
       <template #title><h3>Let's keep in touch</h3></template>
       <ThingsContainer>
         <ContactsBundle />

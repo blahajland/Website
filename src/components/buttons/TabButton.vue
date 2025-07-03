@@ -23,7 +23,7 @@ import { defineComponent } from 'vue'
   border-radius: var(--radius-small) var(--radius-small) 0 0 
   transition: var(--trans)
   cursor: pointer
-  border: 2px dashed var(--surface1)
+  border: 4px dashed var(--surface3)
   font-size: 1.2rem
   margin: 2px
 
@@ -33,7 +33,7 @@ import { defineComponent } from 'vue'
     font-weight: 800
 
   > hr
-    margin: -2px
+    margin: 0px
     height: 8px
     background: var(--surface)
     width: 100%
@@ -42,10 +42,9 @@ import { defineComponent } from 'vue'
 
 
   &:hover
-    background: var(--surface)
-    border: 4px solid var(--surface1)
+    background: var(--surface2)
+    border: 4px solid var(--surface3)
     transition: var(--trans)
-    margin: 0px 0px
 
 
     > hr

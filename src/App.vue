@@ -22,7 +22,7 @@ themeService.setThemeFromCookie()
     </TabGroup>
   </NavbarFrame>
   <RouterView />
-  <CustomFooter>
+  <CustomFooter tabindex="15">
     <FooterBundle />
   </CustomFooter>
 </template>
